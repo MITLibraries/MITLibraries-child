@@ -1,0 +1,230 @@
+/*
+Theme Name: MIT Libraries Child NEW
+Author: Lightning Trumpet & MIT Libraries
+Author URI: http://wordpress.org/
+Version: 1.1
+
+Template: libraries
+
+MIT Libraries theme built for the MIT Libraries child websites.
+*/
+
+@import url("../libraries/style.css");
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.betterBreadcrumbs {
+	background: #eceaea;
+	font-size: 0.75rem;
+	line-height: 1;
+	padding: 0.5em 0.5em 0.5em 1.5em;
+}
+
+.betterBreadcrumbs span:not(:last-of-type):after {
+	content: ' \00bb ';
+}
+
+.siteTitle {
+	background: #333;
+	color: #f7f7f7;
+	font-size: 1.75rem;
+	line-height: 1;
+	padding: 0.7em 0 0.7em 0.75em;
+	width: 100%;
+}
+
+.headerImage img.wp-post-image {
+	border-radius: 0;
+	box-shadow: none;
+	height: auto;
+	width: 960px;
+}
+
+/* ----
+Child Nav
+---- */
+
+.childNav {
+	margin: 0px 20px 0px;
+}
+
+.childNav .menu-main-container {
+	padding-left: 20px;
+}
+
+.childNav li a {
+	line-height: 38px;
+}
+
+.childNav li a,
+.childNav li a:visited,
+.childNav li a:hover,
+.childNav li a:focus {
+	color: #424286;
+}
+
+.childNav .children a {
+	line-height: 20px;
+}
+
+.childNav .current_page_item a {
+	font-weight: bold;
+}
+
+/* ----
+Main Content Area
+---- */
+
+.allContent {
+	margin-top: 2em;
+	margin-left: 20px;
+}
+
+.hasSidebar .mainContent {
+	width: 700px;
+}
+
+.mainContent {
+	width: 100%;
+}
+
+.mainContent h2 {
+	margin-bottom: 10px;
+}
+
+.mainContent h3 {
+	line-height: 1.5em;
+}
+
+#child-navigation .children {
+	box-shadow: rgb(153, 153, 153) 3px 3px 5px;
+}
+
+#child-navigation .children li {
+	margin-right: 0px;
+}
+
+.widget-area {
+	background: rgb(237, 232, 226);
+}
+
+.widget-area>ul>li {
+	padding: 20px 10px 20px 20px;
+}
+
+.widget-area>ul>li {
+	border-bottom: 5px solid #d2ccc4;
+}
+
+.main-navigation li ul li a {
+	background:#eceaea;
+}
+
+.childTheme .sidebar {
+	margin-top: 0;
+}
+
+.childTheme .sidebar .widget {
+	padding: 1em;
+}
+
+.childTheme .sidebar .widget {
+	border-bottom: 5px solid #d2ccc4;
+}
+
+.childTheme .widget-area .textwidget {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.widget-area .xoxo {
+	font-size: 14px;
+	color: #666;
+	font-weight: bold;
+}
+
+/*.xoxo.empty, .emptyDiv {
+	display: none;
+}*/
+
+.childTheme .widget-area .widget {
+	margin-bottom: 20px;
+}
+
+.childTheme .sidebar .widget:last-of-type {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
+.childTheme .widget li {
+	font-size: 12px;
+	line-height: 18px;
+	margin-bottom: 5px;
+}
+
+#child-navigation .nav-menu li:hover>a {
+	background:#eceaea;
+}
+
+#child-navigation .nav-menu li:hover>a {
+	text-decoration: underline;
+}
+
+#child-navigation .sub-menu li, #child-navigation .sub-menu li a {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+#child-navigation .nav-menu li>a {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.mainContent .post h2 {
+	font-size: 24px;
+	line-height: 28px;
+	margin-bottom: 0px;
+}
+
+.post h2 a {
+	color: #333;
+}
+
+.post small {
+	display: block;
+	font-size: 11px;
+}		
+
+.post .entry {
+	margin-top: 10px;
+}
+
+.post {
+	margin-bottom: 20px;
+}
+
+.childTheme #breadcrumb {
+	height: 100%;
+	line-height: 1;
+	padding: 0.5em 1.25rem;
+	white-space: nowrap;
+}
+
+.breadcrumbs {
+	display: inline-block;
+}	
+
+.sidebar {
+	float: left;
+	width: 220px;
+}
+
+footer #footerHeader,
+footer .footerHeader {
+	height: 92px;
+}
