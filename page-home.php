@@ -17,7 +17,7 @@ get_header(); ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
 	
-	  <div id="okay" class="betterBreadcrumbs hidden-phone" role="navigation" aria-label="breadcrumbs">
+	  <div class="betterBreadcrumbs hidden-phone" role="navigation" aria-label="breadcrumbs">
       <span><a href="/">Libraries home</a></span>
       <span><?php bloginfo(); ?></span>
     </div>
