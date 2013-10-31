@@ -57,6 +57,10 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	width: 960px;
 }
 
+.headerImage img {
+	vertical-align: middle;
+}
+
 /* ----
 Child Nav
 ---- */
