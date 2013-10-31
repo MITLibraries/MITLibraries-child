@@ -21,7 +21,7 @@ get_header(); ?>
 
 	<?php get_template_part('inc/postHead'); ?>
 			
-		<div id="content" class="allContent group">
+		<div id="content" class="allContent hasSidebar group">
 
 				<div id="mainContent" class="mainContent group">			
 					<?php while ( have_posts() ) : the_post(); ?>

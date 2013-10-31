@@ -15,12 +15,18 @@ $isRoot = $section->ID == $post->ID;
 get_header(); ?>
 
 <?php get_template_part('inc/breadcrumbs'); ?>
+
+<div class="betterBreadcrumbs hidden-phone" role="navigation" aria-label="breadcrumbs">
+  <span><a href="/">Libraries home</a></span>
+  <span><?php bloginfo(); ?></span>
+</div>
+
 		
 <div id="stage" class="inner group" role="main">
 
 	<?php get_template_part('inc/postHead'); ?>
 			
-		<div id="content" class="allContent group">
+		<div id="content" class="allContent hasSidebar group">
 			<div id="mainContent" class="mainContent">			
 				<?php while ( have_posts() ) : the_post();?>
 

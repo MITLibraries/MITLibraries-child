@@ -102,6 +102,7 @@ Main Content Area
 }
 
 .hasSidebar .mainContent {
+  padding-right: 2em;
 	width: 700px;
 }
 
@@ -243,4 +244,10 @@ Main Content Area
 footer #footerHeader,
 footer .footerHeader {
 	height: 92px;
+}
+
+@media screen and (max-width:480px) {
+  .hasSidebar .mainContent  {
+    max-width: 100%;
+  }
 }
