@@ -1,10 +1,9 @@
 <?php
 
-add_action( 'after_setup_theme', 'remove_child_theme_support', 22);
+add_action( 'after_setup_theme', 'remove_child_theme_support');
 
 function remove_child_theme_support() {
   remove_theme_support('custom-background');
-  remove_theme_support('static-front-page');
 }
 
 function betterBreadcrumbs() {
