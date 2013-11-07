@@ -15,7 +15,7 @@ $isRoot = $section->ID == $post->ID;
 
 get_header(); ?>
 
-<?php get_template_part('inc/breadcrumbs') ?>
+<?php get_template_part('inc/breadcrumbs', 'child') ?>
 	
 <div id="stage" class="inner group" role="main">
 
