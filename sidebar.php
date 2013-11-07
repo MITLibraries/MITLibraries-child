@@ -11,8 +11,8 @@
 	<?php if ( is_active_sidebar( 'sidebar-1' ) ) { ?>
 		<div id="secondary" class="widget-area sidebar" role="complementary">
 			<?php dynamic_sidebar( 'sidebar-1' ); ?>
-			<aside class="widget meta">
-				<h2>Meta</h2>
+			<aside class="widget admin">
+				<h2>Admin</h2>
 				<?php if (is_user_logged_in(1)) {
 					echo '<span><a href="'.wp_logout_url().'">Log out</a></span>'; 
 					} else {
