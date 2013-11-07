@@ -11,12 +11,24 @@ MIT Libraries theme built for the MIT Libraries child websites.
 
 @import url("../libraries/style.css");
 
+/* ---- Parent Theme Element Overrides ---- */
+
 * {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-o-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
+.childTheme ul {
+	list-style-type: disc;
+}
+
+.childTheme ol {
+	list-style-type: decimal;
+}
+
+/* ---- Begin Child Page Content Styles ---- */ 
 
 .betterBreadcrumbs {
 	background: #eceaea;
@@ -37,6 +49,12 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	padding: 0.7em 0 0.7em 0.75em;
 	position: relative;
 	width: 100%;
+}
+
+.category .categoryName {
+	color: #ede8e2;
+	font-size: 0.75em;
+	font-weight: normal;
 }
 
 .childTheme .siteTitle .todayHours {
@@ -98,12 +116,15 @@ Main Content Area
 
 .allContent {
 	margin-top: 2em;
+	margin-right: 20px;
 	margin-left: 20px;
 }
 
 .hasSidebar .mainContent {
+	float: left;
   padding-right: 2em;
 	width: 700px;
+	width: 76.05%;
 }
 
 .mainContent {
@@ -126,8 +147,72 @@ Main Content Area
 	margin-right: 0px;
 }
 
-.widget-area {
-	background: rgb(237, 232, 226);
+#child-navigation .nav-menu li:hover>a {
+	background:#eceaea;
+}
+
+#child-navigation .nav-menu li:hover>a {
+	text-decoration: underline;
+}
+
+#child-navigation .sub-menu li, #child-navigation .sub-menu li a {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+#child-navigation .nav-menu li>a {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.mainContent .post h2,
+.category .post h3 {
+	font-size: 24px;
+	line-height: 28px;
+	margin-bottom: 0px;
+}
+
+.post h2 a,
+.category .post h3 a {
+	color: #333;
+}
+
+.post small {
+	display: block;
+	font-size: 11px;
+}		
+
+.post .entry {
+	margin-top: 10px;
+}
+
+.post:not(:last-of-type):after {
+	background: #ccc;
+	content: '';
+	display: block;
+	height: 1px;
+	margin: 2em auto;
+	width: 80%;
+}
+
+.childTheme #breadcrumb {
+	height: 100%;
+	line-height: 1;
+	padding: 0.5em 1.25rem;
+	white-space: nowrap;
+}
+
+.breadcrumbs {
+	display: inline-block;
+}	
+
+/* ---- Sidebar ---- */
+
+.sidebar {
+	background: #ede8e2;
+	float: left;
+	width: 220px;
+	width: 23.91%;
 }
 
 .widget-area>ul>li {
@@ -147,11 +232,9 @@ Main Content Area
 }
 
 .childTheme .sidebar .widget {
-	padding: 1em;
-}
-
-.childTheme .sidebar .widget {
 	border-bottom: 5px solid #d2ccc4;
+	margin: 0;
+	padding: 1em;
 }
 
 .childTheme .widget-area .textwidget {
@@ -165,80 +248,40 @@ Main Content Area
 	font-weight: bold;
 }
 
-/*.xoxo.empty, .emptyDiv {
-	display: none;
-}*/
-
-.childTheme .widget-area .widget {
-	margin-bottom: 20px;
-}
-
 .childTheme .sidebar .widget:last-of-type {
 	border-bottom: none;
-	margin-bottom: 0;
 }
 
-.childTheme .widget li {
-	font-size: 12px;
-	line-height: 18px;
-	margin-bottom: 5px;
-}
-
-#child-navigation .nav-menu li:hover>a {
-	background:#eceaea;
-}
-
-#child-navigation .nav-menu li:hover>a {
-	text-decoration: underline;
-}
-
-#child-navigation .sub-menu li, #child-navigation .sub-menu li a {
-	font-size: 12px;
-	line-height: 18px;
-}
-
-#child-navigation .nav-menu li>a {
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-.mainContent .post h2 {
-	font-size: 24px;
-	line-height: 28px;
-	margin-bottom: 0px;
-}
-
-.post h2 a {
-	color: #333;
-}
-
-.post small {
+.childTheme .widget ul li,
+.childTheme .widget span {
 	display: block;
-	font-size: 11px;
-}		
-
-.post .entry {
-	margin-top: 10px;
+	font-size: 12px;
+	line-height: 18px;
+	list-style-image: none;
+	margin-bottom: 5px;
+	margin-left: 0;
 }
 
-.post {
-	margin-bottom: 20px;
-}
-
-.childTheme #breadcrumb {
-	height: 100%;
-	line-height: 1;
-	padding: 0.5em 1.25rem;
-	white-space: nowrap;
-}
-
-.breadcrumbs {
+.childTheme .widget ul li:before,
+.childTheme .widget span:before {
+	color: #424286;
+	content: '\f061';
 	display: inline-block;
-}	
+	font-family: 'fontawesome-MITLibraries';
+	font-size: 0.75em;
+	font-style: normal;
+	font-weight: normal;
+	margin-right: 0.5em;
+	text-decoration: none;
+	vertical-align: top;
+}
 
-.sidebar {
-	float: left;
-	width: 220px;
+.childTheme .sidebar .meta {
+	display: block;
+}
+
+.sidebar .meta a:before {
+
 }
 
 footer #footerHeader,
