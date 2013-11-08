@@ -1,12 +1,24 @@
-<div class="siteTitle">
+<div class="siteTitle group">
 
 	<h1><?php bloginfo(); ?></h1>
 
-	<?php if (is_category()) {
+	<?php
+
+		if (is_category()) {
 		echo '<h2 class="categoryName">';
 		single_cat_title('Category: ');
 		echo '</h2>';
-	}
+		}
+
+		$siteName = get_bloginfo('name');
+
+		// Switch out to main site to get location ids
+		if ($siteName == 'Child Theme' || 'MIT Libraries News') {
+
+			get_template_part('inc/locationHours');
+
+		}
+
 	?>
 
 </div>

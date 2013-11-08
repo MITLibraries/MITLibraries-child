@@ -46,9 +46,13 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	color: #f7f7f7;
 	font-size: 1.75rem;
 	line-height: 1;
-	padding: 0.7em 0 0.7em 0.75em;
+	padding: 0.7em 0.75em 0.7em 0.75em;
 	position: relative;
 	width: 100%;
+}
+
+.siteTitle h1 {
+	display: inline-block;
 }
 
 .category .categoryName {
@@ -59,13 +63,31 @@ MIT Libraries theme built for the MIT Libraries child websites.
 
 .childTheme .siteTitle .todayHours {
 	color: #d2ccc4;
-	position: absolute;
-	right: 21px;
+	display: block;
+	float: right;
+	top: auto;
+	position: relative;
+	right: auto;
 	width: auto;
 }
 
 .childTheme .todayHours span {
 	display: block;
+}
+
+.siteTitle .todayHours span:nth-child(2) {
+	font-weight: bold;
+}
+
+.childTheme .todayHours a {
+	color: #ffcc33;
+}
+
+.childTheme .todayHours a:after {
+	content: '\f061';
+	display: inline-block;
+	font-family: 'fontawesome-MITLibraries';
+	margin-left: 0.5em;
 }
 
 .headerImage img.wp-post-image {
