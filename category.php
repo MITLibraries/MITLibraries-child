@@ -27,33 +27,40 @@ get_header(); ?>
 
 				<div class="mainContent group">
 
-				<?php if ( have_posts() ) : ?>
-
-					<?php	while ( have_posts() ) : the_post(); ?>
-
-						<div class="post">
-
-							<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
-							<small>Posted <?php the_time('F jS, Y') ?> by <?php the_author() ?> </small>
-							
-							<div class="entry">
-								<?php the_content('Read the rest of this entry &raquo;'); ?>
-							</div>
-					
-							<p class="postmetadata">Posted in <?php the_category(', ') ?> 
-
-							 <?php edit_post_link('(Edit)'); ?> </p>
-
-						</div>
-
-					<?php 
-						endwhile;
-						twentytwelve_content_nav( 'nav-below' );
+					<?php if (is_category()) {
+						echo '<h2 class="categoryName">';
+						single_cat_title('Category: ');
+						echo '</h2>';
+						}
 					?>
 
-					<?php else : ?>
-						<?php get_template_part( 'content', 'none' ); ?>
-					<?php endif; ?>
+					<?php if ( have_posts() ) : ?>
+
+						<?php	while ( have_posts() ) : the_post(); ?>
+
+							<div class="post">
+
+								<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h3>
+								<small>Posted <?php the_time('F jS, Y') ?> by <?php the_author() ?> </small>
+								
+								<div class="entry">
+									<?php the_content('Read the rest of this entry &raquo;'); ?>
+								</div>
+						
+								<p class="postmetadata">Posted in <?php the_category(', ') ?> 
+
+								 <?php edit_post_link('(Edit)'); ?> </p>
+
+							</div>
+
+						<?php 
+							endwhile;
+							twentytwelve_content_nav( 'nav-below' );
+						?>
+
+						<?php else : ?>
+							<?php get_template_part( 'content', 'none' ); ?>
+						<?php endif; ?>
 
 				</div><!-- end div.mainContent -->
 				

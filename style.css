@@ -55,10 +55,13 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	display: inline-block;
 }
 
-.category .categoryName {
-	color: #ede8e2;
-	font-size: 0.75em;
+.category .categoryName,
+.search .mainContent h2.search-title {
+	border-bottom: 1px solid #ccc;
+	font-size: 2em;
 	font-weight: normal;
+	margin-bottom: 1em;
+	text-transform: none;
 }
 
 .childTheme .siteTitle .todayHours {
@@ -188,14 +191,16 @@ Main Content Area
 }
 
 .mainContent .post h2,
-.category .post h3 {
+.category .post h3,
+.search .post h3 {
 	font-size: 24px;
 	line-height: 28px;
 	margin-bottom: 0px;
 }
 
 .post h2 a,
-.category .post h3 a {
+.category .post h3 a,
+.search .post h3 a {
 	color: #333;
 }
 
@@ -310,6 +315,20 @@ footer .footerHeader {
 	height: 92px;
 }
 
+.search .no-results .entry-content {
+	margin-bottom: 2em;
+}
+
+/* ---- Fields, Inputs, Buttons etc. ---- */
+
+.search input[type="text"] {
+	height: auto;
+	line-height: 1.5;
+	margin: 0;
+}
+
+/* ---- Responsive Styles ---- */
+
 @media screen and (max-width:480px) {
 	
 	.siteTitle {
@@ -328,8 +347,17 @@ footer .footerHeader {
 		margin: 0 auto;
 	}
 
-  .category .categoryName {
-  	color: #ccc;
+	.allContent {
+		margin-top: 1em;
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+  .category .categoryName,
+  .search .mainContent h2.search-title {
+  	border-bottom: none;
+  	color: #666;
+  	font-size: 1.5em;
   }
 
   .hasSidebar .mainContent  {

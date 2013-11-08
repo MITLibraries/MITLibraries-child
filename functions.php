@@ -10,6 +10,10 @@ function betterBreadcrumbs() {
 
   global $post;
 
+  if(is_search()) {
+    echo "<span>Search</span>";
+  }
+
   if(!is_child_page() && is_page() || is_category() || is_single()) {
     echo "<span>".the_title()."</span>";
     return;

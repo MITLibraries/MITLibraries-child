@@ -2,14 +2,13 @@
 
 	global $blog_id;
 	$current_blog_id = $blog_id;
-	$siteName = get_bloginfo('name');
 
-	switch_to_blog(1);
-
-	if ($siteName == 'Document Services') {
-		// get_the_ID(447);
+  // if the Doc. Services site
+	if ($blog_id == 22) {
 		$locationId = 1028;
 	}
+	
+	switch_to_blog(1);
 
 	$hasHours = hasHours($locationId, date("Y-m-d"));
 	$hoursToday = getHoursToday($locationId);

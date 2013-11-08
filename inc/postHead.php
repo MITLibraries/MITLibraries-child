@@ -4,16 +4,13 @@
 
 	<?php
 
-		if (is_category()) {
-		echo '<h2 class="categoryName">';
-		single_cat_title('Category: ');
-		echo '</h2>';
-		}
+		global $blog_id;
+		$current_blog_id = $blog_id;
 
-		$siteName = get_bloginfo('name');
+		$siteURL = get_bloginfo('url');
 
-		// Switch out to main site to get location ids
-		if ($siteName == 'Child Theme' || 'MIT Libraries News') {
+		// If a location site, switch out to main site to get location ids
+		if ($blog_id == 22) {
 
 			get_template_part('inc/locationHours');
 
@@ -23,21 +20,21 @@
 
 </div>
 
-	<?php if (has_post_thumbnail()): ?>
+<?php if (has_post_thumbnail()): ?>
 
-		<div class="headerImage">
-			<?php echo the_post_thumbnail('headerImage'); ?>
-		</div>	
+	<div class="headerImage">
+		<?php echo the_post_thumbnail('headerImage'); ?>
+	</div>	
 
-	<?php else:
-			$defaultHeader = get_header_image();
-			if ($defaultHeader != ''):
-	?>
-				<div class="headerImage">
-					<img src="<?php header_image(); ?>" alt="" />
-				</div>
-			<?php endif; ?>
+<?php else:
+		$defaultHeader = get_header_image();
+		if ($defaultHeader != ''):
+?>
+			<div class="headerImage">
+				<img src="<?php header_image(); ?>" alt="" />
+			</div>
+		<?php endif; ?>
+		
+<?php endif; ?>		
 			
-	<?php endif; ?>		
-				
-	<?php get_template_part("nav", "child"); ?>
+<?php get_template_part("nav", "child"); ?>
