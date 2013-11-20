@@ -6,7 +6,7 @@ function remove_child_theme_support() {
   remove_theme_support('custom-background');
 }
 
-function betterBreadcrumbs() {
+function betterChildBreadcrumbs() {
 
   global $post;
 
