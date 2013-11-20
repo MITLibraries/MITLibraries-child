@@ -13,6 +13,7 @@
 		if ($blog_id == 22) {
 
 			get_template_part('inc/locationHours');
+			// get_template_part('inc/locationInfo');
 
 		}
 
@@ -32,4 +33,4 @@
 
 <?php endif; ?>	
 			
-<?php get_template_part("nav", "child"); ?>
+<?php get_template_part("inc/nav", "child"); ?>
