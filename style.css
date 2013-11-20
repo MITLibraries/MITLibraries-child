@@ -265,6 +265,14 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	width: 23.91%;
 }
 
+.childTheme .sidebar {
+	margin-top: 0;
+}
+
+.childTheme .textwidget ul {
+	margin: 0;
+}
+
 .widget-area>ul>li {
 	padding: 20px 10px 20px 20px;
 }
@@ -275,10 +283,6 @@ MIT Libraries theme built for the MIT Libraries child websites.
 
 .main-navigation li ul li a {
 	background:#eceaea;
-}
-
-.childTheme .sidebar {
-	margin-top: 0;
 }
 
 .childTheme .sidebar .widget {
