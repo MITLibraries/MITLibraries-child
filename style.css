@@ -82,15 +82,24 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	font-weight: bold;
 }
 
-.childTheme .todayHours a {
+.childTheme .todayHours a,
+.childTheme .locationInfo a {
 	color: #ffcc33;
 }
 
-.childTheme .todayHours a:after {
+.childTheme .todayHours a:after,
+.childTheme .locationInfo a:after {
 	content: '\f061';
 	display: inline-block;
 	font-family: 'fontawesome-MITLibraries';
 	margin-left: 0.5em;
+}
+
+.childTheme .locationInfo span {
+	color: #e4e5ec;
+	display: block;
+	font-size: 0.5em;
+	line-height: 1.5;
 }
 
 .headerImage img.wp-post-image {
@@ -104,9 +113,7 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	vertical-align: middle;
 }
 
-/* ----
-Child Nav
----- */
+/* ---- Child Nav ---- */
 
 .childNav {
 	margin: 0px 20px 0px;
@@ -135,14 +142,10 @@ Child Nav
 	font-weight: bold;
 }
 
-/* ----
-Main Content Area
----- */
+/* ---- Main Content Area ---- */
 
 .allContent {
 	margin-top: 2em;
-	margin-right: 20px;
-	margin-left: 20px;
 }
 
 .hasSidebar .mainContent {
@@ -238,7 +241,20 @@ Main Content Area
 
 .breadcrumbs {
 	display: inline-block;
-}	
+}
+
+.childTheme.page-home .flexItem {
+	max-width: 100%;
+}
+
+.childTheme.page-home .flexItem:first-of-type {
+	border-right: 1px solid #ccc;
+	padding-right: 1em;
+}
+
+.childTheme.page-home .flexItem:last-of-type {
+	padding-left: 1em;
+}
 
 /* ---- Sidebar ---- */
 
@@ -268,7 +284,11 @@ Main Content Area
 .childTheme .sidebar .widget {
 	border-bottom: 5px solid #d2ccc4;
 	margin: 0;
-	padding: 1em;
+	padding: 1.5em;
+}
+
+.childTheme .sidebar a {
+	color: #424286;
 }
 
 .childTheme .widget-area .textwidget {
@@ -289,7 +309,7 @@ Main Content Area
 .childTheme .widget ul li,
 .childTheme .widget span {
 	display: block;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 18px;
 	list-style-image: none;
 	margin-bottom: 5px;
@@ -307,7 +327,7 @@ Main Content Area
 	font-weight: normal;
 	margin-right: 0.5em;
 	text-decoration: none;
-	vertical-align: top;
+	vertical-align: middle;
 }
 
 footer #footerHeader,
@@ -331,20 +351,34 @@ footer .footerHeader {
 
 @media screen and (max-width:480px) {
 	
-	.siteTitle {
-		background: #fff;
-		border-top: 3px solid #ccc;
-		border-bottom: 3px solid #ccc;
-/*  	box-shadow: 0 -8px 6px -8px #333,
-  							0 8px 6px -8px #333;*/
-  	color: #000;
-  	margin-top: 0.5rem;
-  	padding: 0.5em;
-  	text-align: center;
+	.childTheme .siteTitle h1 {
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 0.25em;
 	}
 
-	.siteTitle h1 {
-		margin: 0 auto;
+	.headerImage {
+		display: none;
+	}
+
+	.childTheme .siteTitle .todayHours,
+	.childTheme .siteTitle .locationInfo {
+		margin: 0;
+		text-align: left;
+		width: 50%;
+	}
+
+	.childTheme .siteTitle .locationInfo {
+		float: left;
+	}
+	
+	.childTheme .siteTitle .todayHours,
+	.childTheme .locationInfo span {
+		color: #444;
+	}
+
+	.siteTitle .todayHours a,
+	.siteTitle .locationInfo a {
+		color: #424286;
 	}
 
 	.allContent {
