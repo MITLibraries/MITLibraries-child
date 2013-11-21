@@ -10,25 +10,30 @@
 global $isRoot;
 ?>
 
-<?php if (is_child_page()): ?>
+<?php
 
-	<div class="childPageNav">
+	$pageRoot = getRoot($post);
+	$section = get_post($pageRoot);
+
+	$menuName = $section->post_name;
+	$sideMenu = wp_get_nav_menu_items($menuName);
+
+	$hideSideNav = get_field("hide_side_nav");
+
+	if ($sideMenu && $hideSideNav == false || is_child_page() && $hideSideNav == false):
+
+?>
+
+	<div class="leftNav">
 
 		<ul>
 
 			<?php
-				
-				$pageRoot = getRoot($post);
-				$section = get_post($pageRoot);
 							
 				$args = array(
 					"child_of" => $pageRoot,
 					"title_li" => "",
 				);
-				
-				$menuName = $section->post_name;
-				
-				$menu = wp_get_nav_menu_items($menuName);
 				
 				if ($menu) {
 					wp_nav_menu( array( 'menu' => $menuName, 'menu_class' => 'nav-menu' ) ); 
@@ -43,7 +48,7 @@ global $isRoot;
 
 <?php endif; ?>
 
-<div class="mainContent group <?php if(is_child_page()) { echo 'hasChildNav'; } ?>">
+<div class="mainContent group <?php if($sideMenu && $hideSideNav == false || is_child_page() && $hideSideNav == false) { echo 'hasLeftNav'; } ?>">
 	
 	<div class="entry-content">
 		<?php $title = get_the_title(); if ($title != ""): ?>

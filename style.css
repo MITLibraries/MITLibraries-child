@@ -170,18 +170,18 @@ MIT Libraries theme built for the MIT Libraries child websites.
 
 /* ---- Child Page Nav ---- */
 
-.childPageNav {
+.leftNav {
 	float: left;
 	position: relative;
 	width: 14.58%;
 }
 
-.childPageNav ul li {
+.leftNav ul li {
 	list-style: none;
 	margin-left: 1.5em;
 }
 
-.childPageNav ul li:before {
+.leftNav ul li:before {
 	border-top: 5px solid transparent;
 	border-left: 5px solid #424286;
 	border-bottom: 5px solid transparent;
@@ -211,7 +211,7 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	width: 100%;
 }
 
-.mainContent.hasChildNav {
+.mainContent.hasLeftNav {
 	float: left;
 	width: 61.47%;
 }
