@@ -36,6 +36,7 @@ global $isRoot;
 						<div class="flexItem">
 							<?php echo $col2; ?>
 						</div>
+			<?php if(!is_page('home')) { echo "<h2>".$title."</h2>"; } ?>
 					</div>
 
 			<?php endif; ?>
