@@ -17,7 +17,7 @@ get_header(); ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
 		
-		<?php get_template_part('inc/breadcrumbs'); ?>
+		<?php get_template_part('inc/breadcrumbs', 'child'); ?>
 
 		<div id="stage" class="inner group" role="main">
 
