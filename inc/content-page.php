@@ -18,7 +18,7 @@ global $isRoot;
 	$menuName = $section->post_name;
 	$sideMenu = wp_get_nav_menu_items($menuName);
 
-	$hideSideNav = get_field("hide_side_nav");
+	$hideSideNav = get_field("hide_left_nav");
 
 	if ($sideMenu && $hideSideNav == false || is_child_page() && $hideSideNav == false):
 
