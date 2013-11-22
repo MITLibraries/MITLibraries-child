@@ -52,7 +52,7 @@ global $isRoot;
 	
 	<div class="entry-content">
 		<?php $title = get_the_title(); if ($title != ""): ?>
-			<?php if(!is_page('home')) { echo "<h2>".$title."</h2>"; } ?>
+			<?php if(!is_front_page()) { echo "<h2>".$title."</h2>"; } ?>
 		<?php endif; ?>
 
 		<?php the_content(); ?>
@@ -60,7 +60,7 @@ global $isRoot;
 		<?php
 			$blog_id = get_current_blog_id();
 
-			if (is_page('home') && $blog_id == 22):
+			if (is_front_page() && $blog_id == 22):
 				$col1 = get_field('column_1');
 				$col2 = get_field('column_2');
 			endif;

@@ -24,7 +24,7 @@
 <?php
 
 	$defaultHeader = get_header_image();
-	if ($defaultHeader != '' && is_page('home')):
+	if ($defaultHeader != '' && is_front_page()):
 
 ?>
 	<div class="headerImage">
