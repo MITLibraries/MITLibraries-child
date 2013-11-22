@@ -1,34 +1,53 @@
 <div class="siteTitle group <?php if(is_front_page()) { echo 'hasImage'; } ?>">
 
-	<h1><?php bloginfo(); ?></h1>
+	<div class="box1">
 
-	<?php
+		<h1><?php bloginfo(); ?></h1>
 
-		global $blog_id;
-		$current_blog_id = $blog_id;
+		<?php
 
-		$siteURL = get_bloginfo('url');
+			global $blog_id;
+			$current_blog_id = $blog_id;
 
-		$defaultHeader = get_header_image();
-		if ($defaultHeader != '' && is_front_page()):
+			$siteURL = get_bloginfo('url');
+			
+			if($blog_id == 22 && is_front_page()) {
+				switch_to_blog(1);
+				get_template_part('inc/locationInfo');
+				switch_to_blog($current_blog_id);
+			}
 
-	?>
+		?>
 
-		<div class="headerImage">
-			<img src="<?php header_image(); ?>" alt="" />
-		</div>
+	</div>
+
+	<div class="box2">
+		<?php
+
+			$defaultHeader = get_header_image();
+			if ($defaultHeader != '' && is_front_page()):
+
+		?>
+
+			<div class="headerImage">
+				<img src="<?php header_image(); ?>" alt="" />
+			</div>
 	
-	<?php 
+		<?php endif; ?>
 
-		endif;
+	</div>
 
-		// If doc. services, switch out to main site to get location ids
-		if ($blog_id == 22 && is_front_page()):
-			get_template_part('inc/locationHours');
-		endif;
+	<div class="box3">
 
-	?>
+		<?php 
+			// If doc. services, switch out to main site to get location ids
+			if ($blog_id == 22 && is_front_page()):
+				get_template_part('inc/locationHours');
+			endif;
 
+		?>
+		
+	</div>
 </div>
 			
 <?php get_template_part("inc/nav", "child"); ?>

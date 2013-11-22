@@ -51,8 +51,18 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	width: 100%;
 }
 
-.siteTitle.hasImage {
-	min-height: 232px;
+.childTheme .siteTitle.hasImage [class*="box"] {
+	float: left;
+	position: relative;
+}
+
+.childTheme .siteTitle.hasImage .box1,
+.childTheme .siteTitle.hasImage .box3 {
+	width: 25%;
+}
+
+.childTheme .siteTitle.hasImage .box2 {
+	width: 50%;
 }
 
 .siteTitle h1 {
@@ -72,18 +82,11 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	color: #d2ccc4;
 	display: block;
 	float: right;
+	margin-top: 0.5em;
 	top: auto;
 	position: relative;
 	right: auto;
 	width: auto;
-}
-
-.siteTitle.hasImage .todayHours {
-	margin-top: -11.5rem;
-}
-
-.siteTitle.hasImage .locationInfo {
-	margin-top: -10.5rem;
 }
 
 .childTheme .todayHours span {
@@ -112,18 +115,6 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	display: block;
 	font-size: 0.5em;
 	line-height: 1.5;
-}
-
-/*.headerImage img.wp-post-image {
-	border-radius: 0;
-	box-shadow: none;
-	height: auto;
-	width: 960px;
-}*/
-
-.headerImage {
-	margin: -56px auto 0;
-	width: 50%;
 }
 
 .headerImage img {
