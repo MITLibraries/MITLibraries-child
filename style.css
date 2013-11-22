@@ -46,7 +46,8 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	color: #f7f7f7;
 	font-size: 1.75rem;
 	line-height: 1;
-	padding: 0.7em 0.75em 0.7em 0.75em;
+	/*padding: 0.7em 0.75em 0.7em 0.75em;*/
+	padding: 0.3334em 0.75em 0.3334em 0.75em;
 	position: relative;
 	width: 100%;
 }
@@ -58,6 +59,7 @@ MIT Libraries theme built for the MIT Libraries child websites.
 
 .childTheme .siteTitle.hasImage .box1,
 .childTheme .siteTitle.hasImage .box3 {
+	margin-top: 0.75rem;
 	width: 25%;
 }
 
@@ -67,6 +69,11 @@ MIT Libraries theme built for the MIT Libraries child websites.
 
 .siteTitle h1 {
 	display: inline-block;
+}
+
+.siteTitle.hasImage h1 {
+	line-height: 1.15;
+	margin-bottom: 0.5rem;
 }
 
 .category .categoryName,
@@ -118,16 +125,18 @@ MIT Libraries theme built for the MIT Libraries child websites.
 }
 
 .headerImage img {
-	border-right: 6px solid #333;
-	border-left: 6px solid #333;
+	/*border-right: 6px solid #333;*/
+	/*border-left: 6px solid #333;*/
 	display: block;
 	height: auto;
+	margin: 0 auto;
 	position: relative;
 	vertical-align: middle;
+	width: 446px;
 	z-index: 2;
 }
 
-.headerImage:before,
+/*.headerImage:before,
 .headerImage:after {
 	background: #333;
 	content: '';
@@ -146,7 +155,7 @@ MIT Libraries theme built for the MIT Libraries child websites.
 .headerImage:after {
 	box-shadow: 0 -8px 6px -6px #000;
 	margin-bottom: -1rem;
-}
+}*/
 
 /* ---- Child Nav ---- */
 
@@ -207,6 +216,8 @@ MIT Libraries theme built for the MIT Libraries child websites.
 
 .leftNav {
 	float: left;
+	font-size: 12px;
+	font-size: 0.75rem;
 	position: relative;
 	width: 14.58%;
 }
@@ -217,9 +228,9 @@ MIT Libraries theme built for the MIT Libraries child websites.
 }
 
 .leftNav ul li:before {
-	border-top: 5px solid transparent;
-	border-left: 5px solid #424286;
-	border-bottom: 5px solid transparent;
+	border-top: 4px solid transparent;
+	border-left: 4px solid #424286;
+	border-bottom: 4px solid transparent;
 	content: '';
 	display: inline-block;
 	left: 0;
@@ -247,7 +258,9 @@ MIT Libraries theme built for the MIT Libraries child websites.
 }
 
 .mainContent.hasLeftNav {
+	border-left: 1px solid #eceaea;
 	float: left;
+	padding-left: 1em;
 	width: 61.47%;
 }
 
@@ -264,6 +277,16 @@ MIT Libraries theme built for the MIT Libraries child websites.
 }
 
 .childTheme .entry-content h2 {
+	line-height: 1.15;
+	margin-top: 0;
+}
+
+.childTheme .entry-content h3 {
+	margin: 1em 0;
+}
+
+.childTheme .entry-content h2:first-of-type,
+.childTheme .entry-content h3:first-of-type {
 	margin-top: 0;
 }
 
@@ -296,6 +319,7 @@ MIT Libraries theme built for the MIT Libraries child websites.
 .entry-content ol {
 	margin-left: 1em;
 }
+
 
 .post:not(:last-of-type):after {
 	background: #ccc;
@@ -384,17 +408,27 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	border-bottom: none;
 }
 
-.childTheme .widget ul li,
 .childTheme .widget span {
 	display: block;
-	font-size: 14px;
-	line-height: 18px;
-	list-style-image: none;
-	margin-bottom: 5px;
-	margin-left: 0;
 }
 
-.childTheme .widget ul li:before,
+.childTheme .widget ul li,
+.childTheme .widget span {
+	font-size: 14px;
+	line-height: 18px;
+	margin-bottom: 5px;
+}
+
+.childTheme .entry-content ul {
+	margin: 0;
+}
+.childTheme .widget ul li {
+	margin-left: 1.25em;
+	/*list-style-image: none;*/
+	/*margin-left: 0;*/
+}
+
+/*.childTheme .widget ul li:before,
 .childTheme ul.arrows li:before,
 .childTheme .widget span:before {
 	color: #424286;
@@ -407,7 +441,7 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	margin-right: 0.5em;
 	text-decoration: none;
 	vertical-align: middle;
-}
+}*/
 
 footer #footerHeader,
 footer .footerHeader {
@@ -429,7 +463,20 @@ footer .footerHeader {
 /* ---- Responsive Styles ---- */
 
 @media screen and (max-width:480px) {
+
+	.childTheme .siteTitle.hasImage .box1 {
+		width: 100%;
+	}
+
+	.childTheme .siteTitle.hasImage .box2,
+	.childTheme .siteTitle.hasImage .box3 {
+		width: 100%;
+	}
 	
+	.childTheme .siteTitle.hasImage .box3 {
+		margin-top: -3em;
+	}
+
 	.childTheme .siteTitle h1 {
 		border-bottom: 1px solid #ccc;
 		margin-bottom: 0.25em;
