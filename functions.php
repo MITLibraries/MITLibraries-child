@@ -56,4 +56,17 @@ register_nav_menu( 'child', __( 'Child Site Menu', 'twentytwelve' ) );
 
 if (function_exists('add_theme_support')) { add_theme_support('post-thumbnails'); }
 
-add_image_size('headerImage', 960, 200, true);
+add_image_size('headerImage', 960, 200, true);add_image_size('headerImage', 480, 200, true);
+
+if (!function_exists('my_mce_buttons_2')):
+  function my_mce_buttons_2($buttons) { 
+  /**
+   * Add in a core button that's disabled by default
+   */
+  $buttons[] = 'hr';
+
+  return $buttons;
+}
+
+  add_filter('mce_buttons_2', 'my_mce_buttons_2');
+endif;
