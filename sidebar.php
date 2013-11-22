@@ -8,9 +8,20 @@
  */
 ?>
 	
-	<?php if ( is_active_sidebar( 'sidebar-1' ) ) { ?>
-		<div id="secondary" class="widget-area sidebar" role="complementary">
-			<?php dynamic_sidebar( 'sidebar-1' ); ?>
+<?php if (is_active_sidebar('sidebar-1')): ?>
+
+	<div id="secondary" class="widget-area sidebar" role="complementary">
+
+		<?php 
+
+			dynamic_sidebar( 'sidebar-1' );
+
+			// Show Login/Logout for News blog
+			$blogName = get_bloginfo('name');
+			if($blogName == 'MIT Libraries News'):
+
+		?>
+
 			<aside class="widget admin">
 				<h2>Admin</h2>
 				<?php if (is_user_logged_in(1)) {
@@ -20,6 +31,9 @@
 					}
 				?>
 			</aside>
-		</div><!-- #secondary -->
-	<?php } ?>
 
+		<?php endif; ?>
+
+	</div><!-- #secondary -->
+
+<?php endif; ?>
