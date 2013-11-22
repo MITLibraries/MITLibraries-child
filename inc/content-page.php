@@ -18,9 +18,11 @@ global $isRoot;
 	$menuName = $section->post_name;
 	$sideMenu = wp_get_nav_menu_items($menuName);
 
-	$hideSideNav = get_field("hide_left_nav");
+	$showSideNav = get_field("show_left_nav");
 
-	if ($sideMenu && $hideSideNav == false || is_child_page() && $hideSideNav == false):
+	$sideNavExists = $sideMenu && $showSideNav == true || is_child_page() && $showSideNav == true;
+
+	if ($sideNavExists):
 
 ?>
 
@@ -48,7 +50,7 @@ global $isRoot;
 
 <?php endif; ?>
 
-<div class="mainContent group <?php if($sideMenu && $hideSideNav == false || is_child_page() && $hideSideNav == false) { echo 'hasLeftNav'; } ?>">
+<div class="mainContent group <?php if($sideNavExists) { echo 'hasLeftNav'; } ?>">
 	
 	<div class="entry-content">
 		<?php $title = get_the_title(); if ($title != ""): ?>
