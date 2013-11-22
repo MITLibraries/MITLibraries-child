@@ -51,6 +51,10 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	width: 100%;
 }
 
+.siteTitle.hasImage {
+	min-height: 232px;
+}
+
 .siteTitle h1 {
 	display: inline-block;
 }
@@ -72,6 +76,14 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	position: relative;
 	right: auto;
 	width: auto;
+}
+
+.siteTitle.hasImage .todayHours {
+	margin-top: -11.5rem;
+}
+
+.siteTitle.hasImage .locationInfo {
+	margin-top: -10.5rem;
 }
 
 .childTheme .todayHours span {
@@ -102,15 +114,47 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	line-height: 1.5;
 }
 
-.headerImage img.wp-post-image {
+/*.headerImage img.wp-post-image {
 	border-radius: 0;
 	box-shadow: none;
 	height: auto;
 	width: 960px;
+}*/
+
+.headerImage {
+	margin: -56px auto 0;
+	width: 50%;
 }
 
 .headerImage img {
+	border-right: 6px solid #333;
+	border-left: 6px solid #333;
+	display: block;
+	height: auto;
+	position: relative;
 	vertical-align: middle;
+	z-index: 2;
+}
+
+.headerImage:before,
+.headerImage:after {
+	background: #333;
+	content: '';
+	display: block;
+	height: 1rem;
+	position: relative;
+	width: 100%;
+	z-index: 3;
+}
+
+.headerImage:before {
+	box-shadow: 0 8px 6px -6px #000;
+	margin-top: -1rem;
+}
+
+.headerImage:after {
+	box-shadow: 0 -8px 6px -6px #000;
+	margin-bottom: -1rem;
 }
 
 /* ---- Child Nav ---- */
