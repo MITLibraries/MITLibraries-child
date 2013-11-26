@@ -360,11 +360,15 @@ MIT Libraries theme built for the MIT Libraries child websites.
 
 .childTheme.page-home .flexItem:first-of-type {
 	border-right: 1px solid #ccc;
-	padding-right: 1em;
+	padding-right: 1.5em;
 }
 
 .childTheme.page-home .flexItem:last-of-type {
-	padding-left: 1em;
+	padding-left: 1.5em;
+}
+
+html:not(.flexbox) .childTheme.page-home .flexItem {
+	width: 50%;
 }
 
 /* ---- Sidebar ---- */
