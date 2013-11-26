@@ -1,8 +1,12 @@
 <div class="siteTitle group <?php if(is_front_page()) { echo 'hasImage'; } ?>">
 
 	<div class="box1">
-
-		<h1><?php bloginfo(); ?></h1>
+		
+		<?php if(is_front_page()): ?>
+			<h1><?php bloginfo(); ?></h1>
+		<?php else: ?>
+			<h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+		<?php endif; ?>
 
 		<?php
 
