@@ -246,6 +246,10 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	margin-top: 2em;
 }
 
+.childTheme #content.allContent {
+	line-height: 1.5;
+}
+
 .hasSidebar .mainContent {
 	float: left;
   padding-right: 2em;
@@ -269,25 +273,34 @@ MIT Libraries theme built for the MIT Libraries child websites.
 }
 
 .mainContent h3 {
-	line-height: 1.5em;
+	line-height: 1.5;
 }
+
+/* Post & Entry Content Styles */
 
 .childTheme #mainContent .entry-content {
 	padding: 0 20px 20px 0;
 }
 
 .childTheme .entry-content h2 {
+	font-size: 18px;
+	font-size: 1.15rem;
 	line-height: 1.15;
-	margin-top: 0;
 }
 
 .childTheme .entry-content h3 {
+	font-size: 16px;
+	font-size: 1rem;
 	margin: 1em 0;
 }
 
 .childTheme .entry-content h2:first-of-type,
 .childTheme .entry-content h3:first-of-type {
 	margin-top: 0;
+}
+
+.entry-content h2 ~ h3 {
+	margin-top: 0.5rem;
 }
 
 .mainContent .post h2,
