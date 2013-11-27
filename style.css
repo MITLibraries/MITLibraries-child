@@ -381,7 +381,8 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	padding-left: 1.5em;
 }
 
-html:not(.flexbox) .childTheme.page-home .flexItem {
+.no-js .childTheme.page-home .flexItem,
+.no-flexbox .childTheme.page-home .flexItem {
 	width: 50%;
 }
 
@@ -540,8 +541,8 @@ footer .footerHeader {
 
 	.allContent {
 		margin-top: 1em;
-		margin-right: 0;
-		margin-left: 0;
+		margin-right: 1em;
+		margin-left: 1em;
 	}
 
   .category .categoryName,
@@ -560,7 +561,16 @@ footer .footerHeader {
   	border: none;
 		padding: 0;
   }
-	
+
+	.no-js .childTheme.page-home .flexContainer,
+	.no-js .childTheme.page-home .flexItem,
+	.no-flexbox .childTheme.page-home .flexContainer,
+	.no-flexbox .childTheme.page-home .flexItem {
+		display: block;
+		float: none;
+		width: 100%;
+	}
+
 	.sidebar {
 		background: none;
 		width: 100%;
