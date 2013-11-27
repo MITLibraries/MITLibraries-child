@@ -28,6 +28,11 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	list-style-type: decimal;
 }
 
+.childTheme hr {
+	border: none;
+	margin: 2em 1em;
+}
+
 /* ---- Begin Child Page Content Styles ---- */ 
 
 .betterBreadcrumbs {
@@ -286,25 +291,30 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	padding: 0 20px 20px 0;
 }
 
-.childTheme .entry-content h2 {
+.entry-content h2 {
 	font-size: 18px;
 	font-size: 1.15rem;
 	line-height: 1.15;
 }
 
-.childTheme .entry-content h3 {
+.entry-content h3 {
 	font-size: 16px;
 	font-size: 1rem;
 	margin: 1em 0;
 }
 
-.childTheme .entry-content h2:first-of-type,
-.childTheme .entry-content h3:first-of-type {
+.entry-content h2:first-of-type,
+.entry-content h3:first-of-type {
 	margin-top: 0;
 }
 
 .entry-content h2 ~ h3 {
 	margin-top: 0.5rem;
+}
+
+.entry-content hr ~ h2,
+.entry-content hr ~ h3 {
+	margin: 0;
 }
 
 .mainContent .post h2,
@@ -544,6 +554,11 @@ footer .footerHeader {
   .hasSidebar .mainContent  {
   	padding: 0;
     width: 100%;
+  }
+
+  .childTheme.page-home .flexItem:nth-of-type(n) {
+  	border: none;
+		padding: 0;
   }
 	
 	.sidebar {
