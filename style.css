@@ -253,6 +253,7 @@ MIT Libraries theme built for the MIT Libraries child websites.
 
 .allContent {
 	margin-top: 2em;
+	margin-left: 20px;
 }
 
 .childTheme #content.allContent {
@@ -306,6 +307,11 @@ MIT Libraries theme built for the MIT Libraries child websites.
 .entry-content h2:first-of-type,
 .entry-content h3:first-of-type {
 	margin-top: 0;
+}
+
+/* Make this simper when the !important 10px bottom margin on all p tags is removed */
+.entry-content .intro ~ h2:first-of-type {
+	margin-top: 1.714285714rem 0;
 }
 
 .entry-content h2 ~ h3 {
@@ -445,7 +451,8 @@ MIT Libraries theme built for the MIT Libraries child websites.
 }
 
 .childTheme .widget ul li,
-.childTheme .widget span {
+.childTheme .widget span,
+.childTheme .widget p {
 	font-size: 14px;
 	line-height: 18px;
 	margin-bottom: 5px;
