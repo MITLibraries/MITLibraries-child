@@ -312,7 +312,7 @@ MIT Libraries theme built for the MIT Libraries child websites.
 
 /* Make this simper when the !important 10px bottom margin on all p tags is removed */
 .entry-content p:first-of-type ~ h2:first-of-type {
-	margin-top: 1.714285714rem 0;
+	margin-top: 1.714285714rem;
 }
 
 .entry-content h2 ~ h3 {
