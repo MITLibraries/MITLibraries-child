@@ -293,9 +293,10 @@ MIT Libraries theme built for the MIT Libraries child websites.
 }
 
 .entry-content h2 {
-	font-size: 18px;
-	font-size: 1.15rem;
-	line-height: 1.15;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	font-size: 1.5rem;
+	line-height: 1.5;
 }
 
 .entry-content h3 {
