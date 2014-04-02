@@ -1,7 +1,7 @@
 <?php
 	$siteName = get_bloginfo('name');
 	// if ($siteName != 'MIT Libraries News') {
-	$noChildNav = array("MIT Libraries News", "Child Theme");
+	$noChildNav = array("MIT Libraries News", "Document Services");
 	if (!in_array($siteName, $noChildNav)) {
 ?>
 	<nav id="child-navigation" class="main-navigation blogNav childNav" role="navigation">
