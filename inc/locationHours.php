@@ -4,7 +4,7 @@
 	$current_blog_id = $blog_id;
 
   // if the Doc. Services site
-	if ($blog_id == 22) {
+	if ($blog_id == 24) {
 		$locationId = 1028;
 	}
 	

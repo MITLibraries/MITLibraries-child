@@ -15,7 +15,7 @@
 
 			$siteURL = get_bloginfo('url');
 			
-			if($blog_id == 22 && is_front_page()) {
+			if($blog_id == 24 && is_front_page()) {
 				switch_to_blog(1);
 				get_template_part('inc/locationInfo');
 				switch_to_blog($current_blog_id);
@@ -45,7 +45,7 @@
 
 		<?php 
 			// If doc. services, switch out to main site to get location ids
-			if ($blog_id == 22 && is_front_page()):
+			if ($blog_id == 24 && is_front_page()):
 				get_template_part('inc/locationHours');
 			endif;
 
