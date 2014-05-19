@@ -4,16 +4,23 @@
 	$noChildNav = array("MIT Libraries News", "Document Services");
 	if (!in_array($siteName, $noChildNav)) {
 ?>
-	<nav id="child-navigation" class="main-navigation blogNav nav-secondary" role="navigation">
-		<h3 class="menu-toggle"><?php _e( 'Child Menu', 'twentytwelve' ); ?></h3>
+	<h3 id="menu--toggle" class="menu--toggle">View Menu</h3>
+	<nav id="child-navigation" class="nav-secondary" role="navigation">
 		<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'child',
-					'container' => 'nav',
-					'container_class' => 'nav-main',
-				)
-			);
+			if(has_nav_menu()){
+				wp_nav_menu(
+					array(
+						'container' => false
+					)
+				);
+			}
+			else {
+				wp_page_menu(
+					array(
+						'depth' => 2
+					)
+				);
+			}
 		?>
 	</nav><!-- #site-navigation -->
 <?php } ?>
