@@ -166,61 +166,6 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	margin-bottom: -1rem;
 }*/
 
-/* ---- Child Nav ---- */
-
-.childNav {
-	margin: 0px 20px 0px;
-}
-
-.childNav .menu-main-container {
-	padding-left: 20px;
-}
-
-.childNav li a {
-	line-height: 38px;
-}
-
-.childNav li a,
-.childNav li a:visited,
-.childNav li a:hover,
-.childNav li a:focus {
-	color: #424286;
-}
-
-.childNav .children a {
-	line-height: 20px;
-}
-
-.childNav .current_page_item a {
-	font-weight: bold;
-}
-
-#child-navigation .children {
-	box-shadow: rgb(153, 153, 153) 3px 3px 5px;
-}
-
-#child-navigation .children li {
-	margin-right: 0px;
-}
-
-#child-navigation .nav-menu li:hover>a {
-	background:#eceaea;
-}
-
-#child-navigation .nav-menu li:hover>a {
-	text-decoration: underline;
-}
-
-#child-navigation .sub-menu li, #child-navigation .sub-menu li a {
-	font-size: 12px;
-	line-height: 18px;
-}
-
-#child-navigation .nav-menu li>a {
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
 /* ---- Child Page Nav ---- */
 
 .leftNav {
