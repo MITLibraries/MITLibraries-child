@@ -52,7 +52,13 @@ function customHeader() {
 
 // add_theme_support( 'custom-header' );
 
-register_nav_menu( 'child', __( 'Child Site Menu', 'twentytwelve' ) );
+// Register Child Nav
+if(!function_exists('register_child_nav')) {
+  function register_child_nav() {
+    register_nav_menu('child-nav', 'Child Nav');
+  }
+  add_action( 'init', 'register_child_nav' );
+}
 
 if (function_exists('add_theme_support')) { add_theme_support('post-thumbnails'); }
 

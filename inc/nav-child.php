@@ -7,10 +7,12 @@
 	<h3 id="menu--toggle" class="menu--toggle">View Menu</h3>
 	<nav id="child-navigation" class="nav-secondary" role="navigation">
 		<?php
-			if(has_nav_menu()){
+			if(has_nav_menu('child-nav')){
 				wp_nav_menu(
 					array(
-						'container' => false
+						'theme_location' => 'child-nav',
+						'menu' => 'Sub Nav',
+						'container_class' => 'menu'
 					)
 				);
 			}
