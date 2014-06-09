@@ -346,47 +346,6 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	width: 23.91%;
 }
 
-.childTheme .sidebar {
-	margin-top: 0;
-}
-
-.childTheme .textwidget ul {
-	margin: 0;
-}
-
-.widget-area>ul>li {
-	padding: 20px 10px 20px 20px;
-}
-
-.widget-area>ul>li {
-	border-bottom: 5px solid #d2ccc4;
-}
-
-.childTheme .sidebar .widget {
-	border-bottom: 5px solid #d2ccc4;
-	margin: 0;
-	padding: 1.5em;
-}
-
-.childTheme .sidebar a {
-	color: #424286;
-}
-
-.childTheme .widget-area .textwidget {
-	font-size: 14px;
-	font-weight: normal;
-}
-
-.widget-area .xoxo {
-	font-size: 14px;
-	color: #666;
-	font-weight: bold;
-}
-
-.childTheme .sidebar .widget:last-of-type {
-	border-bottom: none;
-}
-
 .childTheme .widget span {
 	display: block;
 }
@@ -402,26 +361,6 @@ MIT Libraries theme built for the MIT Libraries child websites.
 .childTheme .entry-content ul {
 	margin: 0;
 }
-.childTheme .widget ul li {
-	margin-left: 1.25em;
-	/*list-style-image: none;*/
-	/*margin-left: 0;*/
-}
-
-/*.childTheme .widget ul li:before,
-.childTheme ul.arrows li:before,
-.childTheme .widget span:before {
-	color: #424286;
-	content: '\e600';
-	display: inline-block;
-	font-family: 'mitlibraries-icons';
-	font-size: 0.75em;
-	font-style: normal;
-	font-weight: normal;
-	margin-right: 0.5em;
-	text-decoration: none;
-	vertical-align: middle;
-}*/
 
 footer #footerHeader,
 footer .footerHeader {
@@ -517,20 +456,6 @@ footer .footerHeader {
 		display: block;
 		float: none;
 		width: 100%;
-	}
-
-	.sidebar {
-		background: none;
-		width: 100%;
-	}
-
-	.childTheme .sidebar .widget {
-		background: #ede8e2;
-		border: none;
-	}
-
-	.childTheme .sidebar .widget:not(:last-of-type) {
-		margin-bottom: 0.5em;
 	}
 
 }
