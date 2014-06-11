@@ -389,25 +389,31 @@ footer .footerHeader {
 }
 
 .sidebar .button.disaster-response {
-	background: #f58632; /* $orange-dark */
+	background: none;
 	border-bottom: none;
 	margin-bottom: 16px;
 	margin-bottom: 1rem;
-	padding: 16px;
-	padding: 1rem;
+	padding: 0;
 }
 
 .disaster-response {
-	border-radius: 3px;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	font-weight: ;
 	text-align: center;
-
 }
 
-.disaster-response a,
+.disaster-response a {
+	background: #f58632; /* $orange-dark */
+	border-radius: 3px;
+	color: white;
+	display: block;
+	padding: 16px;
+	padding: 1rem;
+	width: 100%;
+}
+
 .disaster-response a:hover {
 	color: white;
 }
