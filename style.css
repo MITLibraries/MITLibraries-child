@@ -212,6 +212,10 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	width: 76.05%;
 }
 
+.ie8 .hasSidebar .mainContent {
+	width: 76%;
+}
+
 .mainContent {
 	width: 100%;
 }
@@ -346,6 +350,10 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	width: 23.91%;
 }
 
+.ie8 .sidebar {
+	width: 23%;
+}
+
 .childTheme .widget span {
 	display: block;
 }
@@ -380,15 +388,18 @@ footer .footerHeader {
 }
 
 .sidebar .button.disaster-response {
-	background: hsla(26, 90.6977%, 57.8431%, 1.0000); /* $orange-dark */
+	background: #f58632; /* $orange-dark */
 	border-bottom: none;
+	margin-bottom: 16px;
 	margin-bottom: 1rem;
+	padding: 16px;
 	padding: 1rem;
 }
 
 .disaster-response {
 	border-radius: 3px;
 	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
 	font-size: 1rem;
 	font-weight: ;
 	text-align: center;
@@ -463,6 +474,10 @@ footer .footerHeader {
   .hasSidebar .mainContent  {
   	padding: 0;
     width: 100%;
+  }
+
+	.sidebar {
+    width: 100%
   }
 
   .childTheme.page-home .flexItem:nth-of-type(n) {
