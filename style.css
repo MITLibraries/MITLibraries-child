@@ -379,6 +379,26 @@ footer .footerHeader {
 	margin: 0;
 }
 
+.sidebar .disaster-response {
+	background: hsla(26, 90.6977%, 57.8431%, 1.0000); /* $orange-dark */
+	border-bottom: none;
+	margin-bottom: 1rem;
+	padding: 1rem;
+}
+
+.disaster-response {
+	border-radius: 3px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+	font-weight: ;
+	text-align: center;
+
+}
+
+.disaster-response a {
+	color: white;
+}
+
 /* ---- Responsive Styles ---- */
 
 @media screen and (max-width:480px) {
