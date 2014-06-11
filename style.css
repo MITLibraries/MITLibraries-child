@@ -49,6 +49,7 @@ MIT Libraries theme built for the MIT Libraries child websites.
 .siteTitle {
 	background: #333;
 	color: #f7f7f7;
+	font-size: 28px;
 	font-size: 1.75rem;
 	line-height: 1;
 	/*padding: 0.7em 0.75em 0.7em 0.75em;*/
@@ -73,7 +74,7 @@ MIT Libraries theme built for the MIT Libraries child websites.
 }
 
 .siteTitle h1 {
-	display: inline-block;
+	display: block;
 }
 
 .siteTitle h1 a {
