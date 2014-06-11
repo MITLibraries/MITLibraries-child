@@ -379,7 +379,7 @@ footer .footerHeader {
 	margin: 0;
 }
 
-.sidebar .disaster-response {
+.sidebar .button.disaster-response {
 	background: hsla(26, 90.6977%, 57.8431%, 1.0000); /* $orange-dark */
 	border-bottom: none;
 	margin-bottom: 1rem;
@@ -395,7 +395,8 @@ footer .footerHeader {
 
 }
 
-.disaster-response a {
+.disaster-response a,
+.disaster-response a:hover {
 	color: white;
 }
 
