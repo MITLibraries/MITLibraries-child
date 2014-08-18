@@ -1,4 +1,4 @@
-<div class="siteTitle group <?php if(is_front_page()) { echo 'hasImage'; } ?>">
+<div class="title-page flex-container group <?php if(is_front_page()) { echo 'hasImage'; } ?>">
 
 	<div class="box1">
 		
