@@ -16,7 +16,7 @@
 
 	<div class="todayHours">
 		<span>Today's Hours:</span>
-		<span><?php echo $hoursToday; ?></span>
+		<span data-location-hours="Document Services"></span>
 		<span><a href="/hours">See all hours</a></span>
 	</div>
 	
