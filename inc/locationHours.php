@@ -1,5 +1,5 @@
 <?php
-
+/*
 	global $blog_id;
 	$current_blog_id = $blog_id;
 
@@ -12,6 +12,7 @@
 
 	$hasHours = hasHours($locationId, date("Y-m-d"));
 	$hoursToday = getHoursToday($locationId);
+	*/
 ?>
 
 	<div class="todayHours">
@@ -20,4 +21,4 @@
 		<span><a href="/hours">See all hours</a></span>
 	</div>
 	
-<?php switch_to_blog($current_blog_id); ?>
+<?php // switch_to_blog($current_blog_id); ?>
