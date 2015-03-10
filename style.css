@@ -400,6 +400,27 @@ footer .footerHeader {
 	color: white;
 }
 
+.sidebar .widget.give {
+	background-color:white;
+	border-bottom: none;
+}
+
+a.giveNow {
+	background: #f58632;
+	border-radius: 3px;
+	color: white;
+	display: block;
+	padding: 16px;
+	padding: 1rem;
+	width: 100%;
+	text-align: center;
+}
+
+a.giveNow:hover {
+	color:white;
+}
+
+
 /* ---- Responsive Styles ---- */
 
 @media screen and (max-width:480px) {
