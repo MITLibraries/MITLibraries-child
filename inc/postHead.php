@@ -3,9 +3,9 @@
 	<div class="box1">
 		
 		<?php if(is_front_page()): ?>
-			<h1><?php bloginfo(); ?></h1>
+			<div class="child-page-title"><?php bloginfo(); ?></div>
 		<?php else: ?>
-			<h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+			<div class="child-page-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></div>
 		<?php endif; ?>
 
 		<?php
