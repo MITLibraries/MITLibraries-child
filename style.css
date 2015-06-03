@@ -338,7 +338,7 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	float: left;
 	width: 220px;
 	width: 23.91%;
-}
+}h2
 
 .ie8 .sidebar {
 	width: 23%;
@@ -352,14 +352,14 @@ MIT Libraries theme built for the MIT Libraries child websites.
 .childTheme .widget span,
 .childTheme .widget p {
 	font-size: 14px;
-	line-height: 18px;
+	line-height: 1.4;
 	margin-bottom: 5px;
 }
 
-.childTheme .entry-content ul {
+/*.childTheme .entry-content ul {
 	margin: 0;
 }
-
+*/
 footer #footerHeader,
 footer .footerHeader {
 	height: 92px;
