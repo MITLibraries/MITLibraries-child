@@ -351,7 +351,7 @@ MIT Libraries theme built for the MIT Libraries child websites.
 .childTheme .widget ul li,
 .childTheme .widget span,
 .childTheme .widget p {
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 1.4;
 	margin-bottom: 5px;
 }
