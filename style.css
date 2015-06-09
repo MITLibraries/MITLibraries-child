@@ -64,19 +64,18 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	width: 100%;
 }
 
-.childTheme .siteTitle.hasImage [class*="box"] {
-	float: left;
-	position: relative;
+.childTheme .siteTitle.hasImage .box1 {
+	margin-top: 0.75rem;
+	width: 50%;
 }
 
-.childTheme .siteTitle.hasImage .box1,
-.childTheme .siteTitle.hasImage .box3 {
+.childTheme .title-page.hasImage .box1 {
 	margin-top: 0.75rem;
-	width: 25%;
+	width: 50%;
 }
 
 .childTheme .title-page.hasImage .box2 {
-	margin: 0 1em;
+	margin-left: 1em;
 	width: 50%;
 }
 
