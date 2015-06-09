@@ -426,9 +426,11 @@ font-weight: 400;
 }
 .entry-content .active.expandable h3 {
 color: #000;
+font-weight: 400;
 }
 .entry-content .expandable h3 a {
 color: #338bc5!important;
+font-weight: 400;
 }
 
 .entry-content .expandable h3:before {
