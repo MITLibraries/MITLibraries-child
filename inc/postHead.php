@@ -22,6 +22,14 @@
 			}
 
 		?>
+		
+		<?php 
+			// If doc. services, switch out to main site to get location ids
+			if ($siteName == 'Document Services' && is_front_page()):
+				get_template_part('inc/locationHours');
+			endif;
+
+		?>
 
 	</div>
 
