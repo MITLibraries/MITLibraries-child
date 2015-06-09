@@ -478,7 +478,7 @@ a.giveNow:hover {
 	.childTheme .siteTitle.hasImage .box3 {
 		width: 100%;
 	}
-	
+
 	.childTheme .siteTitle.hasImage .box3 {
 		margin-top: -3em;
 	}
@@ -486,6 +486,10 @@ a.giveNow:hover {
 	.childTheme .siteTitle h1 {
 		border-bottom: 1px solid #ccc;
 		margin-bottom: 0.25em;
+	}
+
+	.childTheme .title-page.hasImage .box1 {
+		width: 100%;
 	}
 
 	.headerImage {
@@ -502,7 +506,7 @@ a.giveNow:hover {
 	.childTheme .siteTitle .locationInfo {
 		float: left;
 	}
-	
+
 	.childTheme .siteTitle .todayHours,
 	.childTheme .locationInfo span {
 		color: #444;
