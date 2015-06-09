@@ -151,8 +151,9 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	margin: 0 auto;
 	position: relative;
 	vertical-align: middle;
-	width: 446px;
+	width: auto;
 	z-index: 2;
+	float: right;
 }
 
 /* ---- Child Page Nav ---- */
