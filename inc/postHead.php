@@ -3,9 +3,9 @@
 	<div class="box1">
 		
 		<?php if(is_front_page()): ?>
-			<h1><?php bloginfo(); ?></h1>
+			<div class="child-page-title"><?php bloginfo(); ?></div>
 		<?php else: ?>
-			<h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+			<div class="child-page-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></div>
 		<?php endif; ?>
 
 		<?php
@@ -20,6 +20,14 @@
 				get_template_part('inc/locationInfo');
 				switch_to_blog($current_blog_id);
 			}
+
+		?>
+		
+		<?php 
+			// If doc. services, switch out to main site to get location ids
+			if ($siteName == 'Document Services' && is_front_page()):
+				get_template_part('inc/locationHours');
+			endif;
 
 		?>
 
@@ -41,17 +49,7 @@
 
 	</div>
 
-	<div class="box3">
 
-		<?php 
-			// If doc. services, switch out to main site to get location ids
-			if ($siteName == 'Document Services' && is_front_page()):
-				get_template_part('inc/locationHours');
-			endif;
-
-		?>
-		
-	</div>
 </div>
 			
 <?php get_template_part("inc/nav", "child"); ?>

@@ -20,15 +20,16 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	box-sizing: border-box;
 }
 
-.childTheme .title-page {
+/*.childTheme .title-page {
 	background: #333;
 	color: #fff;
-}
+}*/
 
 .childTheme ul {
-	list-style-type: disc;
+	list-style-type: none;
 }
 
+.box1 h1 a:hover{text-decoration:none;}
 .childTheme ol {
 	list-style-type: decimal;
 }
@@ -63,20 +64,25 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	width: 100%;
 }
 
-.childTheme .siteTitle.hasImage [class*="box"] {
-	float: left;
-	position: relative;
+.childTheme .siteTitle.hasImage .box1 {
+	margin-top: 0.75rem;
+	width: 50%;
 }
 
-.childTheme .siteTitle.hasImage .box1,
-.childTheme .siteTitle.hasImage .box3 {
+.childTheme .title-page.hasImage .box1 {
 	margin-top: 0.75rem;
-	width: 25%;
+	width: 50%;
 }
 
 .childTheme .title-page.hasImage .box2 {
-	margin: 0 1em;
+	margin-left: 1em;
 	width: 50%;
+}
+
+.child-page-title {
+  	font-size: 34px;
+  	font-size: 2.25rem;
+  	font-weight: 400;
 }
 
 .siteTitle h1 {
@@ -145,8 +151,9 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	margin: 0 auto;
 	position: relative;
 	vertical-align: middle;
-	width: 446px;
+	width: auto;
 	z-index: 2;
+	float: right;
 }
 
 /* ---- Child Page Nav ---- */
@@ -331,7 +338,7 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	float: left;
 	width: 220px;
 	width: 23.91%;
-}
+}h2
 
 .ie8 .sidebar {
 	width: 23%;
@@ -344,15 +351,15 @@ MIT Libraries theme built for the MIT Libraries child websites.
 .childTheme .widget ul li,
 .childTheme .widget span,
 .childTheme .widget p {
-	font-size: 14px;
-	line-height: 18px;
+	font-size: 16px;
+	line-height: 1.4;
 	margin-bottom: 5px;
 }
 
-.childTheme .entry-content ul {
+/*.childTheme .entry-content ul {
 	margin: 0;
 }
-
+*/
 footer #footerHeader,
 footer .footerHeader {
 	height: 92px;
@@ -400,6 +407,44 @@ footer .footerHeader {
 	color: white;
 }
 
+
+
+.entry-content .expandable:nth-of-type(odd) {
+background: #eceaea !important;
+}
+
+
+.entry-content .expandable h3 {
+background: 0 0 !important;
+padding: 1em 1em .75em!important;
+cursor: pointer!important;
+margin: 0!important;
+font-size: 14px!important;
+line-height: 14px!important;
+color: #338BCF;
+font-weight: 400;
+}
+.entry-content .active.expandable h3 {
+color: #000;
+font-weight: 400;
+}
+.entry-content .expandable h3 a {
+color: #338bc5!important;
+font-weight: 400;
+}
+
+.entry-content .expandable h3:before {
+border-top: 5px solid transparent;
+border-left: 5px solid #338bc5;
+border-bottom: 5px solid transparent;
+content: '';
+display: inline-block;
+height: 0;
+width: 0;
+left: 0;
+margin-right: 1em;
+}
+
 .sidebar .widget.give {
 	background-color:white;
 	border-bottom: none;
@@ -433,7 +478,7 @@ a.giveNow:hover {
 	.childTheme .siteTitle.hasImage .box3 {
 		width: 100%;
 	}
-	
+
 	.childTheme .siteTitle.hasImage .box3 {
 		margin-top: -3em;
 	}
@@ -441,6 +486,10 @@ a.giveNow:hover {
 	.childTheme .siteTitle h1 {
 		border-bottom: 1px solid #ccc;
 		margin-bottom: 0.25em;
+	}
+
+	.childTheme .title-page.hasImage .box1 {
+		width: 100%;
 	}
 
 	.headerImage {
@@ -457,7 +506,7 @@ a.giveNow:hover {
 	.childTheme .siteTitle .locationInfo {
 		float: left;
 	}
-	
+
 	.childTheme .siteTitle .todayHours,
 	.childTheme .locationInfo span {
 		color: #444;
