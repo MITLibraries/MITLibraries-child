@@ -5,25 +5,11 @@
 	$countPosts = wp_count_posts('page')->publish;
 	if (!in_array($siteName, $noChildNav) && $countPosts > 1) {
 ?>
-	<h3 id="menu--toggle" class="menu--toggle">View Menu</h3>
-	<nav id="child-navigation" class="nav-secondary" role="navigation">
-		<?php
-			if(has_nav_menu('child-nav')){
-				wp_nav_menu(
-					array(
-						'theme_location' => 'child-nav',
-						'menu' => 'Sub Nav',
-						'container_class' => 'menu'
-					)
-				);
-			}
-			else {
-				wp_page_menu(
-					array(
-						'depth' => 2
-					)
-				);
-			}
-		?>
-	</nav><!-- #site-navigation -->
-<?php } ?>
+<!-- Lower Navigation -->
+<nav id="child-navigation" class="nav-secondary" role="navigation">
+	<h3 class="menu-toggle"><?php _e( 'View Menu', 'twentytwelve' ); ?></h3>
+	<div class="skip-link assistive-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a></div>
+	<?php wp_nav_menu( array( 'theme_location' => 'child-nav', 'menu_class' => 'Sub Nav', 'container_class' => 'menu', 'fallback_cb' => false ) ); ?>
+</nav><!-- #lower-navigation -->
+
+	<?php } ?>
