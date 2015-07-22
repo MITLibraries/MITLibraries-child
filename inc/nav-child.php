@@ -1,3 +1,4 @@
+
 <?php
 	$siteName = get_bloginfo('name');
 	// if ($siteName != 'MIT Libraries News') {
@@ -5,11 +6,51 @@
 	$countPosts = wp_count_posts('page')->publish;
 	if (!in_array($siteName, $noChildNav) && $countPosts > 1) {
 ?>
-<!-- Lower Navigation -->
-<nav id="child-navigation" class="nav-secondary" role="navigation">
-	<h3 class="menu-toggle"><?php _e( 'View Menu', 'twentytwelve' ); ?></h3>
-	<div class="skip-link assistive-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a></div>
-	<?php wp_nav_menu( array( 'theme_location' => 'child-nav', 'menu_class' => 'Sub Nav', 'container_class' => 'menu', 'fallback_cb' => false ) ); ?>
-</nav><!-- #lower-navigation -->
 
-	<?php } ?>
+	
+	<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand mobile-display">
+                <?php _e( 'View Menu' ); ?>
+            </a>
+    </div>
+
+        <?php
+            wp_nav_menu( array(
+                'menu'              => 'Sub Nav',
+                'theme_location'    => 'child-nav',
+                'container'         => 'div',
+                'container_class'   => 'collapse navbar-collapse',
+				'container_id'      => 'bs-example-navbar-collapse-1',
+                'menu_class'        => 'nav navbar-nav nav-second',
+                'fallback_cb'       => 'navwalker::fallback',
+                'walker'            => new navwalker())
+            );
+            
+                       
+
+        ?>
+
+
+    </div>
+</nav>
+<script>
+	$('.dropdown-toggle').click(function() {
+    var location = $(this).attr('href');
+    window.location.href = location;
+    return false;
+});
+</script>
+
+<!-- #site-navigation -->
+
+<?php } ?>
+
