@@ -495,7 +495,18 @@ a.giveNow:hover {
 }
 
 
+
 /* ---- Responsive Styles ---- */
+@media screen and (max-width:720px) {
+	.mobile-display {
+		display: block !important;
+	}
+	
+	.navbar-default .navbar-nav>.dropdown>a .caret {
+		display: none;
+	}
+}
+
 
 @media screen and (max-width:480px) {
 
