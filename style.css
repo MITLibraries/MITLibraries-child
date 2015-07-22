@@ -93,6 +93,11 @@ h1, h2, h3, h4, h5, h6 {
   	font-weight: 400;
 }
 
+.child-page-title a {
+	font-size: 21px;
+	font-size: 1.5rem;
+}
+
 .siteTitle h1 {
 	display: block;
 }
