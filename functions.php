@@ -64,24 +64,8 @@ function customHeader() {
 
 }
 
-// add_theme_support( 'custom-header' );
 
-// de-queue navigation js
-add_action('wp_print_scripts','tto_dequeue_navigation');
-	function tto_dequeue_navigation() {
-		wp_dequeue_script( 'twentytwelve-navigation' );
-}
-// load the new navigation js
-	function tto_custom_scripts()
-{
 
-// Register the new navigation script
-	wp_register_script( 'lowernav-script', get_stylesheet_directory_uri() . '/js/navigation.js', array(), '1.0', true );
-
-// Enqueue the new navigation script 
-	wp_enqueue_script( 'lowernav-script' );
-}
-add_action( 'wp_enqueue_scripts', 'tto_custom_scripts' );
 
 // Register Child Nav
 if(!function_exists('register_child_nav')) {
@@ -91,6 +75,10 @@ if(!function_exists('register_child_nav')) {
   add_action( 'init', 'register_child_nav' );
 }
 
+
+
+
+	
 if (function_exists('add_theme_support')) { add_theme_support('post-thumbnails'); }
 
 add_image_size('headerImage', 480, 200, true);
