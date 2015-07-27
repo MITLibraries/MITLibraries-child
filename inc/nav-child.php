@@ -1,3 +1,4 @@
+
 <?php
 	$siteName = get_bloginfo('name');
 	// if ($siteName != 'MIT Libraries News') {
@@ -5,25 +6,51 @@
 	$countPosts = wp_count_posts('page')->publish;
 	if (!in_array($siteName, $noChildNav) && $countPosts > 1) {
 ?>
-	<h3 id="menu--toggle" class="menu--toggle">View Menu</h3>
-	<nav id="child-navigation" class="nav-secondary" role="navigation">
-		<?php
-			if(has_nav_menu('child-nav')){
-				wp_nav_menu(
-					array(
-						'theme_location' => 'child-nav',
-						'menu' => 'Sub Nav',
-						'container_class' => 'menu'
-					)
-				);
-			}
-			else {
-				wp_page_menu(
-					array(
-						'depth' => 2
-					)
-				);
-			}
-		?>
-	</nav><!-- #site-navigation -->
+
+	
+	<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand mobile-display">
+                <?php _e( 'View Menu' ); ?>
+            </a>
+    </div>
+
+        <?php
+            wp_nav_menu( array(
+                'menu'              => 'Sub Nav',
+                'theme_location'    => 'child-nav',
+                'container'         => 'div',
+                'container_class'   => 'collapse navbar-collapse',
+				'container_id'      => 'bs-example-navbar-collapse-1',
+                'menu_class'        => 'nav navbar-nav nav-second',
+                'fallback_cb'       => 'navwalker::fallback',
+                'walker'            => new navwalker())
+            );
+            
+                       
+
+        ?>
+
+
+    </div>
+</nav>
+<script>
+	$('.dropdown-toggle').click(function() {
+    var location = $(this).attr('href');
+    window.location.href = location;
+    return false;
+});
+</script>
+
+<!-- #site-navigation -->
+
 <?php } ?>
+
