@@ -15,42 +15,9 @@ global $isRoot;
 	$pageRoot = getRoot($post);
 	$section = get_post($pageRoot);
 
-	$menuName = $section->post_name;
-	$sideMenu = wp_get_nav_menu_items($menuName);
-
-	$showSideNav = get_field("show_left_nav");
-
-	$sideNavExists = $sideMenu && $showSideNav == true || is_child_page() && $showSideNav == true;
-
-	if ($sideNavExists):
-
 ?>
 
-	<div class="leftNav">
-
-		<ul>
-
-			<?php
-							
-				$args = array(
-					"child_of" => $pageRoot,
-					"title_li" => "",
-				);
-				
-				if ($menu) {
-					wp_nav_menu( array( 'menu' => $menuName, 'menu_class' => 'nav-menu' ) ); 
-				} else {
-					wp_list_pages( $args ); 
-				}
-			?>
-
-		</ul>
-
-	</div>
-
-<?php endif; ?>
-
-<div class="mainContent group <?php if($sideNavExists) { echo 'hasLeftNav'; } ?>">
+<div class="content-main group">
 	
 	<div class="entry-content">
 		<?php $title = get_the_title(); if ($title != ""): ?>
@@ -70,7 +37,7 @@ global $isRoot;
 			if ($col1 != '' && $col2 != ''):
 		?>
 
-				<div class="flexContainer">
+				<div class="flex-container">
 					<div class="flexItem">
 						<?php echo $col1; ?>
 					</div>
