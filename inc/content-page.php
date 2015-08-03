@@ -17,7 +17,8 @@ global $isRoot;
 
 ?>
 
-<div class="content-main group">
+
+<div class="mainContent group content-main">
 	
 	<div class="entry-content">
 		<?php $title = get_the_title(); if ($title != ""): ?>
@@ -37,7 +38,7 @@ global $isRoot;
 			if ($col1 != '' && $col2 != ''):
 		?>
 
-				<div class="flex-container">
+				<div class="flexContainer">
 					<div class="flexItem">
 						<?php echo $col1; ?>
 					</div>
