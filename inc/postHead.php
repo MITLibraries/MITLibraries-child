@@ -3,7 +3,7 @@
 	<div class="box1">
 		
 		<?php if(is_front_page()): ?>
-			<div class="child-page-title"><?php bloginfo(); ?></div>
+			<h1 class="child-page-title"><?php bloginfo(); ?></h1>
 		<?php else: ?>
 			<div class="child-page-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></div>
 		<?php endif; ?>
