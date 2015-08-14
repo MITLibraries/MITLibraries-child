@@ -96,6 +96,7 @@ h1.child-page-title {
 .child-page-title a {
 	font-size: 21px;
 	font-size: 1.5rem;
+	line-height: 1;
 }
 
 .siteTitle h1 {
@@ -239,13 +240,6 @@ h1.child-page-title {
 	width: 100%;
 }
 
-.mainContent.hasLeftNav {
-	border-left: 1px solid #eceaea;
-	float: left;
-	padding-left: 1em;
-	width: 61.47%;
-}
-
 .mainContent h2 {
 	margin-bottom: 10px;
 }
@@ -260,17 +254,23 @@ h1.child-page-title {
 	padding: 0 20px 20px 0;
 }
 
+.entry-content h1 {
+	line-height: 1;
+}
+
 .entry-content h2 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 24px;
 	font-size: 1.5rem;
-	line-height: 1.5;
+	line-height: 1;
 }
 
 .entry-content h3 {
 	font-size: 16px;
 	font-size: 1rem;
 	margin: 1em 0;
+	font-weight: 600;
+	line-height: 1;
 }
 
 .entry-content h2:first-of-type,
