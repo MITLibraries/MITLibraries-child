@@ -74,17 +74,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .childTheme .siteTitle.hasImage .box1 {
 	margin-top: 0.75rem;
-	width: 50%;
+	width: 75%;
 }
 
 .childTheme .title-page.hasImage .box1 {
 	margin-top: 0.75rem;
-	width: 50%;
+	width: 75%;
 }
 
 .childTheme .title-page.hasImage .box2 {
 	margin-left: 1em;
-	width: 50%;
+	width: 25%;
 }
 
 h1.child-page-title {
@@ -96,6 +96,7 @@ h1.child-page-title {
 .child-page-title a {
 	font-size: 21px;
 	font-size: 1.5rem;
+	line-height: 1;
 }
 
 .siteTitle h1 {
@@ -160,7 +161,7 @@ h1.child-page-title {
 
 .headerImage img {
 	display: block;
-	height: auto;
+	height: 120px;
 	margin: 0 auto;
 	position: relative;
 	vertical-align: middle;
@@ -239,17 +240,6 @@ h1.child-page-title {
 	width: 100%;
 }
 
-.mainContent.hasLeftNav {
-	border-left: 1px solid #eceaea;
-	float: left;
-	padding-left: 1em;
-	width: 61.47%;
-}
-
-.mainContent h2 {
-	margin-bottom: 10px;
-}
-
 .mainContent h3 {
 	line-height: 1.5;
 }
@@ -260,17 +250,15 @@ h1.child-page-title {
 	padding: 0 20px 20px 0;
 }
 
+.entry-content h1 {
+	line-height: 1;
+}
+
 .entry-content h2 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 24px;
 	font-size: 1.5rem;
-	line-height: 1.5;
-}
-
-.entry-content h3 {
-	font-size: 16px;
-	font-size: 1rem;
-	margin: 1em 0;
+	line-height: 1;
 }
 
 .entry-content h2:first-of-type,
