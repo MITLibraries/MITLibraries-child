@@ -95,3 +95,6 @@ if (!function_exists('my_mce_buttons_2')):
 
   add_filter('mce_buttons_2', 'my_mce_buttons_2');
 endif;
+
+
+

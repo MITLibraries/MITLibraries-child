@@ -23,7 +23,7 @@ get_header(); ?>
 
 			<?php get_template_part('inc/postHead'); ?>
 
-			<div id="content" class="allContent hasSidebar group">
+			<div id="content" class="allContent hasSidebar group ">
 
 				<div class="mainContent group">
 
