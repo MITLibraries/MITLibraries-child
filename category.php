@@ -20,6 +20,8 @@ get_header(); ?>
 	<?php get_template_part('inc/breadcrumbs', 'child'); ?>
 
 		<div id="stage" class="inner group" role="main">
+			
+			 
 
 			<?php get_template_part('inc/postHead'); ?>
 
@@ -28,35 +30,30 @@ get_header(); ?>
 				<div class="mainContent group">
 
 					<?php if (is_category()) {
-						echo '<h2 class="categoryName">';
-						single_cat_title('Category: ');
+						echo '<h2 class="">';
+						single_cat_title();
+						echo (' - Past Exhibits');
 						echo '</h2>';
 						}
 					?>
-
 					<?php if ( have_posts() ) : ?>
 
-						<?php	while ( have_posts() ) : the_post(); ?>
+						<?php while ( have_posts() ) : the_post(); ?>
 
-							<div class="post">
-
-								<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h3>
-								<small>Posted <?php the_time('F jS, Y') ?> by <?php the_author() ?> </small>
-								
-								<div class="entry">
-									<?php the_content('Read the rest of this entry &raquo;'); ?>
+								<div class="exhibit-archive">
+				<a class="exhibit-title" href="<?php the_permalink(); ?>"><?php the_title();?></a>
+				<img class="alignLeft" src="<?php the_field('exhibitImage'); ?>" height="89" width="89"/>
+				<br><em class="timespan"><?php the_field('timespan'); ?></em>
+				<br style="clear: both;" />
 								</div>
-						
-								<p class="postmetadata">Posted in <?php the_category(', ') ?> 
 
-								 <?php edit_post_link('(Edit)'); ?> </p>
-
-							</div>
-
-						<?php 
+						<span class="post-page-nav">
+							<?php 
 							endwhile;
-							twentytwelve_content_nav( 'nav-below' );
+							child_numeric_posts_nav(); 
+
 						?>
+						</span>
 
 						<?php else : ?>
 							<?php get_template_part( 'content', 'none' ); ?>
