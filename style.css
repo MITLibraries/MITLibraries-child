@@ -2,7 +2,7 @@
 Theme Name: MIT Libraries Child NEW
 Author: Lightning Trumpet & MIT Libraries
 Author URI: http://wordpress.org/
-Version: 1.1.11
+Version: 1.1.12
 
 Template: libraries
 
@@ -169,6 +169,47 @@ h1.child-page-title {
 	z-index: 2;
 	float: right;
 }
+
+/* ---- Child Post Nav ---- */
+
+.post-page-nav {
+	margin: 0 auto;	
+}
+
+.post-navigation {
+	margin: 0 auto;
+	padding-bottom: 50px;
+	text-align: center;
+}
+
+.post-navigation li a,
+.post-navigation li a:hover,
+.post-navigation li.active a,
+.post-navigation li.disabled {
+	color: #fff;
+	text-decoration:none;
+}
+
+.post-navigation li {
+	display: inline;
+}
+
+.post-navigation li a,
+.post-navigation li a:hover,
+.post-navigation li.active a,
+.post-navigation li.disabled {
+	background-color: #6FB7E9;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 12px;
+	padding: 0.75rem;
+}
+
+.post-navigation li a:hover,
+.post-navigation li.active a {
+	background-color: #3C8DC5;
+}
+
 
 /* ---- Child Page Nav ---- */
 
@@ -349,6 +390,48 @@ h1.child-page-title {
 	width: 50%;
 }
 
+.current-exhibit {
+	margin: 25px 0;
+}
+
+.currentExhibit {
+	margin-top: 25px;
+	color: #338bc5;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.exhibits-header {
+	margin: 10px 20px 30px;
+}
+
+.exhibits-header h1 {
+	font-size: 24px;
+}
+
+.exhibit-archive {
+	margin: 40px 0;
+}
+.exhibits-listing-image {
+	width: 15%;
+	float: left
+}
+
+.exhibit-title {
+	margin-top: 10px;
+}
+
+.timespan {
+	padding-top: 20px;
+}
+
+.alignLeft {
+	float: left;
+    margin: 0em 1em 1em 0;
+    display: block;
+    position: relative;
+}
+
 /* ---- Sidebar ---- */
 
 .sidebar {
@@ -458,9 +541,7 @@ a.giveNow:hover {
 		display: block !important;
 	}
 	
-	.navbar-default .navbar-nav>.dropdown>a .caret {
-		display: none;
-	}
+
 }
 
 
