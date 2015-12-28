@@ -25,14 +25,14 @@ get_header(); ?>
 
 			<?php get_template_part('inc/postHead'); ?>
 
+
 			<div id="content" class="allContent hasSidebar group ">
 
 				<div class="mainContent group">
 
 					<?php if (is_category()) {
-						echo '<h2 class="">';
+						echo '<h2>';
 						single_cat_title();
-						echo (' - Past Exhibits');
 						echo '</h2>';
 						}
 					?>
@@ -40,12 +40,7 @@ get_header(); ?>
 
 						<?php while ( have_posts() ) : the_post(); ?>
 
-								<div class="exhibit-archive">
-				<a class="exhibit-title" href="<?php the_permalink(); ?>"><?php the_title();?></a>
-				<img class="alignLeft" src="<?php the_field('exhibitImage'); ?>" height="89" width="89"/>
-				<br><em class="timespan"><?php the_field('timespan'); ?></em>
-				<br style="clear: both;" />
-								</div>
+							<?php get_template_part( 'content', 'cpt' ); ?>
 
 						<span class="post-page-nav">
 							<?php 
@@ -66,6 +61,7 @@ get_header(); ?>
 			</div><!-- end div#content -->
 
 		</div><!-- #stage -->
+
 
 
 
