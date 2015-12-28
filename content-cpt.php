@@ -29,10 +29,10 @@ $endEvent = get_field('event_end_date_and_time');
 					<?php if($startExhibit != ""): ?>
 						<span class="datespan">(<?php echo $startExhibit; ?> - <?php echo $endExhibit; ?>)</span>
 					<?php elseif($startEvent != "" && $endEvent != ""): ?>
-						(<?php echo $startEvent; ?> - <?php echo $endEvent; ?>)
+						<span class="datespan">(<?php echo $startEvent; ?> - <?php echo $endEvent; ?>)
 						</span>
 					<?php elseif($startEvent != "" ): ?>
-						<span class="timespan">(<?php echo $startEvent; ?>)
+						<span class="timespan">(<?php echo $startEvent; ?>)</span>
 					<?php endif; ?>
 						</div>
 			</div>
