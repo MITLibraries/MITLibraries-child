@@ -409,28 +409,41 @@ h1.child-page-title {
 	font-size: 24px;
 }
 
-.exhibit-archive {
-	margin: 40px 0;
-}
-.exhibits-listing-image {
-	width: 15%;
-	float: left
+/* Category Styles */
+
+.category-post {
+  display: flex;
+  align-items: flex-start;
+  margin: 2em 0;
 }
 
-.exhibit-title {
-	margin-top: 10px;
+.category-post-slider {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 0 2em;
 }
 
-.timespan {
-	padding-top: 20px;
+.sticky-slider .exhibit-title,
+.sticky-slider .sub-title,
+.sticky-slider .datespan {
+	margin: 10px 0;
+	line-height: 1.5;
 }
 
-.alignLeft {
-	float: left;
-    margin: 0em 1em 1em 0;
-    display: block;
-    position: relative;
+
+.category-post__fig {
+	margin-right: 1em;
 }
+
+.category-post__body {
+  flex: 1;
+}
+
+.sub-title {
+	font-size: 16px;
+}
+
+
 
 /* ---- Sidebar ---- */
 
@@ -532,6 +545,7 @@ a.giveNow {
 a.giveNow:hover {
 	color:white;
 }
+
 
 
 
