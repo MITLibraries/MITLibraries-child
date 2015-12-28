@@ -75,6 +75,15 @@ if(!function_exists('register_child_nav')) {
   add_action( 'init', 'register_child_nav' );
 }
 
+//Gets post cat slug and looks for single-[cat slug].php and applies it
+add_filter('single_template', create_function(
+	'$the_template',
+	'foreach( (array) get_the_category() as $cat ) {
+		if ( file_exists(STYLESHEETPATH . "/single-{$cat->slug}.php") )
+		return STYLESHEETPATH . "/single-{$cat->slug}.php"; }
+	return $the_template;' )
+);
+
 
 
 /**
@@ -191,5 +200,37 @@ function child_numeric_posts_nav() {
 	echo '</ul></div>' . "\n";
 
 }
+
+// FLEXSLIDER
+
+function twentytwelve_flexslider() {
+	if (!is_admin()) {
+
+		// Enqueue FlexSlider JavaScript
+		wp_register_script('jquery_flexslider', get_stylesheet_directory_uri(). '/js/jquery.flexslider-min.js', array('jquery') );
+		wp_enqueue_script('jquery_flexslider');
+
+		// Enqueue FlexSlider Stylesheet
+		wp_register_style( 'flexslider-style', get_stylesheet_directory_uri() . '/flexslider.css', 'all' );
+		wp_enqueue_style( 'flexslider-style' );
+
+		// FlexSlider custom settings
+		add_action('wp_footer', 'twentytwelve_flexslider_settings');
+
+		function twentytwelve_flexslider_settings() { ?>
+			<script>
+				jQuery(document).ready(function($){
+
+					$('.flexslider').flexslider();
+				});
+			</script>
+		<?php
+		}
+
+	}
+}
+
+add_action('init', 'twentytwelve_flexslider');
+
 
 
