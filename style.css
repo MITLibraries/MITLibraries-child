@@ -2,7 +2,7 @@
 Theme Name: MIT Libraries Child NEW
 Author: Lightning Trumpet & MIT Libraries
 Author URI: http://wordpress.org/
-Version: 1.1.7
+Version: 1.1.12
 
 Template: libraries
 
@@ -74,17 +74,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .childTheme .siteTitle.hasImage .box1 {
 	margin-top: 0.75rem;
-	width: 50%;
+	width: 75%;
 }
 
 .childTheme .title-page.hasImage .box1 {
 	margin-top: 0.75rem;
-	width: 50%;
+	width: 75%;
 }
 
 .childTheme .title-page.hasImage .box2 {
 	margin-left: 1em;
-	width: 50%;
+	width: 25%;
 }
 
 h1.child-page-title {
@@ -161,7 +161,7 @@ h1.child-page-title {
 
 .headerImage img {
 	display: block;
-	height: auto;
+	height: 120px;
 	margin: 0 auto;
 	position: relative;
 	vertical-align: middle;
@@ -169,6 +169,47 @@ h1.child-page-title {
 	z-index: 2;
 	float: right;
 }
+
+/* ---- Child Post Nav ---- */
+
+.post-page-nav {
+	margin: 0 auto;	
+}
+
+.post-navigation {
+	margin: 0 auto;
+	padding-bottom: 50px;
+	text-align: center;
+}
+
+.post-navigation li a,
+.post-navigation li a:hover,
+.post-navigation li.active a,
+.post-navigation li.disabled {
+	color: #fff;
+	text-decoration:none;
+}
+
+.post-navigation li {
+	display: inline;
+}
+
+.post-navigation li a,
+.post-navigation li a:hover,
+.post-navigation li.active a,
+.post-navigation li.disabled {
+	background-color: #6FB7E9;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 12px;
+	padding: 0.75rem;
+}
+
+.post-navigation li a:hover,
+.post-navigation li.active a {
+	background-color: #3C8DC5;
+}
+
 
 /* ---- Child Page Nav ---- */
 
@@ -240,10 +281,6 @@ h1.child-page-title {
 	width: 100%;
 }
 
-.mainContent h2 {
-	margin-bottom: 10px;
-}
-
 .mainContent h3 {
 	line-height: 1.5;
 }
@@ -262,14 +299,6 @@ h1.child-page-title {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 24px;
 	font-size: 1.5rem;
-	line-height: 1;
-}
-
-.entry-content h3 {
-	font-size: 16px;
-	font-size: 1rem;
-	margin: 1em 0;
-	font-weight: 600;
 	line-height: 1;
 }
 
@@ -360,6 +389,61 @@ h1.child-page-title {
 .no-flexbox .childTheme.page-home .flexItem {
 	width: 50%;
 }
+
+.current-exhibit {
+	margin: 25px 0;
+}
+
+.currentExhibit {
+	margin-top: 25px;
+	color: #338bc5;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.exhibits-header {
+	margin: 10px 20px 30px;
+}
+
+.exhibits-header h1 {
+	font-size: 24px;
+}
+
+/* Category Styles */
+
+.category-post {
+  display: flex;
+  align-items: flex-start;
+  margin: 2em 0;
+}
+
+.category-post-slider {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 0 2em;
+}
+
+.sticky-slider .exhibit-title,
+.sticky-slider .sub-title,
+.sticky-slider .datespan {
+	margin: 10px 0;
+	line-height: 1.5;
+}
+
+
+.category-post__fig {
+	margin-right: 1em;
+}
+
+.category-post__body {
+  flex: 1;
+}
+
+.sub-title {
+	font-size: 16px;
+}
+
+
 
 /* ---- Sidebar ---- */
 
@@ -464,15 +548,14 @@ a.giveNow:hover {
 
 
 
+
 /* ---- Responsive Styles ---- */
 @media screen and (max-width:720px) {
 	.mobile-display {
 		display: block !important;
 	}
 	
-	.navbar-default .navbar-nav>.dropdown>a .caret {
-		display: none;
-	}
+
 }
 
 
