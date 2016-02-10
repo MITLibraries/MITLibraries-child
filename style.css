@@ -259,29 +259,6 @@ nav.navbar.navbar-default {
 	margin-bottom: 75px;
 }
 
-.section-wrapper {
-	padding-bottom: 50px;
-	margin-bottom: 50px;
-	border-bottom: 1px solid #888;
-	float: left;
-}
-
-.section-wrapper-last {
-	float: left;	
-	margin: 25px 0;
-}
-
-.main p {
-	margin-bottom: 1.25em !important;
-	line-height: 1.5;
-}
-
-.main h3 {
-	font-size: 1.5em;
-	font-weight: 700;
-	padding: 1em 0;
-}
-
 .allContent {
 	margin-top: 2em;
 }
@@ -307,6 +284,56 @@ nav.navbar.navbar-default {
 
 .mainContent h3 {
 	line-height: 1.5;
+}
+
+/* ---- Full Width Template Styles ---- */
+.section-wrapper {
+	padding-bottom: 50px;
+	margin-bottom: 50px;
+	border-bottom: 1px solid #888;
+	float: left;
+}
+
+.section-wrapper-last {
+	float: left;	
+	margin: 25px 0;
+}
+
+.main {
+	float: left;
+	padding-right: 2em;
+	width: 76%;
+}
+
+.main p {
+	margin-bottom: 1.25em !important;
+	line-height: 1.5;
+}
+
+.main h3 {
+	font-size: 1.5em;
+	font-weight: 700;
+	padding: 1em 0;
+}
+
+.location-hours {
+	font-weight: 700;
+}
+
+.contact-email {
+	font-weight: bold;
+}
+
+.box {
+	padding: 0 15px 10px;
+	background: #eee;
+	border: 1px solid #888;
+	margin-bottom: 25px;
+}
+
+.box h4 {
+	font-weight: 700;
+	line-height: 1.5;	
 }
 
 /* Post & Entry Content Styles */
