@@ -1,67 +1,55 @@
-<div class="title-page flex-container group <?php if(is_front_page()) { echo 'hasImage'; } ?>">
-
-	<div class="box1">
-
+<div class="header-section group <?php if(is_front_page()) { echo 'hasImage'; } ?>">
 		<?php if(is_front_page()): ?>
-			<h1 class="child-page-title"><?php bloginfo(); ?></h1>
-		<?php else: ?>
-			<div class="child-page-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></div>
-		<?php endif; ?>
+			<div class="child-header-tall">
+				<div class="page-header-home">
+					<h1 class="child-page-title"><?php bloginfo(); ?></h1>
+					<p class="child-tagline"><?php bloginfo('description'); ?></p>
+					<?php
 
-		<?php
+						global $blog_id;
+						$current_blog_id = $blog_id;
+						
+						$siteName = get_bloginfo('name');
+						
+						if($siteName == 'Document Services' && is_front_page()) {
+							switch_to_blog(1);
+							get_template_part('inc/locationInfo');
+							switch_to_blog($current_blog_id);
+						}
 
-global $blog_id;
-$current_blog_id = $blog_id;
+					?>
 
-$siteName = get_bloginfo('name');
-
-if($siteName == 'Document Services' && is_front_page()) {
-	switch_to_blog(1);
-	get_template_part('inc/locationInfo');
-	switch_to_blog($current_blog_id);
-}
-
-?>
-
-		<?php
-// If doc. services, switch out to main site to get location ids
-if ($siteName == 'Document Services' && is_front_page()):
-	get_template_part('inc/locationHours');
-endif;
-
-?>
-
-	</div>
-
-	<div class="box2">
-		<?php
-
-$defaultHeader = get_header_image();
-if ($defaultHeader != '' && is_front_page()):
-
-?>
-
-			<div class="headerImage">
-				<img src="<?php header_image(); ?>" alt="" />
+					<?php
+						
+						// If doc. services, switch out to main site to get location ids
+						if ($siteName == 'Document Services' && is_front_page()):
+							get_template_part('inc/locationHours');
+						endif;
+				
+					?>
+					
+				</div>
+					
+				<div class="header-bg-image-high">
+					<img class="test-image" src="<?php header_image(); ?>" alt="" />
+				</div>
+				
 			</div>
-
+			
+		<?php else: ?>
+		
+			<div class="child-header-short">
+				<div class="page-header-internal">
+					<div class="child-page-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></div>
+				</div>
+				<div class="header-bg-image-short">
+					<?php the_post_thumbnail(); ?>
+				</div>			
+			</div>
+			
 		<?php endif; ?>
-
-	</div>
-
 
 </div>
 
-
-<!-- Flexslider featured content -->
-			
-				<?php
-
-					// Add featured content slider
-					get_template_part( 'inc/featureslider' );
-
-				?>
-
-			<!-- END Flexslider featured -->
 
 <?php get_template_part("inc/nav", "child"); ?>
