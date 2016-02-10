@@ -487,6 +487,39 @@ footer #footerHeader,footer .footerHeader {
 	margin-bottom:2em;
 }
 
+/* ---- Widgets ---- */
+.staff-widget {
+	float: left;
+	width: 30%;
+	margin-top: 30px;
+	margin-right: 5%;
+	font-size: 12px;
+	line-height: 1.5
+}
+
+.staff-widget.last {
+	margin-right: 0;
+}
+
+.staff-widget .widget-title {
+	display: none;
+}
+
+.staff-widget h3,
+.staff-widget h4 {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+}
+
+.staff-widget h3 {
+	font-weight: 600;
+}
+
+.staff-widget h4 {
+	padding-bottom: 10px;
+}
+
 /* ---- Fields, Inputs, Buttons etc. ---- */
 .search input[type="text"] {
 	height:auto;
