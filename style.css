@@ -254,32 +254,59 @@ nav.navbar.navbar-default {
 }
 
 /* ---- Main Content Area ---- */
+#content {
+	padding-left: 27.5px;
+	margin-bottom: 75px;
+}
+
+.section-wrapper {
+	padding-bottom: 50px;
+	margin-bottom: 50px;
+	border-bottom: 1px solid #888;
+	float: left;
+}
+
+.section-wrapper-last {
+	float: left;	
+	margin: 25px 0;
+}
+
+.main p {
+	margin-bottom: 1.25em !important;
+	line-height: 1.5;
+}
+
+.main h3 {
+	font-size: 1.5em;
+	font-weight: 700;
+	padding: 1em 0;
+}
+
 .allContent {
-	margin-top:2em;
-	margin-left:20px;
+	margin-top: 2em;
 }
 
 .childTheme #content.allContent {
-	line-height:1.5;
+	line-height: 1.5;
 }
 
 .hasSidebar .mainContent {
-	float:left;
-	padding-right:2em;
-	width:700px;
-	width:76.05%;
+	float: left;
+	padding-right: 2em;
+	width: 700px;
+	width: 76.05%;
 }
 
 .ie8 .hasSidebar .mainContent {
-	width:76%;
+	width: 76%;
 }
 
 .mainContent {
-	width:100%;
+	width: 100%;
 }
 
 .mainContent h3 {
-	line-height:1.5;
+	line-height: 1.5;
 }
 
 /* Post & Entry Content Styles */
