@@ -592,6 +592,18 @@ a.px14 {
 }
 
 /* ---- Fields, Inputs, Buttons etc. ---- */
+.buttons {
+	margin: 50px 0;
+}
+
+.button-set {
+	display: inline !important;
+}
+
+.button-set:first-child {
+	margin-right: 50px;
+}
+
 .search input[type="text"] {
 	height:auto;
 	line-height:1.5;
