@@ -551,12 +551,11 @@ footer .footerHeader {
 	width: 30%;
 	margin-top: 30px;
 	margin-right: 5%;
-	font-size: 12px;
-	line-height: 1.5
 }
 
-.sidebar-staff-widget {
-	font-size: 12px;
+.staff-widget .textwidget,
+.sidebar-staff-widget .textwidget {
+	font-size: 12px !important;
 	line-height: 1.5;
 }
 
