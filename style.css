@@ -254,11 +254,6 @@ nav.navbar.navbar-default {
 }
 
 /* ---- Main Content Area ---- */
-#content {
-	padding-left: 27.5px;
-	margin-bottom: 75px;
-}
-
 .allContent {
 	margin-top: 2em;
 }
@@ -280,6 +275,7 @@ nav.navbar.navbar-default {
 
 .mainContent {
 	width: 100%;
+	padding-left: 27.5px;
 }
 
 .mainContent h3 {
@@ -681,28 +677,19 @@ a.giveNow:hover {
 	.mobile-display {
 		display:block!important;
 	}
+	
+	.hasSidebar .mainContent,
+	.sidebar {
+		padding:0 27.5px;
+		width:100%;
+	}
 }
 
 @media screen and (max-width:480px) {
-	.allContent {
-		margin-top:1em;
-		margin-right:1em;
-		margin-left:1em;
-	}
-	
 	.category .categoryName,.search .mainContent h2.search-title {
 		border-bottom:none;
 		color:#666;
 		font-size:1.5em;
-	}
-	
-	.hasSidebar .mainContent {
-		padding:0;
-		width:100%;
-	}
-	
-	.sidebar {
-		width:100%;
 	}
 	
 	.childTheme.page-home .flexItem:nth-of-type(n) {
@@ -716,15 +703,15 @@ a.giveNow:hover {
 		width:100%;
 	}
 	
-		/* ---- Gallery Styles ---- */
-		/* NOTE: images should be - at least - 350px in width for best resolution. */
+	/* ---- Gallery Styles ---- */
 	.childTheme .gallery .gallery-item {
 		width: 100% !important;
 	}
 	
-		/* ---- Button (group) Styles ---- */
+	/* ---- Button (group) Styles ---- */
 	.button-set {
 		display: block !important;
 		max-width: none !important;
 	}
+
 }
