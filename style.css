@@ -725,5 +725,6 @@ a.giveNow:hover {
 		/* ---- Button (group) Styles ---- */
 	.button-set {
 		display: block !important;
+		max-width: none !important;
 	}
 }
