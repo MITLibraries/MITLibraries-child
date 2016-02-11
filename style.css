@@ -401,6 +401,10 @@ nav.navbar.navbar-default {
 	width:80%;
 }
 
+.entry-content .expandable:nth-of-type(odd) {
+	background:#eceaea!important;
+}
+
 .childTheme #breadcrumb {
 	height:100%;
 	line-height:1;
@@ -479,7 +483,6 @@ nav.navbar.navbar-default {
 }
 
 /* ---- Sidebar ---- */
-
 .sidebar {
 	float: left;
 	width: 220px;
@@ -531,10 +534,6 @@ nav.navbar.navbar-default {
 	color: #c63 !important;
 }
 
-/*.childTheme .entry-content ul {
-	margin: 0;
-}
-*/
 footer #footerHeader,
 footer .footerHeader {
 	height: 92px;
@@ -545,7 +544,6 @@ footer .footerHeader {
 }
 
 /* ---- Widgets ---- */
-
 .staff-widget {
 	float: left;
 	width: 30%;
@@ -591,25 +589,7 @@ a.px14 {
 	font-size: 14px;
 }
 
-/* ---- Fields, Inputs, Buttons etc. ---- */
-.buttons {
-	margin: 50px 0;
-}
-
-.button-set {
-	display: inline !important;
-}
-
-.button-set:first-child {
-	margin-right: 50px;
-}
-
-.search input[type="text"] {
-	height:auto;
-	line-height:1.5;
-	margin:0;
-}
-
+/* ---- Disaster-Response Styles ----*/
 .sidebar .button.disaster-response {
 	background:none;
 	border-bottom:none;
@@ -641,10 +621,7 @@ a.px14 {
 	color:#fff;
 }
 
-.entry-content .expandable:nth-of-type(odd) {
-	background:#eceaea!important;
-}
-
+/* ---- Give Now Styles ----*/
 .sidebar .widget.give {
 	background-color:#fff;
 	border-bottom:none;
@@ -663,6 +640,43 @@ a.giveNow {
 
 a.giveNow:hover {
 	color:#fff;
+}
+
+/* ---- Fields, Inputs, Buttons etc. ---- */
+.buttons {
+	margin: 50px 0;
+}
+
+.button-set {
+	display: inline !important;
+}
+
+.button-set:first-child {
+	margin-right: 50px;
+}
+
+.search input[type="text"] {
+	height:auto;
+	line-height:1.5;
+	margin:0;
+}
+
+/* ---- Gallery Styles ---- */
+.childTheme .wp-caption .wp-caption-text,
+.childTheme .gallery-caption,
+.childTheme .entry-caption {
+	text-align: left;
+	font-style: normal;
+	font-size: 12px;
+	line-height: 1.5;
+	color: #111;
+}
+
+.childTheme .gallery .gallery-icon img {
+	height: auto;
+	max-width: 100%;
+	padding: 0 !important;
+	border: 0 !important;
 }
 
 /* ---- Responsive Styles ---- */
