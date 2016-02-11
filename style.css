@@ -510,17 +510,14 @@ nav.navbar.navbar-default {
 	font-size: 16px !important;
 	font-weight: 600 !important;
 }
+
 .childTheme .sidebar .widget {
 	background: none;
 	border-top: 2px solid #ddd;
 	border-bottom: 0;
 	padding: 0;
 	padding-bottom: 20px;
-	padding-top: 20px;
-}
-
-.childTheme .sidebar .widget:first-child {
-	border-top: 0;
+	padding-top: 10px;
 }
 
 .contribute.widget {
