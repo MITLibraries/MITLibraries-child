@@ -651,8 +651,8 @@ a.giveNow:hover {
 	display: inline !important;
 }
 
-.button-set:first-child {
-	margin-right: 50px;
+.button-set {
+	margin-right: 5%;
 }
 
 .search input[type="text"] {
@@ -723,5 +723,10 @@ a.giveNow:hover {
 		/* NOTE: images should be - at least - 350px in width for best resolution. */
 	.childTheme .gallery .gallery-item {
 		width: 100% !important;
+	}
+	
+		/* ---- Button (group) Styles ---- */
+	.button-set {
+		display: block !important;
 	}
 }
