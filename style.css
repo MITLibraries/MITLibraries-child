@@ -707,7 +707,12 @@ a.giveNow:hover {
 	.childTheme .gallery .gallery-item {
 		width: 100% !important;
 	}
-	
+
+	.childTheme .gallery-item a,
+	.childTheme .gallery-caption {
+		width: 100%;
+	}
+		
 	/* ---- Button (group) Styles ---- */
 	.button-set {
 		display: block !important;
