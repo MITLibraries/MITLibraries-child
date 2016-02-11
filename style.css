@@ -276,6 +276,7 @@ nav.navbar.navbar-default {
 .mainContent {
 	width: 100%;
 	padding-left: 27.5px;
+	margin-bottom: 100px;
 }
 
 .mainContent h3 {
