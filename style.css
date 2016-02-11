@@ -718,4 +718,10 @@ a.giveNow:hover {
 		float:none;
 		width:100%;
 	}
+	
+		/* ---- Gallery Styles ---- */
+		/* NOTE: images should be - at least - 350px in width for best resolution. */
+	.childTheme .gallery .gallery-item {
+		width: 100% !important;
+	}
 }
