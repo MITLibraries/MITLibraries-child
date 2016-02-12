@@ -191,7 +191,7 @@ nav.navbar.navbar-default {
 .page-header-home {
 	color:#fff;
 	position:relative;
-	padding:27.5px;
+	padding:50px 27.5px;
 }
 
 .page-header-internal {
@@ -203,19 +203,19 @@ nav.navbar.navbar-default {
 .child-header-tall {
 	height:200px;
 	overflow:hidden;
-	display:inline-block;
+	display:block;
 	width:100%;
-	background:-moz-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	background:-moz-linear-gradient(left,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
 /* FF3.6+ */
-	background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(0,0,0,0.65)),color-stop(100%,rgba(0,0,0,0)));
+	background:-webkit-gradient(linear,left,right,color-stop(0%,rgba(0,0,0,0.65)),color-stop(100%,rgba(0,0,0,0)));
 /* Chrome,Safari4+ */
-	background:-webkit-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	background:-webkit-linear-gradient(left,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
 /* Chrome10+,Safari5.1+ */
-	background:-o-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	background:-o-linear-gradient(left,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
 /* Opera 11.10+ */
-	background:-ms-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	background:-ms-linear-gradient(left,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
 /* IE10+ */
-	background:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	background:linear-gradient(to right,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
 /* W3C */
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000',endColorstr='#00000000',GradientType=0);
 /* IE6-9 */
@@ -224,19 +224,19 @@ nav.navbar.navbar-default {
 .child-header-short {
 	height:100px;
 	overflow:hidden;
-	display:inline-block;
+	display:block;
 	width:100%;
-	background:-moz-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	background:-moz-linear-gradient(left,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
 /* FF3.6+ */
-	background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(0,0,0,0.65)),color-stop(100%,rgba(0,0,0,0)));
+	background:-webkit-gradient(linear,left,right,color-stop(0%,rgba(0,0,0,0.65)),color-stop(100%,rgba(0,0,0,0)));
 /* Chrome,Safari4+ */
-	background:-webkit-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	background:-webkit-linear-gradient(left,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
 /* Chrome10+,Safari5.1+ */
-	background:-o-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	background:-o-linear-gradient(left,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
 /* Opera 11.10+ */
-	background:-ms-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	background:-ms-linear-gradient(left,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
 /* IE10+ */
-	background:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	background:linear-gradient(to right,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
 /* W3C */
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000',endColorstr='#00000000',GradientType=0);
 /* IE6-9 */
@@ -247,19 +247,18 @@ nav.navbar.navbar-default {
 }
 
 .child-page-title {
-	font-size:34px!important;
-	font-size:2.25rem!important;
-	font-weight:400!important;
+	font-size:36px!important;
+	font-weight:600!important;
 	line-height:2;
 }
 
 .child-page-title a {
-	font-size:28px;
-	line-height:1.5;
+	font-size:24px;
 	color:#fff;
+	line-height:1;
 }
 
-.info-more,.info-more a,.link-hours-all,.info-more a:hover,.hours-today a:hover {
+.child-page-title a:hover, .info-more,.info-more a,.link-hours-all,.info-more a:hover,.hours-today a:hover {
 	color:#fff;
 }
 
@@ -718,7 +717,16 @@ a.giveNow:hover {
 		float:none;
 		width:100%;
 	}
+
+	/* ---- Header Styles ---- */	
+	.page-header-home {
+		padding: 27.5px;
+	}
 	
+	.child-page-title {
+		font-size:30px!important;
+	}
+		
 	/* ---- Gallery Styles ---- */
 	.childTheme .gallery .gallery-item {
 		width: 100% !important;
@@ -736,3 +744,21 @@ a.giveNow:hover {
 	}
 
 }
+
+@media screen and (max-width:380px) {
+	.child-page-title {
+		font-size:24px!important;
+	}
+
+	.child-page-title a {
+		font-size:21px!important;
+	}
+		
+	.child-tagline {
+		font-size:12px;
+	}
+	
+	.header-bg-image-high img {
+		height: 100% !important;
+		width: auto;
+	}
