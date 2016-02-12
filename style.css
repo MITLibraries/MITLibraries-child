@@ -361,6 +361,16 @@ nav.navbar.navbar-default {
 	line-height:1;
 }
 
+.entry-content h3 {
+	margin: 0;
+	padding: 20px 0 5px;
+	font-weight: 600;
+}
+
+.childTheme .entry-content p {
+	margin: 0 !important;
+}
+
 .entry-content h2:first-of-type,.entry-content h3:first-of-type {
 	margin-top:0;
 }
