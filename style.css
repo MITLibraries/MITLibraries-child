@@ -132,6 +132,16 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /* ---- Child Page Nav ---- */
+#bs-example-navbar-collapse-1 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#menu-primary>li>a {
+	padding-left: 27.5px;
+	padding-right: 27.5px;
+}
+
 nav.navbar.navbar-default {
 	background: none;
 	border-radius: 0;
@@ -675,6 +685,11 @@ a.giveNow:hover {
 
 /* ---- Responsive Styles ---- */
 @media screen and (max-width:720px) {
+	.childTheme .navbar-collapse { /* Removes scroll on mobile */
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}	
+	
 	.mobile-display {
 		display:block!important;
 	}
