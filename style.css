@@ -609,6 +609,14 @@ a.px14 {
 	font-size: 14px;
 }
 
+.logo-widget {
+	border-top: 0 !important;
+}
+
+.hide-title .widget-title {
+	display: none;
+}
+
 /* ---- Disaster-Response Styles ----*/
 .sidebar .button.disaster-response {
 	background:none;
