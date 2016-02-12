@@ -352,6 +352,7 @@ nav.navbar.navbar-default {
 	text-transform: uppercase;
 	font-size: 14px;
 	color: #777;
+	margin-bottom: 10px;
 }
 
 .entry-content h2 {
@@ -366,10 +367,6 @@ nav.navbar.navbar-default {
 	margin: 0;
 	padding: 20px 0 5px;
 	font-weight: 600;
-}
-
-.childTheme .entry-content p {
-	margin: 0 !important;
 }
 
 .entry-content h2:first-of-type {
