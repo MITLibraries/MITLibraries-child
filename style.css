@@ -359,6 +359,7 @@ nav.navbar.navbar-default {
 	font-size:24px;
 	font-size:1.5rem;
 	line-height:1;
+	padding: 50px 0;
 }
 
 .entry-content h3 {
@@ -371,8 +372,9 @@ nav.navbar.navbar-default {
 	margin: 0 !important;
 }
 
-.entry-content h2:first-of-type,.entry-content h3:first-of-type {
+.entry-content h2:first-of-type {
 	margin-top:0;
+	padding: 0;
 }
 
 /* Make this simper when the !important 10px bottom margin on all p tags is removed */
