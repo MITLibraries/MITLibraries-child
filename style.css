@@ -349,6 +349,9 @@ nav.navbar.navbar-default {
 
 .entry-content h1 {
 	line-height:1;
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #777;
 }
 
 .entry-content h2 {
