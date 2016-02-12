@@ -44,11 +44,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /* ---- Begin Child Page Content Styles ---- */
-.betterBreadcrumbs {
+.childTheme .betterBreadcrumbs {
 	background:#eceaea;
 	font-size:.75rem;
 	line-height:1;
-	padding:.5em .5em .5em 1.5em;
+	padding: 8px 8px 8px 27.5px;
 }
 
 .betterBreadcrumbs span:not(:last-of-type):after {
