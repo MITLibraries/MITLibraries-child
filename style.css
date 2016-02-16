@@ -736,10 +736,11 @@ a.giveNow:hover {
 		display: block !important;
 	}
 	
-	.has-sidebar .main-content,
-	.sidebar {
+	.childTheme .has-sidebar .main-content,
+	.childTheme .has-sidebar .sidebar {
 		padding: 0 27.5px;
 		width: 100%;
+		margin-bottom: 50px;
 	}
 }
 
