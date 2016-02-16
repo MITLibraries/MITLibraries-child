@@ -18,7 +18,7 @@ global $isRoot;
 ?>
 
 
-<div class="mainContent group content-main">
+<div class="main-content content-main">
 	
 	<div class="entry-content">
 		<?php $title = get_the_title(); if ($title != ""): ?>
@@ -26,7 +26,7 @@ global $isRoot;
 		<?php endif; ?>
 
 		<?php the_content(); ?>
-
+		
 		<?php
 			$blog_id = get_current_blog_id();
 
@@ -51,8 +51,5 @@ global $isRoot;
 
 	</div>
 	
-	<footer class="entry-meta">
-		<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-meta -->
-	
+		
 </div>

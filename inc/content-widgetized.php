@@ -18,7 +18,7 @@ global $isRoot;
 ?>
 
 
-<div class="mainContent group content-main">
+<div class="main-content">
 	
 	<div class="entry-content">
 		<?php $title = get_the_title(); if ($title != ""): ?>

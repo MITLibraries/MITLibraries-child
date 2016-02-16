@@ -55,7 +55,7 @@ h1,h2,h3,h4,h5,h6 {
 	content:' \00bb ';
 }
 
-.category .categoryName,.search .mainContent h2.search-title {
+.category .categoryName,.search .main-content h2.search-title {
 	border-bottom:1px solid #ccc;
 	font-size:2em;
 	font-weight:400;
@@ -137,7 +137,8 @@ h1,h2,h3,h4,h5,h6 {
 	padding-right: 0;
 }
 
-#menu-primary>li>a {
+#menu-primary>li>a,
+#menu-navigation>li>a {
 	padding-left: 27.5px;
 	padding-right: 27.5px;
 }
@@ -164,6 +165,7 @@ nav.navbar.navbar-default {
 	.dropdown:hover .dropdown-menu {
 		display:block;
 	}
+	
 }
 
 /* ---- Child Header ---- */
@@ -200,11 +202,6 @@ nav.navbar.navbar-default {
 	padding:15px 27.5px;
 }
 
-.child-header-tall {
-	height:200px;
-	overflow:hidden;
-	display:block;
-	width:100%;
 .child-header-tall {
 	height:200px;
 	overflow:hidden;
@@ -268,33 +265,48 @@ nav.navbar.navbar-default {
 }
 
 /* ---- Main Content Area ---- */
-.allContent {
+.content {
 	margin-top: 2em;
 }
 
-.childTheme #content.allContent {
+.childTheme .acontent {
 	line-height: 1.5;
 }
 
-.hasSidebar .mainContent {
+.has-sidebar .main-content {
 	float: left;
 	padding-right: 2em;
 	width: 700px;
 	width: 76.05%;
 }
 
-.ie8 .hasSidebar .mainContent {
+.ie8 .has-sidebar .main-content {
 	width: 76%;
 }
 
-.mainContent {
+.main-content {
 	width: 100%;
 	padding-left: 27.5px;
 	margin-bottom: 100px;
 }
 
-.mainContent h3 {
+.main-content h3 {
 	line-height: 1.5;
+}
+
+.align-left {
+	float: left;
+	width: 12%;
+}
+
+img.align-left {
+	max-width: 83px;
+}
+
+.align-right {
+	float: right;
+	text-align: left;
+	width: 85%;
 }
 
 /* ---- Full Width Template Styles ---- */
@@ -348,7 +360,7 @@ nav.navbar.navbar-default {
 }
 
 /* Post & Entry Content Styles */
-.childTheme #mainContent .entry-content {
+.childTheme .entry-content {
 	padding:0 20px 20px 0;
 }
 
@@ -392,7 +404,7 @@ nav.navbar.navbar-default {
 	margin:0;
 }
 
-.mainContent .post h2,.category .post h3,.search .post h3 {
+.main-content .post h2,.category .post h3,.search .post h3 {
 	font-size:24px;
 	line-height:28px;
 	margin-bottom:0;
@@ -428,7 +440,7 @@ nav.navbar.navbar-default {
 	background:#eceaea!important;
 }
 
-.childTheme #breadcrumb {
+.childTheme #dcrumb {
 	height:100%;
 	line-height:1;
 	padding:.5em 1.25rem;
@@ -533,7 +545,6 @@ nav.navbar.navbar-default {
 	font-size: 16px !important;
 	font-weight: 600 !important;
 }
-
 .childTheme .sidebar .widget {
 	background: none;
 	border-top: 2px solid #ddd;
@@ -541,6 +552,11 @@ nav.navbar.navbar-default {
 	padding: 0;
 	padding-bottom: 20px;
 	padding-top: 10px;
+}
+
+.childTheme .has-sidebar .sidebar {
+	background: none;
+	margin-bottom: 100px;
 }
 
 .contribute.widget {
@@ -622,7 +638,7 @@ a.px14 {
 /* ---- Disaster-Response Styles ----*/
 .sidebar .button.disaster-response {
 	background:none;
-	border-bottom:none;
+	border-top:none;
 	margin-bottom:16px;
 	margin-bottom:1rem;
 	padding:0;
@@ -654,7 +670,7 @@ a.px14 {
 /* ---- Give Now Styles ----*/
 .sidebar .widget.give {
 	background-color:#fff;
-	border-bottom:none;
+	border-top:none;
 }
 
 a.giveNow {
@@ -674,14 +690,14 @@ a.giveNow:hover {
 
 /* ---- Fields, Inputs, Buttons etc. ---- */
 .buttons {
-	margin: 50px 0;
+	margin: 50px 0px;
 }
 
 .button-set {
 	display: inline !important;
 }
 
-.button-set {
+.button-set:first-child {
 	margin-right: 5%;
 }
 
@@ -714,21 +730,21 @@ a.giveNow:hover {
 	.childTheme .navbar-collapse { /* Removes scroll on mobile */
 		padding-left: 15px !important;
 		padding-right: 15px !important;
-	}	
-	
-	.mobile-display {
-		display:block!important;
 	}
 	
-	.hasSidebar .mainContent,
+	.mobile-display {
+		display: block !important;
+	}
+	
+	.has-sidebar .main-content,
 	.sidebar {
-		padding:0 27.5px;
-		width:100%;
+		padding: 0 27.5px;
+		width: 100%;
 	}
 }
 
 @media screen and (max-width:480px) {
-	.category .categoryName,.search .mainContent h2.search-title {
+	.category .categoryName,.search .main-content h2.search-title {
 		border-bottom:none;
 		color:#666;
 		font-size:1.5em;
@@ -753,17 +769,17 @@ a.giveNow:hover {
 	.child-page-title {
 		font-size:30px!important;
 	}
-		
+	
 	/* ---- Gallery Styles ---- */
 	.childTheme .gallery .gallery-item {
 		width: 100% !important;
 	}
-
+	
 	.childTheme .gallery-item a,
 	.childTheme .gallery-caption {
 		width: 100%;
 	}
-		
+	
 	/* ---- Button (group) Styles ---- */
 	.button-set {
 		display: block !important;

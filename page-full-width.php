@@ -7,19 +7,15 @@
  *
  */
 
-$pageRoot = getRoot($post);
-$section = get_post($pageRoot);
-$isRoot = $section->ID == $post->ID;
-
 get_header();
 
 get_template_part('inc/breadcrumbs', 'child'); ?>
 
-		<div id="stage" class="inner group" role="main">
+		<div id="stage" class="inner" role="main">
 			
 			<?php get_template_part('inc/postHead'); ?>
 			
-			<div id="content">
+			<div id="content" class="content">
 				<?php while ( have_posts() ) : the_post(); ?>
 	
 					<?php get_template_part( 'inc/content', 'page' ); ?>

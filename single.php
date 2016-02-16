@@ -17,36 +17,28 @@ get_header(); ?>
 
 <?php get_template_part('inc/breadcrumbs', 'child') ?>
 	
-<div id="stage" class="inner group" role="main">
+<div id="stage" class="inner" role="main">
 
 	<?php get_template_part('inc/postHead'); ?>
 			
-		<div id="content" class="allContent hasSidebar group">
+		<div id="content" class="content has-sidebar">
 
-				<div id="mainContent" class="mainContent group">			
+				<div class="main-content">			
+					
 					<?php while ( have_posts() ) : the_post(); ?>
+					
+						<div class="article-head">
 
-					<div class="post">
-						<h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
-						<small>Posted <?php the_time('F jS, Y') ?> by <?php the_author() ?> </small>
+						<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
 						
-						<div class="entry">
-							<?php the_content('Read the rest of this entry &raquo;'); ?>
 						</div>
-				
-						<p class="postmetadata">Posted in <?php the_category(', ') ?> 
-						<!--
-						<strong>|</strong>
-						-->
-						 <?php edit_post_link('(Edit)'); ?> </p>
-						<!--
-						 <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p> 
-						-->
-						<!--
-						<?php trackback_rdf(); ?>
-						-->
-					</div>				
-				
+						
+						<div class="entry-content">
+							<?php the_content('Read the rest of this entry &raquo;'); ?>
+						</div>					
+								
+					
+									
 					<?php endwhile; // end of the loop. ?>
 				</div>
 				

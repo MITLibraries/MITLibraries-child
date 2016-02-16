@@ -27,13 +27,13 @@ get_template_part('inc/breadcrumbs', 'child'); ?>
 
 		
 
-		<div id="stage" class="inner group" role="main">
+		<div id="stage" class="inner" role="main">
 
 			<?php get_template_part('inc/postHead'); ?>
 			
 			<?php if ( is_active_sidebar( 'sidebar-1' ) ) { ?>
 			
-				<div id="content" class="allContent hasSidebar group">
+				<div id="content" class="content has-sidebar">
 					
 					
 
@@ -45,7 +45,7 @@ get_template_part('inc/breadcrumbs', 'child'); ?>
 			
 			<?php } else { ?> 
 			
-			<div id="content" class="allContent group">
+			<div id="content" class="content">
 
 				<?php get_template_part( 'inc/content', 'widgetized' ); ?>
 

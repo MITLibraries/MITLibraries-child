@@ -36,14 +36,14 @@ get_header(); ?>
 			<?php } ?>
 		
 
-		<div id="stage" class="inner group" role="main">
+		<div id="stage" class="inner" role="main">
 
 			<?php get_template_part('inc/postHead'); ?>
 			
 			<?php if ( is_active_sidebar( 'sidebar-1' ) ) { ?>
 			
-				<div id="content" class="allContent hasSidebar group">
-
+				<div id="content" class="content has-sidebar">
+					
 				<?php get_template_part( 'inc/content', 'page' ); ?>
 
 				<?php get_sidebar(); ?>
@@ -52,7 +52,7 @@ get_header(); ?>
 			
 			<?php } else { ?> 
 			
-			<div id="content" class="allContent group">
+			<div id="content" class="content">
 
 				<?php get_template_part( 'inc/content', 'page' ); ?>
 
