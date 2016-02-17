@@ -55,8 +55,8 @@ add_action( 'after_setup_theme', 'customHeader' );
 function customHeader() {
 
   $args = array(
-  'width'         => 480,
-  'height'        => 200,
+  'width'         => 2000,
+  'height'        => 1020,
   'uploads'       => true
   );
 
@@ -130,8 +130,9 @@ add_action('pre_get_posts','search_filter');
 	
 if (function_exists('add_theme_support')) { add_theme_support('post-thumbnails'); }
 
-add_image_size('headerImage', 480, 200, true);
+add_image_size('headerImage', 2000, 1020, true);
 add_image_size('exhibitImage', 150, 150, true);
+set_post_thumbnail_size( 1024, 9999 ); // Unlimited height, soft crop
 
 if (!function_exists('my_mce_buttons_2')):
   function my_mce_buttons_2($buttons) { 
