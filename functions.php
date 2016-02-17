@@ -64,8 +64,40 @@ function customHeader() {
 
 }
 
+function remove_parent_widgets(){
 
+	// Unregister some of the TwentyTen sidebars
+	unregister_sidebar( 'sidebar-2' );
+	unregister_sidebar( 'sidebar-3' );
+}
+add_action( 'widgets_init', 'remove_parent_widgets', 11 );
 
+function remove_parent_widgets(){
+
+	// Unregister some of the TwentyTwelve sidebars
+	unregister_sidebar( 'sidebar-2' );
+	unregister_sidebar( 'sidebar-3' );
+}
+add_action( 'widgets_init', 'remove_parent_widgets', 11 );
+
+/**
+ * Registers the Widgetized Area Below the Content.
+ *
+ * @since Twenty Twelve 1.0
+ */
+ 
+function twentytwelve_child_widgets_init() {
+	register_sidebar( array(
+		'name' => __( 'Below Content Widget Area', 'twentytwelve' ),
+		'id' => 'sidebar-two',
+		'description' => __( 'Appears when using the Widgetized Page template', 'twentytwelve' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s" role="complementary">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'twentytwelve_child_widgets_init' );
 
 // Register Child Nav
 if(!function_exists('register_child_nav')) {
@@ -84,8 +116,6 @@ add_filter('single_template', create_function(
 	return $the_template;' )
 );
 
-
-
 /**
  * Load all custom post_types if home page or search results.
  */
@@ -97,9 +127,6 @@ function search_filter($query) {
   }
 }
 add_action('pre_get_posts','search_filter');
-
-
-
 	
 if (function_exists('add_theme_support')) { add_theme_support('post-thumbnails'); }
 

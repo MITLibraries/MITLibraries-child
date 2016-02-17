@@ -27,7 +27,7 @@ global $isRoot;
 
 		<?php the_content(); ?>
 		
-		<?php get_sidebar( 'front' ); ?>
+		<?php dynamic_sidebar( 'sidebar-two' ); ?>
 
 	</div>
 	
