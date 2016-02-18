@@ -487,34 +487,55 @@ img.align-left {
 	font-size:24px;
 }
 
-/* Category Styles */
-.category-post {
-	display:flex;
-	align-items:flex-start;
-	margin:2em 0;
+/* ---- Sticky/Post Excerpts + Flexbox Layout---- */
+.wrap-section-hilite,
+.excerpt-post {
+	display: flex;
+	align-items: flex-start;
 }
 
-.category-post-slider {
-	display:flex;
-	align-items:flex-start;
-	margin:0 0 2em;
+.wrap-section-hilite {
+	padding: 25px;
+	margin: 25px 0;
+	transition: background-color 0.5s ease;
 }
 
-.sticky-slider .exhibit-title,.sticky-slider .sub-title,.sticky-slider .datespan {
-	margin:10px 0;
-	line-height:1.5;
+.wrap-section-hilite:hover {
+	background: #e4e4e4;	
 }
 
-.category-post__fig {
-	margin-right:1em;
+.excerpt-post {
+	background: #e4e4e4;
+	border: 1px solid #b3b3b3;
+	-webkit-box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.25);
+	-moz-box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.25);
+	box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.25);
+	padding: 25px;
 }
 
-.category-post__body {
+.section-hilite-image,
+.excerpt-post__fig {
+	margin-right: 25px;
+	position: relative;
+	top: 5px;
+}
+
+.section-hilite,
+.excerpt-post__body {
 	flex:1;
+	font-size: 14px;
+	line-height: 1.5 !important;
 }
 
-.sub-title {
-	font-size:16px;
+.section-hilite h3,
+.excerpt-post__body h3 {
+	padding-top: 0;
+}
+
+.excerpt-post__body h3 a {
+	color: #111;
+	font-weight: 600;
+	font-size: 16px;
 }
 
 /* ---- Sidebar ---- */
