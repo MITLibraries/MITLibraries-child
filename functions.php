@@ -1,10 +1,12 @@
 <?php
+	
+	$siteName = get_bloginfo('name');
 
-add_action( 'after_setup_theme', 'remove_child_theme_support');
-
-function remove_child_theme_support() {
-  remove_theme_support('custom-background');
-}
+	add_action( 'after_setup_theme', 'remove_child_theme_support');
+	
+	function remove_child_theme_support() {
+	  remove_theme_support('custom-background');
+	}
 
 	function enqueue_my_scripts() {
 	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', array('jquery'), '1.9.1', true); // we need the jquery library
@@ -13,10 +15,9 @@ function remove_child_theme_support() {
 	add_action('wp_enqueue_scripts', 'enqueue_my_scripts');
 	function enqueue_my_styles() {
 	wp_enqueue_style( 'bootstrap', '//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' );
-	wp_enqueue_style( 'roger', get_template_directory_uri() . '/style.css');
 	}
+
 	add_action('wp_enqueue_scripts', 'enqueue_my_styles');
-	
 
 
 
@@ -66,27 +67,29 @@ function customHeader() {
 
 function remove_parent_widgets(){
 
-	// Unregister some of the TwentyTen sidebars
-	unregister_sidebar( 'sidebar-2' );
-	unregister_sidebar( 'sidebar-3' );
-}
-add_action( 'widgets_init', 'remove_parent_widgets', 11 );
-
-function remove_parent_widgets(){
-
 	// Unregister some of the TwentyTwelve sidebars
+	unregister_sidebar( 'sidebar-1' );
 	unregister_sidebar( 'sidebar-2' );
 	unregister_sidebar( 'sidebar-3' );
 }
-add_action( 'widgets_init', 'remove_parent_widgets', 11 );
+add_action( 'widgets_init', 'remove_parent_widgets', 11);
 
 /**
  * Registers the Widgetized Area Below the Content.
  *
  * @since Twenty Twelve 1.0
  */
- 
 function twentytwelve_child_widgets_init() {
+	register_sidebar( array(
+		'name' => __( 'Main Sidebar', 'twentytwelve' ),
+		'id' => 'sidebar',
+		'description' => __( 'Appears on posts and pages', 'twentytwelve' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s" role="complementary">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	) );
+	
 	register_sidebar( array(
 		'name' => __( 'Below Content Widget Area', 'twentytwelve' ),
 		'id' => 'sidebar-two',
@@ -127,6 +130,9 @@ function search_filter($query) {
   }
 }
 add_action('pre_get_posts','search_filter');
+
+
+
 	
 if (function_exists('add_theme_support')) { add_theme_support('post-thumbnails'); }
 
@@ -229,36 +235,11 @@ function child_numeric_posts_nav() {
 
 }
 
-// FLEXSLIDER
-
-function twentytwelve_flexslider() {
-	if (!is_admin()) {
-
-		// Enqueue FlexSlider JavaScript
-		wp_register_script('jquery_flexslider', get_stylesheet_directory_uri(). '/js/jquery.flexslider-min.js', array('jquery') );
-		wp_enqueue_script('jquery_flexslider');
-
-		// Enqueue FlexSlider Stylesheet
-		wp_register_style( 'flexslider-style', get_stylesheet_directory_uri() . '/flexslider.css', 'all' );
-		wp_enqueue_style( 'flexslider-style' );
-
-		// FlexSlider custom settings
-		add_action('wp_footer', 'twentytwelve_flexslider_settings');
-
-		function twentytwelve_flexslider_settings() { ?>
-			<script>
-				jQuery(document).ready(function($){
-
-					$('.flexslider').flexslider();
-				});
-			</script>
-		<?php
-		}
-
-	}
+function custom_excerpt_length( $length ) {
+	return 20;
 }
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
-add_action('init', 'twentytwelve_flexslider');
 
 
 
