@@ -40,7 +40,7 @@ get_header(); ?>
 
 			<?php get_template_part('inc/postHead'); ?>
 			
-			<?php if ( is_active_sidebar( 'sidebar-1' ) ) { ?>
+			<?php if ( is_active_sidebar( 'sidebar' ) ) { ?>
 			
 				<div id="content" class="content has-sidebar">
 					

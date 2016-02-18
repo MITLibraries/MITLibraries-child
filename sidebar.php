@@ -8,13 +8,13 @@
  */
 ?>
 	
-<?php if (is_active_sidebar('sidebar-1')): ?>
+<?php if (is_active_sidebar('sidebar')): ?>
 
 	<div id="secondary" class="widget-area sidebar" role="complementary">
 
 		<?php 
 
-			dynamic_sidebar( 'sidebar-1' );
+			dynamic_sidebar( 'sidebar' );
 
 			// Show Login/Logout for News blog
 			$blogName = get_bloginfo('name');
