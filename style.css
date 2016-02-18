@@ -637,8 +637,6 @@ a.px14 {
 
 /* ---- Disaster-Response Styles ----*/
 .sidebar .button.disaster-response {
-	background:none;
-	border-top:none;
 	margin-bottom:16px;
 	margin-bottom:1rem;
 	padding:0;
@@ -648,7 +646,6 @@ a.px14 {
 	font-family:'Open Sans',sans-serif;
 	font-size:16px;
 	font-size:1rem;
-	font-weight:;
 	text-align:center;
 }
 
@@ -668,11 +665,6 @@ a.px14 {
 }
 
 /* ---- Give Now Styles ----*/
-.sidebar .widget.give {
-	background-color:#fff;
-	border-top:none;
-}
-
 a.giveNow {
 	background:#f58632;
 	border-radius:3px;
