@@ -239,3 +239,19 @@ function custom_excerpt_length( $length ) {
 	return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+// Get URL of first image in a post
+function get_first_post_image() {
+  global $post, $posts;
+  $first_img = '';
+  ob_start();
+  ob_end_clean();
+  $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+  $first_img = $matches [1] [0];
+
+  //Defines a default image
+  if(empty($first_img)){ 
+    $first_img = "/images/default.jpg";
+  }
+  return $first_img;
+} 
