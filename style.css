@@ -714,6 +714,10 @@ a.giveNow:hover {
 	margin-right: 5%;
 }
 
+.button.full-width {
+	min-width: 100%;
+}
+
 .search input[type="text"] {
 	height:auto;
 	line-height:1.5;
