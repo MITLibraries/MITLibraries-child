@@ -656,6 +656,49 @@ a.px14 {
 	display: none;
 }
 
+/* ---- Ultimate Posts Widget styles ---- */
+.upw-posts h4 a {
+	font-size: 18px;
+	color: #111;
+	font-weight: 600;
+}
+
+.widget_ultimate_posts .upw-posts .entry-meta,
+.widget_ultimate_posts .upw-posts .entry-meta a {
+	color: #ababab;
+	font-size: 12px;
+}
+
+.widget_ultimate_posts .upw-content span {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.widget_ultimate_posts .upw-posts .post {
+	box-shadow: none;
+}
+
+.widget_ultimate_posts .upw-posts .post:after {
+	background: none;
+	margin: 0;
+}
+
+.widget_ultimate_posts .upw-posts article {
+	border-bottom: none;
+}
+
+.upw-content img {
+	float: left;
+	padding: 0 20px 5px 0;
+	position: relative;
+	top: 5px;
+}
+
+.widget_ultimate_posts .upw-content p {
+	color: #5c5c5c;
+	font-size: 16px;
+}
+
 /* ---- Disaster-Response Styles ----*/
 .sidebar .button.disaster-response {
 	margin-bottom:16px;
