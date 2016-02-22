@@ -235,10 +235,20 @@ function child_numeric_posts_nav() {
 
 }
 
-function custom_excerpt_length( $length ) {
-	return 20;
+// Allows for custom excerpt lengths
+function custom_excerpt($new_length = 20, $new_more = '...') {
+  add_filter('excerpt_length', function () use ($new_length) {
+    return $new_length;
+  }, 999);
+  add_filter('excerpt_more', function () use ($new_more) {
+    return $new_more;
+  });
+  $output = get_the_excerpt();
+  $output = apply_filters('wptexturize', $output);
+  $output = apply_filters('convert_chars', $output);
+  $output = '<p>' . $output . '</p>';
+  echo $output;
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 // Get URL of first image in a post
 function get_first_post_image() {
