@@ -35,6 +35,32 @@
           </header>
           
           <div class="upw-content">
+	          
+	        <?php if ($custom_fields) : ?>
+              <?php $custom_field_name = explode(',', $custom_fields); ?>
+              <div class="entry-custom-fields">
+                <?php foreach ($custom_field_name as $name) :
+                  $name = trim($name);
+                  $custom_field_values = get_post_meta($post->ID, $name, true);
+                  if ($custom_field_values) : ?>
+                    <div class="custom-field custom-field-<?php echo $name; ?>">
+                      <?php
+                      if (!is_array($custom_field_values)) {
+                        echo $custom_field_values;
+                      } else {
+                        $last_value = end($custom_field_values);
+                        foreach ($custom_field_values as $value) {
+                          echo $value;
+                          if ($value != $last_value) echo ', ';
+                        }
+                      }
+                      ?>
+                    </div>
+                  <?php endif;
+                endforeach; ?>
+              </div>
+            <?php endif; ?>
+            
 
           <?php if ($instance['show_excerpt']) : ?>
             <div class="entry-summary">
@@ -108,31 +134,6 @@
               <div class="entry-tags">
                 <strong class="entry-tags-label"><?php _e('Tagged', 'upw'); ?>:</strong>
                 <span class="entry-tags-list"><?php echo $tags; ?></span>
-              </div>
-            <?php endif; ?>
-
-            <?php if ($custom_fields) : ?>
-              <?php $custom_field_name = explode(',', $custom_fields); ?>
-              <div class="entry-custom-fields">
-                <?php foreach ($custom_field_name as $name) :
-                  $name = trim($name);
-                  $custom_field_values = get_post_meta($post->ID, $name, true);
-                  if ($custom_field_values) : ?>
-                    <div class="custom-field custom-field-<?php echo $name; ?>">
-                      <?php
-                      if (!is_array($custom_field_values)) {
-                        echo $custom_field_values;
-                      } else {
-                        $last_value = end($custom_field_values);
-                        foreach ($custom_field_values as $value) {
-                          echo $value;
-                          if ($value != $last_value) echo ', ';
-                        }
-                      }
-                      ?>
-                    </div>
-                  <?php endif;
-                endforeach; ?>
               </div>
             <?php endif; ?>
 
