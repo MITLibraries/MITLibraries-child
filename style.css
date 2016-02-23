@@ -862,6 +862,11 @@ a.giveNow:hover {
 		display: block !important;
 		max-width: none !important;
 	}
+	
+	.button-set:first-child {
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
 
 }
 
