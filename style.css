@@ -590,7 +590,10 @@ img.align-left {
     margin-bottom: 20px;
 }
 
-.archnet {
+.archnet,
+span.archnet.twitter-connect:before,
+span.archnet.fb-connect:before,
+span.archnet.email-connect:before {
 	color: #c63 !important;
 }
 
