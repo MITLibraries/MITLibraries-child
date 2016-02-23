@@ -821,8 +821,12 @@ a.giveNow:hover {
 		float:none;
 		width:100%;
 	}
+	
+	.childTheme .entry-content {
+		padding: 0;
+	}
 
-	/* ---- Header Styles ---- */	
+		/* ---- Header Styles ---- */	
 	.page-header-home {
 		padding: 27.5px;
 	}
