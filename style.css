@@ -826,13 +826,25 @@ a.giveNow:hover {
 		padding: 0;
 	}
 
-		/* ---- Header Styles ---- */	
+	/* ---- Header Styles ---- */	
 	.page-header-home {
 		padding: 27.5px;
 	}
 	
 	.child-page-title {
 		font-size:30px!important;
+	}
+	
+	/* ---- Sticky/Post Excerpts + Flexbox Layout---- */
+	.excerpt-post {
+		flex-direction: column;
+	}
+	
+	.excerpt-post__fig {
+		margin: 0 auto;
+		margin-bottom: 25px;
+		min-width: 100%;
+		max-width: 100%;
 	}
 	
 	/* ---- Gallery Styles ---- */
@@ -854,6 +866,7 @@ a.giveNow:hover {
 }
 
 @media screen and (max-width:380px) {
+	/* ---- Header Styles ---- */	
 	.child-page-title {
 		font-size:24px!important;
 	}
@@ -869,4 +882,14 @@ a.giveNow:hover {
 	.header-bg-image-high img {
 		height: 100% !important;
 		width: auto;
+	}
+	
+	/* ---- Sticky/Post Excerpts + Flexbox Layout---- */
+	.wrap-section-hilite {
+		flex-direction: column;
+	}
+	
+	.section-hilite-image {
+		margin: 0 auto;
+		margin-bottom: 25px;
 	}
