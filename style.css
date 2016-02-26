@@ -653,8 +653,8 @@ a.px14 {
 	font-size: 14px;
 }
 
-.logo-widget {
-	border-top: 0 ;
+.widget-area.sidebar .logo-widget {
+	border-top: 0;
 }
 
 .hide-title .widget-title {
