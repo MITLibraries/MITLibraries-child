@@ -592,10 +592,10 @@ img.align-left {
     margin-bottom: 20px;
 }
 
-.archnet,
-span.archnet.twitter-connect:before,
-span.archnet.fb-connect:before,
-span.archnet.email-connect:before {
+.connect-archnet .archnet,
+.connect-archnet .textwidget span.archnet.twitter-connect:before,
+.connect-archnet .textwidget span.archnet.fb-connect:before,
+.connect-archnet .textwidget span.archnet.email-connect:before {
 	color: #c63 ;
 }
 
@@ -615,8 +615,8 @@ footer .footerHeader {
 	margin-right: 5%;
 }
 
-.staff-widget .textwidget,
-.sidebar-staff-widget .textwidget {
+.entry-content .staff-widget .textwidget,
+.entry-content .sidebar-staff-widget .textwidget {
 	font-size: 12px ;
 	line-height: 1.5;
 }
