@@ -43,7 +43,7 @@
                   $name = trim($name);
                   $custom_field_values = get_post_meta($post->ID, $name, true);
                   if ($custom_field_values) : ?>
-                    <div class="custom-field custom-field-<?php echo $name; ?>">
+                    <span class="custom-field custom-field-<?php echo $name; ?>">
                       <?php
                       if ( ! is_array( $custom_field_values ) ) {
 
@@ -65,7 +65,7 @@
                         }
                       }
                       ?>
-                    </div>
+                    </span>
                   <?php endif;
                 endforeach; ?>
               </div>
