@@ -23,11 +23,11 @@ MIT Libraries theme built for the MIT Libraries child websites.
 	color: #fff;
 }*/
 body {
-	font-family:'Open Sans',Helvetica,sans-serif!important;
+	font-family:'Open Sans',Helvetica,sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6 {
-	font-family:'Open Sans',Helvetica,sans-serif!important;
+	font-family:'Open Sans',Helvetica,sans-serif;
 }
 
 .childTheme ul {
@@ -156,7 +156,7 @@ nav.navbar.navbar-default {
 }
 
 .nav-second>li>a:hover {
-	color:#338bc5!important;
+	color:#338bc5;
 	text-decoration:underline;
 }
 
@@ -249,8 +249,8 @@ nav.navbar.navbar-default {
 }
 
 .child-page-title {
-	font-size:36px!important;
-	font-weight:600!important;
+	font-size:36px;
+	font-weight:600;
 	line-height:2;
 }
 
@@ -267,6 +267,7 @@ nav.navbar.navbar-default {
 /* ---- Main Content Area ---- */
 .content {
 	margin-top: 2em;
+	clear: both;
 }
 
 .childTheme .acontent {
@@ -329,7 +330,7 @@ img.align-left {
 }
 
 .main p {
-	margin-bottom: 1.25em !important;
+	margin-bottom: 1.25em ;
 	line-height: 1.5;
 }
 
@@ -377,12 +378,12 @@ img.align-left {
 	font-size:24px;
 	font-size:1.5rem;
 	line-height:1;
-	padding: 50px 0;
+	padding: 30px 0 10px;
 }
 
 .entry-content h3 {
-	margin: 0;
-	padding: 20px 0 5px;
+	margin-top: 1rem; 
+	padding: 0;
 	font-weight: 600;
 }
 
@@ -391,7 +392,7 @@ img.align-left {
 	padding: 0;
 }
 
-/* Make this simper when the !important 10px bottom margin on all p tags is removed */
+/* Make this simper when the  10px bottom margin on all p tags is removed */
 .entry-content p:first-of-type ~ h2:first-of-type {
 	margin-top:1.714285714rem;
 }
@@ -437,7 +438,7 @@ img.align-left {
 }
 
 .entry-content .expandable:nth-of-type(odd) {
-	background:#eceaea!important;
+	background:#eceaea;
 }
 
 .childTheme #dcrumb {
@@ -524,15 +525,15 @@ img.align-left {
 .excerpt-post__body {
 	flex:1;
 	font-size: 14px;
-	line-height: 1.5 !important;
+	line-height: 1.5 ;
 }
 
-.section-hilite h3,
-.excerpt-post__body h3 {
-	padding-top: 0;
+.excerpt-post .section-hilite h3,
+.excerpt-post .excerpt-post__body h3 {
+	margin-top: 0;
 }
 
-.excerpt-post__body h3 a {
+.excerpt-post .excerpt-post__body h3 a {
 	color: #111;
 	font-weight: 600;
 	font-size: 16px;
@@ -562,9 +563,9 @@ img.align-left {
 	margin-bottom: 5px;
 }
 
-.childTheme .widget-title {
-	font-size: 16px !important;
-	font-weight: 600 !important;
+.childTheme .sidebar .widget .widget-title {
+	font-size: 16px ;
+	font-weight: 600 ;
 }
 .childTheme .sidebar .widget {
 	background: none;
@@ -578,15 +579,16 @@ img.align-left {
 .childTheme .has-sidebar .sidebar {
 	background: none;
 	margin-bottom: 100px;
+	padding-right: 1%;
 }
 
-.contribute.widget {
-	background: #e4e4e4 !important;
-	border-top: 2px solid #c63 !important;
-	padding-left: 20px !important;
-	padding-right: 20px !important;
-    padding-top: 15px !important;
-    padding-bottom: 15px !important;
+.sidebar .contribute.widget {
+	background: #e4e4e4 ;
+	border-top: 2px solid #c63 ;
+	padding-left: 20px ;
+	padding-right: 20px ;
+    padding-top: 15px ;
+    padding-bottom: 15px ;
     margin-bottom: 20px;
 }
 
@@ -594,7 +596,7 @@ img.align-left {
 span.archnet.twitter-connect:before,
 span.archnet.fb-connect:before,
 span.archnet.email-connect:before {
-	color: #c63 !important;
+	color: #c63 ;
 }
 
 footer #footerHeader,
@@ -615,7 +617,7 @@ footer .footerHeader {
 
 .staff-widget .textwidget,
 .sidebar-staff-widget .textwidget {
-	font-size: 12px !important;
+	font-size: 12px ;
 	line-height: 1.5;
 }
 
@@ -652,7 +654,7 @@ a.px14 {
 }
 
 .logo-widget {
-	border-top: 0 !important;
+	border-top: 0 ;
 }
 
 .hide-title .widget-title {
@@ -753,8 +755,7 @@ a.giveNow:hover {
 }
 
 .button-set {
-	display: inline !important;
-	font-size: 16px;
+	display: inline ;
 }
 
 .button-set:first-child {
@@ -785,24 +786,24 @@ a.giveNow:hover {
 .childTheme .gallery .gallery-icon img {
 	height: auto;
 	max-width: 100%;
-	padding: 0 !important;
-	border: 0 !important;
+	padding: 0 ;
+	border: 0 ;
 }
 
 /* ---- Responsive Styles ---- */
 @media screen and (max-width:720px) {
 	.childTheme .navbar-collapse { /* Removes scroll on mobile */
-		padding-left: 15px !important;
-		padding-right: 15px !important;
+		padding-left: 15px ;
+		padding-right: 15px ;
 	}
 	
 	.mobile-display {
-		display: block !important;
+		display: block ;
 	}
 	
 	.childTheme .has-sidebar .main-content,
 	.childTheme .has-sidebar .sidebar {
-		padding: 0 27.5px;
+		padding: 0 5%;
 		width: 100%;
 		margin-bottom: 50px;
 	}
@@ -836,7 +837,7 @@ a.giveNow:hover {
 	}
 	
 	.child-page-title {
-		font-size:30px!important;
+		font-size:30px;
 	}
 	
 	/* ---- Sticky/Post Excerpts + Flexbox Layout---- */
@@ -853,7 +854,7 @@ a.giveNow:hover {
 	
 	/* ---- Gallery Styles ---- */
 	.childTheme .gallery .gallery-item {
-		width: 100% !important;
+		width: 100% ;
 	}
 	
 	.childTheme .gallery-item a,
@@ -863,8 +864,8 @@ a.giveNow:hover {
 	
 	/* ---- Button (group) Styles ---- */
 	.button-set {
-		display: block !important;
-		max-width: none !important;
+		display: block ;
+		max-width: none ;
 	}
 	
 	.button-set:first-child {
@@ -872,16 +873,22 @@ a.giveNow:hover {
 		margin-bottom: 10px;
 	}
 
+	/* ---- Widget Styles ---- */
+	.staff-widget {
+		width: 100%;
+		margin-right: 0;
+		margin: 15px 0;
+	}
 }
 
 @media screen and (max-width:380px) {
 	/* ---- Header Styles ---- */	
 	.child-page-title {
-		font-size:24px!important;
+		font-size:24px;
 	}
 
 	.child-page-title a {
-		font-size:21px!important;
+		font-size:21px;
 	}
 		
 	.child-tagline {
@@ -889,7 +896,7 @@ a.giveNow:hover {
 	}
 	
 	.header-bg-image-high img {
-		height: 100% !important;
+		height: 100% ;
 		width: auto;
 	}
 	
@@ -902,3 +909,8 @@ a.giveNow:hover {
 		margin: 0 auto;
 		margin-bottom: 25px;
 	}
+
+	.section-hilite {
+		text-align: center;
+	}
+	
