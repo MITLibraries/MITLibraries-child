@@ -754,7 +754,7 @@ a.giveNow:hover {
 	margin: 50px 0px;
 }
 
-.button-set {
+.entry-content .button-set {
 	display: inline ;
 }
 
@@ -863,12 +863,12 @@ a.giveNow:hover {
 	}
 	
 	/* ---- Button (group) Styles ---- */
-	.button-set {
+	.entry-content .button-set {
 		display: block ;
 		max-width: none ;
 	}
 	
-	.button-set:first-child {
+	.entry-content .button-set:first-child {
 		margin-right: 0;
 		margin-bottom: 10px;
 	}
