@@ -862,6 +862,10 @@ a.giveNow:hover {
 		width: 100%;
 	}
 	
+	.childTheme .gallery-caption {
+		padding: 0 10px;
+	}	
+
 	/* ---- Button (group) Styles ---- */
 	.entry-content .button-set {
 		display: block ;
