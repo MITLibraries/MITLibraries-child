@@ -854,7 +854,7 @@ a.giveNow:hover {
 	
 	/* ---- Gallery Styles ---- */
 	.childTheme .gallery .gallery-item {
-		width: 100% ;
+		width: 100% !important;
 	}
 	
 	.childTheme .gallery-item a,
