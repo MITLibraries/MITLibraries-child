@@ -807,6 +807,42 @@ a.giveNow:hover {
 		width: 100%;
 		margin-bottom: 50px;
 	}
+
+	ul.nav li.dropdown:hover > ul.dropdown-menu {
+	    display: block;    
+		left: auto;
+		opacity: 1;
+	}
+	
+	.childTheme .dropdown-menu {
+	    position: relative;
+	    top: 100%;
+	    left: 0;
+	    z-index: 1000;
+	    display: none;
+	    float: none;
+	    min-width: 100%;
+	    padding: 5px 0;
+	    margin: 2px 0 0;
+	    font-size: 14px;
+	    list-style: none;
+	    background-color: #fff;
+	    border: 1px solid #ccc;
+	    border: 1px solid rgba(0,0,0,0.15);
+	    border-radius: 0;
+	    -webkit-box-shadow: none;
+	    box-shadow: none;
+	    background-clip: padding-box;
+	}
+	
+	.childTheme	.dropdown-menu>li>a {
+	    display: block;
+	    padding: 8px 40px;
+	    clear: both;
+	    font-weight: normal;
+	    color: #333;
+	    white-space: nowrap;
+	}
 }
 
 @media screen and (max-width:480px) {
