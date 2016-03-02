@@ -704,6 +704,38 @@ a.px14 {
 	font-size: 16px;
 }
 
+.upw-content .entry-custom-fields {
+	margin-left: 0px;
+}
+
+.upw-content .custom-field-event_date {
+	color: #F58733;
+	font-weight: bold;
+}
+
+.upw-content .custom-field-event_date:before {
+	margin-right: 5px;
+	font-family:FontAwesome;
+	content:"\f073" !important;
+	color: #F58733;
+	font-size: 1em;	
+}
+
+.upw-content .custom-field-event_start_time,
+.upw-content .custom-field-event_end_time {
+	color: #ababab;
+	font-weight: bold;
+}
+
+.widget_ultimate_posts .upw-content .custom-field-event_start_time {
+	margin-right: 0;
+}
+
+.upw-content .custom-field-event_end_time:before {
+	content: "-";
+}
+
+
 /* ---- Disaster-Response Styles ----*/
 .sidebar .button.disaster-response {
 	margin-bottom:16px;
