@@ -160,6 +160,10 @@ nav.navbar.navbar-default {
 	text-decoration:underline;
 }
 
+.current_page_ancestor {
+	background: #e7e7e7;
+}
+
 @media only screen and (min-width : 768px) {
 	/* Make Navigation Toggle on Desktop Hover */
 	.dropdown:hover .dropdown-menu {
