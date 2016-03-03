@@ -924,6 +924,23 @@ a.giveNow:hover {
 		max-width: 100%;
 	}
 	
+	.staff-widget .textwidget {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	.textwidget img {
+		margin-right: 25px;
+		position: relative;
+		top: 15px;
+	}
+	
+	.staff--body {
+		flex:1;
+		font-size: 14px;
+		line-height: 1.5 ;
+	}
+	
 	/* ---- Gallery Styles ---- */
 	.childTheme .gallery .gallery-item {
 		width: 100% !important;
