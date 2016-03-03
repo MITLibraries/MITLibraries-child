@@ -739,6 +739,142 @@ a.px14 {
 	content: "-";
 }
 
+/* ---- Exhibits Styles ---- */
+
+.category-init {
+  background: #333;
+   border-radius: 27.5px;
+  -moz-border-radius: 27.5px;
+  -webkit-border-radius: 27.5px;
+  color: #eee;
+  display: inline-block;
+  line-height: 55px;
+  text-align: center;
+  width: 55px;
+  position: absolute;
+  z-index: 10000 !important;
+  font-size: 32px;
+  font-weight: 300;
+  margin-top: 10px; 
+}
+
+.catName {
+	font-weight: 600;
+	margin-left: 65px;
+	font-size: 18px;
+	position: relative;
+	top: 7px;
+}
+
+.category-post {
+  border-top: 8px solid #333;
+  background: #eee;
+  margin-left: 27.5px !important;
+  margin-bottom: 0 !important;
+  position: relative;
+}
+
+.category-post-content {
+	padding: 15px !important;
+}
+
+.category-post-content p {
+	font-size: 13px;
+}
+
+.category-post img {
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	border: none !important;
+}
+
+.category-post-slider {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 0 2em;
+  background: #f8f8f8;
+}
+
+.sticky-slider .exhibit-title,
+.sticky-slider .sub-title,
+.sticky-slider .datespan {
+	margin: 10px 0;
+	line-height: 1.5;
+}
+
+.category-post__fig {
+	margin-right: 1.5em;
+}
+
+.category-post-flex__fig {
+	margin-right: 1.5em;
+}
+
+.category-post__body {
+  flex: 1;
+  padding-right: 25px;
+}
+
+.category-post-flex__body {
+	flex: 1;
+	padding-right: 25px;
+}
+
+.category-post__body * {
+	line-height: 1.5;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font-size: 1em;	
+}
+
+.category-post-flex__body h2 a.exhibit-title {
+	padding-bottom: 0 !important;
+	font-size: 18px;
+	color: #333;
+	font-weight: 600;
+}
+
+.category-post-flex__body p {
+	font-size: 14px;
+}
+
+.category-post__body h4 {
+	font-weight: 600;
+}
+
+.header.exhibit-title {
+	font-weight: bold;
+	font-size: 19px !important;
+}
+
+.sub-title {
+	font-size: 16px;
+}
+
+h2.exhibit-title,
+h2.event-title {
+	font-size: 19px;
+}
+
+.exhibit-ends {
+	position: absolute;
+	bottom: 15px;
+	left: 315px;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+
+.sponsored {
+	background: #ddd;
+	padding: 10px 20px 5px;
+	-webkit-box-shadow: inset 0px 10px 10px -5px rgba(0,0,0,.4);
+    box-shadow: inset 0px 10px 10px -5px rgba(0,0,0,.4);
+    margin-left: 36px;
+}
+
+.sponsored p {
+	font-size: 14px;
+}
 
 /* ---- Disaster-Response Styles ----*/
 .sidebar .button.disaster-response {
