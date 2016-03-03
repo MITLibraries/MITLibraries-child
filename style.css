@@ -973,6 +973,7 @@ a.giveNow:hover {
 		display: block ;
 	}
 	
+	.childTheme .main-content,	
 	.childTheme .has-sidebar .main-content,
 	.childTheme .has-sidebar .sidebar {
 		padding: 0 5%;
