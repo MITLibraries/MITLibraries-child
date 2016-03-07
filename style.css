@@ -40,7 +40,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .childTheme hr {
 	border:none;
-	margin:2em 1em;
+	margin:2em 0;
 }
 
 /* ---- Begin Child Page Content Styles ---- */
@@ -494,7 +494,8 @@ img.align-left {
 
 /* ---- Sticky/Post Excerpts + Flexbox Layout---- */
 .wrap-section-hilite,
-.excerpt-post {
+.excerpt-post,
+.category-post {
 	display: flex;
 	align-items: flex-start;
 }
@@ -526,7 +527,8 @@ img.align-left {
 }
 
 .section-hilite,
-.excerpt-post__body {
+.excerpt-post__body,
+.category-post-content {
 	flex:1;
 	font-size: 14px;
 	line-height: 1.5 ;
@@ -552,6 +554,10 @@ img.align-left {
 
 .ie8 .sidebar {
 	width: 23%;
+}
+
+.page-template-page-widgetized .sidebar {
+	margin-top: 35px;
 }
 
 .childTheme .widget span {
@@ -658,7 +664,7 @@ a.px14 {
 }
 
 .widget-area.sidebar .logo-widget {
-	border-top: 0;
+	border-top: 0 ;
 }
 
 .hide-title .widget-title {
@@ -741,7 +747,11 @@ a.px14 {
 
 /* ---- Exhibits Styles ---- */
 
-.category-init {
+.exhibits-feed {
+	margin-left: -27.5px;
+}
+
+.childTheme .upw-posts .category-init {
   background: #333;
    border-radius: 27.5px;
   -moz-border-radius: 27.5px;
@@ -758,12 +768,20 @@ a.px14 {
   margin-top: 10px; 
 }
 
-.catName {
+.childTheme .upw-posts .catName {
 	font-weight: 600;
 	margin-left: 65px;
-	font-size: 18px;
+	font-size: 16px;
 	position: relative;
-	top: 7px;
+	top: 5px;
+}
+
+.category-image {
+	background-image: url("https://placem.at/places?w=432&h=300&random=1");
+	height: 300px;
+	width: 200px;
+	background-repeat: no-repeat; 
+	background-position: center center;
 }
 
 .category-post {
@@ -775,10 +793,10 @@ a.px14 {
 }
 
 .category-post-content {
-	padding: 15px !important;
+	padding: 15px;
 }
 
-.category-post-content p {
+.upw-content .category-post-content p {
 	font-size: 13px;
 }
 
@@ -786,28 +804,6 @@ a.px14 {
 	border-radius: 0 !important;
 	box-shadow: none !important;
 	border: none !important;
-}
-
-.category-post-slider {
-  display: flex;
-  align-items: flex-start;
-  margin: 0 0 2em;
-  background: #f8f8f8;
-}
-
-.sticky-slider .exhibit-title,
-.sticky-slider .sub-title,
-.sticky-slider .datespan {
-	margin: 10px 0;
-	line-height: 1.5;
-}
-
-.category-post__fig {
-	margin-right: 1.5em;
-}
-
-.category-post-flex__fig {
-	margin-right: 1.5em;
 }
 
 .category-post__body {
@@ -856,10 +852,15 @@ h2.event-title {
 	font-size: 19px;
 }
 
+h4.entry-title {
+	margin-top: 0;
+	line-height: 1.5;
+}
+
 .exhibit-ends {
 	position: absolute;
 	bottom: 15px;
-	left: 315px;
+	left: 215px;
 	text-transform: uppercase;
 	font-size: 13px;
 }
@@ -958,8 +959,8 @@ a.giveNow:hover {
 .childTheme .gallery .gallery-icon img {
 	height: auto;
 	max-width: 100%;
-	padding: 0 ;
-	border: 0 ;
+	padding: 0 !important;
+	border: 0 !important;
 }
 
 /* ---- Responsive Styles ---- */
@@ -972,7 +973,7 @@ a.giveNow:hover {
 	.mobile-display {
 		display: block ;
 	}
-	
+
 	.childTheme .main-content,	
 	.childTheme .has-sidebar .main-content,
 	.childTheme .has-sidebar .sidebar {
@@ -980,7 +981,7 @@ a.giveNow:hover {
 		width: 100%;
 		margin-bottom: 50px;
 	}
-
+	
 	ul.nav li.dropdown:hover > ul.dropdown-menu {
 	    display: block;    
 		left: auto;
@@ -1016,6 +1017,11 @@ a.giveNow:hover {
 	    color: #333;
 	    white-space: nowrap;
 	}
+	
+	.childTheme .entry-content,
+	.has-sidebar .main-content {
+		padding: 0;
+	}
 }
 
 @media screen and (max-width:480px) {
@@ -1050,7 +1056,12 @@ a.giveNow:hover {
 	}
 	
 	/* ---- Sticky/Post Excerpts + Flexbox Layout---- */
-	.excerpt-post {
+	.upw-feeds .exhibits-feed {
+		padding: 0 5%;
+	}
+	
+	.excerpt-post,
+	.category-post {
 		flex-direction: column;
 	}
 	
@@ -1060,6 +1071,12 @@ a.giveNow:hover {
 		min-width: 100%;
 		max-width: 100%;
 	}
+	
+	.category-image {
+		height: 200px;
+		min-width: 100% !important;
+		background-repeat: no-repeat; 
+	}		
 	
 	.staff-widget .textwidget {
 		display: flex;
@@ -1075,6 +1092,42 @@ a.giveNow:hover {
 	.staff--body {
 		flex:1;
 	}
+
+	.exhibit-ends {
+		position: absolute;
+		bottom: 10px;
+		left: 15px;
+		text-transform: uppercase;
+		font-size: 13px;
+	}
+
+	
+	.childTheme .upw-posts .category-init {
+		background: #333;
+		border-radius: 25px;
+		-moz-border-radius: 25px;
+		-webkit-border-radius: 25px;
+		color: #eee;
+		display: inline-block;
+		line-height: 50px;
+		text-align: center;
+		width: 50px;
+		z-index: -1 !important;
+		font-size: 30px;
+		font-weight: 300;
+		position: relative;
+		bottom:-60px;
+		left: 30px;
+	}	
+
+	.childTheme .upw-posts .catName {
+		font-weight: bold;
+		left: 30px;
+		font-size: 16px;
+		margin-top: 18px;
+		position: relative;
+		top: 0px;
+	}	
 	
 	/* ---- Gallery Styles ---- */
 	.childTheme .gallery .gallery-item {
@@ -1089,7 +1142,7 @@ a.giveNow:hover {
 	.childTheme .gallery-caption {
 		padding: 0 10px;
 	}	
-
+	
 	/* ---- Button (group) Styles ---- */
 	.entry-content .button-set {
 		display: block ;
