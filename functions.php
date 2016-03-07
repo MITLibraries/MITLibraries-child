@@ -17,6 +17,8 @@ function enqueue_my_styles() {
 	wp_enqueue_style( 'bootstrap', '//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' );
 }
 
+
+
 add_action('wp_enqueue_scripts', 'enqueue_my_styles');
 
 
@@ -94,8 +96,8 @@ function twentytwelve_child_widgets_init() {
 			'name' => __( 'Below Content Widget Area', 'twentytwelve' ),
 			'id' => 'sidebar-two',
 			'description' => __( 'Appears when using the Widgetized Page template', 'twentytwelve' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s" role="complementary">',
-			'after_widget' => '</aside>',
+			'before_widget' => '<div id="%1$s" class="widget %2$s" role="complementary">',
+			'after_widget' => '</div>',
 			'before_title' => '<h3 class="widget-title">',
 			'after_title' => '</h3>',
 		) );
@@ -137,7 +139,7 @@ add_action('pre_get_posts','search_filter');
 if (function_exists('add_theme_support')) { add_theme_support('post-thumbnails'); }
 
 add_image_size('headerImage', 2000, 1020, true);
-add_image_size('exhibitImage', 150, 150, true);
+add_image_size('exhibit_thumbnail_image', 800, 600, true);
 set_post_thumbnail_size( 1024, 9999 ); // Unlimited height, soft crop
 
 if (!function_exists('my_mce_buttons_2')):
@@ -261,7 +263,7 @@ function get_first_post_image() {
 
   //Defines a default image
   if(empty($first_img)){ 
-    $first_img = "/images/default.jpg";
+    $first_img = "";
   }
   return $first_img;
 } 
