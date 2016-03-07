@@ -1025,6 +1025,10 @@ a.giveNow:hover {
 }
 
 @media screen and (max-width:480px) {
+	.childTheme .widget span {
+		display: inline;
+	}
+	
 	.category .categoryName,.search .main-content h2.search-title {
 		border-bottom:none;
 		color:#666;
@@ -1056,10 +1060,6 @@ a.giveNow:hover {
 	}
 	
 	/* ---- Sticky/Post Excerpts + Flexbox Layout---- */
-	.upw-feeds .exhibits-feed {
-		padding: 0 5%;
-	}
-	
 	.excerpt-post,
 	.category-post {
 		flex-direction: column;
