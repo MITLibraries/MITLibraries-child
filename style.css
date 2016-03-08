@@ -1076,6 +1076,11 @@ a.giveNow:hover {
 		max-width: 100%;
 	}
 	
+	.category-post-content {
+	    padding: 15px 15px 35px;
+	}
+		
+		
 	.category-image {
 		height: 200px;
 		min-width: 100% !important;
