@@ -1025,6 +1025,14 @@ a.giveNow:hover {
 }
 
 @media screen and (max-width:480px) {
+	.childTheme .widget span {
+		display: block;
+	}
+
+	.childTheme .widget .entry-categories span {
+		display: inline-block;
+	}
+		
 	.category .categoryName,.search .main-content h2.search-title {
 		border-bottom:none;
 		color:#666;
