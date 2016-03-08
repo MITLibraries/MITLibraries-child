@@ -1080,7 +1080,6 @@ a.giveNow:hover {
 	    padding: 15px 15px 35px;
 	}
 		
-		
 	.category-image {
 		height: 200px;
 		min-width: 100% !important;
@@ -1124,18 +1123,18 @@ a.giveNow:hover {
 		font-size: 30px;
 		font-weight: 300;
 		position: relative;
-		bottom:-60px;
+		bottom:-25px;
 		left: 30px;
 	}	
 
 	.childTheme .upw-posts .catName {
 		font-weight: bold;
-		left: 30px;
+		left: -20px;
 		font-size: 16px;
-		margin-top: 18px;
+		margin-top: 10px;
 		position: relative;
-		top: 0px;
-	}	
+		top: 20px;
+	}
 	
 	/* ---- Gallery Styles ---- */
 	.childTheme .gallery .gallery-item {
