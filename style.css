@@ -746,29 +746,29 @@ a.px14 {
 }
 
 /* ---- Exhibits Styles ---- */
-
 .exhibits-feed {
 	margin-left: -27.5px;
+	margin-bottom: 50px;
 }
 
-.childTheme .upw-posts .category-init {
-  background: #333;
-   border-radius: 27.5px;
-  -moz-border-radius: 27.5px;
-  -webkit-border-radius: 27.5px;
-  color: #eee;
-  display: inline-block;
-  line-height: 55px;
-  text-align: center;
-  width: 55px;
-  position: absolute;
-  z-index: 10000 !important;
-  font-size: 32px;
-  font-weight: 300;
-  margin-top: 10px; 
-}
+.childTheme .exhibits-feed .category-init {
+	background: #333;
+	border-radius: 27.5px;
+	-moz-border-radius: 27.5px;
+	-webkit-border-radius: 27.5px;
+	color: #cbcbcb;
+	display: inline-block;
+	line-height: 55px;
+	text-align: center;
+	width: 55px;
+	position: absolute;
+	z-index: 10000 !important;
+	font-size: 32px;
+	font-weight: 300;
+	margin-top: 10px; 
+ }
 
-.childTheme .upw-posts .catName {
+.childTheme .exhibits-feed .catName {
 	font-weight: 600;
 	margin-left: 65px;
 	font-size: 16px;
@@ -777,26 +777,29 @@ a.px14 {
 }
 
 .category-image {
-	background-image: url("https://placem.at/places?w=432&h=300&random=1");
-	height: 300px;
 	width: 200px;
+	height: 300px;
 	background-repeat: no-repeat; 
 	background-position: center center;
 }
 
 .category-post {
-  border-top: 8px solid #333;
-  background: #eee;
-  margin-left: 27.5px;
-  margin-bottom: 0;
-  position: relative;
+  	border-top: 8px solid #333;
+  	background: #eee;
+	margin-left: 27.5px !important;
+	margin-bottom: 0 !important;
+	position: relative;
+	top: 10px;
+	-webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.75);
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.75);
 }
 
 .category-post-content {
 	padding: 15px;
 }
 
-.upw-content .category-post-content p {
+.category-post-content p {
 	font-size: 13px;
 }
 
@@ -806,55 +809,15 @@ a.px14 {
 	border: none !important;
 }
 
-.category-post__body {
-  flex: 1;
-  padding-right: 25px;
-}
-
-.category-post-flex__body {
-	flex: 1;
-	padding-right: 25px;
-}
-
-.category-post__body * {
-	line-height: 1.5;
-	margin-bottom: 0;
+h4 a.exhibit-title {
 	padding-bottom: 0;
-	font-size: 1em;	
-}
-
-.category-post-flex__body h2 a.exhibit-title {
-	padding-bottom: 0 !important;
 	font-size: 18px;
 	color: #333;
 	font-weight: 600;
 }
 
-.category-post-flex__body p {
-	font-size: 14px;
-}
-
-.category-post__body h4 {
-	font-weight: 600;
-}
-
-.header.exhibit-title {
-	font-weight: bold;
-	font-size: 19px !important;
-}
-
 .sub-title {
 	font-size: 16px;
-}
-
-h2.exhibit-title,
-h2.event-title {
-	font-size: 19px;
-}
-
-h4.entry-title {
-	margin-top: 0;
-	line-height: 1.5;
 }
 
 .exhibit-ends {
@@ -866,15 +829,13 @@ h4.entry-title {
 }
 
 .sponsored {
-	background: #ddd;
-	padding: 10px 20px 5px;
+	background: #cbcbcb;
+	padding: 10px 15px;
 	-webkit-box-shadow: inset 0px 10px 10px -5px rgba(0,0,0,.4);
     box-shadow: inset 0px 10px 10px -5px rgba(0,0,0,.4);
-    margin-left: 36px;
-}
-
-.sponsored p {
-	font-size: 14px;
+    margin: 10px 0 0 27.5px;
+	font-size: 13px;
+	font-weight: 600;
 }
 
 /* ---- Disaster-Response Styles ----*/
