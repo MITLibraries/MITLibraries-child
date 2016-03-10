@@ -1018,7 +1018,7 @@ a.giveNow:hover {
 		font-size:30px;
 	}
 	
-	/* ---- Sticky/Post Excerpts + Flexbox Layout---- */
+	/* ---- Sticky/Post Excerpts + Flexbox Layout---- */	
 	.excerpt-post,
 	.category-post {
 		flex-direction: column;
@@ -1029,16 +1029,6 @@ a.giveNow:hover {
 		margin-bottom: 25px;
 		min-width: 100%;
 		max-width: 100%;
-	}
-	
-	.category-post-content {
-	    padding: 15px 15px 35px;
-	}
-		
-	.category-image {
-		height: 200px;
-		min-width: 100% !important;
-		background-repeat: no-repeat; 
 	}		
 	
 	.staff-widget .textwidget {
@@ -1056,6 +1046,43 @@ a.giveNow:hover {
 		flex:1;
 	}
 
+	/* ---- Exhibits Styles ---- */
+	.category-post-content {
+	    padding: 15px 15px 45px;
+	}
+		
+	.category-image {
+		height: 200px;
+		min-width: 100% !important;
+		background-position: center top;
+	}
+	
+	.childTheme .exhibits-feed .category-init {
+		background: #333;
+		border-radius: 21px;
+		-moz-border-radius: 21px;
+		-webkit-border-radius: 21px;
+		display: inline-block;
+		line-height: 42px;
+		text-align: center;
+		width: 42px;
+		z-index: -1 !important;
+		font-size: 24px;
+		font-weight: 300;
+		position: relative;
+		bottom:-15px;
+		left: 30px;
+	}	
+
+	.childTheme .exhibits-feed .catName {
+		font-weight: bold;
+		left: -25px;
+		font-size: 16px;
+		margin-top: 10px;
+		position: relative;
+		top: 10px;
+	}	
+
 	.exhibit-ends {
 		position: absolute;
 		bottom: 10px;
@@ -1063,34 +1090,7 @@ a.giveNow:hover {
 		text-transform: uppercase;
 		font-size: 13px;
 	}
-	
-	.childTheme .upw-posts .category-init {
-		background: #333;
-		border-radius: 25px;
-		-moz-border-radius: 25px;
-		-webkit-border-radius: 25px;
-		color: #eee;
-		display: inline-block;
-		line-height: 50px;
-		text-align: center;
-		width: 50px;
-		z-index: -1 !important;
-		font-size: 30px;
-		font-weight: 300;
-		position: relative;
-		bottom:-25px;
-		left: 30px;
-	}	
-
-	.childTheme .upw-posts .catName {
-		font-weight: bold;
-		left: -20px;
-		font-size: 16px;
-		margin-top: 10px;
-		position: relative;
-		top: 20px;
-	}
-	
+		
 	/* ---- Gallery Styles ---- */
 	.childTheme .gallery .gallery-item {
 		width: 100% !important;
