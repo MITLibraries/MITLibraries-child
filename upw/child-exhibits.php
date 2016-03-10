@@ -23,13 +23,13 @@
 
         <?php $current_post = ($post->ID == $current_post_id && is_single()) ? 'active' : ''; ?>
 
-        <article <?php post_class($current_post); ?>>
+    <article <?php post_class($current_post); ?>>
 
-          <header>
+        <header>
 	          
-	            <?php
-            $categories = get_the_term_list($post->ID, 'category', '', ', ');
-            if ($instance['show_cats'] && $categories) :
+	        <?php
+	            $categories = get_the_term_list($post->ID, 'category', '', ', ');
+	            if ($instance['show_cats'] && $categories) :
             ?>
               <div class="entry-categories">
                 <div class="entry-cats-list"><?php
@@ -40,18 +40,20 @@ foreach((get_the_category()) as $category) {
               </div>
             <?php endif; ?>
 
-          </header>
+        </header>
           
-          <div class="upw-content category-post">
-	          	<div class="category-image">
+        <div class="upw-content category-post">
+	          
+	        <div class="category-image">
 	           <?php if (current_theme_supports('post-thumbnails') && $instance['show_thumbnail'] && has_post_thumbnail()) : ?>
               <div class="entry-image">
                 <a href="<?php the_permalink(); ?>" rel="bookmark">
                   <?php the_post_thumbnail($instance['thumb_size']); ?>
                </a>
               </div>
+            
             <?php endif; ?>
-	          	</div>
+	        </div>
 
 			<div class="category-post-content">
             <?php if (get_the_title() && $instance['show_title']) : ?>
@@ -97,9 +99,9 @@ foreach((get_the_category()) as $category) {
                         } 
                         
                         if ($name == 'end_date') { ?>
-                       <div class="exhibit-ends">
-                       <?php echo 'Ends ' . $custom_field_values; } ?>
-                       </div>
+	                       <div class="exhibit-ends">
+	                       	<?php echo 'Ends ' . $custom_field_values; } ?>
+	                       </div>
                       
                        <?php
 
@@ -114,14 +116,14 @@ foreach((get_the_category()) as $category) {
                     </span>
                   <?php endif;
                 endforeach; ?>
-              </div>
+              </div> <!---- End of .entry-custom-fields ---->
             <?php endif; ?>
           
-          </div>
+          </div> <!---- End of .category-post-content ---->
           
-          </div>
+        </div> <!---- End of .upw-content + .category-post ---->
 
-        </article>
+    </article>
 
       <?php endwhile; ?>
 
@@ -133,7 +135,7 @@ foreach((get_the_category()) as $category) {
 
   <?php endif; ?>
 
-</div>
+</div> <!---- End of .upw-posts + .exhibits-feed ---->
 
 <?php if ($instance['after_posts']) : ?>
   <div class="upw-after">
