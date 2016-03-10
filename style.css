@@ -787,8 +787,8 @@ a.px14 {
 .category-post {
   border-top: 8px solid #333;
   background: #eee;
-  margin-left: 27.5px !important;
-  margin-bottom: 0 !important;
+  margin-left: 27.5px;
+  margin-bottom: 0;
   position: relative;
 }
 
