@@ -786,8 +786,8 @@ a.px14 {
 .category-post {
   	border-top: 8px solid #333;
   	background: #eee;
-	margin-left: 27.5px !important;
-	margin-bottom: 0 !important;
+	margin-left: 27.5px;
+	margin-bottom: 0;
 	position: relative;
 	top: 10px;
 	-webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.75);
@@ -801,12 +801,6 @@ a.px14 {
 
 .category-post-content p {
 	font-size: 13px;
-}
-
-.category-post img {
-	border-radius: 0 !important;
-	box-shadow: none !important;
-	border: none !important;
 }
 
 h4 a.exhibit-title {
