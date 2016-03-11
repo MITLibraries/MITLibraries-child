@@ -175,23 +175,26 @@ nav.navbar.navbar-default {
 /* ---- Child Header ---- */
 .header-bg-image-high {
 	position:absolute;
-	top:0;
 	z-index:-99998;
 	overflow:hidden;
-	height:200px;
-	max-width:100%;
+	height: 200px;
+	top: 0;
+}
+
+.header-image-high,
+.header-image-short {
+	height:1020px;
+	width:2000px;
+	background-repeat: no-repeat; 
+	background-position: center center;
 }
 
 .header-bg-image-short {
 	position:absolute;
-	top:0;
 	z-index:-99998;
 	overflow:hidden;
 	height:100px;
-}
-
-.header-bg-image-short img {
-	width:100%;
+	top:0;
 }
 
 .page-header-home {
