@@ -563,6 +563,10 @@ img.align-left {
 	margin-top: 35px;
 }
 
+.page-template-page-exhibits-display .sidebar {
+	margin-top: 80px;
+}
+
 .childTheme .widget span {
 	display: block;
 }
