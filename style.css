@@ -807,7 +807,8 @@ a.px14 {
 }
 
 .category-post-content p {
-	font-size: 13px;
+	font-size: 14px;
+	line-height: 1.5;
 }
 
 h4 a.exhibit-title {
@@ -816,6 +817,18 @@ h4 a.exhibit-title {
 	color: #333;
 	font-weight: 600;
 	line-height: 1.5;
+}
+
+h3.exhibits {
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+	line-height: 3;
+	color: #777;
+}
+
+.exhibits-feed-section {
+	margin: 0 0 100px;
 }
 
 .sub-title {
