@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Exhibits | Upcoming + Past
+ * Template Name: Exhibits | Current, Upcoming & Past
  */
 
 $pageRoot = getRoot($post);
