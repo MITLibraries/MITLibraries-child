@@ -1,6 +1,6 @@
 <?php
 /**
- * The template used for displaying archive content for custom post types in category.php
+ * The sub-template used by page-exhibits-home.php, page-exhibits-feed.php, category-rotch-library.php and category-maihaugen-gallery.php for displaying Current Exhibits.
  *
  * @package WordPress
  * @subpackage Twenty_Twelve
