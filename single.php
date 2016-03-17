@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * This is the template that displays the news page
+ * This is the template that displays the single post.
  *
  * @package WordPress
  * @subpackage Twenty_Twelve
@@ -29,12 +29,12 @@ get_header(); ?>
 					
 						<div class="article-head">
 
-						<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
+						<h2><?php the_title(); ?></h2>
 						
 						</div>
 						
 						<div class="entry-content">
-							<?php the_content('Read the rest of this entry &raquo;'); ?>
+							<?php the_content(); ?>
 						</div>					
 								
 					
