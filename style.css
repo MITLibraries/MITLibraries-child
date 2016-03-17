@@ -866,7 +866,15 @@ h3.exhibits {
 	font-size: 13px;
 }
 
-.sponsored {
+.date-span {
+	font-weight: 600;
+}
+
+.sponsored-content {
+	color: #777;
+}
+
+.sponsored-excerpt {
 	background: #cbcbcb;
 	padding: 10px 15px;
 	-webkit-box-shadow: inset 0px 10px 10px -5px rgba(0,0,0,.4);
