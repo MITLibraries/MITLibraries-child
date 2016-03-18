@@ -17,7 +17,9 @@ global $isRoot;
 		
 				<?php
 				$sticky = get_option( 'sticky_posts' );
-				$the_query = new WP_Query( 'p=' . $sticky[0] );
+				rsort( $sticky );
+				$sticky = array_slice( $sticky, 0, 5 );
+				$the_query = new WP_Query( array( 'post__in' => $sticky, 'ignore_sticky_posts' => 1 ) );
 				while ($the_query->have_posts()) {
 					$the_query->the_post();
 				?>
