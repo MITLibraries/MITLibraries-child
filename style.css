@@ -543,6 +543,7 @@ img.align-left {
 	-moz-box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.25);
 	box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.25);
 	padding: 25px;
+	margin-bottom: 35px;
 }
 
 .section-hilite-image,
@@ -586,7 +587,9 @@ img.align-left {
 	margin-top: 35px;
 }
 
-.page-template-page-exhibits-display .sidebar {
+.page-template-page-exhibits-display .sidebar,
+.category-rotch-library .sidebar,
+.category-maihaugen-gallery .sidebar {
 	margin-top: 80px;
 }
 
