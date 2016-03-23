@@ -36,8 +36,19 @@
 				
 			</div>
 			
-		<?php else: ?>
+		<?php elseif(is_category()): ?>
 		
+			<div class="child-header-short">
+				<div class="page-header-internal">
+					<div class="child-page-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></div>
+				</div>
+				<div class="header-bg-image-short">
+					<img class="header-image-short" style="background-image: url('<?php header_image(); ?>');" />
+				</div>			
+			</div>
+			
+		<?php else: ?>
+
 			<div class="child-header-short">
 				<div class="page-header-internal">
 					<div class="child-page-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></div>
@@ -46,7 +57,7 @@
 					<img class="header-image-short" style="background-image: url('<?php the_post_thumbnail(); ?>');" />
 				</div>			
 			</div>
-			
+						
 		<?php endif; ?>
 
 </div>
