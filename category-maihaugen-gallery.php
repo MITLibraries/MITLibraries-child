@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Exhibits | Upcoming + Past
+ * The template for displaying Category pages for Maihaugen Gallery on Exhibits site.
  */
 
 $pageRoot = getRoot($post);
