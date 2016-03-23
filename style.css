@@ -183,10 +183,10 @@ nav.navbar.navbar-default {
 
 .header-image-high,
 .header-image-short {
-	height:1020px;
-	width:2000px;
+	height:522px;
+	width:1024px;
 	background-repeat: no-repeat; 
-	background-position: center center;
+	background-position: center top;
 }
 
 .header-bg-image-short {
