@@ -350,6 +350,7 @@ img.alignleft, img.alignright, img.aligncenter {
 	text-align: center;
 	margin-bottom: 20px;
 	padding: 4px;
+	border-radius: 3px;
 }
 .wp-caption p.wp-caption-text {
 	margin: 4px 8px;
