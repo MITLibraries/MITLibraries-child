@@ -361,6 +361,25 @@ figure {
 .wp-caption p.wp-caption-text,
 figcaption {
 	margin: 4px 8px;
+}
+
+dt.gallery-icon,
+dd.wp-caption-text {
+	background: #efefef;
+	color: #888;
+	font-size: 12px;
+	line-height: 18px;
+	text-align: center;
+	padding: 4px;
+}
+
+dt.gallery-icon {
+	border-radius: 3px 3px 0 0;	
+}	
+
+dd.wp-caption-text {
+	border-radius 0 0 3px 3px;
+	text-align: center;
 }		
 
 /* ---- Full Width Template Styles ---- */
@@ -974,7 +993,6 @@ h3.exhibits {
 .childTheme .wp-caption .wp-caption-text,
 .childTheme .gallery-caption,
 .childTheme .entry-caption {
-	text-align: left;
 	font-style: normal;
 	font-size: 12px;
 	line-height: 1.5;
