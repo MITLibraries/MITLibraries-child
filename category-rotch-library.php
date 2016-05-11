@@ -3,9 +3,6 @@
  * The template for displaying Category pages for Rotch Library on Exhibits site.
  */
 
-$pageRoot = getRoot($post);
-$section  = get_post($pageRoot);
-$isRoot   = $section->ID == $post->ID;
 get_header();
 ?>
 
@@ -47,13 +44,21 @@ get_header();
 			
 				<h3 class="exhibits">Current Exhibits</h3>   
 						 
-		   <?php while($current_query->have_posts()): $current_query->the_post();  //loop for current exhibits 
+		   <?php if($current_query->have_posts()): $current_query->the_post(); { //loop for current exhibits 
 		       
 		       get_template_part('inc/exhibits-current');
 		       
-		       wp_reset_query(); // Restore global post data stomped by the_post(). 
+		       } else: {
+			       
+			       ?>
+			       
+			       <p>There are no current exhibits at this time, but check back often.</p>
+			       
+			       <?php } ?>
+		       
+		       <?php wp_reset_query(); // Restore global post data stomped by the_post(). 
 			
-			   endwhile; ?>
+		endif; ?>
 			   		   
 			</div>
 
@@ -96,7 +101,7 @@ get_header();
 	        
 				<p>There are no upcoming exhibits at this time, but check back often.</p>
 						
-        <?php } ?>       
+				<?php } ?>       
     
 		<?php wp_reset_query(); // Restore global post data stomped by the_post(). 
 	
