@@ -19,7 +19,7 @@ $todaysDate = date('m/d/Y H:i:s');
 	                <div class="entry-cats-list">
 		                <?php
 						foreach((get_the_category()) as $category) {
-							echo '<span class="category-bg"><span class="category-init">' . (substr($category->cat_name,0,1))  . '</span></span>' . '<span class="cat-name">' . $category->cat_name . ' Exhibit' . '</span> ';
+							echo '<a href="/exhibits/about-alternate/">' . '<span class="category-bg"><span class="category-init">' . (substr($category->cat_name,0,1))  . '</span></span>' . '<span class="cat-name">' . $category->cat_name . ' Exhibit' . '</span>' . '</a>';
 						}
 						?>
 					</div>
