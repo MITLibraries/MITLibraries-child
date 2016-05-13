@@ -175,7 +175,7 @@ nav.navbar.navbar-default {
 	.dropdown:hover .dropdown-menu {
 		display:block;
 	}
-	
+
 }
 
 /* ---- Child Header ---- */
@@ -191,7 +191,7 @@ nav.navbar.navbar-default {
 .header-image-short {
 	height:522px;
 	width:1024px;
-	background-repeat: no-repeat; 
+	background-repeat: no-repeat;
 	background-position: center top;
 }
 
@@ -372,13 +372,13 @@ dd.wp-caption-text {
 }
 
 dt.gallery-icon {
-	border-radius: 3px 3px 0 0;	
-}	
+	border-radius: 3px 3px 0 0;
+}
 
 dd.wp-caption-text {
 	border-radius 0 0 3px 3px;
 	text-align: center;
-}		
+}
 
 /* ---- Full Width Template Styles ---- */
 .section-wrapper {
@@ -389,7 +389,7 @@ dd.wp-caption-text {
 }
 
 .section-wrapper-last {
-	float: left;	
+	float: left;
 	margin: 25px 0;
 }
 
@@ -427,7 +427,7 @@ dd.wp-caption-text {
 
 .box h4 {
 	font-weight: 700;
-	line-height: 1.5;	
+	line-height: 1.5;
 }
 
 /* Post & Entry Content Styles */
@@ -475,7 +475,7 @@ dd.wp-caption-text {
 }
 
 .entry-content h3 {
-	margin-top: 1rem; 
+	margin-top: 1rem;
 	padding: 0;
 	font-weight: 600;
 }
@@ -596,7 +596,7 @@ dd.wp-caption-text {
 }
 
 .wrap-section-hilite:hover {
-	background: #e4e4e4;	
+	background: #e4e4e4;
 }
 
 .excerpt-post {
@@ -838,7 +838,7 @@ a.px14 {
 	font-family:FontAwesome;
 	content:"\f073" !important;
 	color: #F58733;
-	font-size: 1em;	
+	font-size: 1em;
 }
 
 .upw-content .custom-field-event_start_time,
@@ -875,9 +875,9 @@ a.px14 {
 	z-index: 10000 !important;
 	font-size: 32px;
 	font-weight: 300;
-	margin-top: 10px; 
+	margin-top: 10px;
  }
- 
+
 .entry-cats-list a,
 .entry-cats-list a:hover {
 	color: #333;
@@ -894,7 +894,7 @@ a.px14 {
 .category-image {
 	width: 200px;
 	height: 300px;
-	background-repeat: no-repeat; 
+	background-repeat: no-repeat;
 	background-position: center center;
 }
 
@@ -969,6 +969,69 @@ h3.exhibits {
 	font-weight: 600;
 }
 
+a.exhibits-button {
+	width: 100%;
+	text-align: right;
+}
+
+a.exhibits-button:after {
+	content:'\f061';
+	display:inline-block;
+	font-family:'fontawesome';
+	margin-left:.5em;
+}
+
+a.exhibits-button:hover,
+a.exhibits-button:focus {
+	background-color: #338bc5;
+	border-color: #338bc5;
+}
+
+/* ---- Disaster-Response Styles ----*/
+.sidebar .button.disaster-response {
+	margin-bottom:16px;
+	margin-bottom:1rem;
+	padding:0;
+}
+
+.disaster-response {
+	font-family:'Open Sans',sans-serif;
+	font-size:16px;
+	font-size:1rem;
+	text-align:center;
+}
+
+.disaster-response a {
+	background:#f58632;
+/* $orange-dark */
+	border-radius:3px;
+	color:#fff;
+	display:block;
+	padding:16px;
+	padding:1rem;
+	width:100%;
+}
+
+.disaster-response a:hover {
+	color:#fff;
+}
+
+/* ---- Give Now Styles ----*/
+a.giveNow {
+	background:#f58632;
+	border-radius:3px;
+	color:#fff;
+	display:block;
+	padding:16px;
+	padding:1rem;
+	width:100%;
+	text-align:center;
+}
+
+a.giveNow:hover {
+	color:#fff;
+}
+
 /* ---- Fields, Inputs, Buttons etc. ---- */
 .buttons {
 	margin: 50px 0px;
@@ -1015,12 +1078,12 @@ h3.exhibits {
 		padding-left: 15px ;
 		padding-right: 15px ;
 	}
-	
+
 	.mobile-display {
 		display: block ;
 	}
 
-	.childTheme .main-content,	
+	.childTheme .main-content,
 	.childTheme .has-sidebar .main-content,
 	.childTheme .has-sidebar .sidebar {
 		padding: 0 5%;
@@ -1028,13 +1091,13 @@ h3.exhibits {
 		margin-bottom: 50px;
 		float: none;
 	}
-	
+
 	ul.nav li.dropdown:hover > ul.dropdown-menu {
-	    display: block;    
+	    display: block;
 		left: auto;
 		opacity: 1;
 	}
-	
+
 	.childTheme .dropdown-menu {
 	    position: relative;
 	    top: 100%;
@@ -1055,7 +1118,7 @@ h3.exhibits {
 	    box-shadow: none;
 	    background-clip: padding-box;
 	}
-	
+
 	.childTheme	.dropdown-menu>li>a {
 	    display: block;
 	    padding: 8px 40px;
@@ -1064,24 +1127,24 @@ h3.exhibits {
 	    color: #333;
 	    white-space: nowrap;
 	}
-	
+
 	.childTheme .entry-content,
 	.has-sidebar .main-content {
 		padding: 0;
 	}
-	
-	/* ---- Header Styles ---- */	
+
+	/* ---- Header Styles ---- */
 	.page-header-home {
 		padding: 27.5px;
 	}
-	
+
 	.childTheme .child-page-title {
 		padding: 2% 0;
 		font-size: 30px;
 		font-weight: 300;
 		line-height: 1.25;
 	}
-	
+
 	.page-header-internal .child-page-title {
     	padding: 3% 0;
     	font-size: 24px;
@@ -1096,46 +1159,46 @@ h3.exhibits {
 	.childTheme .widget .entry-categories span {
 		display: inline-block;
 	}
-		
+
 	.category .categoryName,.search .main-content h2.search-title {
 		border-bottom:none;
 		color:#666;
 		font-size:1.5em;
 	}
-	
+
 	.childTheme.page-home .flexItem:nth-of-type(n) {
 		border:none;
 		padding:0;
 	}
-	
+
 	.no-js .childTheme.page-home .flexContainer,.no-js .childTheme.page-home .flexItem,.no-flexbox .childTheme.page-home .flexContainer,.no-flexbox .childTheme.page-home .flexItem {
 		display:block;
 		float:none;
 		width:100%;
 	}
-	
+
 	.childTheme .entry-content {
 		padding: 0;
 	}
 
-	/* ---- Header Styles ---- */	
+	/* ---- Header Styles ---- */
 	.page-header-internal .child-page-title {
     	padding: 2% 0;
 	}
-		
-	/* ---- Sticky/Post Excerpts + Flexbox Layout---- */	
+
+	/* ---- Sticky/Post Excerpts + Flexbox Layout---- */
 	.excerpt-post,
 	.category-post {
 		flex-direction: column;
 	}
-	
+
 	.excerpt-post__fig {
 		margin: 0 auto;
 		margin-bottom: 25px;
 		min-width: 100%;
 		max-width: 100%;
-	}		
-	
+	}
+
 	.staff-widget .textwidget {
 		display: flex;
 		align-items: flex-start;
@@ -1146,7 +1209,7 @@ h3.exhibits {
 		position: relative;
 		top: 15px;
 	}
-	
+
 	.staff--body {
 		flex:1;
 	}
@@ -1155,13 +1218,13 @@ h3.exhibits {
 	.category-post-content {
 	    padding: 15px 15px 45px;
 	}
-		
+
 	.category-image {
 		height: 200px;
 		min-width: 100% !important;
 		background-position: center top;
 	}
-	
+
 	.childTheme .exhibits-feed .category-init {
 		background: #333;
 		border-radius: 21px;
@@ -1177,7 +1240,7 @@ h3.exhibits {
 		position: relative;
 		bottom:-15px;
 		left: 30px;
-	}	
+	}
 
 	.childTheme .exhibits-feed .catName {
 		font-weight: bold;
@@ -1186,7 +1249,7 @@ h3.exhibits {
 		margin-top: 10px;
 		position: relative;
 		top: 10px;
-	}	
+	}
 
 	.exhibit-ends {
 		position: absolute;
@@ -1195,27 +1258,27 @@ h3.exhibits {
 		text-transform: uppercase;
 		font-size: 13px;
 	}
-		
+
 	/* ---- Gallery Styles ---- */
 	.childTheme .gallery .gallery-item {
 		width: 100% !important;
 	}
-	
+
 	.childTheme .gallery-item a,
 	.childTheme .gallery-caption {
 		width: 100%;
 	}
-	
+
 	.childTheme .gallery-caption {
 		padding: 0 10px;
-	}	
-	
+	}
+
 	/* ---- Button (group) Styles ---- */
 	.entry-content .button-set {
 		display: block ;
 		max-width: none ;
 	}
-	
+
 	.entry-content .button-set:first-child {
 		margin-right: 0;
 		margin-bottom: 10px;
@@ -1230,37 +1293,37 @@ h3.exhibits {
 }
 
 @media screen and (max-width:380px) {
-	/* ---- Header Styles ---- */	
+	/* ---- Header Styles ---- */
 	.childTheme .child-page-title {
 		font-size: 21px;
 	}
-	
+
 	.page-header-internal {
-    	padding: 5% 0;	
+    	padding: 5% 0;
     }
-	
+
 	.page-header-internal .child-page-title {
     	padding: 5%;
 	}
 
 	.page-header-internal .child-page-title a {
-		font-size: 21px;		
+		font-size: 21px;
 	}
-		
+
 	.child-tagline {
 		font-size:12px;
 	}
-	
+
 	.header-bg-image-high img {
 		height: 100% ;
 		width: auto;
 	}
-	
+
 	/* ---- Sticky/Post Excerpts + Flexbox Layout---- */
 	.wrap-section-hilite {
 		flex-direction: column;
 	}
-	
+
 	.section-hilite-image {
 		margin: 0 auto;
 		margin-bottom: 25px;
@@ -1269,9 +1332,9 @@ h3.exhibits {
 	.section-hilite {
 		text-align: center;
 	}
-	
+
 	/* ---- Exhibits Styles ---- */
 	.childTheme .exhibits-feed .cat-name {
 		font-size: 14px;
-	}	
+	}
 }

@@ -50,12 +50,14 @@ $todaysDate = date('m/d/Y H:i:s');
 						<?php endwhile; 
 							
 					?>
+					
+				<a class="button-secondary exhibits-button" href="/exhibits/current-upcoming-past-exhibits/">View all exhibits</a>
 
-				</div><!-- end div.mainContent -->
+				</div><!-- end .main-content -->
 				
 				<?php get_sidebar(); ?>
 
-			</div><!-- end div#content -->
+			</div><!-- end #content -->
 
 		</div><!-- #stage -->
 		
