@@ -877,6 +877,11 @@ a.px14 {
 	font-weight: 300;
 	margin-top: 10px; 
  }
+ 
+.entry-cats-list a,
+.entry-cats-list a:hover {
+	color: #333;
+}
 
 .childTheme .exhibits-feed .cat-name {
 	font-weight: 600;
