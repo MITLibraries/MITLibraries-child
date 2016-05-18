@@ -153,6 +153,14 @@ h1,h2,h3,h4,h5,h6 {
 	padding: .5em 1em
 }
 
+.previous-image a:hover,
+.next-image a:hover {
+	background-color: #338bc5;
+	border-color: #338bc5;
+	color: #fff;
+	text-decoration: none;
+}
+
 /* ---- Child Page Nav ---- */
 #bs-example-navbar-collapse-1 {
 	padding-left: 0;
