@@ -137,6 +137,22 @@ h1,h2,h3,h4,h5,h6 {
 	background-color:#3C8DC5;
 }
 
+.next-image {
+	float: right;
+}
+
+.previous-image a,
+.next-image a {
+	border: 2px solid #dedede;
+	border-radius: 3px;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 600;
+	-webkit-transition: background .1s ease, border-color .1s ease, color .1s ease;
+	transition: background .1s ease, border-color .1s ease, color .1s ease;
+	padding: .5em 1em
+}
+
 /* ---- Child Page Nav ---- */
 #bs-example-navbar-collapse-1 {
 	padding-left: 0;
@@ -319,6 +335,16 @@ nav.navbar.navbar-default {
 	line-height: 1.5;
 }
 
+.entry-meta {
+	margin: 1em 0;
+	font-size: 14px;
+	color: #777;
+}
+
+.entry-attachment .attachment {
+	margin: .5em 0;
+}
+
 /* ---- Image and Caption Styles ---- */
 .alignleft,
 img.alignleft {
@@ -382,6 +408,10 @@ dt.gallery-icon {
 dd.wp-caption-text {
 	border-radius 0 0 3px 3px;
 	text-align: center;
+}
+
+.attachment a img {
+	margin-top: 1em;
 }
 
 /* ---- Full Width Template Styles ---- */
