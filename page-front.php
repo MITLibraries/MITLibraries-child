@@ -15,24 +15,21 @@
 
 get_header(); ?>
 
-	<?php if ( is_front_page()) { ?>
+	<?php if ( is_front_page()) {
 
-	 <div class="betterBreadcrumbs hidden-phone" role="navigation" aria-label="breadcrumbs">
-      <span><a href="/">Libraries home</a></span>
-      <span><?php bloginfo(); ?></span>
-    </div>
+		get_template_part('inc/breadcrumbs','sitename');
 
-    <?php } else { ?>
+    	} else {
 
-		<?php get_template_part('inc/breadcrumbs', 'child'); ?>
+		get_template_part('inc/breadcrumbs', 'child');
 
-			<?php } ?>
+		} 
+		
+	?>
 
 		<div id="stage" class="inner" role="main">
 
 			<?php get_template_part('inc/postHead'); ?>
-
-
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
