@@ -210,6 +210,10 @@ nav.navbar.navbar-default {
 	min-width: 100%;
 }
 
+.header-bg-image-short img.wp-post-image {
+	min-width: 100%;
+}
+
 .page-header-home {
 	color:#fff;
 	position:relative;
