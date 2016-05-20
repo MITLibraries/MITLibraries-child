@@ -1296,8 +1296,7 @@ a.giveNow:hover {
 		left: 30px;
 	}
 
-	.childTheme .exhibits-feed .catName {
-		font-weight: bold;
+	.childTheme .exhibits-feed .cat-name {
 		left: -25px;
 		font-size: 16px;
 		margin-top: 10px;
