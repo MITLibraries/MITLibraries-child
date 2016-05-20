@@ -298,7 +298,7 @@ nav.navbar.navbar-default {
 
 .child-page-title {
 	font-size:36px;
-	font-weight:600;
+	font-weight:400;
 	line-height:2;
 }
 
@@ -1265,6 +1265,11 @@ a.giveNow:hover {
 	/* ---- Header Styles ---- */
 	.page-header-home {
 		padding: 27.5px;
+	}
+
+	.childTheme .child-page-title {
+		font-size: 30px;
+		line-height: 2;
 	}
 
 	/* ---- Sticky/Post Excerpts + Flexbox Layout---- */
