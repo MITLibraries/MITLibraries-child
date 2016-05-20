@@ -1203,6 +1203,13 @@ a.giveNow:hover {
     	padding: 3% 0;
     	font-size: 24px;
 	}
+
+	.page-template-page-exhibits-feed .sidebar,
+	.category-rotch-library .sidebar,
+	.category-maihaugen-gallery .sidebar {
+		margin-top: 0;
+	}
+
 }
 
 @media screen and (max-width:480px) {
@@ -1310,6 +1317,10 @@ a.giveNow:hover {
 		left: 15px;
 		text-transform: uppercase;
 		font-size: 13px;
+	}
+
+	.exhibits-feed-section:last-child {
+		margin-bottom: 0;
 	}
 
 	/* ---- Gallery Styles ---- */
