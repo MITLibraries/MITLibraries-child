@@ -1245,6 +1245,26 @@ a.giveNow:hover {
 	/* ---- Header Styles ---- */
 	.page-header-internal .child-page-title {
     	padding: 2% 0;
+
+	.section-wrapper .main,
+	.section-wrapper .sidebar,
+	.section-wrapper-last .main,
+	.section-wrapper-last .sidebar {
+		width: 100%;
+	}
+
+	.section-wrapper .sidebar,
+	.section-wrapper-last .sidebar {
+		margin-top: 50px;
+	}
+
+	.section-wrapper-last {
+		margin-bottom: 80px;
+	}
+
+	/* ---- Header Styles ---- */
+	.page-header-home {
+		padding: 27.5px;
 	}
 
 	/* ---- Sticky/Post Excerpts + Flexbox Layout---- */
