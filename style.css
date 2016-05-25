@@ -656,6 +656,28 @@ footer .footerHeader {
 	margin-bottom: 2em;
 }
 
+/* ---- TO-GO ---- */
+.hide-title .widget-title,
+.screen-reader-text {
+	border: 0 none;
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal;
+}
+
+.no-top-border {
+	border-top: none;
+}
+
+.widget .button {
+	padding: 1em 0;
+}
+
 /* ---- Widgets ---- */
 .staff-widget {
 	float: left;
@@ -699,14 +721,6 @@ footer .footerHeader {
 
 a.px14 {
 	font-size: 14px;
-}
-
-.widget-area.sidebar .logo-widget {
-	border-top: 0 ;
-}
-
-.hide-title .widget-title {
-	display: none;
 }
 
 /* ---- Ultimate Posts Widget styles ---- */
@@ -822,8 +836,8 @@ a.px14 {
 }
 
 .category-post {
-  	border-top: 8px solid #333;
-  	background: #eee;
+	border-top: 8px solid #333;
+	background: #eee;
 	margin-left: 27.5px;
 	margin-bottom: 0;
 	position: relative;
@@ -890,51 +904,6 @@ h3.exhibits {
     margin: 10px 0 0 27.5px;
 	font-size: 13px;
 	font-weight: 600;
-}
-
-/* ---- Disaster-Response Styles ----*/
-.sidebar .button.disaster-response {
-	margin-bottom:16px;
-	margin-bottom:1rem;
-	padding:0;
-}
-
-.disaster-response {
-	font-family:'Open Sans',sans-serif;
-	font-size:16px;
-	font-size:1rem;
-	text-align:center;
-}
-
-.disaster-response a {
-	background:#f58632;
-/* $orange-dark */
-	border-radius:3px;
-	color:#fff;
-	display:block;
-	padding:16px;
-	padding:1rem;
-	width:100%;
-}
-
-.disaster-response a:hover {
-	color:#fff;
-}
-
-/* ---- Give Now Styles ----*/
-a.giveNow {
-	background:#f58632;
-	border-radius:3px;
-	color:#fff;
-	display:block;
-	padding:16px;
-	padding:1rem;
-	width:100%;
-	text-align:center;
-}
-
-a.giveNow:hover {
-	color:#fff;
 }
 
 /* ---- Fields, Inputs, Buttons etc. ---- */
