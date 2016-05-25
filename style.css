@@ -200,6 +200,13 @@ nav.navbar.navbar-default {
 	overflow:hidden;
 	height:100px;
 	top:0;
+	width: 100%;
+}
+
+.header-bg-image-high img,
+.header-bg-image-short img {
+	display: block;
+	min-width: 100%;
 }
 
 .page-header-home {
