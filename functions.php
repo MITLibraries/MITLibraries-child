@@ -15,6 +15,7 @@ function enqueue_my_scripts() {
 add_action('wp_enqueue_scripts', 'enqueue_my_scripts');
 function enqueue_my_styles() {
 	wp_enqueue_style( 'bootstrap', '//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' );
+	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css' ); 
 }
 
 
