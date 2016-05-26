@@ -31,7 +31,8 @@
 				</div>
 					
 				<div class="header-bg-image-high">
-					<img class="header-image-high" style="background-image: url('<?php header_image(); ?>');" />
+					<img class="header-image-high" src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+
 				</div>
 				
 			</div>
@@ -43,7 +44,7 @@
 					<div class="child-page-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></div>
 				</div>
 				<div class="header-bg-image-short">
-					<img class="header-image-short" style="background-image: url('<?php header_image(); ?>');" />
+					<img class="header-image-short" src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
 				</div>			
 			</div>
 			
@@ -54,12 +55,15 @@
 					<div class="child-page-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></div>
 				</div>
 				<div class="header-bg-image-short">
-					<img class="header-image-short" style="background-image: url('<?php the_post_thumbnail(); ?>');" />
+					<?php if(get_the_post_thumbnail()): ?>
+					<img class="header-image-short" src="<?php echo( get_the_post_thumbnail() ); ?>" />
+					<?php else: ?>
+					<img class="header-image-short" src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+					<?php endif; ?>
 				</div>			
 			</div>
 						
 		<?php endif; ?>
-
 </div>
 
 
