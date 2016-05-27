@@ -971,6 +971,7 @@ h3.exhibits {
 		padding: 0 5%;
 		width: 100%;
 		margin-bottom: 50px;
+		float: none;
 	}
 	
 	ul.nav li.dropdown:hover > ul.dropdown-menu {
