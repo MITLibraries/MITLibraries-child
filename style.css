@@ -1204,3 +1204,8 @@ h3.exhibits {
 		text-align: center;
 	}
 	
+	/* ---- Exhibits Styles ---- */
+	.childTheme .exhibits-feed .cat-name {
+		font-size: 14px;
+	}	
+}
