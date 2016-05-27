@@ -1163,12 +1163,22 @@ h3.exhibits {
 
 @media screen and (max-width:380px) {
 	/* ---- Header Styles ---- */	
-	.child-page-title {
-		font-size:24px;
+	.childTheme .child-page-title {
+		font-size: 21px;
+		line-height: 1.25;
+		padding-bottom: 10px;
+	}
+	
+	.page-header-internal {
+    	padding: 5% 0;	
+    }
+	
+	.page-header-internal .child-page-title {
+    	padding: 5%;
 	}
 
-	.child-page-title a {
-		font-size:21px;
+	.page-header-internal .child-page-title a {
+		font-size: 21px;		
 	}
 		
 	.child-tagline {
