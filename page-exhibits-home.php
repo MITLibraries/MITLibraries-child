@@ -15,18 +15,11 @@ get_header(); ?>
 <?php // Get today's date in the right format
 $todaysDate = date('m/d/Y H:i:s');
 ?>
-<?php if ( is_front_page()) { ?>
+	<?php
 
-	 <div class="betterBreadcrumbs hidden-phone" role="navigation" aria-label="breadcrumbs">
-      <span><a href="/">Libraries home</a></span>
-      <span><?php bloginfo(); ?></span>
-    </div>
-
-    <?php } else { ?>
-
-		<?php get_template_part('inc/breadcrumbs', 'child'); ?>
-
-			<?php } ?>
+		get_template_part('inc/breadcrumbs','sitename');
+		
+	?>
 			
 		<div id="stage" class="inner" role="main">
 			
@@ -50,12 +43,14 @@ $todaysDate = date('m/d/Y H:i:s');
 						<?php endwhile; 
 							
 					?>
+					
+				<a class="button-secondary exhibits-button" href="/exhibits/current-upcoming-past-exhibits/">View all exhibits</a>
 
-				</div><!-- end div.mainContent -->
+				</div><!-- end .main-content -->
 				
 				<?php get_sidebar(); ?>
 
-			</div><!-- end div#content -->
+			</div><!-- end #content -->
 
 		</div><!-- #stage -->
 		

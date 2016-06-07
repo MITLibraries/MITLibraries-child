@@ -3,9 +3,6 @@
  * Template Name: Exhibits | Current, Upcoming & Past
  */
 
-$pageRoot = getRoot($post);
-$section  = get_post($pageRoot);
-$isRoot   = $section->ID == $post->ID;
 get_header();
 ?>
 
@@ -46,14 +43,21 @@ get_header();
         	<div class="exhibits-feed-section">
 			
 				<h3 class="exhibits">Current Exhibits</h3>   
-				 
-		   <?php while($current_query->have_posts()): $current_query->the_post();  //loop for current exhibits 
-		       
-		       get_template_part('inc/content', 'exhibits');
-		       
-		       wp_reset_query(); // Restore global post data stomped by the_post(). 
-			
-			   endwhile; ?>
+						 
+				<?php if($current_query->have_posts()): 
+					while( $current_query->have_posts() ) : $current_query->the_post(); //loop for current exhibits 
+				       
+				       get_template_part('inc/exhibits-current');
+				       
+				       endwhile;
+		 
+					   wp_reset_query();
+					   
+					   else : ?>
+		 
+					   <p><?php _e( 'There are no current exhibits at this time, but check back often.' ); ?></p>
+		 
+				<?php endif; ?>
 			   		   
 			</div>
 
@@ -86,21 +90,20 @@ get_header();
 				
 				<h3 class="exhibits">Upcoming Exhibits</h3>   
 				 
-			<?php if($future_query->have_posts()): $future_query->the_post(); { //loop for upcoming exhibits 
-	       
-				get_template_part('inc/content', 'exhibits');
-	       
-				} else: {
-	        
-	        ?>
-	        
-				<p>There are no upcoming exhibits at this time, but check back often.</p>
-						
-        <?php } ?>       
-    
-		<?php wp_reset_query(); // Restore global post data stomped by the_post(). 
-	
-		endif; ?>
+				<?php if($future_query->have_posts()): 
+					while( $future_query->have_posts() ) : $future_query->the_post(); //loop for future exhibits 
+			       
+			       get_template_part('inc/exhibits-current');
+			       
+			       endwhile;
+	 
+				   wp_reset_query();
+	 
+				   else : ?>
+	 
+				   <p><?php _e( 'There are no upcoming exhibits at this time, but check back often.' ); ?></p>
+	 
+				<?php endif; ?>
 		
 			</div>
 		
@@ -137,7 +140,7 @@ get_header();
 				 
 		   <?php while($past_query->have_posts()): $past_query->the_post(); //loop for events 
 		       
-		       get_template_part('inc/content', 'exhibits');
+		       get_template_part('inc/exhibits-past');
 		       
 		       wp_reset_query(); // Restore global post data stomped by the_post(). 
 			
