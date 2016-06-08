@@ -15,7 +15,7 @@ function enqueue_my_scripts() {
 add_action('wp_enqueue_scripts', 'enqueue_my_scripts');
 function enqueue_my_styles() {
 	wp_enqueue_style( 'bootstrap', '//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' );
-	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css' ); 
+	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css' );
 }
 
 
@@ -263,8 +263,8 @@ function get_first_post_image() {
   $first_img = $matches [1] [0];
 
   //Defines a default image
-  if(empty($first_img)){ 
+  if(empty($first_img)){
     $first_img = "";
   }
   return $first_img;
-} 
+}

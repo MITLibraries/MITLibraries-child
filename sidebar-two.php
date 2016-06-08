@@ -12,7 +12,7 @@
 
 	<div id="below" class="widget-area" role="complementary">
 
-		<?php 
+		<?php
 
 			dynamic_sidebar( 'sidebar-two' );
 

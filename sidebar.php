@@ -12,7 +12,7 @@
 
 	<div id="secondary" class="widget-area sidebar" role="complementary">
 
-		<?php 
+		<?php
 
 			dynamic_sidebar( 'sidebar' );
 
@@ -25,7 +25,7 @@
 			<aside class="widget admin">
 				<h2>Admin</h2>
 				<?php if (is_user_logged_in(1)) {
-					echo '<span><a href="'.wp_logout_url().'">Log out</a></span>'; 
+					echo '<span><a href="'.wp_logout_url().'">Log out</a></span>';
 					} else {
 					echo '<span><a href="'.wp_login_url().'">Log in</a></span>';
 					}

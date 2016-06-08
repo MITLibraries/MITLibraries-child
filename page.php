@@ -12,7 +12,7 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
- 
+
 get_header(); ?>
 
 	<?php if ( is_front_page()) {
@@ -23,8 +23,8 @@ get_header(); ?>
 
 		get_template_part('inc/breadcrumbs', 'child');
 
-		} 
-		
+		}
+
 	?>
 
 		<div id="stage" class="inner" role="main">

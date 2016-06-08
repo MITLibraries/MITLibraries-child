@@ -1,5 +1,5 @@
 <?php
-	
+
 	$postID = get_the_ID();
 
 	if (is_home()) {

@@ -23,8 +23,8 @@ get_header(); ?>
 
 		get_template_part('inc/breadcrumbs', 'child');
 
-		} 
-		
+		}
+
 	?>
 
 		<div id="stage" class="inner" role="main">
