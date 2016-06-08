@@ -12,8 +12,8 @@ global $isRoot;
 
 <?php
 
-	$pageRoot = getRoot($post);
-	$section = get_post($pageRoot);
+	$pageRoot = getRoot( $post );
+	$section = get_post( $pageRoot );
 
 ?>
 

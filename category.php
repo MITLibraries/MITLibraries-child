@@ -11,19 +11,19 @@
  * @since Twenty Twelve 1.0
  */
 
-$pageRoot = getRoot($post);
-$section = get_post($pageRoot);
+$pageRoot = getRoot( $post );
+$section = get_post( $pageRoot );
 $isRoot = $section->ID == $post->ID;
 
 get_header(); ?>
 
-	<?php get_template_part('inc/breadcrumbs', 'child'); ?>
+	<?php get_template_part( 'inc/breadcrumbs', 'child' ); ?>
 
 		<div id="stage" class="inner group" role="main">
 			
 			 
 
-			<?php get_template_part('inc/postHead'); ?>
+			<?php get_template_part( 'inc/postHead' ); ?>
 
 
 			<div id="content" class="allContent hasSidebar group ">

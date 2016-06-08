@@ -6,11 +6,11 @@
 get_header();
 ?>
 
-	<?php get_template_part('inc/breadcrumbs', 'child'); ?>
+	<?php get_template_part( 'inc/breadcrumbs', 'child' ); ?>
 
 	<div id="stage" class="inner" role="main">
 
-	<?php get_template_part('inc/postHead'); ?>
+	<?php get_template_part( 'inc/postHead' ); ?>
 
 		<div id="content" class="content has-sidebar">
 			
@@ -18,7 +18,7 @@ get_header();
 
 		<?php
 
-			$date1 = DateTime::createFromFormat('Ymd', get_field('end_date'));
+			$date1 = DateTime::createFromFormat( 'Ymd', get_field( 'end_date' ) );
 
 		$current_query = new WP_Query(
 	        array(
@@ -31,7 +31,7 @@ get_header();
 	          'meta_query'  => array(
 	             array(
 	              'key'     => 'end_date',  // which meta to query
-	              'value'   => date("Y-m-d"),  // value for comparison
+	              'value'   => date( "Y-m-d" ),  // value for comparison
 	              'compare' => '>=',          // method of comparison
 	              'type'    => 'DATE'
 	            ) // meta_query is an array of query ites
@@ -47,7 +47,7 @@ get_header();
 				<?php if($current_query->have_posts()):
 					while( $current_query->have_posts() ) : $current_query->the_post(); //loop for current exhibits
 
-				       get_template_part('inc/exhibits-current');
+				       get_template_part( 'inc/exhibits-current' );
 
 				       endwhile;
 
@@ -66,7 +66,7 @@ get_header();
 
 		<?php
 
-			$date2 = DateTime::createFromFormat('Ymd', get_field('start_date'));
+			$date2 = DateTime::createFromFormat( 'Ymd', get_field( 'start_date' ) );
 
 		$future_query = new WP_Query(
 	        array(
@@ -77,7 +77,7 @@ get_header();
 	          'meta_query'  => array(
 	             array(
 	              'key'     => 'start_date',  // which meta to query
-	              'value'   => date("Y-m-d"),  // value for comparison
+	              'value'   => date( "Y-m-d" ),  // value for comparison
 	              'compare' => '>=',          // method of comparison
 	              'type'    => 'DATE'
 	            ) // meta_query is an array of query ites
@@ -93,7 +93,7 @@ get_header();
 				<?php if($future_query->have_posts()):
 					while( $future_query->have_posts() ) : $future_query->the_post(); //loop for future exhibits
 
-			       get_template_part('inc/exhibits-current');
+			       get_template_part( 'inc/exhibits-current' );
 
 			       endwhile;
 
@@ -113,7 +113,7 @@ get_header();
 		 
 		<?php
 
-			$date3 = DateTime::createFromFormat('Ymd', get_field('end_date'));
+			$date3 = DateTime::createFromFormat( 'Ymd', get_field( 'end_date' ) );
 
 		$past_query = new WP_Query(
 	        array(
@@ -124,7 +124,7 @@ get_header();
 	          'meta_query'  => array(
 	             array(
 	              'key'     => 'end_date',  // which meta to query
-	              'value'   => date("Y-m-d"),  // value for comparison
+	              'value'   => date( "Y-m-d" ),  // value for comparison
 	              'compare' => '<',          // method of comparison
 	              'type'    => 'DATE'
 	            ) // meta_query is an array of query ites
@@ -140,7 +140,7 @@ get_header();
 				 
 		   <?php while($past_query->have_posts()): $past_query->the_post(); //loop for events
 
-		       get_template_part('inc/exhibits-past');
+		       get_template_part( 'inc/exhibits-past' );
 
 		       wp_reset_query(); // Restore global post data stomped by the_post().
 

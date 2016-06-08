@@ -1,18 +1,18 @@
 <?php
 
-$siteName = get_bloginfo('name');
+$siteName = get_bloginfo( 'name' );
 
-add_action( 'after_setup_theme', 'remove_child_theme_support');
+add_action( 'after_setup_theme', 'remove_child_theme_support' );
 
 function remove_child_theme_support() {
-	remove_theme_support('custom-background');
+	remove_theme_support( 'custom-background' );
 }
 
 function enqueue_my_scripts() {
-	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', array('jquery'), '1.9.1', true); // we need the jquery library
-	wp_enqueue_script( 'bootstrap-js', '//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js', array('jquery'), true); // all the bootstrap javascript goodness
+	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', array('jquery'), '1.9.1', true ); // we need the jquery library
+	wp_enqueue_script( 'bootstrap-js', '//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js', array('jquery'), true ); // all the bootstrap javascript goodness
 }
-add_action('wp_enqueue_scripts', 'enqueue_my_scripts');
+add_action( 'wp_enqueue_scripts', 'enqueue_my_scripts' );
 function enqueue_my_styles() {
 	wp_enqueue_style( 'bootstrap', '//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' );
 	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css' );
@@ -20,7 +20,7 @@ function enqueue_my_styles() {
 
 
 
-add_action('wp_enqueue_scripts', 'enqueue_my_styles');
+add_action( 'wp_enqueue_scripts', 'enqueue_my_styles' );
 
 
 
@@ -38,14 +38,14 @@ function betterChildBreadcrumbs() {
 	}
 
 	if(is_child_page()) {
-		$parentLink = get_permalink($post->post_parent);
-		$parentTitle = get_the_title($post->post_parent);
+		$parentLink = get_permalink( $post->post_parent );
+		$parentTitle = get_the_title( $post->post_parent );
 		$startLink = '<a href="';
 		$endLink = '">';
 		$closeLink = '</a>';
 		$parentBreadcrumb = $startLink.$parentLink.$endLink.$parentTitle.$closeLink;
-		$pageTitle = get_the_title($post);
-		$pageLink = get_permalink($post);
+		$pageTitle = get_the_title( $post );
+		$pageLink = get_permalink( $post );
 		$childBreadcrumb = $startLink.$pageLink.$endLink.$pageTitle.$closeLink;
 	}
 
@@ -75,7 +75,7 @@ function remove_parent_widgets(){
 	unregister_sidebar( 'sidebar-2' );
 	unregister_sidebar( 'sidebar-3' );
 }
-add_action( 'widgets_init', 'remove_parent_widgets', 11);
+add_action( 'widgets_init', 'remove_parent_widgets', 11 );
 
 /**
  * Registers the Widgetized Area Below the Content.
@@ -106,9 +106,9 @@ function twentytwelve_child_widgets_init() {
 add_action( 'widgets_init', 'twentytwelve_child_widgets_init' );
 
 // Register Child Nav
-if(!function_exists('register_child_nav')) {
+if(!function_exists( 'register_child_nav' )) {
 	function register_child_nav() {
-		register_nav_menu('child-nav', 'Child Nav');
+		register_nav_menu( 'child-nav', 'Child Nav' );
 	}
 	add_action( 'init', 'register_child_nav' );
 }
@@ -128,22 +128,22 @@ add_filter('single_template', create_function(
 function search_filter($query) {
 	if ( !is_admin() && $query->is_main_query() ) {
 		if ($query->is_home() || $query->is_search() ) {
-			$query->set('post_type', array( 'maihaugen', 'rotch', 'online' ) );
+			$query->set( 'post_type', array( 'maihaugen', 'rotch', 'online' ) );
 		}
 	}
 }
-add_action('pre_get_posts','search_filter');
+add_action( 'pre_get_posts','search_filter' );
 
 
 
 
-if (function_exists('add_theme_support')) { add_theme_support('post-thumbnails'); }
+if (function_exists( 'add_theme_support' )) { add_theme_support( 'post-thumbnails' ); }
 
-add_image_size('headerImage', 2000, 1020, true);
-add_image_size('exhibit_thumbnail_image', 800, 600, true);
+add_image_size( 'headerImage', 2000, 1020, true );
+add_image_size( 'exhibit_thumbnail_image', 800, 600, true );
 set_post_thumbnail_size( 1024, 9999 ); // Unlimited height, soft crop
 
-if (!function_exists('my_mce_buttons_2')):
+if (!function_exists( 'my_mce_buttons_2' )):
 	function my_mce_buttons_2($buttons) {
 		/**
 		 * Add in a core button that's disabled by default
@@ -153,7 +153,7 @@ if (!function_exists('my_mce_buttons_2')):
 		return $buttons;
 	}
 
-add_filter('mce_buttons_2', 'my_mce_buttons_2');
+add_filter( 'mce_buttons_2', 'my_mce_buttons_2' );
 endif;
 
 function add_custom_types_to_tax( $query ) {
@@ -247,8 +247,8 @@ function custom_excerpt($new_length = 20, $new_more = '...') {
     return $new_more;
   });
   $output = get_the_excerpt();
-  $output = apply_filters('wptexturize', $output);
-  $output = apply_filters('convert_chars', $output);
+  $output = apply_filters( 'wptexturize', $output );
+  $output = apply_filters( 'convert_chars', $output );
   $output = '<p>' . $output . '</p>';
   echo $output;
 }
@@ -259,11 +259,11 @@ function get_first_post_image() {
   $first_img = '';
   ob_start();
   ob_end_clean();
-  $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+  $output = preg_match_all( '/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches );
   $first_img = $matches [1] [0];
 
   //Defines a default image
-  if(empty($first_img)){
+  if(empty( $first_img )){
     $first_img = "";
   }
   return $first_img;

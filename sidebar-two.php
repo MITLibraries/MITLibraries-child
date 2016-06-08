@@ -8,7 +8,7 @@
  */
 ?>
 	
-<?php if (is_active_sidebar('sidebar-two')): ?>
+<?php if (is_active_sidebar( 'sidebar-two' )): ?>
 
 	<div id="below" class="widget-area" role="complementary">
 

@@ -9,11 +9,11 @@
 
 get_header();
 
-get_template_part('inc/breadcrumbs', 'child'); ?>
+get_template_part( 'inc/breadcrumbs', 'child' ); ?>
 
 		<div id="stage" class="inner" role="main">
 			
-			<?php get_template_part('inc/postHead'); ?>
+			<?php get_template_part( 'inc/postHead' ); ?>
 			
 			<div id="content" class="content">
 				<?php while ( have_posts() ) : the_post(); ?>
