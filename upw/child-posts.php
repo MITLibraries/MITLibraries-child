@@ -40,34 +40,34 @@
               <?php $custom_field_name = explode( ',', $custom_fields ); ?>
               <div class="entry-custom-fields">
                 <?php foreach ( $custom_field_name as $name ) :
-                  $name = trim( $name );
-                  $custom_field_values = get_post_meta( $post->ID, $name, true );
-                  if ( $custom_field_values ) : ?>
+				  $name = trim( $name );
+				  $custom_field_values = get_post_meta( $post->ID, $name, true );
+				  if ( $custom_field_values ) : ?>
                     <span class="custom-field custom-field-<?php echo $name; ?>">
                       <?php
-                      if ( ! is_array( $custom_field_values ) ) {
+					  if ( ! is_array( $custom_field_values ) ) {
 
-                        // For custom fields named "event_date", we pass the value through an additional parsing step.
-                        if ( $name == 'event_date' ) {
-                          // Generally speaking, we need to reformat a _string_ in YYYYMMDD format into 'December 10, 2014'.
-                          $event_date = date_parse_from_format( "Ymd", $custom_field_values );
-                          // Because PHP sucks, we have to make this array into a timestamp, and then into the string we desire
-                          $custom_field_values = date( "F j, Y", mktime( 0, 0, 0, $event_date['month'],$event_date['day'],$event_date['year'] ) );
-                        }
+						// For custom fields named "event_date", we pass the value through an additional parsing step.
+						if ( $name == 'event_date' ) {
+						  // Generally speaking, we need to reformat a _string_ in YYYYMMDD format into 'December 10, 2014'.
+						  $event_date = date_parse_from_format( "Ymd", $custom_field_values );
+						  // Because PHP sucks, we have to make this array into a timestamp, and then into the string we desire
+						  $custom_field_values = date( "F j, Y", mktime( 0, 0, 0, $event_date['month'],$event_date['day'],$event_date['year'] ) );
+						}
 
-                        echo $custom_field_values;
+						echo $custom_field_values;
 
-                      } else {
-                        $last_value = end( $custom_field_values );
-                        foreach ( $custom_field_values as $value ) {
-                          echo $value;
-                          if ($value != $last_value) echo ', ';
-                        }
-                      }
-                      ?>
+					  } else {
+						$last_value = end( $custom_field_values );
+						foreach ( $custom_field_values as $value ) {
+						  echo $value;
+						  if ($value != $last_value) echo ', ';
+						}
+					  }
+					  ?>
                     </span>
                   <?php endif;
-                endforeach; ?>
+				endforeach; ?>
               </div>
             <?php endif; ?>
             
@@ -95,9 +95,9 @@
 	        <div class="entry-meta">
 
             <?php
-            $categories = get_the_term_list( $post->ID, 'category', '', ', ' );
-            if ( $instance['show_cats'] && $categories ) :
-            ?>
+			$categories = get_the_term_list( $post->ID, 'category', '', ', ' );
+			if ( $instance['show_cats'] && $categories ) :
+			?>
               <span class="entry-categories">
                 <span class="entry-cats-list"><?php echo $categories; ?></span>
               </span>
@@ -138,9 +138,9 @@
 
 
             <?php
-            $tags = get_the_term_list( $post->ID, 'post_tag', '', ', ' );
-            if ( $instance['show_tags'] && $tags ) :
-            ?>
+			$tags = get_the_term_list( $post->ID, 'post_tag', '', ', ' );
+			if ( $instance['show_tags'] && $tags ) :
+			?>
               <div class="entry-tags">
                 <strong class="entry-tags-label"><?php _e( 'Tagged', 'upw' ); ?>:</strong>
                 <span class="entry-tags-list"><?php echo $tags; ?></span>

@@ -38,7 +38,7 @@ get_header();
 	           ) // end meta_query array
 	          ) // end array
 	        ); // close WP_Query constructor call
-        ?> 
+		?> 
         
         	<div class="exhibits-feed-section">
 			
