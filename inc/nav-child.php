@@ -1,7 +1,7 @@
 <?php
 	$siteName = get_bloginfo( 'name' );
 	// if ($siteName != 'MIT Libraries News') {
-	$noChildNav = array("MIT Libraries News", "Document Services");
+	$noChildNav = array('MIT Libraries News', 'Document Services');
 	$countPosts = wp_count_posts( 'page' )->publish;
 	if ( !in_array( $siteName, $noChildNav ) && $countPosts > 1 ) {
 ?>
