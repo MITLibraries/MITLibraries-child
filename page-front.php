@@ -15,7 +15,7 @@
 
 get_header(); ?>
 
-	<?php if ( is_front_page()) {
+	<?php if ( is_front_page() ) {
 
 		get_template_part( 'inc/breadcrumbs','sitename' );
 

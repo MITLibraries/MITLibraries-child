@@ -18,7 +18,7 @@ $todaysDate = date( 'm/d/Y H:i:s' );
 				<div class="entry-categories">
 	                <div class="entry-cats-list">
 		                <?php
-						foreach((get_the_category()) as $category) {
+						foreach ( (get_the_category()) as $category ) {
 							echo '<a href="/exhibits/about-alternate/">' . '<span class="category-bg"><span class="category-init">' . (substr( $category->cat_name,0,1 ))  . '</span></span>' . '<span class="cat-name">' . $category->cat_name . ' Exhibit' . '</span>' . '</a>';
 						}
 						?>
@@ -39,7 +39,7 @@ $todaysDate = date( 'm/d/Y H:i:s' );
 					</div>
             	</div>
 
-              	<?php if (get_field( 'sponsored' )) : ?>
+              	<?php if ( get_field( 'sponsored' ) ) : ?>
 	              	<div class="sponsored-excerpt">
 					<?php the_field( 'sponsored' ); ?>
 					</div>

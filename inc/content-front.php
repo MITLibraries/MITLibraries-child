@@ -20,7 +20,7 @@ global $isRoot;
 				rsort( $sticky );
 				$sticky = array_slice( $sticky, 0, 5 );
 				$the_query = new WP_Query( array( 'post__in' => $sticky, 'ignore_sticky_posts' => 1 ) );
-				while ($the_query->have_posts()) {
+				while ( $the_query->have_posts() ) {
 					$the_query->the_post();
 				?>
 				

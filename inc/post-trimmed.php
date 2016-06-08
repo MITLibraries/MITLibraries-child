@@ -2,12 +2,12 @@
 
 	$postID = get_the_ID();
 
-	if (is_home()) {
+	if ( is_home() ) {
 		$postHeader = '<h2 id="post-'.$postID.'">';
 		$closeTag = '</h2>';
 	}
 
-	if (is_search() || is_category()) {
+	if ( is_search() || is_category() ) {
 		$postHeader = '<h3 id="post-'.$postID.'">';
 		$closeTag = '</h3>';
 	}
