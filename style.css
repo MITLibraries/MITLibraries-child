@@ -209,14 +209,14 @@ nav.navbar.navbar-default {
 	overflow:hidden;
 	height: 200px;
 	top: 0;
+	min-width: 100%;
 }
 
 .header-image-high,
 .header-image-short {
-	height:522px;
 	width:1024px;
-	background-repeat: no-repeat;
-	background-position: center top;
+	position: relative;
+	top: -50%;
 }
 
 .header-bg-image-short {
@@ -225,16 +225,12 @@ nav.navbar.navbar-default {
 	overflow:hidden;
 	height:100px;
 	top:0;
-	width: 100%;
+	min-width: 100%;
 }
 
 .header-bg-image-high img,
 .header-bg-image-short img {
 	display: block;
-	min-width: 100%;
-}
-
-.header-bg-image-short img.wp-post-image {
 	min-width: 100%;
 }
 
@@ -1271,7 +1267,18 @@ a.giveNow:hover {
 		font-size: 30px;
 		line-height: 2;
 	}
-
+	
+	.header-image-high,
+	.header-image-short {
+		width:auto;
+		position: relative;
+		top: 0;
+	}
+	
+	.header-bg-image-high img {
+		min-height: 100%;
+	}
+		
 	/* ---- Sticky/Post Excerpts + Flexbox Layout---- */
 	.excerpt-post,
 	.category-post {
@@ -1401,11 +1408,6 @@ a.giveNow:hover {
 
 	.child-tagline {
 		font-size:12px;
-	}
-
-	.header-bg-image-high img {
-		height: 100% ;
-		width: auto;
 	}
 
 	/* ---- Sticky/Post Excerpts + Flexbox Layout---- */
