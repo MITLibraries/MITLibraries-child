@@ -59,14 +59,23 @@ add_action( 'after_setup_theme', 'customHeader' );
 function customHeader() {
 
 	$args = array(
-		'width'         => 2000,
-		'height'        => 1020,
+		'width'         => 1250,
+		'height'        => 800,
 		'uploads'       => true
 	);
 
 	add_theme_support( 'custom-header', $args );
 
 }
+
+// Change description of Header Image section in WP Customizer
+function customize_register_init( $wp_customize ){
+    $wp_customize->get_section('header_image')->description = __( 'While you can crop images to your liking after clicking Add new image, your theme recommends a header size of 1250 × 800 pixels or - if smaller - something of equal proportions of width to height.' );
+
+}
+
+add_action( 'customize_register', 'customize_register_init' );
+
 
 function remove_parent_widgets(){
 
@@ -139,7 +148,7 @@ add_action('pre_get_posts','search_filter');
 
 if (function_exists('add_theme_support')) { add_theme_support('post-thumbnails'); }
 
-add_image_size('headerImage', 2000, 1020, true);
+add_image_size('headerImage', 1250, 800, true);
 add_image_size('exhibit_thumbnail_image', 800, 600, true);
 set_post_thumbnail_size( 1024, 9999 ); // Unlimited height, soft crop
 
