@@ -209,6 +209,7 @@ nav.navbar.navbar-default {
 	overflow:hidden;
 	height: 200px;
 	top: 0;
+	min-width: 100%;
 }
 
 .header-image-high,
@@ -224,7 +225,7 @@ nav.navbar.navbar-default {
 	overflow:hidden;
 	height:100px;
 	top:0;
-	width: 100%;
+	min-width: 100%;
 }
 
 .header-bg-image-high img,
