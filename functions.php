@@ -113,7 +113,7 @@ if ( !function_exists( 'register_child_nav' ) ) {
 	add_action( 'init', 'register_child_nav' );
 }
 
-//Gets post cat slug and looks for single-[cat slug].php and applies it
+// Gets post cat slug and looks for single-[cat slug].php and applies it
 add_filter('single_template', create_function(
 		'$the_template',
 		'foreach( (array) get_the_category() as $cat ) {
@@ -262,7 +262,7 @@ function get_first_post_image() {
 	$output = preg_match_all( '/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches );
 	$first_img = $matches [1] [0];
 
-	//Defines a default image
+	// Defines a default image
 	if ( empty( $first_img ) ) {
 	$first_img = '';
 	}
