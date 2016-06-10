@@ -18,8 +18,6 @@
 
 		?>
 
-		<?php endif; ?>
-
 	</div><!-- #secondary -->
 
 <?php endif; ?>
