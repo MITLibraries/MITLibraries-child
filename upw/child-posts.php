@@ -61,7 +61,7 @@
 						$last_value = end( $custom_field_values );
 						foreach ( $custom_field_values as $value ) {
 						  echo $value;
-						  if ($value != $last_value) { echo ', '; }
+						  if ( $value != $last_value ) { echo ', '; }
 						}
 					  }
 					  ?>
