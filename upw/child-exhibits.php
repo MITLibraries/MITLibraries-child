@@ -88,7 +88,7 @@ foreach ( (get_the_category()) as $category ) {
 				  if ( $custom_field_values ) : ?>
                     <span class="custom-field custom-field-<?php echo $name; ?>">
                       <?php
-					  if ( !is_array( $custom_field_values ) ) {
+					  if ( ! is_array( $custom_field_values ) ) {
 
 						// For custom fields named "event_date", we pass the value through an additional parsing step.
 						if ( $name == 'end_date' ) {
