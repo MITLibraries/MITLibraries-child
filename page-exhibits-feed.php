@@ -33,9 +33,9 @@ get_header();
 	              'key'     => 'end_date',  // which meta to query
 	              'value'   => date( 'Y-m-d' ),  // value for comparison
 	              'compare' => '>=',          // method of comparison
-	              'type'    => 'DATE'
-	            ) // meta_query is an array of query ites
-	           ) // end meta_query array
+	              'type'    => 'DATE',
+	            ), // meta_query is an array of query ites
+	           ),// end meta_query array
 	          ) // end array
 	        ); // close WP_Query constructor call
 		?> 
@@ -79,9 +79,9 @@ get_header();
 	              'key'     => 'start_date',  // which meta to query
 	              'value'   => date( 'Y-m-d' ),  // value for comparison
 	              'compare' => '>=',          // method of comparison
-	              'type'    => 'DATE'
-	            ) // meta_query is an array of query ites
-	           ) // end meta_query array
+	              'type'    => 'DATE',
+	            ), // meta_query is an array of query ites
+	           ),// end meta_query array
 	          ) // end array
 	        ); // close WP_Query constructor call
 		?> 
@@ -126,9 +126,9 @@ get_header();
 	              'key'     => 'end_date',  // which meta to query
 	              'value'   => date( 'Y-m-d' ),  // value for comparison
 	              'compare' => '<',          // method of comparison
-	              'type'    => 'DATE'
-	            ) // meta_query is an array of query ites
-	           ) // end meta_query array
+	              'type'    => 'DATE',
+	            ), // meta_query is an array of query ites
+	           ),// end meta_query array
 	          ) // end array
 	        ); // close WP_Query constructor call
 
