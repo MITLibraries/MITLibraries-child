@@ -209,14 +209,7 @@ nav.navbar.navbar-default {
 	overflow:hidden;
 	height: 200px;
 	top: 0;
-}
-
-.header-image-high,
-.header-image-short {
-	height:522px;
-	width:1024px;
-	background-repeat: no-repeat;
-	background-position: center top;
+	min-width: 100%;
 }
 
 .header-bg-image-short {
@@ -225,17 +218,24 @@ nav.navbar.navbar-default {
 	overflow:hidden;
 	height:100px;
 	top:0;
-	width: 100%;
+	min-width: 100%;
 }
 
 .header-bg-image-high img,
 .header-bg-image-short img {
+	position: relative;
 	display: block;
 	min-width: 100%;
+	height: auto;
+	width: auto;
 }
 
-.header-bg-image-short img.wp-post-image {
-	min-width: 100%;
+.header-bg-image-high img {
+	top: -50%;
+}
+
+.header-bg-image-short img {
+	top: -100%;
 }
 
 .page-header-home {
@@ -1203,6 +1203,14 @@ a.giveNow:hover {
     	padding: 3% 0;
     	font-size: 24px;
 	}
+	
+	.header-bg-image-high img {
+		top: 0;
+	}
+
+	.header-bg-image-short img {
+		top: -50%;
+	}
 
 	.page-template-page-exhibits-feed .sidebar,
 	.category-rotch-library .sidebar,
@@ -1402,12 +1410,7 @@ a.giveNow:hover {
 	.child-tagline {
 		font-size:12px;
 	}
-
-	.header-bg-image-high img {
-		height: 100% ;
-		width: auto;
-	}
-
+	
 	/* ---- Sticky/Post Excerpts + Flexbox Layout---- */
 	.wrap-section-hilite {
 		flex-direction: column;

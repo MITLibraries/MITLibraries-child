@@ -31,23 +31,22 @@
 				</div>
 
 				<div class="header-bg-image-high">
-					<img class="header-image-high" src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
-
+					<img src="<?php header_image(); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
 				</div>
-
+				
 			</div>
-
+			
 		<?php elseif(is_category()): ?>
-
+		
 			<div class="child-header-short">
 				<div class="page-header-internal">
 					<div class="child-page-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></div>
 				</div>
 				<div class="header-bg-image-short">
-					<img class="header-image-short" src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
-				</div>
+					<img src="<?php header_image(); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+				</div>			
 			</div>
-
+			
 		<?php else: ?>
 
 			<div class="child-header-short">
@@ -55,14 +54,14 @@
 					<div class="child-page-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></div>
 				</div>
 				<div class="header-bg-image-short">
-					<?php if(get_the_post_thumbnail()): ?>
-					<img class="header-image-short" src="<?php echo( get_the_post_thumbnail() ); ?>" />
-					<?php else: ?>
-					<img class="header-image-short" src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
-					<?php endif; ?>
-				</div>
+				<?php if(get_the_post_thumbnail()): ?>
+					<?php the_post_thumbnail(); ?>
+				<?php else: ?>
+					<img src="<?php header_image(); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+				<?php endif; ?>
+				</div>			
 			</div>
-
+						
 		<?php endif; ?>
 </div>
 
