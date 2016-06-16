@@ -790,6 +790,11 @@ footer .footerHeader {
 	padding: 1em 0;
 }
 
+.page-template-default .widget ul.menu {
+	border: none;
+	padding: 0;
+}
+
 /* ---- Widgets ---- */
 .staff-widget {
 	float: left;
