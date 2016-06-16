@@ -30,9 +30,7 @@
 
 				</div>
 
-				<div class="header-bg-image-high">
-					<img src="<?php header_image(); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
-				</div>
+				<?php get_template_part( 'inc/header','image' ); ?>
 				
 			</div>
 			
@@ -42,9 +40,9 @@
 				<div class="page-header-internal">
 					<div class="child-page-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></div>
 				</div>
-				<div class="header-bg-image-short">
-					<img src="<?php header_image(); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
-				</div>			
+
+				<?php get_template_part( 'inc/header','image' ); ?>
+
 			</div>
 			
 		<?php else: ?>
@@ -53,13 +51,9 @@
 				<div class="page-header-internal">
 					<div class="child-page-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></div>
 				</div>
-				<div class="header-bg-image-short">
-				<?php if(get_the_post_thumbnail()): ?>
-					<?php the_post_thumbnail(); ?>
-				<?php else: ?>
-					<img src="<?php header_image(); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
-				<?php endif; ?>
-				</div>			
+
+				<?php get_template_part( 'inc/header','image' ); ?>
+
 			</div>
 						
 		<?php endif; ?>
