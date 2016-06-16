@@ -1041,35 +1041,6 @@ a.exhibits-button:focus {
 	border-color: #338bc5;
 }
 
-/* ---- Disaster-Response Styles ----*/
-.sidebar .button.disaster-response {
-	margin-bottom:16px;
-	margin-bottom:1rem;
-	padding:0;
-}
-
-.disaster-response {
-	font-family:'Open Sans',sans-serif;
-	font-size:16px;
-	font-size:1rem;
-	text-align:center;
-}
-
-.disaster-response a {
-	background:#f58632;
-/* $orange-dark */
-	border-radius:3px;
-	color:#fff;
-	display:block;
-	padding:16px;
-	padding:1rem;
-	width:100%;
-}
-
-.disaster-response a:hover {
-	color:#fff;
-}
-
 /* ---- Give Now Styles ----*/
 a.giveNow {
 	background:#f58632;
