@@ -788,6 +788,7 @@ footer .footerHeader {
 
 .widget .button {
 	padding: 1em 0;
+	max-width: none;
 }
 
 /* ---- Widgets ---- */
