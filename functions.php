@@ -59,8 +59,8 @@ add_action( 'after_setup_theme', 'customHeader' );
 function customHeader() {
 
 	$args = array(
-		'width'         => 2000,
-		'height'        => 1020,
+		'width'         => 1250,
+		'height'        => 800,
 		'uploads'       => true
 	);
 
@@ -139,7 +139,7 @@ add_action('pre_get_posts','search_filter');
 
 if (function_exists('add_theme_support')) { add_theme_support('post-thumbnails'); }
 
-add_image_size('headerImage', 2000, 1020, true);
+add_image_size('headerImage', 1250, 800, true);
 add_image_size('exhibit_thumbnail_image', 800, 600, true);
 set_post_thumbnail_size( 1024, 9999 ); // Unlimited height, soft crop
 
