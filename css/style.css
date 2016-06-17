@@ -791,6 +791,11 @@ footer .footerHeader {
 	max-width: none;
 }
 
+.page-template-default .widget ul.menu {
+	border: none;
+	padding: 0;
+}
+
 /* ---- Widgets ---- */
 .staff-widget {
 	float: left;
