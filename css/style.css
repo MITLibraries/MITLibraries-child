@@ -1047,22 +1047,6 @@ a.exhibits-button:focus {
 	border-color: #338bc5;
 }
 
-/* ---- Give Now Styles ----*/
-a.giveNow {
-	background:#f58632;
-	border-radius:3px;
-	color:#fff;
-	display:block;
-	padding:16px;
-	padding:1rem;
-	width:100%;
-	text-align:center;
-}
-
-a.giveNow:hover {
-	color:#fff;
-}
-
 /* ---- Fields, Inputs, Buttons etc. ---- */
 .buttons {
 	margin: 50px 0px;
