@@ -782,7 +782,7 @@ footer .footerHeader {
 	word-wrap: normal;
 }
 
-.no-top-border {
+.childTheme .sidebar .no-top-border {
 	border-top: none;
 }
 
