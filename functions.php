@@ -96,7 +96,7 @@ function twentytwelve_child_widgets_init() {
 	register_sidebar( array(
 			'name' => __( 'Below Content Widget Area', 'twentytwelve' ),
 			'id' => 'sidebar-two',
-			'description' => __( 'Appears when using the Widgetized Page template', 'twentytwelve' ),
+			'description' => __( 'Appears when using the Front Page or Widgetized Page templates', 'twentytwelve' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s" role="complementary">',
 			'after_widget' => '</div>',
 			'before_title' => '<h3 class="widget-title">',
