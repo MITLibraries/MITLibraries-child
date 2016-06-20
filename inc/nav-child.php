@@ -1,7 +1,7 @@
 <?php
 	$siteName = get_bloginfo( 'name' );
 	// if ($siteName != 'MIT Libraries News') {
-	$noChildNav = array('MIT Libraries News', 'Document Services');
+	$noChildNav = array( 'MIT Libraries News', 'Document Services' );
 	$countPosts = wp_count_posts( 'page' )->publish;
 	if ( !in_array( $siteName, $noChildNav ) && $countPosts > 1 ) {
 ?>
@@ -31,7 +31,8 @@
 				'container_id'      => 'bs-example-navbar-collapse-1',
 				'menu_class'        => 'nav navbar-nav nav-second',
 				'fallback_cb'       => 'navwalker::fallback',
-				'walker'            => new navwalker())
+				'walker'            => new navwalker(),
+),
 			);
 
 
