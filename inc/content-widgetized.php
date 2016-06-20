@@ -22,7 +22,7 @@ global $isRoot;
 	
 	<div class="entry-content">
 		<?php $title = get_the_title(); if ( $title != '' ) : ?>
-			<?php if ( !is_front_page() ) { echo '<h1>'.$title.'</h1>'; } ?>
+			<?php if ( ! is_front_page() ) { echo '<h1>'.$title.'</h1>'; } ?>
 		<?php endif; ?>
 
 		<?php the_content(); ?>

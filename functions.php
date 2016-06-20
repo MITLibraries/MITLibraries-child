@@ -32,7 +32,7 @@ function betterChildBreadcrumbs() {
 		echo '<span>Search</span>';
 	}
 
-	if ( !is_child_page() && is_page() || is_category() || is_single() ) {
+	if ( ! is_child_page() && is_page() || is_category() || is_single() ) {
 		echo '<span>'.the_title().'</span>';
 		return;
 	}
@@ -49,7 +49,7 @@ function betterChildBreadcrumbs() {
 		$childBreadcrumb = $startLink.$pageLink.$endLink.$pageTitle.$closeLink;
 	}
 
-	if ( $parentBreadcrumb !='' ) {echo '<span>'.$parentBreadcrumb.'</span>';}
+	if ( $parentBreadcrumb != '' ) {echo '<span>'.$parentBreadcrumb.'</span>';}
 	if ( $childBreadcrumb != '' ) {echo '<span>'.$pageTitle.'</span>';}
 
 }
@@ -106,7 +106,7 @@ function twentytwelve_child_widgets_init() {
 add_action( 'widgets_init', 'twentytwelve_child_widgets_init' );
 
 // Register Child Nav
-if ( !function_exists( 'register_child_nav' ) ) {
+if ( ! function_exists( 'register_child_nav' ) ) {
 	function register_child_nav() {
 		register_nav_menu( 'child-nav', 'Child Nav' );
 	}
@@ -126,7 +126,7 @@ add_filter('single_template', create_function(
  * Load all custom post_types if home page or search results.
  */
 function search_filter( $query ) {
-	if ( !is_admin() && $query->is_main_query() ) {
+	if ( ! is_admin() && $query->is_main_query() ) {
 		if ( $query->is_home() || $query->is_search() ) {
 			$query->set( 'post_type', array( 'maihaugen', 'rotch', 'online' ) );
 		}
@@ -143,7 +143,7 @@ add_image_size( 'headerImage', 1250, 800, true );
 add_image_size( 'exhibit_thumbnail_image', 800, 600, true );
 set_post_thumbnail_size( 1024, 9999 ); // Unlimited height, soft crop
 
-if ( !function_exists( 'my_mce_buttons_2' ) ) :
+if ( ! function_exists( 'my_mce_buttons_2' ) ) :
 	function my_mce_buttons_2( $buttons ) {
 		/**
 		 * Add in a core button that's disabled by default
