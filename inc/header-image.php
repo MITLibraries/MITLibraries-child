@@ -31,10 +31,10 @@ if ( is_front_page() ) {
 		// Final choice is to get the basic image provided by the theme.
 		echo '<!-- theme hero -->';
 ?>
-	<img
+    <img
 		src="<?php echo( esc_url( get_theme_root_uri() . '/libraries-child-new/images/hayden.png' ) ); ?>"
 		alt="<?php echo( esc_attr( get_bloginfo( 'title' ) ) ); ?>" 
-	/>
+    />
 <?php
 	}
 ?>

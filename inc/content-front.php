@@ -20,7 +20,7 @@ global $isRoot;
 				rsort( $sticky );
 				$sticky = array_slice( $sticky, 0, 5 );
 				$the_query = new WP_Query( array( 'post__in' => $sticky, 'ignore_sticky_posts' => 1 ) );
-				while ($the_query->have_posts()) {
+				while ( $the_query->have_posts() ) {
 					$the_query->the_post();
 				?>
 				
@@ -28,7 +28,7 @@ global $isRoot;
 					<img class="excerpt-post__fig"  src="<?php echo get_first_post_image(); ?>" width="200" >
 					<div class="excerpt-post__body">
 		                <h3><a href="<?php echo the_permalink();?>"><?php echo get_the_title();?></a></h3>
-		                <?php custom_excerpt(20, '...') ?>
+		                <?php custom_excerpt( 20, '...' ) ?>
 					</div>
 				</div>
 				

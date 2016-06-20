@@ -1,10 +1,9 @@
-
 <?php
-	$siteName = get_bloginfo('name');
+	$siteName = get_bloginfo( 'name' );
 	// if ($siteName != 'MIT Libraries News') {
-	$noChildNav = array("MIT Libraries News", "Document Services");
-	$countPosts = wp_count_posts('page')->publish;
-	if (!in_array($siteName, $noChildNav) && $countPosts > 1) {
+	$noChildNav = array( 'MIT Libraries News', 'Document Services' );
+	$countPosts = wp_count_posts( 'page' )->publish;
+	if ( ! in_array( $siteName, $noChildNav ) && $countPosts > 1 ) {
 ?>
 
 	
@@ -24,20 +23,21 @@
     </div>
 
         <?php
-            wp_nav_menu( array(
-                'menu'              => 'Sub Nav',
-                'theme_location'    => 'child-nav',
-                'container'         => 'div',
-                'container_class'   => 'collapse navbar-collapse',
+			wp_nav_menu( array(
+				'menu'              => 'Sub Nav',
+				'theme_location'    => 'child-nav',
+				'container'         => 'div',
+				'container_class'   => 'collapse navbar-collapse',
 				'container_id'      => 'bs-example-navbar-collapse-1',
-                'menu_class'        => 'nav navbar-nav nav-second',
-                'fallback_cb'       => 'navwalker::fallback',
-                'walker'            => new navwalker())
-            );
-            
-                       
+				'menu_class'        => 'nav navbar-nav nav-second',
+				'fallback_cb'       => 'navwalker::fallback',
+				'walker'            => new navwalker(),
+),
+			);
 
-        ?>
+
+
+		?>
 
 
     </div>
@@ -53,4 +53,3 @@
 <!-- #site-navigation -->
 
 <?php } ?>
-

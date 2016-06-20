@@ -7,7 +7,7 @@
 	if ($blog_id == 24) {
 		$locationId = 1028;
 	}
-	
+
 	switch_to_blog(1);
 
 	$hasHours = hasHours($locationId, date("Y-m-d"));

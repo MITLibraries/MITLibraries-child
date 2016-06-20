@@ -12,24 +12,24 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
- 
+
 get_header(); ?>
 
-	<?php if ( is_front_page()) {
+	<?php if ( is_front_page() ) {
 
-		get_template_part('inc/breadcrumbs','sitename');
+		get_template_part( 'inc/breadcrumbs','sitename' );
 
-    	} else {
+		} else {
 
-		get_template_part('inc/breadcrumbs', 'child');
+		get_template_part( 'inc/breadcrumbs', 'child' );
 
-		} 
-		
+		}
+
 	?>
 
 		<div id="stage" class="inner" role="main">
 
-			<?php get_template_part('inc/postHead'); ?>
+			<?php get_template_part( 'inc/postHead' ); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
