@@ -29,11 +29,11 @@ function betterChildBreadcrumbs() {
 	global $post;
 
 	if ( is_search() ) {
-		echo "<span>Search</span>";
+		echo '<span>Search</span>';
 	}
 
 	if ( !is_child_page() && is_page() || is_category() || is_single() ) {
-		echo "<span>".the_title()."</span>";
+		echo '<span>'.the_title().'</span>';
 		return;
 	}
 
@@ -49,8 +49,8 @@ function betterChildBreadcrumbs() {
 		$childBreadcrumb = $startLink.$pageLink.$endLink.$pageTitle.$closeLink;
 	}
 
-	if ( $parentBreadcrumb !="" ) {echo "<span>".$parentBreadcrumb."</span>";}
-	if ( $childBreadcrumb != "" ) {echo "<span>".$pageTitle."</span>";}
+	if ( $parentBreadcrumb !='' ) {echo '<span>'.$parentBreadcrumb.'</span>';}
+	if ( $childBreadcrumb != '' ) {echo '<span>'.$pageTitle.'</span>';}
 
 }
 
@@ -264,7 +264,7 @@ function get_first_post_image() {
 
 	//Defines a default image
 	if ( empty( $first_img ) ) {
-	$first_img = "";
+	$first_img = '';
 	}
 	return $first_img;
 }

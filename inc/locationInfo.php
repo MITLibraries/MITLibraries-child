@@ -6,7 +6,7 @@
 	$docsBuilding = get_post_meta( 1028, 'building', true );
 	$docsSlug = $docsServices->post_name;
 
-	$mapPage = "/locations/#!";
+	$mapPage = '/locations/#!';
 
 ?>
 

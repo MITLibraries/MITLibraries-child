@@ -31,7 +31,7 @@ get_header();
 	          'meta_query'  => array(
 	             array(
 	              'key'     => 'end_date',  // which meta to query
-	              'value'   => date( "Y-m-d" ),  // value for comparison
+	              'value'   => date( 'Y-m-d' ),  // value for comparison
 	              'compare' => '>=',          // method of comparison
 	              'type'    => 'DATE'
 	            ) // meta_query is an array of query ites
@@ -78,7 +78,7 @@ get_header();
 	          'meta_query'  => array(
 	             array(
 	              'key'     => 'start_date',  // which meta to query
-	              'value'   => date( "Y-m-d" ),  // value for comparison
+	              'value'   => date( 'Y-m-d' ),  // value for comparison
 	              'compare' => '>=',          // method of comparison
 	              'type'    => 'DATE'
 	            ) // meta_query is an array of query ites
@@ -126,7 +126,7 @@ get_header();
 	          'meta_query'  => array(
 	             array(
 	              'key'     => 'end_date',  // which meta to query
-	              'value'   => date( "Y-m-d" ),  // value for comparison
+	              'value'   => date( 'Y-m-d' ),  // value for comparison
 	              'compare' => '<',          // method of comparison
 	              'type'    => 'DATE'
 	            ) // meta_query is an array of query ites

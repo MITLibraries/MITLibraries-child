@@ -60,4 +60,4 @@
 </div>
 
 
-<?php get_template_part( "inc/nav", "child" ); ?>
+<?php get_template_part( 'inc/nav', 'child' ); ?>
