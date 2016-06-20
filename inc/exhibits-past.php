@@ -1,6 +1,7 @@
 <?php
 /**
  * The sub-template used by page-exhibits-feed.php, category-rotch-library.php and category-maihaugen-gallery.php for displaying Past Exhibits.       *
+ *
  * @package WordPress
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
