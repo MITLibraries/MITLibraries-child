@@ -766,7 +766,7 @@ dd.wp-caption-text {
     margin-bottom: 20px;
 }
 
-.connect-alt .color-alt,
+.connect-alt a,
 .connect-alt .textwidget span.color-alt.twitter-connect:before,
 .connect-alt .textwidget span.color-alt.fb-connect:before,
 .connect-alt .textwidget span.color-alt.email-connect:before,
