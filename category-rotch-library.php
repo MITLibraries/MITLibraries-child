@@ -1,6 +1,9 @@
 <?php
-/*
+/**
  * The template for displaying Category pages for Rotch Library on Exhibits site.
+ *
+ * @package MIT_Libraries_Child
+ * @since 2.0.0
  */
 
 get_header();
@@ -25,26 +28,26 @@ get_header();
 			  'posts_per_page' => -1,
 			  'ignore_sticky_posts' => false,
 	          'category_name'	=> 'rotch-library',
-	          'meta_key'    => 'end_date',  // load up the event_date meta
+	          'meta_key'    => 'end_date',  // Load up the event_date meta.
 	          'order_by'    => 'end_date',
-	          'order'       => 'desc',         // descending, so later events first
+	          'order'       => 'desc',         // Descending, so later events first.
 	          'meta_query'  => array(
 	             array(
-	              'key'     => 'end_date',  // which meta to query
-	              'value'   => date( 'Y-m-d' ),  // value for comparison
-	              'compare' => '>=',          // method of comparison
+	              'key'     => 'end_date',  // Which meta to query.
+	              'value'   => date( 'Y-m-d' ),  // Value for comparison.
+	              'compare' => '>=',          // Method of comparison.
 	              'type'    => 'DATE',
-	            ), // meta_query is an array of query ites
-	           ),// end meta_query array
-	          ) // end array
-	        ); // close WP_Query constructor call
+	            ), // Meta_query is an array of query items.
+	           ),// End meta_query array.
+	          ) // End array.
+	        ); // Close WP_Query constructor call.
 		?> 
         
         	<div class="exhibits-feed-section">
 			
 				<h3 class="exhibits">Current Exhibits</h3>   
 						 
-		   <?php if ( $current_query->have_posts() ) : $current_query->the_post(); { // loop for current exhibits
+		   <?php if ( $current_query->have_posts() ) : $current_query->the_post(); { // Loop for current exhibits.
 
 		       get_template_part( 'inc/exhibits-current' );
 
@@ -62,7 +65,7 @@ get_header();
 			   		   
 			</div>
 
-		<!---- END OF CURRENT EXHIBITS LOOP --->
+		<!-- END OF CURRENT EXHIBITS LOOP -->
 		   
 
 		<?php
@@ -72,26 +75,26 @@ get_header();
 		$future_query = new WP_Query(
 	        array(
 	          'category_name'	=> 'rotch-library',
-	          'meta_key'    => 'start_date',  // load up the event_date meta
+	          'meta_key'    => 'start_date',  // Load up the event_date meta.
 	          'order_by'    => 'start_date',
-	          'order'       => 'desc',         // descending, so later events first
+	          'order'       => 'desc',         // Descending, so later events first.
 	          'meta_query'  => array(
 	             array(
-	              'key'     => 'start_date',  // which meta to query
-	              'value'   => date( 'Y-m-d' ),  // value for comparison
-	              'compare' => '>=',          // method of comparison
+	              'key'     => 'start_date',  // Which meta to query.
+	              'value'   => date( 'Y-m-d' ),  // Value for comparison.
+	              'compare' => '>=',          // Method of comparison.
 	              'type'    => 'DATE',
-	            ), // meta_query is an array of query ites
-	           ),// end meta_query array
-	          ) // end array
-	        ); // close WP_Query constructor call
+	            ), // Meta_query is an array of query items.
+	           ),// End meta_query array.
+	          ) // End array.
+	        ); // Close WP_Query constructor call.
 		?> 
 			
 			<div class="exhibits-feed-section">
 				
 				<h3 class="exhibits">Upcoming Exhibits</h3>   
 
-			<?php if ( $future_query->have_posts() ) : $future_query->the_post(); { // loop for upcoming exhibits
+			<?php if ( $future_query->have_posts() ) : $future_query->the_post(); { // Loop for upcoming exhibits.
 
 				get_template_part( 'inc/exhibits-upcoming' );
 
@@ -110,7 +113,7 @@ get_header();
 			</div>
 		
 		
-		<!---- END OF UPCOMING EXHIBITS LOOP ----->
+		<!-- END OF UPCOMING EXHIBITS LOOP -->
 		 
 		 
 		<?php
@@ -120,19 +123,19 @@ get_header();
 		$past_query = new WP_Query(
 	        array(
 	          'category_name'	=> 'rotch-library',
-	          'meta_key'    => 'end_date',  // load up the event_date meta
+	          'meta_key'    => 'end_date',  // Load up the event_date meta.
 	          'order_by'    => 'end_date',
-	          'order'       => 'desc',         // descending, so later events first
+	          'order'       => 'desc',         // Descending, so later events first.
 	          'meta_query'  => array(
 	             array(
-	              'key'     => 'end_date',  // which meta to query
-	              'value'   => date( 'Y-m-d' ),  // value for comparison
-	              'compare' => '<',          // method of comparison
+	              'key'     => 'end_date',  // Which meta to query.
+	              'value'   => date( 'Y-m-d' ),  // Value for comparison.
+	              'compare' => '<',          // Method of comparison.
 	              'type'    => 'DATE',
-	            ), // meta_query is an array of query ites
-	           ),// end meta_query array
-	          ) // end array
-	        ); // close WP_Query constructor call
+	            ), // Meta_query is an array of query items.
+	           ),// End meta_query array.
+	          ) // End array.
+	        ); // Close WP_Query constructor call.
 
 		?> 
 		
@@ -140,18 +143,18 @@ get_header();
 			
 				<h3 class="exhibits">Past Exhibits</h3>   
 							 
-		   <?php while ( $past_query->have_posts() ) : $past_query->the_post(); // loop for events
+		   <?php while ( $past_query->have_posts() ) : $past_query->the_post(); // Loop for events.
 
 		       get_template_part( 'inc/exhibits-past' );
 
 		       wp_reset_query(); // Restore global post data stomped by the_post().
 
-			   endwhile; // end of the loop. ?>
+			   endwhile; // End of the loop. ?>
 
 			</div>
 
 
-		<!--- END OF UPCOMING EXHIBITS LOOP --->
+		<!-- END OF UPCOMING EXHIBITS LOOP -->
     
   		
   		

@@ -1,4 +1,10 @@
 <?php
+/**
+ * The template for displaying location information.
+ *
+ * @package MIT_Libraries_Child
+ * @since 2.0.0
+ */
 
 	$docsServices = get_post( 1028 );
 	$docsPhone = get_post_meta( 1028, 'phone', true );

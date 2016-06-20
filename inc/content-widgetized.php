@@ -1,12 +1,11 @@
 <?php
 /**
- * The template used for displaying
- * page content for Widgetized Page
+ * The template used for displaying page content for Widgetized Page
  *
- * @package WordPress
- * @subpackage Twenty_Twelve
+ * @package MIT_Libraries_Child
  * @since Twenty Twelve 1.0
  */
+
 global $isRoot;
 ?>
 

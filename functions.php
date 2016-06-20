@@ -1,29 +1,44 @@
 <?php
+/**
+ * Child themes functions and definitions.
+ *
+ * @package MIT_Libraries_Child
+ * @since Twenty Twelve 1.0
+ */
 
 $siteName = get_bloginfo( 'name' );
 
-add_action( 'after_setup_theme', 'remove_child_theme_support' );
-
+/**
+ * Remove theme support for custom backgrounds
+ */
 function remove_child_theme_support() {
 	remove_theme_support( 'custom-background' );
 }
+add_action( 'after_setup_theme', 'remove_child_theme_support' );
 
+/**
+ * Add theme-specific scripts
+ */
 function enqueue_my_scripts() {
-	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', array( 'jquery' ), '1.9.1', true ); // we need the jquery library
-	wp_enqueue_script( 'bootstrap-js', '//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js', array( 'jquery' ), true ); // all the bootstrap javascript goodness
+	// We need the jquery library.
+	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', array( 'jquery' ), '1.9.1', true );
+	// All the bootstrap javascript goodness.
+	wp_enqueue_script( 'bootstrap-js', '//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js', array( 'jquery' ), true );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_my_scripts' );
+
+/**
+ * Add theme-specific stylesheets
+ */
 function enqueue_my_styles() {
 	wp_enqueue_style( 'bootstrap', '//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' );
 	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css' );
 }
-
-
-
 add_action( 'wp_enqueue_scripts', 'enqueue_my_styles' );
 
-
-
+/**
+ * Define betterChildBreadcrumbs function
+ */
 function betterChildBreadcrumbs() {
 
 	global $post;
@@ -54,8 +69,9 @@ function betterChildBreadcrumbs() {
 
 }
 
-add_action( 'after_setup_theme', 'customHeader' );
-
+/**
+ * Define custom header image size
+ */
 function customHeader() {
 
 	$args = array(
@@ -67,10 +83,14 @@ function customHeader() {
 	add_theme_support( 'custom-header', $args );
 
 }
+add_action( 'after_setup_theme', 'customHeader' );
 
+/**
+ * Remove widget areas inherited from parent theme
+ */
 function remove_parent_widgets() {
 
-	// Unregister some of the TwentyTwelve sidebars
+	// Unregister some of the TwentyTwelve sidebars.
 	unregister_sidebar( 'sidebar-1' );
 	unregister_sidebar( 'sidebar-2' );
 	unregister_sidebar( 'sidebar-3' );
@@ -105,15 +125,17 @@ function twentytwelve_child_widgets_init() {
 }
 add_action( 'widgets_init', 'twentytwelve_child_widgets_init' );
 
-// Register Child Nav
 if ( ! function_exists( 'register_child_nav' ) ) {
+	/**
+	 * Define register_child_nav function
+	 */
 	function register_child_nav() {
 		register_nav_menu( 'child-nav', 'Child Nav' );
 	}
 	add_action( 'init', 'register_child_nav' );
 }
 
-// Gets post cat slug and looks for single-[cat slug].php and applies it
+// Gets post cat slug and looks for single-[cat slug].php and applies it.
 add_filter('single_template', create_function(
 		'$the_template',
 		'foreach( (array) get_the_category() as $cat ) {
@@ -124,6 +146,8 @@ add_filter('single_template', create_function(
 
 /**
  * Load all custom post_types if home page or search results.
+ *
+ * @param object $query A wordpress query object.
  */
 function search_filter( $query ) {
 	if ( ! is_admin() && $query->is_main_query() ) {
@@ -141,13 +165,15 @@ if ( function_exists( 'add_theme_support' ) ) { add_theme_support( 'post-thumbna
 
 add_image_size( 'headerImage', 1250, 800, true );
 add_image_size( 'exhibit_thumbnail_image', 800, 600, true );
-set_post_thumbnail_size( 1024, 9999 ); // Unlimited height, soft crop
+set_post_thumbnail_size( 1024, 9999 ); // Unlimited height, soft crop.
 
 if ( ! function_exists( 'my_mce_buttons_2' ) ) :
+	/**
+	 * Add in a core button that's disabled by default
+	 *
+	 * @param array $buttons array of buttons.
+	 */
 	function my_mce_buttons_2( $buttons ) {
-		/**
-		 * Add in a core button that's disabled by default
-		 */
 		$buttons[] = 'hr';
 
 		return $buttons;
@@ -156,10 +182,15 @@ if ( ! function_exists( 'my_mce_buttons_2' ) ) :
 add_filter( 'mce_buttons_2', 'my_mce_buttons_2' );
 endif;
 
+/**
+ * Adds custom post types to taxonomies
+ *
+ * @param object $query A wordpress query object.
+ */
 function add_custom_types_to_tax( $query ) {
 	if ( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
 
-		// Get all your post types
+		// Get all your post types.
 		$post_types = get_post_types();
 
 		$query->set( 'post_type', $post_types );
@@ -168,7 +199,9 @@ function add_custom_types_to_tax( $query ) {
 }
 add_filter( 'pre_get_posts', 'add_custom_types_to_tax' );
 
-// pagination for posts
+/**
+ * Pagination for posts
+ */
 function child_numeric_posts_nav() {
 
 	if ( is_singular() ) {
@@ -238,7 +271,12 @@ function child_numeric_posts_nav() {
 
 }
 
-// Allows for custom excerpt lengths
+/**
+ * Allows for custom excerpt lengths
+ *
+ * @param int    $new_length The new length of the excerpt.
+ * @param scalar $new_more The string to append when trimming the excerpt.
+ */
 function custom_excerpt( $new_length = 20, $new_more = '...' ) {
 	add_filter('excerpt_length', function () use ( $new_length ) {
 	return $new_length;
@@ -253,7 +291,9 @@ function custom_excerpt( $new_length = 20, $new_more = '...' ) {
 	echo $output;
 }
 
-// Get URL of first image in a post
+/**
+ * Get URL of first image in a post
+ */
 function get_first_post_image() {
 	global $post, $posts;
 	$first_img = '';
@@ -262,7 +302,7 @@ function get_first_post_image() {
 	$output = preg_match_all( '/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches );
 	$first_img = $matches [1] [0];
 
-	// Defines a default image
+	// Defines a default image.
 	if ( empty( $first_img ) ) {
 	$first_img = '';
 	}
