@@ -45,7 +45,7 @@ get_header();
 				<h3 class="exhibits">Current Exhibits</h3>   
 						 
 				<?php if ( $current_query->have_posts() ) :
-					while ( $current_query->have_posts() ) : $current_query->the_post(); //loop for current exhibits
+					while ( $current_query->have_posts() ) : $current_query->the_post(); // loop for current exhibits
 
 				       get_template_part( 'inc/exhibits-current' );
 
@@ -91,7 +91,7 @@ get_header();
 				<h3 class="exhibits">Upcoming Exhibits</h3>   
 				 
 				<?php if ( $future_query->have_posts() ) :
-					while ( $future_query->have_posts() ) : $future_query->the_post(); //loop for future exhibits
+					while ( $future_query->have_posts() ) : $future_query->the_post(); // loop for future exhibits
 
 			       get_template_part( 'inc/exhibits-current' );
 
@@ -138,7 +138,7 @@ get_header();
 			
 				<h3 class="exhibits">Past Exhibits</h3>   
 				 
-		   <?php while ( $past_query->have_posts() ) : $past_query->the_post(); //loop for events
+		   <?php while ( $past_query->have_posts() ) : $past_query->the_post(); // loop for events
 
 		       get_template_part( 'inc/exhibits-past' );
 
