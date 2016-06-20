@@ -13,17 +13,17 @@
 get_header(); ?>
 
 <?php // Get today's date in the right format
-$todaysDate = date('m/d/Y H:i:s');
+$todaysDate = date( 'm/d/Y H:i:s' );
 ?>
 	<?php
 
-		get_template_part('inc/breadcrumbs','sitename');
+		get_template_part( 'inc/breadcrumbs','sitename' );
 		
 	?>
 			
 		<div id="stage" class="inner" role="main">
 			
-			<?php get_template_part('inc/postHead'); ?>
+			<?php get_template_part( 'inc/postHead' ); ?>
 
 			<div id="content" class="content has-sidebar">
 

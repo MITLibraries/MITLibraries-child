@@ -5,13 +5,13 @@
  * @version     2.0.0
  */
  
- $exhibitThumb = get_field('exhibit_thumbnail_image');
+ $exhibitThumb = get_field( 'exhibit_thumbnail_image' );
 
 ?>
 
 <?php if ($instance['before_posts']) : ?>
   <div class="upw-before">
-    <?php echo wpautop($instance['before_posts']); ?>
+    <?php echo wpautop( $instance['before_posts'] ); ?>
   </div>
 <?php endif; ?>
 
@@ -23,18 +23,18 @@
 
         <?php $current_post = ($post->ID == $current_post_id && is_single()) ? 'active' : ''; ?>
 
-    <article <?php post_class($current_post); ?>>
+    <article <?php post_class( $current_post ); ?>>
 
         <header>
 	          
 	        <?php
-	            $categories = get_the_term_list($post->ID, 'category', '', ', ');
+	            $categories = get_the_term_list( $post->ID, 'category', '', ', ' );
 	            if ($instance['show_cats'] && $categories) :
             ?>
               <div class="entry-categories">
                 <div class="entry-cats-list"><?php
 foreach((get_the_category()) as $category) {
-    echo '<span class="category-bg"><span class="category-init">' . (substr($category->cat_name,0,1))  . '</span></span>' . '<span class="catName">' . $category->cat_name . ' Exhibit' . '</span> ';
+    echo '<span class="category-bg"><span class="category-init">' . (substr( $category->cat_name,0,1 ))  . '</span></span>' . '<span class="catName">' . $category->cat_name . ' Exhibit' . '</span> ';
 }
 ?></div>
               </div>
@@ -45,10 +45,10 @@ foreach((get_the_category()) as $category) {
         <div class="upw-content category-post">
 	          
 	        <div class="category-image">
-	           <?php if (current_theme_supports('post-thumbnails') && $instance['show_thumbnail'] && has_post_thumbnail()) : ?>
+	           <?php if (current_theme_supports( 'post-thumbnails' ) && $instance['show_thumbnail'] && has_post_thumbnail()) : ?>
               <div class="entry-image">
                 <a href="<?php the_permalink(); ?>" rel="bookmark">
-                  <?php the_post_thumbnail($instance['thumb_size']); ?>
+                  <?php the_post_thumbnail( $instance['thumb_size'] ); ?>
                </a>
               </div>
             
@@ -80,22 +80,22 @@ foreach((get_the_category()) as $category) {
           <?php endif; ?>
           
           <?php if ($custom_fields) : ?>
-              <?php $custom_field_name = explode(',', $custom_fields); ?>
+              <?php $custom_field_name = explode( ',', $custom_fields ); ?>
               <div class="entry-custom-fields">
                 <?php foreach ($custom_field_name as $name) :
-                  $name = trim($name);
-                  $custom_field_values = get_post_meta($post->ID, $name, true);
+                  $name = trim( $name );
+                  $custom_field_values = get_post_meta( $post->ID, $name, true );
                   if ($custom_field_values) : ?>
                     <span class="custom-field custom-field-<?php echo $name; ?>">
                       <?php
-                      if (!is_array($custom_field_values)) {
+                      if (!is_array( $custom_field_values )) {
 
                         // For custom fields named "event_date", we pass the value through an additional parsing step.
                         if ($name == 'end_date') {
                           // Generally speaking, we need to reformat a _string_ in YYYYMMDD format into 'December 10, 2014'.
-                          $event_date = date_parse_from_format("Ymd", $custom_field_values);
+                          $event_date = date_parse_from_format( "Ymd", $custom_field_values );
                           // Because PHP sucks, we have to make this array into a timestamp, and then into the string we desire
-                          $custom_field_values = date("F j, Y", mktime(0, 0, 0, $event_date['month'],$event_date['day'],$event_date['year']));
+                          $custom_field_values = date( "F j, Y", mktime( 0, 0, 0, $event_date['month'],$event_date['day'],$event_date['year'] ) );
                         } 
                         
                         if ($name == 'end_date') { ?>
@@ -106,7 +106,7 @@ foreach((get_the_category()) as $category) {
                        <?php
 
                       } else {
-                        $last_value = end($custom_field_values);
+                        $last_value = end( $custom_field_values );
                         foreach ($custom_field_values as $value) {
                           echo $value;
                           if ($value != $last_value) echo ' , ';
@@ -130,7 +130,7 @@ foreach((get_the_category()) as $category) {
   <?php else : ?>
 
     <p class="upw-not-found">
-      <?php _e('No posts found.', 'upw'); ?>
+      <?php _e( 'No posts found.', 'upw' ); ?>
     </p>
 
   <?php endif; ?>
@@ -139,6 +139,6 @@ foreach((get_the_category()) as $category) {
 
 <?php if ($instance['after_posts']) : ?>
   <div class="upw-after">
-    <?php echo wpautop($instance['after_posts']); ?>
+    <?php echo wpautop( $instance['after_posts'] ); ?>
   </div>
 <?php endif; ?>

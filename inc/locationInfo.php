@@ -1,9 +1,9 @@
 <?php
 
-	$docsServices = get_post(1028);
-	$docsPhone = get_post_meta(1028, 'phone', true);
-	$docsEmail = get_post_meta(1028, 'email', true);
-	$docsBuilding = get_post_meta(1028, 'building', true);
+	$docsServices = get_post( 1028 );
+	$docsPhone = get_post_meta( 1028, 'phone', true );
+	$docsEmail = get_post_meta( 1028, 'email', true );
+	$docsBuilding = get_post_meta( 1028, 'building', true );
 	$docsSlug = $docsServices->post_name;
 
 	$mapPage = "/locations/#!";

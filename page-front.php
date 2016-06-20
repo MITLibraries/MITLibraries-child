@@ -17,11 +17,11 @@ get_header(); ?>
 
 	<?php if ( is_front_page()) {
 
-		get_template_part('inc/breadcrumbs','sitename');
+		get_template_part( 'inc/breadcrumbs','sitename' );
 
     	} else {
 
-		get_template_part('inc/breadcrumbs', 'child');
+		get_template_part( 'inc/breadcrumbs', 'child' );
 
 		} 
 		
@@ -29,7 +29,7 @@ get_header(); ?>
 
 		<div id="stage" class="inner" role="main">
 
-			<?php get_template_part('inc/postHead'); ?>
+			<?php get_template_part( 'inc/postHead' ); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 

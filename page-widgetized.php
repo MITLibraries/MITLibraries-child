@@ -13,14 +13,14 @@
  * @since Twenty Twelve 1.0
  */
  
-$pageRoot = getRoot($post);
-$section = get_post($pageRoot);
+$pageRoot = getRoot( $post );
+$section = get_post( $pageRoot );
 $isRoot = $section->ID == $post->ID;
 
 
 get_header(); 
 
-get_template_part('inc/breadcrumbs', 'child'); ?>
+get_template_part( 'inc/breadcrumbs', 'child' ); ?>
 
 
 	<?php while ( have_posts() ) : the_post(); ?>
@@ -29,7 +29,7 @@ get_template_part('inc/breadcrumbs', 'child'); ?>
 
 		<div id="stage" class="inner" role="main">
 
-			<?php get_template_part('inc/postHead'); ?>
+			<?php get_template_part( 'inc/postHead' ); ?>
 			
 			<?php if ( is_active_sidebar( 'sidebar' ) ) { ?>
 			
