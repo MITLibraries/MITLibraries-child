@@ -68,7 +68,7 @@ function customHeader() {
 
 }
 
-function remove_parent_widgets(){
+function remove_parent_widgets() {
 
 	// Unregister some of the TwentyTwelve sidebars
 	unregister_sidebar( 'sidebar-1' );
