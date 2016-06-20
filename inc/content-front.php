@@ -34,9 +34,15 @@ global $isRoot;
 				
 				<?php } wp_reset_postdata(); ?>
 
-		<?php the_content(); ?>
-		
-		</div>
+				<?php the_content(); ?>
+				
+				<?php if ( is_active_sidebar( 'sidebar-two' ) ) : ?>
+				
+					<?php dynamic_sidebar( 'sidebar-two' ); ?>
+					
+				<?php endif; ?>		
+	
+	</div><!-- end div.entry-content -->
 	
 		
-</div>
+</div><!-- end div.main-content -->

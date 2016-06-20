@@ -33,25 +33,17 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php if ( is_active_sidebar( 'sidebar' ) ) { ?>
-
-				<div id="content" class="content has-sidebar">
+			<div id="content" class="content <?php if ( is_active_sidebar( 'sidebar' ) ) { echo 'has-sidebar';} ?>">
 
 				<?php get_template_part( 'inc/content', 'front' ); ?>
 
+				<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
+			
 				<?php get_sidebar(); ?>
-
-			</div>
-
-			<?php } else { ?>
-
-			<div id="content" class="content">
-
-				<?php get_template_part( 'inc/content', 'front' ); ?>
-
-			</div>
-
-			<?php } ?>
+			
+				<?php endif; ?>				
+				
+			</div><!-- end div#content -->
 
 		</div><!-- end div#stage -->
 
