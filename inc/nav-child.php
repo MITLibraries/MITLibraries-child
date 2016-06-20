@@ -32,7 +32,7 @@
 				'menu_class'        => 'nav navbar-nav nav-second',
 				'fallback_cb'       => 'navwalker::fallback',
 				'walker'            => new navwalker(),
-),
+				)
 			);
 
 
