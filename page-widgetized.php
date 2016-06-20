@@ -1,7 +1,7 @@
 <?php
 /**
  *
-  * Template Name: Widgetized Page
+	* Template Name: Widgetized Page
 
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages

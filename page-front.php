@@ -19,7 +19,7 @@ get_header(); ?>
 
 		get_template_part( 'inc/breadcrumbs','sitename' );
 
-    	} else {
+		} else {
 
 		get_template_part( 'inc/breadcrumbs', 'child' );
 

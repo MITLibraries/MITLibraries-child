@@ -240,31 +240,31 @@ function child_numeric_posts_nav() {
 
 // Allows for custom excerpt lengths
 function custom_excerpt( $new_length = 20, $new_more = '...' ) {
-  add_filter('excerpt_length', function () use ( $new_length ) {
-    return $new_length;
-  }, 999);
-  add_filter('excerpt_more', function () use ( $new_more ) {
-    return $new_more;
-  });
-  $output = get_the_excerpt();
-  $output = apply_filters( 'wptexturize', $output );
-  $output = apply_filters( 'convert_chars', $output );
-  $output = '<p>' . $output . '</p>';
-  echo $output;
+	add_filter('excerpt_length', function () use ( $new_length ) {
+	return $new_length;
+	}, 999);
+	add_filter('excerpt_more', function () use ( $new_more ) {
+	return $new_more;
+	});
+	$output = get_the_excerpt();
+	$output = apply_filters( 'wptexturize', $output );
+	$output = apply_filters( 'convert_chars', $output );
+	$output = '<p>' . $output . '</p>';
+	echo $output;
 }
 
 // Get URL of first image in a post
 function get_first_post_image() {
-  global $post, $posts;
-  $first_img = '';
-  ob_start();
-  ob_end_clean();
-  $output = preg_match_all( '/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches );
-  $first_img = $matches [1] [0];
+	global $post, $posts;
+	$first_img = '';
+	ob_start();
+	ob_end_clean();
+	$output = preg_match_all( '/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches );
+	$first_img = $matches [1] [0];
 
-  //Defines a default image
-  if ( empty( $first_img ) ) {
-    $first_img = "";
-  }
-  return $first_img;
+	//Defines a default image
+	if ( empty( $first_img ) ) {
+	$first_img = "";
+	}
+	return $first_img;
 }
