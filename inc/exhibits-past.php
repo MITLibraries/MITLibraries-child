@@ -26,7 +26,8 @@ $todaysDate = date( 'm/d/Y H:i:s' );
               	</div>
               	
               	<div class="category-post">
-					<div class="category-image" style="background-image: url('<?php get_stylesheet_directory_uri(); the_field( 'exhibit_thumbnail_image' ); ?>');">
+					<div class="category-image" style="background-image: url('<?php get_stylesheet_directory_uri();
+the_field( 'exhibit_thumbnail_image' ); ?>');">
 					</div>
 					<div class="category-post-content">
 						<h4><a class="exhibit-title" href="<?php the_permalink(); ?>"><?php the_title();?></a></h4>
