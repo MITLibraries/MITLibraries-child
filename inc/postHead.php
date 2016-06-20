@@ -1,5 +1,5 @@
-<div class="header-section group <?php if(is_front_page()) { echo 'hasImage'; } ?>">
-		<?php if(is_front_page()): ?>
+<div class="header-section group <?php if ( is_front_page() ) { echo 'hasImage'; } ?>">
+		<?php if ( is_front_page() ) : ?>
 			<div class="child-header-tall">
 				<div class="page-header-home">
 						<h1 class="child-page-title"><?php bloginfo(); ?></h1>
@@ -11,7 +11,7 @@
 
 							$siteName = get_bloginfo( 'name' );
 
-							if($siteName == 'Document Services' && is_front_page()) {
+							if ( $siteName == 'Document Services' && is_front_page() ) {
 								switch_to_blog( 1 );
 								get_template_part( 'inc/locationInfo' );
 								switch_to_blog( $current_blog_id );
@@ -22,7 +22,7 @@
 						<?php
 
 							// If doc. services, switch out to main site to get location ids
-							if ($siteName == 'Document Services' && is_front_page()):
+							if ( $siteName == 'Document Services' && is_front_page() ) :
 								get_template_part( 'inc/locationHours' );
 							endif;
 
@@ -34,7 +34,7 @@
 				
 			</div>
 			
-		<?php elseif(is_category()): ?>
+		<?php elseif ( is_category() ) : ?>
 		
 			<div class="child-header-short">
 				<div class="page-header-internal">
@@ -45,7 +45,7 @@
 
 			</div>
 			
-		<?php else: ?>
+		<?php else : ?>
 
 			<div class="child-header-short">
 				<div class="page-header-internal">

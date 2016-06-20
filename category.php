@@ -30,7 +30,7 @@ get_header(); ?>
 
 				<div class="mainContent group">
 
-					<?php if (is_category()) {
+					<?php if ( is_category() ) {
 						echo '<h2>';
 						single_cat_title();
 						echo '</h2>';

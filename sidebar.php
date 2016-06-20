@@ -8,7 +8,7 @@
  */
 ?>
 	
-<?php if (is_active_sidebar( 'sidebar' )): ?>
+<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
 
 	<div id="secondary" class="widget-area sidebar" role="complementary">
 
@@ -18,13 +18,13 @@
 
 			// Show Login/Logout for News blog
 			$blogName = get_bloginfo( 'name' );
-			if($blogName == 'MIT Libraries News'):
+			if ( $blogName == 'MIT Libraries News' ) :
 
 		?>
 
 			<aside class="widget admin">
 				<h2>Admin</h2>
-				<?php if (is_user_logged_in( 1 )) {
+				<?php if ( is_user_logged_in( 1 ) ) {
 					echo '<span><a href="'.wp_logout_url().'">Log out</a></span>';
 					} else {
 					echo '<span><a href="'.wp_login_url().'">Log in</a></span>';
