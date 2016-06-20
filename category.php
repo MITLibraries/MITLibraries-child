@@ -43,9 +43,9 @@ get_header(); ?>
 							<?php get_template_part( 'content', 'cpt' ); ?>
 
 						<span class="post-page-nav">
-							<?php 
+							<?php
 							endwhile;
-							child_numeric_posts_nav(); 
+							child_numeric_posts_nav();
 
 						?>
 						</span>

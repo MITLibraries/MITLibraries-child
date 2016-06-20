@@ -1,4 +1,3 @@
-
 <?php
 	$siteName = get_bloginfo( 'name' );
 	// if ($siteName != 'MIT Libraries News') {
@@ -34,8 +33,8 @@
                 'fallback_cb'       => 'navwalker::fallback',
                 'walker'            => new navwalker())
             );
-            
-                       
+
+
 
         ?>
 
@@ -53,4 +52,3 @@
 <!-- #site-navigation -->
 
 <?php } ?>
-

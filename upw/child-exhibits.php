@@ -4,7 +4,7 @@
  *
  * @version     2.0.0
  */
- 
+
  $exhibitThumb = get_field( 'exhibit_thumbnail_image' );
 
 ?>
@@ -96,8 +96,8 @@ foreach((get_the_category()) as $category) {
                           $event_date = date_parse_from_format( "Ymd", $custom_field_values );
                           // Because PHP sucks, we have to make this array into a timestamp, and then into the string we desire
                           $custom_field_values = date( "F j, Y", mktime( 0, 0, 0, $event_date['month'],$event_date['day'],$event_date['year'] ) );
-                        } 
-                        
+                        }
+
                         if ($name == 'end_date') { ?>
 	                       <div class="exhibit-ends">
 	                       	<?php echo 'Ends ' . $custom_field_values; } ?>
