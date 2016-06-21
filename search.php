@@ -9,11 +9,11 @@
 
 get_header(); ?>
 
-	<?php get_template_part('inc/breadcrumbs', 'child'); ?>
+	<?php get_template_part( 'inc/breadcrumbs', 'child' ); ?>
 
 		<div id="stage" class="inner group" role="main">
 
-			<?php get_template_part('inc/postHead'); ?>
+			<?php get_template_part( 'inc/postHead' ); ?>
 
 			<div id="content" class="allContent hasSidebar group">
 
@@ -28,7 +28,7 @@ get_header(); ?>
 						<?php /* Start the Loop */ ?>
 						<?php while ( have_posts() ) : the_post(); ?>
 							
-							<?php get_template_part('inc/post', 'trimmed'); ?>
+							<?php get_template_part( 'inc/post', 'trimmed' ); ?>
 
 						<?php endwhile; ?>
 

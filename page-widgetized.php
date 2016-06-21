@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * Template Name: Standard Child
+ * Template Name: Widgetized Page
 
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -13,48 +13,49 @@
  * @since Twenty Twelve 1.0
  */
 
-get_header(); ?>
+$pageRoot = getRoot( $post );
+$section = get_post( $pageRoot );
+$isRoot = $section->ID == $post->ID;
 
-	<?php if ( is_front_page() ) {
 
-		get_template_part( 'inc/breadcrumbs','sitename' );
+get_header();
 
-		} else {
+get_template_part( 'inc/breadcrumbs', 'child' ); ?>
 
-		get_template_part( 'inc/breadcrumbs', 'child' );
 
-		}
+	<?php while ( have_posts() ) : the_post(); ?>
 
-	?>
+		
 
 		<div id="stage" class="inner" role="main">
 
 			<?php get_template_part( 'inc/postHead' ); ?>
-
-			<?php while ( have_posts() ) : the_post(); ?>
-
+			
 			<?php if ( is_active_sidebar( 'sidebar' ) ) { ?>
-
+			
 				<div id="content" class="content has-sidebar">
+					
+					
 
-				<?php get_template_part( 'inc/content', 'page' ); ?>
+				<?php get_template_part( 'inc/content', 'widgetized' ); ?>
 
 				<?php get_sidebar(); ?>
 
 			</div>
-
-			<?php } else { ?>
-
+			
+			<?php } else { ?> 
+			
 			<div id="content" class="content">
 
-				<?php get_template_part( 'inc/content', 'page' ); ?>
+				<?php get_template_part( 'inc/content', 'widgetized' ); ?>
 
 			</div>
-
+			
 			<?php } ?>
-
+		
 		</div><!-- end div#stage -->
-
+		
 	<?php endwhile; // end of the loop. ?>
+
 
 <?php get_footer(); ?>

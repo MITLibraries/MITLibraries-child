@@ -1,14 +1,23 @@
 <?php
 /**
- * The template used for displaying page content in page.php
+ * The template used for displaying page content for Widgetized Page
  *
  * @package MIT_Libraries_Child
  * @since Twenty Twelve 1.0
  */
 
+global $isRoot;
 ?>
 
-<div class="main-content content-main">
+<?php
+
+	$pageRoot = getRoot( $post );
+	$section = get_post( $pageRoot );
+
+?>
+
+
+<div class="main-content">
 	
 	<div class="entry-content">
 		<?php $title = get_the_title(); if ( $title != '' ) : ?>
@@ -16,6 +25,10 @@
 		<?php endif; ?>
 
 		<?php the_content(); ?>
-	</div>
+		
+		<?php dynamic_sidebar( 'sidebar-two' ); ?>
 
+	</div>
+	
+		
 </div>

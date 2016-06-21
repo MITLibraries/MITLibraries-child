@@ -7,6 +7,7 @@ lib-cov
 *.out
 *.pid
 *.gz
+*.diff
 
 pids
 logs
@@ -15,3 +16,6 @@ results
 npm-debug.log
 
 .sass-cache
+node_modules/
+
+/style.css
