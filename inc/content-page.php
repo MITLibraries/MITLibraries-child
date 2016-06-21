@@ -1,12 +1,11 @@
 <?php
 /**
- * The template used for displaying
- * page content in page.php
+ * The template used for displaying page content in page.php
  *
- * @package WordPress
- * @subpackage Twenty_Twelve
+ * @package MIT_Libraries_Child
  * @since Twenty Twelve 1.0
  */
+
 ?>
 
 <div class="main-content content-main">

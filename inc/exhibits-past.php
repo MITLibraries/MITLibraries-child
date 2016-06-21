@@ -1,16 +1,18 @@
 <?php
 /**
- * The sub-template used by page-exhibits-feed.php, category-rotch-library.php and category-maihaugen-gallery.php for displaying Past Exhibits.       *
+ * The sub-template used by page-exhibits-feed.php, category-rotch-library.php
+ * and category-maihaugen-gallery.php for displaying Past Exhibits.
  *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
+ * @package MIT_Libraries_Child
+ * @since 2.0.0
  */
+
 global $isRoot;
 
 ?>
 
-<?php // Get today's date in the right format
+<?php
+// Get today's date in the right format.
 $todaysDate = date( 'm/d/Y H:i:s' );
 ?>
 
