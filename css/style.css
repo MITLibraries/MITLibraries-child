@@ -766,10 +766,14 @@ dd.wp-caption-text {
     margin-bottom: 20px;
 }
 
-.connect-archnet .archnet,
-.connect-archnet .textwidget span.archnet.twitter-connect:before,
-.connect-archnet .textwidget span.archnet.fb-connect:before,
-.connect-archnet .textwidget span.archnet.email-connect:before {
+.connect-alt a,
+.connect-alt .textwidget span.color-alt.twitter-connect:before,
+.connect-alt .textwidget span.color-alt.fb-connect:before,
+.connect-alt .textwidget span.color-alt.email-connect:before,
+.connect-alt .textwidget span.color-alt.instagram-connect:before,
+.connect-alt .textwidget span.color-alt.pinterest-connect:before,
+.connect-alt .textwidget span.color-alt.youtube-connect:before,
+.connect-alt .textwidget span.color-alt.google-plus-connect:before {
 	color: #c63 ;
 }
 
