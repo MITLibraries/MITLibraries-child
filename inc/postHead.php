@@ -3,7 +3,13 @@
 			<div class="child-header-tall">
 				<div class="page-header-home">
 						<h1 class="child-page-title"><?php bloginfo(); ?></h1>
+						<?php
+							// Checks to see if tagline exists
+							if( !empty( get_bloginfo('description') ) : 
+							?> 
 						<p class="child-tagline"><?php bloginfo( 'description' ); ?></p>
+						<?php endif; ?>
+						
 						<?php
 
 							global $blog_id;
