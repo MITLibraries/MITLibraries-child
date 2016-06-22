@@ -21,6 +21,8 @@ engines:
     checks:
       Generic WhiteSpace DisallowTabIndent TabsUsed:
         enabled: false
+      Generic WhiteSpace DisallowTabIndent NonIndentTabsUsed:
+        enabled: false
       PSR2 ControlStructures ControlStructureSpacing SpacingAfterOpenBrace:
         enabled: false
       PSR2 ControlStructures ControlStructureSpacing SpaceBeforeCloseBrace:
@@ -41,10 +43,14 @@ engines:
         enabled: false
       Squiz Functions FunctionDeclarationArgumentSpacing SpacingBeforeClose:
         enabled: false
+      Squiz Functions MultiLineFunctionDeclaration BraceOnSameLine:
+        enabled: false
   phpmd:
     enabled: true
     checks:
       Controversial/CamelCaseClassName:
+        enabled: false
+      Controversial/CamelCaseParameterName:
         enabled: false
       Controversial/CamelCaseVariableName:
         enabled: false
