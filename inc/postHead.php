@@ -18,20 +18,12 @@
 
 							$siteName = get_bloginfo( 'name' );
 
-							if ( $siteName == 'Document Services' && is_front_page() ) {
+							// If this is the Doc Services site, switch out to main site to get location IDs.
+							if ( 'Document Services' == $siteName && is_front_page() ) {
 								switch_to_blog( 1 );
-								get_template_part( 'inc/locationInfo' );
+								get_template_part( 'inc/location' );
 								switch_to_blog( $current_blog_id );
 							}
-
-						?>
-
-						<?php
-
-							// If doc. services, switch out to main site to get location ids
-							if ( $siteName == 'Document Services' && is_front_page() ) :
-								get_template_part( 'inc/locationHours' );
-							endif;
 
 						?>
 
