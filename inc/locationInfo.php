@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying location information.
+ * The template for displaying location information for Doc Services.
  *
  * @package MIT_Libraries_Child
  * @since 2.0.0
@@ -18,9 +18,9 @@
 
 
 <div class="info-more">
-					<a href="tel:<?php echo $docsPhone; ?>" class="phone"><?php echo $docsPhone ?></a> |
-                    	<?php if ( $docsEmail ) : ?>
-					<a href="mailto:<?php echo $docsEmail; ?>" class="email"><?php echo $docsEmail ?></a> |
-                    	<?php endif; ?>
-					<a href="<?php echo $mapPage.$docsSlug; ?>">Room: <?php echo $docsBuilding ?> <i class="icon-arrow-right"></i></a>
-				</div>
+	<a href="tel:<?php echo $docsPhone; ?>" class="phone"><?php echo $docsPhone ?></a> |
+<?php if ( $docsEmail ) : ?>
+	<a href="mailto:<?php echo $docsEmail; ?>" class="email"><?php echo $docsEmail ?></a> |
+<?php endif; ?>
+	<a href="<?php echo $mapPage.$docsSlug; ?>">Room: <?php echo $docsBuilding ?></a>
+</div>
