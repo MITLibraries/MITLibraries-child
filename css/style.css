@@ -310,6 +310,13 @@ nav.navbar.navbar-default {
 	color:#fff;
 }
 
+/* doc services extra header info */
+.page-header-home .info-more,
+.page-header-home .hours-today {
+	font-size: 14px;
+}
+
+
 /* ---- Main Content Area ---- */
 .content {
 	margin-top: 2em;

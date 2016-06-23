@@ -9,7 +9,6 @@
 ?>
 
 	<div class="hours-today">
-		<span>Today's Hours: <strong data-location-hours="Document Services"></strong></span>
-		<br>
-		<a href="/hours" class="link-hours-all">See all hours <i class="icon-arrow-right"></i></a>
+		<span>Today's Hours: <span data-location-hours="Document Services"></span></span>  | 
+		<a href="/hours" class="link-hours-all">See all hours</a>
 	</div>
