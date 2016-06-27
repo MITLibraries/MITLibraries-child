@@ -5,9 +5,10 @@
 						<h1 class="child-page-title"><?php bloginfo(); ?></h1>
 						<?php
 						// Checks to see if tagline exists.
-						if ( ! empty( get_bloginfo( 'description' ) ) ) :
+						$description = get_bloginfo( 'description' );
+						if ( ! empty( $description ) ) :
 							?> 
-						<p class="child-tagline"><?php bloginfo( 'description' ); ?></p>
+						<p class="child-tagline"><?php echo esc_html( $description ); ?></p>
 						<?php endif; ?>
 						
 						<?php
