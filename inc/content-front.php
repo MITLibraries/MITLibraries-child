@@ -24,7 +24,13 @@ global $isRoot;
 				?>
 				
 				<div class="excerpt-post">
+					<?php
+					if ( get_first_post_image() ) :
+					?>
 					<img class="excerpt-post__fig"  src="<?php echo get_first_post_image(); ?>" width="200" >
+					<?php
+					endif ;
+					?>
 					<div class="excerpt-post__body">
 		                <h3><a href="<?php echo the_permalink();?>"><?php echo get_the_title();?></a></h3>
 		                <?php custom_excerpt( 20, '...' ) ?>
