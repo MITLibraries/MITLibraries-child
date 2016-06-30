@@ -360,15 +360,9 @@ nav.navbar.navbar-default {
 	margin: 2em 0;
 }
 
-.article-head p.entry-meta,
-.non-link a {
+.article-head p.entry-meta {
 	font-size: 12px;
 	color: #777;
-}
-
-.non-link a {
-	pointer-events: none;
-	cursor: text;
 }
 
 .entry-attachment .attachment {

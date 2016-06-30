@@ -28,10 +28,20 @@ get_header(); ?>
 						<h2><?php the_title(); ?></h2>
 						
 						<p class="entry-meta"> posted <?php 
-							the_time('F j, Y'); 
-							?> in <span class="non-link"><?php 
-							the_category(', '); 
-							?></span></p>
+							the_time('F j, Y');
+							
+							$cats = array();
+							foreach ( get_the_category ( $post_id ) as $cat ) {
+							$categ = get_category( $cat ) ;
+							array_push($cats, $categ -> name) ;
+							}
+
+							$post_categories = implode ( ', ', $cats ) ;
+
+							echo ' in ' . $post_categories;
+							
+							?>
+						</p>
 						
 						</div>
 						
