@@ -431,7 +431,7 @@ dt.gallery-icon {
 }
 
 dd.wp-caption-text {
-	border-radius 0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
 	text-align: center;
 }
 
@@ -517,7 +517,8 @@ dd.wp-caption-text {
 	padding:0 20px 20px 0;
 }
 
-.entry-content h1 {
+.entry-content h1,
+.meta-header {
 	line-height:1;
 	text-transform: uppercase;
 	font-size: 14px;
