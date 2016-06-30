@@ -41,17 +41,6 @@
 				
 			</div>
 			
-		<?php elseif ( is_category() ) : ?>
-		
-			<div class="child-header-short">
-				<div class="page-header-internal">
-					<div class="child-page-title"><a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a></div>
-				</div>
-
-				<?php get_template_part( 'inc/header','image' ); ?>
-
-			</div>
-			
 		<?php else : ?>
 
 			<div class="child-header-short">
