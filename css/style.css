@@ -1398,17 +1398,10 @@ a.exhibits-button:focus {
 	}
 	
 	/* ---- Sticky/Post Excerpts + Flexbox Layout---- */
-	.wrap-section-hilite {
-		flex-direction: column;
-	}
-
 	.section-hilite-image {
-		margin: 0 auto;
-		margin-bottom: 25px;
-	}
-
-	.section-hilite {
-		text-align: center;
+		top: 25px;
+		width: 75%;
+		height: 75%;
 	}
 
 	/* ---- Exhibits Styles ---- */
