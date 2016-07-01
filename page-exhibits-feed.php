@@ -1,6 +1,9 @@
 <?php
-/*
+/**
  * Template Name: Exhibits | Current, Upcoming & Past
+ *
+ * @package MIT_Libraries_Child
+ * @since Twenty Twelve 1.0
  */
 
 get_header();

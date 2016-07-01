@@ -2,8 +2,10 @@
 /**
  * Custom template to display post excerpts when using ultimate posts widget
  *
- * @version     2.0.0
+ * @package MIT_Libraries_Child
+ * @since 2.0.0
  */
+
 ?>
 
 <?php if ( $instance['before_posts'] ) : ?>

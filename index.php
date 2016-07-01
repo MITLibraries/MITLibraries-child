@@ -3,8 +3,7 @@
  *
  * This is the template that displays the news page
  *
- * @package WordPress
- * @subpackage Twenty_Twelve
+ * @package MIT_Libraries_Child
  * @since Twenty Twelve 1.0
  */
 
