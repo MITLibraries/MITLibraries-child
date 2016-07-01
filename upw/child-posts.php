@@ -50,7 +50,7 @@
 					  if ( ! is_array( $custom_field_values ) ) {
 
 						// For custom fields named "event_date", we pass the value through an additional parsing step.
-						if ( $name == 'event_date' ) {
+						if ( 'event_date' === $name ) {
 						  // Generally speaking, we need to reformat a _string_ in YYYYMMDD format into 'December 10, 2014'.
 						  $event_date = date_parse_from_format( 'Ymd', $custom_field_values );
 						  // Because PHP sucks, we have to make this array into a timestamp, and then into the string we desire.

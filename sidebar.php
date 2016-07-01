@@ -18,7 +18,7 @@
 
 			// Show Login/Logout for News blog.
 			$blogName = get_bloginfo( 'name' );
-			if ( $blogName == 'MIT Libraries News' ) :
+			if ( 'MIT Libraries News' === $blogName ) :
 
 		?>
 

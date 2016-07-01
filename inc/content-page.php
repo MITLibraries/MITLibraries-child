@@ -11,7 +11,7 @@
 <div class="main-content content-main">
 	
 	<div class="entry-content">
-		<?php $title = get_the_title(); if ( $title != '' ) : ?>
+		<?php $title = get_the_title(); if ( '' != $title ) : ?>
 			<?php if ( ! is_front_page() ) { echo '<h1>'.$title.'</h1>'; } ?>
 		<?php endif; ?>
 
