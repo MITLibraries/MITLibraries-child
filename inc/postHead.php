@@ -15,10 +15,10 @@
 				global $blog_id;
 				$current_blog_id = $blog_id;
 
-				$siteName = get_bloginfo( 'name' );
+				$site_name = get_bloginfo( 'name' );
 
 				// If this is the Doc Services site, switch out to main site to get location IDs.
-				if ( 'Document Services' === $siteName && is_front_page() ) {
+				if ( 'Document Services' === $site_name && is_front_page() ) {
 					switch_to_blog( 1 );
 					get_template_part( 'inc/location' );
 					switch_to_blog( $current_blog_id );
