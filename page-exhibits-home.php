@@ -11,7 +11,7 @@
 
 get_header(); ?>
 
-<?php // Get today's date in the right format
+<?php // Get today's date in the right format.
 $todaysDate = date( 'm/d/Y H:i:s' );
 ?>
 	<?php

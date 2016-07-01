@@ -53,7 +53,7 @@ get_template_part( 'inc/breadcrumbs', 'child' ); ?>
 		
 		</div><!-- end div#stage -->
 		
-	<?php endwhile; // end of the loop. ?>
+	<?php endwhile; // End of the loop. ?>
 
 
 <?php get_footer(); ?>

@@ -16,7 +16,7 @@
 
 			dynamic_sidebar( 'sidebar' );
 
-			// Show Login/Logout for News blog
+			// Show Login/Logout for News blog.
 			$blogName = get_bloginfo( 'name' );
 			if ( $blogName == 'MIT Libraries News' ) :
 

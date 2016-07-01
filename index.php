@@ -32,7 +32,7 @@ get_header(); ?>
 
 					<?php get_template_part( 'inc/post', 'trimmed' ); ?>
 			
-				<?php endwhile; // end of the loop. ?>
+				<?php endwhile; // End of the loop. ?>
 
 			</div>
 				
