@@ -88,9 +88,9 @@ get_header();
 			) // End array.
 		); // Close WP_Query constructor call.
 		?> 
-			
+
 			<div class="exhibits-feed-section">
-				
+
 				<h3 class="exhibits">Upcoming Exhibits</h3>   
 
 			<?php if ( $future_query->have_posts() ) : $future_query->the_post(); { // Loop for upcoming exhibits.
@@ -102,8 +102,8 @@ get_header();
 			?>
 
 				<p>There are no upcoming exhibits at this time, but check back often.</p>
-						
-				<?php } ?>       
+
+				<?php } ?>
 
 		<?php wp_reset_query(); // Restore global post data stomped by the_post().
 

@@ -42,8 +42,8 @@ get_header();
 	          ) // End array.
 	        ); // Close WP_Query constructor call.
 		?> 
-        
-        	<div class="exhibits-feed-section">
+
+			<div class="exhibits-feed-section">
 			
 				<h3 class="exhibits">Current Exhibits</h3>   
 						 
@@ -153,9 +153,7 @@ get_header();
 
 
 		<!-- END OF UPCOMING EXHIBITS LOOP -->
-    
-  		
-  		
+
 	  	</div>  <!-- main-content --> 
 	
 	  	<?php get_sidebar(); ?>
