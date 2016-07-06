@@ -1,7 +1,9 @@
 <?php
 /**
- Template Name: Full Width
+ * Template Name: Full Width
  *
+ * @package MIT_Libraries_Child
+ * @since Twenty Twelve 1.0
  * @link https://codex.wordpress.org/Template_Hierarchy
  */
 

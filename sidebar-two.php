@@ -2,10 +2,10 @@
 /**
  * The sidebar template that controls the widgetized area below content.
  *
- * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @package MIT_Libraries_Child
+ * @since Twenty Twelve 1.0
  */
+
 ?>
 	
 <?php if ( is_active_sidebar( 'sidebar-two' ) ) : ?>

@@ -3,8 +3,7 @@
  *
  * This is the template that displays the news page
  *
- * @package WordPress
- * @subpackage Twenty_Twelve
+ * @package MIT_Libraries_Child
  * @since Twenty Twelve 1.0
  */
 
@@ -33,7 +32,7 @@ get_header(); ?>
 
 					<?php get_template_part( 'inc/post', 'trimmed' ); ?>
 			
-				<?php endwhile; // end of the loop. ?>
+				<?php endwhile; // End of the loop. ?>
 
 			</div>
 				

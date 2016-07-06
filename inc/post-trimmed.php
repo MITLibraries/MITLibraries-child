@@ -1,4 +1,10 @@
 <?php
+/**
+ * The template for displaying a trimmed post.
+ *
+ * @package MIT_Libraries_Child
+ * @since 2.0.0
+ */
 
 	$postID = get_the_ID();
 

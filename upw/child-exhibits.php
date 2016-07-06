@@ -2,7 +2,8 @@
 /**
  * Custom template to display Exhibit post excerpts when using ultimate posts widget
  *
- * @version     2.0.0
+ * @package MIT_Libraries_Child
+ * @since 2.0.0
  */
 
 	$exhibitThumb = get_field( 'exhibit_thumbnail_image' );
@@ -91,14 +92,14 @@ foreach ( (get_the_category()) as $category ) {
 					  if ( ! is_array( $custom_field_values ) ) {
 
 						// For custom fields named "event_date", we pass the value through an additional parsing step.
-						if ( $name == 'end_date' ) {
+						if ( 'end_date' === $name ) {
 						  // Generally speaking, we need to reformat a _string_ in YYYYMMDD format into 'December 10, 2014'.
 						  $event_date = date_parse_from_format( 'Ymd', $custom_field_values );
-						  // Because PHP sucks, we have to make this array into a timestamp, and then into the string we desire
+						  // Because PHP sucks, we have to make this array into a timestamp, and then into the string we desire.
 						  $custom_field_values = date( 'F j, Y', mktime( 0, 0, 0, $event_date['month'],$event_date['day'],$event_date['year'] ) );
 						}
 
-						if ( $name == 'end_date' ) { ?>
+						if ( 'end_date' === $name ) { ?>
 	                       <div class="exhibit-ends">
 	                       	<?php echo 'Ends ' . $custom_field_values; } ?>
 	                       </div>

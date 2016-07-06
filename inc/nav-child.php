@@ -1,6 +1,12 @@
 <?php
+/**
+ * The template for displaying the child navigation bar.
+ *
+ * @package MIT_Libraries_Child
+ * @since 2.0.0
+ */
+
 	$siteName = get_bloginfo( 'name' );
-	// if ($siteName != 'MIT Libraries News') {
 	$noChildNav = array( 'MIT Libraries News', 'Document Services' );
 	$countPosts = wp_count_posts( 'page' )->publish;
 	if ( ! in_array( $siteName, $noChildNav ) && $countPosts > 1 ) {

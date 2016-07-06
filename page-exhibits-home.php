@@ -5,14 +5,13 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @subpackage Twenty_Twelve
+ * @package MIT_Libraries_Child
  * @since Twenty Twelve 1.0
  */
 
 get_header(); ?>
 
-<?php // Get today's date in the right format
+<?php // Get today's date in the right format.
 $todaysDate = date( 'm/d/Y H:i:s' );
 ?>
 	<?php

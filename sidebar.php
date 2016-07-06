@@ -2,10 +2,10 @@
 /**
  * The Sidebar containing the primary and secondary widget areas.
  *
- * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @package MIT_Libraries_Child
+ * @since Twenty Twelve 1.0
  */
+
 ?>
 	
 <?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
@@ -16,9 +16,9 @@
 
 			dynamic_sidebar( 'sidebar' );
 
-			// Show Login/Logout for News blog
+			// Show Login/Logout for News blog.
 			$blogName = get_bloginfo( 'name' );
-			if ( $blogName == 'MIT Libraries News' ) :
+			if ( 'MIT Libraries News' === $blogName ) :
 
 		?>
 
