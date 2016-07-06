@@ -11,11 +11,14 @@
 <div class="main-content content-main">
 	
 	<div class="entry-content">
-		<?php $title = get_the_title(); if ( '' != $title ) : ?>
-			<?php if ( ! is_front_page() ) { echo '<h1>'.$title.'</h1>'; } ?>
-		<?php endif; ?>
+		<?php
+		$title = get_the_title();
+		if ( '' !== $title ) :
+			if ( ! is_front_page() ) { echo '<h1>' . esc_html( $title ) . '</h1>'; }
+		endif;
 
-		<?php the_content(); ?>
+		the_content();
+		?>
 	</div>
 
 </div>
