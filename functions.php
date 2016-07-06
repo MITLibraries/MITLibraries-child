@@ -64,8 +64,8 @@ function betterChildBreadcrumbs() {
 		$childBreadcrumb = $startLink.$pageLink.$endLink.$pageTitle.$closeLink;
 	}
 
-	if ( '' != $parentBreadcrumb ) {echo '<span>'.$parentBreadcrumb.'</span>';}
-	if ( '' != $childBreadcrumb ) {echo '<span>'.$pageTitle.'</span>';}
+	if ( '' !== $parentBreadcrumb ) {echo '<span>'.$parentBreadcrumb.'</span>';}
+	if ( '' !== $childBreadcrumb ) {echo '<span>' . esc_html( $pageTitle ) . '</span>';}
 
 }
 
