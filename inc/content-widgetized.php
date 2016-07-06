@@ -20,14 +20,16 @@ global $isRoot;
 <div class="main-content">
 	
 	<div class="entry-content">
-		<?php $title = get_the_title(); if ( '' != $title ) : ?>
-			<?php if ( ! is_front_page() ) { echo '<h1>'.$title.'</h1>'; } ?>
-		<?php endif; ?>
+		<?php
+		$title = get_the_title();
+		if ( '' !== $title ) :
+			if ( ! is_front_page() ) { echo '<h1>' . esc_html( $title ) . '</h1>'; }
+		endif;
 
-		<?php the_content(); ?>
-		
-		<?php dynamic_sidebar( 'sidebar-two' ); ?>
+		the_content();
 
+		dynamic_sidebar( 'sidebar-two' );
+		?>
 	</div>
 	
 		
