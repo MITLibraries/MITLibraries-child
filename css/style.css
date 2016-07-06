@@ -236,6 +236,13 @@ nav.navbar.navbar-default {
 	top: -100%;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.header-bg-image-high img,
+	.header-bg-image-short img {
+		width: 1020px;
+	}	
+}
+
 .page-header-home {
 	color:#fff;
 	position:relative;
