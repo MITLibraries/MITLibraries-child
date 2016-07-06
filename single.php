@@ -17,48 +17,46 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 
 	<?php get_template_part( 'inc/postHead' ); ?>
 
-		<div id="content" class="content has-sidebar">
+	<div id="content" class="content has-sidebar">
 
-				<div class="content-main main-content">
+		<div class="content-main main-content">
 
-					<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-						<div class="article-head">
+				<div class="article-head">
 
-						<span class="meta-header">News</span>
+					<span class="meta-header">News</span>
 
-						<h2><?php the_title(); ?></h2>
+					<h2><?php the_title(); ?></h2>
 
-						<p class="entry-meta"> posted <?php
-							the_time( 'F j, Y' );
+					<p class="entry-meta"> posted <?php
+					the_time( 'F j, Y' );
 
-							$cats = array();
-							foreach ( get_the_category( $post_id ) as $cat ) {
-								$categ = get_category( $cat );
-								array_push( $cats, $categ -> name );
-							}
+					$cats = array();
+					foreach ( get_the_category( $post_id ) as $cat ) {
+						$categ = get_category( $cat );
+						array_push( $cats, $categ -> name );
+					}
 
-							$post_categories = implode( ', ', $cats );
+					$post_categories = implode( ', ', $cats );
 
-							echo ' in ' . esc_html( $post_categories );
+					echo ' in ' . esc_html( $post_categories );
 
-							?>
-						</p>
-						
-						</div>
-						
-						<div class="entry-content">
-							<?php the_content(); ?>
-						</div>					
-								
-					
-									
-					<?php endwhile; // End of the loop. ?>
+					?>
+					</p>
+
 				</div>
-				
-				<?php get_sidebar(); ?>					
+
+				<div class="entry-content">
+					<?php the_content(); ?>
+				</div>
+
+			<?php endwhile; // End of the loop. ?>
 		</div>
-		
+
+		<?php get_sidebar(); ?>
+	</div>
+
 </div><!-- end div#stage -->
 
 <?php get_footer(); ?>
