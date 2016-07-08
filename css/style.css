@@ -225,7 +225,7 @@ nav.navbar.navbar-default {
 	display: block;
 	min-width: 100%;
 	height: auto;
-	width: auto;
+	width: 100%;
 }
 
 .header-bg-image-high img {
@@ -234,13 +234,6 @@ nav.navbar.navbar-default {
 
 .header-bg-image-short img {
 	top: -100%;
-}
-
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-	.header-bg-image-high img,
-	.header-bg-image-short img {
-		width: 1020px;
-	}	
 }
 
 .page-header-home {
