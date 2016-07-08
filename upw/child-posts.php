@@ -19,7 +19,7 @@ endif;
 <?php
 if ( $upw_query->have_posts() ) :
 	while ( $upw_query->have_posts() ) : $upw_query->the_post();
-		$current_post = ($post->ID == $current_post_id && is_single()) ? 'active' : '';
+		$current_post = ($post->ID === $current_post_id && is_single()) ? 'active' : '';
 ?>
 	<article <?php post_class( $current_post ); ?>>
 		<header>

@@ -38,8 +38,8 @@ if ( $upw_query->have_posts() ) :
 				<div class="entry-cats-list">
 <?php
 			foreach ( (get_the_category()) as $category ) {
-				echo '<span class="category-bg"><span class="category-init">' . substr( $category->cat_name,0,1 )  . '</span></span>';
-				echo '<span class="catName">' . $category->cat_name . ' Exhibit</span>';
+				echo '<span class="category-bg"><span class="category-init">' . esc_html( substr( $category->cat_name,0,1 ) ) . '</span></span>';
+				echo '<span class="catName">' . esc_html( $category->cat_name ) . ' Exhibit</span>';
 			}
 ?>
 				</div>
@@ -123,7 +123,7 @@ if ( $upw_query->have_posts() ) :
 						if ( 'end_date' === $name ) {
 ?>
 						<div class="exhibit-ends">
-							<?php echo 'Ends ' . $custom_field_values; ?>
+							<?php echo 'Ends ' . esc_html( $custom_field_values ); ?>
 						</div>
 <?php
 						}
