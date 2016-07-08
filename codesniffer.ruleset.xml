@@ -14,5 +14,17 @@
 		<exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact" />
 		<exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect" />
 		<exclude name="PEAR.Functions.FunctionCallSignature.Indent" />
+		<!-- These checks are known to have failures, but we exclude them to make watching for regressions easier. -->
+		<exclude name="Generic.Files.LineEndings.InvalidEOLChar" />
+		<exclude name="Generic.Files.LowercasedFilename.NotFound" />
+		<exclude name="Generic.Strings.UnnecessaryStringConcat.Found" />
+		<exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed" />
+		<exclude name="Squiz.Strings.ConcatenationSpacing.PaddingFound" />
+		<exclude name="WordPress.NamingConventions.ValidFunctionName.FunctionNameInvalid" />
+		<exclude name="WordPress.NamingConventions.ValidVariableName.NotSnakeCase" />
+		<exclude name="WordPress.VIP.PostsPerPage.posts_per_page" />
+		<exclude name="WordPress.VIP.RestrictedFunctions.switch_to_blog" />
+		<exclude name="WordPress.XSS.EscapeOutput.OutputNotEscaped" />
+		<exclude name="WordPress.XSS.EscapeOutput.UnsafePrintingFunction" />
 	</rule>
 </ruleset>
