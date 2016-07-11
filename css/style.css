@@ -225,7 +225,7 @@ nav.navbar.navbar-default {
 	display: block;
 	min-width: 100%;
 	height: auto;
-	width: auto;
+	width: 100%;
 }
 
 .header-bg-image-high img {
