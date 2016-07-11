@@ -17,8 +17,9 @@ endif;
 <div class="upw-posts hfeed">
 
 <?php
-if ( $upw_query->have_posts() ) :
-	while ( $upw_query->have_posts() ) : $upw_query->the_post();
+if ( $upw_query->have_posts() ) {
+	while ( $upw_query->have_posts() ) {
+		$upw_query->the_post();
 		$current_post = ($post->ID === $current_post_id && is_single()) ? 'active' : '';
 ?>
 	<article <?php post_class( $current_post ); ?>>
@@ -171,14 +172,14 @@ if ( $upw_query->have_posts() ) :
 		</div>
 	</article>
 <?php
-	endwhile;
-else :
+	} // End of while.
+} else {
 ?>
 	<p class="upw-not-found">
 		<?php _e( 'No posts found.', 'upw' ); ?>
 	</p>
 <?php
-endif;
+}
 ?>
 </div>
 <?php
