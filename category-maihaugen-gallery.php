@@ -7,61 +7,64 @@
  */
 
 get_header();
+
+get_template_part( 'inc/breadcrumbs', 'child' );
+
 ?>
-
-	<?php get_template_part( 'inc/breadcrumbs', 'child' ); ?>
-
-	<div id="stage" class="inner" role="main">
+<div id="stage" class="inner" role="main">
 
 	<?php get_template_part( 'inc/postHead' ); ?>
 
-		<div id="content" class="content has-sidebar">
+	<div id="content" class="content has-sidebar">
+		<div class="main-content">
 
-			<div class="main-content">
+<?php
 
-		<?php
+$date1 = DateTime::createFromFormat( 'Ymd', get_field( 'end_date' ) );
 
-			$date1 = DateTime::createFromFormat( 'Ymd', get_field( 'end_date' ) );
-
-		$current_query = new WP_Query(
+$current_query = new WP_Query(
+	array(
+		'posts_per_page' => -1,
+		'ignore_sticky_posts' => false,
+		'category_name'	=> 'maihaugen-gallery',
+		'meta_key'    => 'end_date', // Load up the event_date meta.
+		'order_by'    => 'end_date',
+		'order'       => 'desc',     // Descending, so later events first.
+		'meta_query'  => array(
 			array(
-				'posts_per_page' => -1,
-				'ignore_sticky_posts' => false,
-				'category_name'	=> 'maihaugen-gallery',
-				'meta_key'    => 'end_date', // Load up the event_date meta.
-				'order_by'    => 'end_date',
-				'order'       => 'desc',     // Descending, so later events first.
-				'meta_query'  => array(
-					array(
-						'key'     => 'end_date',      // Which meta to query.
-						'value'   => date( 'Y-m-d' ), // Value for comparison.
-						'compare' => '>=',            // Method of comparison.
-						'type'    => 'DATE',
-					), // Meta_query is an array of query items.
-				),// End meta_query array.
-			) // End array.
-		); // Close WP_Query constructor call.
-		?> 
+				'key'     => 'end_date',      // Which meta to query.
+				'value'   => date( 'Y-m-d' ), // Value for comparison.
+				'compare' => '>=',            // Method of comparison.
+				'type'    => 'DATE',
+			), // Meta_query is an array of query items.
+		),// End meta_query array.
+	) // End array.
+); // Close WP_Query constructor call.
+
+?> 
 
 			<div class="exhibits-feed-section">
 
 				<h3 class="exhibits">Current Exhibits</h3>   
 
-		<?php if ( $current_query->have_posts() ) : $current_query->the_post(); { // Loop for current exhibits.
+<?php
+if ( $current_query->have_posts() ) : $current_query->the_post(); { // Loop for current exhibits.
 
-				get_template_part( 'inc/exhibits-current' );
+	get_template_part( 'inc/exhibits-current' );
 
-			} else : {
+} else : {
 
-		?>
+?>
 
 				<p>There are no current exhibits at this time, but check back often.</p>
 
-		<?php } ?>
+<?php
+}
 
-		<?php wp_reset_query(); // Restore global post data stomped by the_post().
+wp_reset_query(); // Restore global post data stomped by the_post().
 
-		endif; ?>
+endif;
+?>
 
 			</div>
 
@@ -150,15 +153,14 @@ get_header();
 
 			</div>
 
-
 		<!-- END OF UPCOMING EXHIBITS LOOP -->
 
 		</div><!-- main-content --> 
 
-		<?php get_sidebar(); ?>
+	<?php get_sidebar(); ?>
 
-		</div><!-- content --> 
+	</div><!-- content --> 
 
-	</div><!-- stage --> 
+</div><!-- stage --> 
 
 <?php get_footer(); ?>
