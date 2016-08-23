@@ -1239,7 +1239,8 @@ a.exhibits-button:focus {
 	/* ---- Header Styles ---- */
 	.page-header-internal .child-page-title {
     	padding: 2% 0;
-
+	}
+	
 	.section-wrapper .main,
 	.section-wrapper .sidebar,
 	.section-wrapper-last .main,
