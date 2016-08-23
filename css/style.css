@@ -1071,20 +1071,41 @@ a.exhibits-button:focus {
 }
 
 /* ---- Fields, Inputs, Buttons etc. ---- */
-.buttons {
-	margin: 50px 0px;
-}
 
-.entry-content .button-set {
-	display: inline ;
-}
-
-.button-set:first-child {
-	margin-right: 5%;
+.content .button {
+	margin: 5px 10px 15px 0;
 }
 
 .button.full-width {
 	min-width: 100%;
+}
+
+.content .button-set {
+	display: inline-block;
+}
+
+.button-set:first-child {
+	margin-right: 3%;
+}
+
+/* override bad parent button styles */
+.content .button-primary {
+	display: inline-block;
+	max-width: none;
+	width: auto;
+}
+
+/* special case buttons */
+.button.button-music {
+	border: none;
+}
+
+.button.button-music:before {
+	content: "\f028";
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-size: inherit;
+	margin-right: 10px;
 }
 
 .search input[type="text"] {
