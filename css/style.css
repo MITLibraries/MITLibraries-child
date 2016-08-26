@@ -103,6 +103,10 @@ b, strong {
 	line-height:1.5;
 }
 
+.widget_nav_menu .current-menu-item a {
+	font-weight: bold;
+}
+
 /* ---- Child Post Nav ---- */
 .post-page-nav {
 	margin:0 auto;
