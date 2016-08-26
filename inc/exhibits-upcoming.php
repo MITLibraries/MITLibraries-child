@@ -26,9 +26,9 @@ $todaysDate = date( 'm/d/Y H:i:s' );
 						}
 						?>
 					</div>
-              	</div>
-              	
-              	<div class="category-post">
+				</div>
+
+				<div class="category-post">
 					<div class="category-image" style="background-image: url('<?php get_stylesheet_directory_uri();
 the_field( 'exhibit_thumbnail_image' ); ?>');">
 					</div>
@@ -41,9 +41,9 @@ the_field( 'exhibit_thumbnail_image' ); ?>');">
 							Starts <?php the_field( 'start_date' ); ?>
 						</div>
 					</div>
-            	</div>
+				</div>
 
-              	<?php if ( get_field( 'sponsored' ) ) : ?>
+				<?php if ( get_field( 'sponsored' ) ) : ?>
 	              	<div class="sponsored-excerpt">
 					<?php the_field( 'sponsored' ); ?>
 					</div>

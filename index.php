@@ -16,8 +16,8 @@ get_header(); ?>
 <?php get_template_part( 'inc/breadcrumbs' ); ?>
 
 <div class="betterBreadcrumbs hidden-phone" role="navigation" aria-label="breadcrumbs">
-  <span><a href="/">Libraries home</a></span>
-  <span><?php bloginfo(); ?></span>
+	<span><a href="/">Libraries home</a></span>
+	<span><?php bloginfo(); ?></span>
 </div>
 
 		
