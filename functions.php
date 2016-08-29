@@ -313,3 +313,8 @@ function get_first_post_image() {
 	}
 	return $first_img;
 }
+
+/**
+ * Remove native Gallery styling
+ */
+add_filter( 'use_default_gallery_style', '__return_false' );

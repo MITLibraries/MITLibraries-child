@@ -419,6 +419,13 @@ figcaption {
 	margin: 4px 8px;
 }
 
+dl.gallery-item {
+	float: left;
+    margin: 1%;
+    text-align: center;
+    width: 31%;
+}
+
 dt.gallery-icon,
 dd.wp-caption-text {
 	background: #efefef;
