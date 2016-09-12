@@ -95,48 +95,48 @@
           <footer>
 	          
 	        <div class="entry-meta">
-
-            <?php
-			$categories = get_the_term_list( $post->ID, 'category', '', ', ' );
-			if ( $instance['show_cats'] && $categories ) :
-			?>
-              <span class="entry-categories">
-                <span class="entry-cats-list"><?php echo $categories; ?></span>
-              </span>
-            <?php endif; ?>
             
-              <?php if ( $instance['show_date'] || $instance['show_author'] || $instance['show_comments'] ) : ?>
+						<?php if ( $instance['show_date'] || $instance['show_author'] || $instance['show_comments'] ) : ?>
 
-                <?php if ( $instance['show_date'] ) : ?>
-                  <time class="published" datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_time( $instance['date_format'] ); ?></time>
-                <?php endif; ?>
+							<?php if ( $instance['show_date'] ) : ?>
+								<time class="published" datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_time( $instance['date_format'] ); ?></time>
+							<?php endif; ?>
 
-                <?php if ( $instance['show_date'] && $instance['show_author'] ) : ?>
-                  <span class="sep"><?php _e( '|', 'upw' ); ?></span>
-                <?php endif; ?>
+							<?php if ( $instance['show_date'] && $instance['show_author'] ) : ?>
+								<span class="sep"><?php _e( '|', 'upw' ); ?></span>
+							<?php endif; ?>
 
-                <?php if ( $instance['show_author'] ) : ?>
-                  <span class="author vcard">
-                    <?php echo __( 'By', 'upw' ); ?>
-                    <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author" class="fn">
-                      <?php echo get_the_author(); ?>
-                    </a>
-                  </span>
-                <?php endif; ?>
+							<?php if ( $instance['show_author'] ) : ?>
+								<span class="author vcard">
+								<?php echo __( 'By', 'upw' ); ?>
+									<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author" class="fn">
+									<?php echo get_the_author(); ?>
+									</a>
+								</span>
+							<?php endif; ?>
 
-                <?php if ( $instance['show_author'] && $instance['show_comments'] ) : ?>
-                  <span class="sep"><?php _e( '|', 'upw' ); ?></span>
-                <?php endif; ?>
+							<?php if ( $instance['show_author'] && $instance['show_comments'] ) : ?>
+								<span class="sep"><?php _e( '|', 'upw' ); ?></span>
+							<?php endif; ?>
 
-                <?php if ( $instance['show_comments'] ) : ?>
-                  <a class="comments" href="<?php comments_link(); ?>">
-                    <?php comments_number( __( 'No comments', 'upw' ), __( 'One comment', 'upw' ), __( '% comments', 'upw' ) ); ?>
-                  </a>
-                <?php endif; ?>
+							<?php if ( $instance['show_comments'] ) : ?>
+								<a class="comments" href="<?php comments_link(); ?>">
+									<?php comments_number( __( 'No comments', 'upw' ), __( 'One comment', 'upw' ), __( '% comments', 'upw' ) ); ?>
+								</a>
+							<?php endif; ?>
 
-              </div>
+						<?php endif; ?>
 
-            <?php endif; ?>
+						<?php
+						  $categories = get_the_term_list( $post->ID, 'category', '', ', ' );
+						if ( $instance['show_cats'] && $categories ) :
+						?>
+							<span class="entry-categories">
+								<span class="entry-cats-list"> &middot; <?php echo esc_attr( $categories ); ?></span>
+							</span>
+						<?php endif; ?>
+            
+          </div>
 
 
             <?php
