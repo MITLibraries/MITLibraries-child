@@ -27,7 +27,7 @@ get_header();
 				array(
 					'posts_per_page' => -1,
 					'ignore_sticky_posts' => false,
-					'post_type'	=> 'exhibits', // Only query exhibits.
+					'post_type'   => 'exhibits',  // Only query exhibits.
 					'meta_key'    => 'end_date',  // Load up the event_date meta.
 					'order_by'    => 'end_date',
 					'order'       => 'desc',      // Descending, so later events first.
@@ -43,8 +43,8 @@ get_header();
 							'value'   => date( 'Y-m-d' ),  // Value for comparison.
 							'compare' => '>=',             // Method of comparison.
 							'type'    => 'DATE',
-						),// The meta_query is an array of query items.
-					),// End meta_query array.
+						), // The meta_query is an array of query items.
+					), // End meta_query array.
 				) // End array.
 			); // Close WP_Query constructor call.
 		?> 
@@ -90,7 +90,7 @@ get_header();
 	              'compare' => '>',             // Method of comparison.
 	              'type'    => 'DATE',
 	            ), // The meta_query is an array of query items.
-	           ),// End meta_query array.
+	           ), // End meta_query array.
 	          ) // End array.
 	        ); // Close WP_Query constructor call.
 		?> 
@@ -137,7 +137,7 @@ get_header();
 	              'compare' => '<',              // Method of comparison.
 	              'type'    => 'DATE',
 	            ), // The meta_query is an array of query items.
-	           ),// End meta_query array.
+	           ), // End meta_query array.
 	          ) // End array.
 	        ); // Close WP_Query constructor call.
 
