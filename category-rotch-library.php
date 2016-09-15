@@ -23,30 +23,30 @@ get_header();
 
 			$date1 = DateTime::createFromFormat( 'Ymd', get_field( 'start_date','end_date' ) );
 
-		$current_query = new WP_Query(
-	        array(
-			  'posts_per_page' => -1,
-			  'ignore_sticky_posts' => false,
-	          'category_name'	=> 'rotch-library',
-	          'meta_key'    => 'end_date',  // Load up the event_date meta.
-	          'order_by'    => 'end_date',
-	          'order'       => 'desc',      // Descending, so later events first.
-	          'meta_query'  => array(
-	             array(
-	              'key'     => 'start_date',     // Which meta to query.
-	              'value'   => date( 'Y-m-d' ),  // Value for comparison.
-	              'compare' => '<=',             // Method of comparison.
-	              'type'    => 'DATE',
-	            ), 
-	             array(
-	              'key'     => 'end_date',       // Which meta to query.
-	              'value'   => date( 'Y-m-d' ),  // Value for comparison.
-	              'compare' => '>=',             // Method of comparison.
-	              'type'    => 'DATE',
-	            ),// The meta_query is an array of query items.
-	           ),// End meta_query array.
-	          ) // End array.
-	        ); // Close WP_Query constructor call.
+			$current_query = new WP_Query(
+				array(
+					'posts_per_page' => -1,
+					'ignore_sticky_posts' => false,
+					'category_name'	=> 'rotch-library',
+					'meta_key'    => 'end_date',  // Load up the event_date meta.
+					'order_by'    => 'end_date',
+					'order'       => 'desc',      // Descending, so later events first.
+					'meta_query'  => array(
+						array(
+							'key'     => 'start_date',     // Which meta to query.
+							'value'   => date( 'Y-m-d' ),  // Value for comparison.
+							'compare' => '<=',             // Method of comparison.
+							'type'    => 'DATE',
+						),
+						array(
+							'key'     => 'end_date',       // Which meta to query.
+							'value'   => date( 'Y-m-d' ),  // Value for comparison.
+							'compare' => '>=',             // Method of comparison.
+							'type'    => 'DATE',
+						),// The meta_query is an array of query items.
+					),// End meta_query array.
+				) // End array.
+			); // Close WP_Query constructor call.
 		?> 
         
         	<div class="exhibits-feed-section">
@@ -56,15 +56,15 @@ get_header();
 				<?php if ( $current_query->have_posts() ) :
 					while ( $current_query->have_posts() ) : $current_query->the_post(); // Loop for current exhibits.
 
-				       get_template_part( 'inc/exhibits-current' );
+						get_template_part( 'inc/exhibits-current' );
 
-				       endwhile;
+					endwhile;
 
-					   wp_reset_query();
+						wp_reset_postdata();
 
-					   else : ?>
+				else : ?>
 		 
-					   <p><?php _e( 'There are no current exhibits at this time, but check back often.' ); ?></p>
+					<p><?php esc_html_e( 'There are no current exhibit announcements at this time. New exhibits are added throughout the year, so please check back.' ); ?></p>
 		 
 				<?php endif; ?>
 			   		   
@@ -89,7 +89,7 @@ get_header();
 	              'value'   => date( 'Y-m-d' ),  // Value for comparison.
 	              'compare' => '>',             // Method of comparison.
 	              'type'    => 'DATE',
-	            ), // The meta_query is an array of query items.
+							), // The meta_query is an array of query items.
 	           ),// End meta_query array.
 	          ) // End array.
 	        ); // Close WP_Query constructor call.
@@ -102,15 +102,15 @@ get_header();
 				<?php if ( $future_query->have_posts() ) :
 					while ( $future_query->have_posts() ) : $future_query->the_post(); // Loop for future exhibits.
 
-					get_template_part( 'inc/exhibits-current' );
+						get_template_part( 'inc/exhibits-current' );
 
-					endwhile;
+						endwhile;
 
-					wp_reset_query();
+						wp_reset_postdata();
 
-					   else : ?>
+					else : ?>
 	 
-					   <p><?php _e( 'There are no upcoming exhibits at this time, but check back often.' ); ?></p>
+						<p><?php esc_html_e( 'There are no upcoming exhibit announcements at this time. New exhibits are added throughout the year, so please check back.' ); ?></p>
 	 
 				<?php endif; ?>
 		
@@ -136,7 +136,7 @@ get_header();
 	              'value'   => date( 'Y-m-d' ),  // Value for comparison.
 	              'compare' => '<',              // Method of comparison.
 	              'type'    => 'DATE',
-	            ), // The meta_query is an array of query items.
+							), // The meta_query is an array of query items.
 	           ),// End meta_query array.
 	          ) // End array.
 	        ); // Close WP_Query constructor call.
@@ -149,9 +149,9 @@ get_header();
 				 
 		   <?php while ( $past_query->have_posts() ) : $past_query->the_post(); // Loop for events.
 
-		       get_template_part( 'inc/exhibits-past' );
+					get_template_part( 'inc/exhibits-past' );
 
-		       wp_reset_query(); // Restore global post data stomped by the_post().
+					wp_reset_postdata(); // Restore global post data stomped by the_post().
 
 			   endwhile; // End of the loop. ?>
 

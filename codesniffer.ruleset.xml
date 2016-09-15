@@ -26,5 +26,7 @@
 		<exclude name="WordPress.VIP.RestrictedFunctions.switch_to_blog" />
 		<exclude name="WordPress.XSS.EscapeOutput.OutputNotEscaped" />
 		<exclude name="WordPress.XSS.EscapeOutput.UnsafePrintingFunction" />
+		<exclude name="Squiz.Commenting.LongConditionClosingComment.Invalid" />
+		<exclude name="Squiz.Commenting.LongConditionClosingComment.Missing" />
 	</rule>
 </ruleset>
