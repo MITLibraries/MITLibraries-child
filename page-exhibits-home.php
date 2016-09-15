@@ -27,6 +27,13 @@ $todaysDate = date( 'm/d/Y H:i:s' );
 			<div id="content" class="content has-sidebar">
 
 				<div class="main-content">
+
+					<?php while ( have_posts() ) : the_post();
+
+						the_content();
+						wp_reset_postdata();
+
+					endwhile; ?>
 					
 					<?php
 

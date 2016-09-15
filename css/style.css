@@ -454,41 +454,17 @@ dd.wp-caption-text {
 }
 
 /* ---- Full Width Template Styles ---- */
-.section-wrapper {
-	padding-bottom: 50px;
-	margin-bottom: 50px;
-	border-bottom: 1px solid #888;
-	float: left;
-}
 
-.section-wrapper-last {
-	float: left;
-	margin: 25px 0;
-}
-
-.main {
+/* banded page with columns in bands */
+.section-wrapper .main {
 	float: left;
 	padding-right: 2em;
 	width: 76%;
 }
 
-.main p {
-	margin-bottom: 1.25em ;
-	line-height: 1.5;
-}
-
-.main h3 {
-	font-size: 1.5em;
-	font-weight: 700;
-	padding: 1em 0;
-}
-
-.location-hours {
-	font-weight: 700;
-}
-
-.contact-email {
-	font-weight: bold;
+.section-wrapper .sidebar {
+	float: left;
+	width: 23.91%;
 }
 
 .box {
@@ -532,12 +508,14 @@ dd.wp-caption-text {
 }
 
 .entry-content h1,
-.meta-header {
-	line-height:1;
-	text-transform: uppercase;
+.meta-header, 
+.title-sub {
+	margin-bottom: 15px;
 	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.3;
 	color: #777;
-	margin-bottom: 10px;
+	text-transform: uppercase;
 }
 
 .entry-content h2 {
@@ -1017,20 +995,12 @@ a.px14 {
 	line-height: 1.5;
 }
 
-h4 a.exhibit-title {
+.exhibit-title {
 	padding-bottom: 0;
 	font-size: 18px;
 	color: #333;
 	font-weight: 600;
 	line-height: 1.5;
-}
-
-h3.exhibits {
-	font-size: 16px;
-	font-weight: 400;
-	text-transform: uppercase;
-	line-height: 3;
-	color: #777;
 }
 
 .exhibits-feed-section {
@@ -1047,6 +1017,7 @@ h3.exhibits {
 	left: 215px;
 	text-transform: uppercase;
 	font-size: 13px;
+	font-weight: 600;
 }
 
 .date-span {
@@ -1060,29 +1031,30 @@ h3.exhibits {
 .sponsored-excerpt {
 	background: #cbcbcb;
 	padding: 10px 15px;
-	-webkit-box-shadow: inset 0px 10px 10px -5px rgba(0,0,0,.4);
-    box-shadow: inset 0px 10px 10px -5px rgba(0,0,0,.4);
-    margin: 10px 0 0 27.5px;
+  box-shadow: inset 0px 10px 10px -5px rgba(0,0,0,.4);
+  margin: 10px 0 0 27.5px;
 	font-size: 13px;
 	font-weight: 600;
 }
 
-a.exhibits-button {
-	width: 100%;
+.exhibits-button {
+	display: block;
 	text-align: right;
 }
 
-a.exhibits-button:after {
+.exhibits-button:after {
 	content:'\f061';
 	display:inline-block;
 	font-family:'fontawesome';
 	margin-left:.5em;
 }
 
-a.exhibits-button:hover,
-a.exhibits-button:focus {
+.exhibits-button:hover,
+.exhibits-button:focus {
 	background-color: #338bc5;
 	border-color: #338bc5;
+	color: #fff;
+	text-decoration: none;
 }
 
 /* ---- Fields, Inputs, Buttons etc. ---- */
@@ -1276,19 +1248,13 @@ a.exhibits-button:focus {
 	}
 	
 	.section-wrapper .main,
-	.section-wrapper .sidebar,
-	.section-wrapper-last .main,
-	.section-wrapper-last .sidebar {
+	.section-wrapper .sidebar {
 		width: 100%;
 	}
 
-	.section-wrapper .sidebar,
-	.section-wrapper-last .sidebar {
-		margin-top: 50px;
-	}
-
-	.section-wrapper-last {
-		margin-bottom: 80px;
+	.section-wrapper .sidebar {
+		margin: 10px 0 20px 0;
+		padding: 0;
 	}
 
 	/* ---- Header Styles ---- */
@@ -1337,7 +1303,7 @@ a.exhibits-button:focus {
 	.category-image {
 		height: 200px;
 		min-width: 100% !important;
-		background-position: center top;
+		background-position: center center;
 	}
 
 	.childTheme .exhibits-feed .category-init {
@@ -1366,11 +1332,8 @@ a.exhibits-button:focus {
 	}
 
 	.exhibit-ends {
-		position: absolute;
 		bottom: 10px;
 		left: 15px;
-		text-transform: uppercase;
-		font-size: 13px;
 	}
 
 	.exhibits-feed-section:last-child {

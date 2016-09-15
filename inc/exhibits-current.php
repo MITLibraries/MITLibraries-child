@@ -20,16 +20,16 @@ $todaysDate = date( 'm/d/Y H:i:s' );
 
 			<div class="exhibits-feed">
 				<div class="entry-categories">
-	                <div class="entry-cats-list">
-		                <?php
-						foreach ( (get_the_category()) as $category ) {
-							echo '<a href="/exhibits/about-alternate/">' . '<span class="category-bg"><span class="category-init">' . (substr( $category->cat_name,0,1 ))  . '</span></span>' . '<span class="cat-name">' . $category->cat_name . ' Exhibit' . '</span>' . '</a>';
-						}
-						?>
+					<div class="entry-cats-list">
+
+						<?php foreach ( (get_the_category()) as $category ) { ?>
+							<a href="/exhibits/about/"><span class="category-bg"><span class="category-init"><?php echo esc_attr( substr( $category->cat_name,0,1 ) ); ?></span></span><span class="cat-name"><?php echo esc_attr( $category->cat_name ); ?> Exhibit</span></a>
+						<?php } ?>
+
 					</div>
-              	</div>
+      	</div>
               	
-              	<div class="category-post">
+        <div class="category-post">
 					<div class="category-image" style="background-image: url('<?php get_stylesheet_directory_uri();
 the_field( 'exhibit_thumbnail_image' ); ?>');">
 					</div>
@@ -39,7 +39,7 @@ the_field( 'exhibit_thumbnail_image' ); ?>');">
 			              <p><?php custom_excerpt( 35, '...' ) ?></p>
 						</div>
 						<div class="exhibit-ends">
-							Ends <?php the_field( 'end_date' ); ?>
+						<?php the_field( 'start_date' ); ?> - <?php the_field( 'end_date' ); ?>
 						</div>
 					</div>
             	</div>
