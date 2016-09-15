@@ -26,28 +26,18 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 				<div class="article-head">
 
 					<h2><?php the_title(); ?></h2>
+					<?php if ( get_field( 'subtitle' ) ) : ?>
+						<h3 class="sub-title"><?php the_field( 'subtitle' );?></h3>
+					<?php endif; ?>
 
-					<p class="entry-meta">
-						
+					<p class="date-span">
 						<?php the_field( 'start_date' );?> 
-						
 						- 
-						
-						<?php the_field( 'end_date' );
-
-							$cats = array();
-						foreach ( get_the_category( $post_id ) as $cat ) {
-							$categ = get_category( $cat );
-							array_push( $cats, $categ -> name );
-						}
-
-						$post_categories = implode( ', ', $cats );
-
-						echo ' in ' . esc_html( $post_categories );
-
-					?>
-					
+						<?php the_field( 'end_date' );?>
 					</p>
+					<?php if ( get_field( 'sponsored' ) ) : ?>
+						<p class="sponsored-content"><?php the_field( 'sponsored' );?></p>
+					<?php endif; ?>
 
 				</div>
 
