@@ -21,16 +21,14 @@ get_header();
 
 		<?php
 
-			$date1 = DateTime::createFromFormat( 'Ymd', get_field( 'start_date','end_date' ) );
-
 			$current_query = new WP_Query(
 				array(
 					'posts_per_page' => -1,
 					'ignore_sticky_posts' => false,
 					'category_name'	=> 'rotch-library',
-					'meta_key'    => 'end_date',  // Load up the event_date meta.
-					'order_by'    => 'end_date',
-					'order'       => 'desc',      // Descending, so later events first.
+					'meta_key'    => 'start_date',  // Load up the event_date meta.
+					'orderby'     => 'start_date',
+					'order'       => 'DESC',      // Descending, so later events first.
 					'meta_query'  => array(
 						array(
 							'key'     => 'start_date',     // Which meta to query.
@@ -43,15 +41,15 @@ get_header();
 							'value'   => date( 'Y-m-d' ),  // Value for comparison.
 							'compare' => '>=',             // Method of comparison.
 							'type'    => 'DATE',
-						),// The meta_query is an array of query items.
-					),// End meta_query array.
+						), // The meta_query is an array of query items.
+					), // End meta_query array.
 				) // End array.
 			); // Close WP_Query constructor call.
 		?> 
         
-        	<div class="exhibits-feed-section">
+			<div class="exhibits-feed-section">
 			
-				<h3 class="exhibits">Current Exhibits</h3>   
+				<h3 class="title-sub">Current Exhibits</h3>
 						 
 				<?php if ( $current_query->have_posts() ) :
 					while ( $current_query->have_posts() ) : $current_query->the_post(); // Loop for current exhibits.
@@ -75,42 +73,40 @@ get_header();
 
 		<?php
 
-			$date2 = DateTime::createFromFormat( 'Ymd', get_field( 'start_date' ) );
-
 		$future_query = new WP_Query(
-	        array(
-	          'category_name'	=> 'rotch-library',
-	          'meta_key'    => 'start_date',  // Load up the event_date meta.
-	          'order_by'    => 'start_date',
-	          'order'       => 'desc',        // Descending, so later events first.
-	          'meta_query'  => array(
-	             array(
-	              'key'     => 'start_date',     // Which meta to query.
-	              'value'   => date( 'Y-m-d' ),  // Value for comparison.
-	              'compare' => '>',             // Method of comparison.
-	              'type'    => 'DATE',
-							), // The meta_query is an array of query items.
-	           ),// End meta_query array.
-	          ) // End array.
-	        ); // Close WP_Query constructor call.
+			array(
+				'category_name'	=> 'rotch-library',
+				'meta_key'    => 'start_date',  // Load up the event_date meta.
+				'orderby'    => 'start_date',
+				'order'       => 'ASC',        // Descending, so later events first.
+				'meta_query'  => array(
+					array(
+						'key'     => 'start_date',     // Which meta to query.
+						'value'   => date( 'Y-m-d' ),  // Value for comparison.
+						'compare' => '>',             // Method of comparison.
+						'type'    => 'DATE',
+					), // The meta_query is an array of query items.
+				), // End meta_query array.
+			) // End array.
+		); // Close WP_Query constructor call.
 		?> 
 			
 			<div class="exhibits-feed-section">
 				
-				<h3 class="exhibits">Upcoming Exhibits</h3>   
+				<h3 class="title-sub">Upcoming Exhibits</h3>
 				 
 				<?php if ( $future_query->have_posts() ) :
 					while ( $future_query->have_posts() ) : $future_query->the_post(); // Loop for future exhibits.
 
-						get_template_part( 'inc/exhibits-current' );
+						get_template_part( 'inc/exhibits-upcoming' );
 
-						endwhile;
+					endwhile;
 
-						wp_reset_postdata();
+					wp_reset_postdata();
 
-					else : ?>
+				else : ?>
 	 
-						<p><?php esc_html_e( 'There are no upcoming exhibit announcements at this time. New exhibits are added throughout the year, so please check back.' ); ?></p>
+					<p><?php esc_html_e( 'There are no upcoming exhibit announcements at this time. New exhibits are added throughout the year, so please check back.' ); ?></p>
 	 
 				<?php endif; ?>
 		
@@ -122,38 +118,36 @@ get_header();
 		 
 		<?php
 
-			$date3 = DateTime::createFromFormat( 'Ymd', get_field( 'end_date' ) );
-
 		$past_query = new WP_Query(
-	        array(
-	          'category_name'	=> 'rotch-library',
-	          'meta_key'    => 'end_date',  // Load up the event_date meta.
-	          'order_by'    => 'end_date',
-	          'order'       => 'desc',      // Descending, so later events first.
-	          'meta_query'  => array(
-	             array(
-	              'key'     => 'end_date',       // Which meta to query.
-	              'value'   => date( 'Y-m-d' ),  // Value for comparison.
-	              'compare' => '<',              // Method of comparison.
-	              'type'    => 'DATE',
-							), // The meta_query is an array of query items.
-	           ),// End meta_query array.
-	          ) // End array.
-	        ); // Close WP_Query constructor call.
+			array(
+				'category_name'	=> 'rotch-library',
+				'meta_key'    => 'end_date',  // Load up the event_date meta.
+				'orderby'    => 'end_date',
+				'order'       => 'DESC',      // Descending, so later events first.
+				'meta_query'  => array(
+					array(
+						'key'     => 'end_date',       // Which meta to query.
+						'value'   => date( 'Y-m-d' ),  // Value for comparison.
+						'compare' => '<',              // Method of comparison.
+						'type'    => 'DATE',
+					), // The meta_query is an array of query items.
+				), // End meta_query array.
+			) // End array.
+		); // Close WP_Query constructor call.
 
 		?> 
 		
 			<div class="exhibits-feed-section">
 			
-				<h3 class="exhibits">Past Exhibits</h3>   
+				<h3 class="title-sub">Past Exhibits</h3>
 				 
 		   <?php while ( $past_query->have_posts() ) : $past_query->the_post(); // Loop for events.
 
-					get_template_part( 'inc/exhibits-past' );
+				get_template_part( 'inc/exhibits-past' );
 
-					wp_reset_postdata(); // Restore global post data stomped by the_post().
+				wp_reset_postdata(); // Restore global post data stomped by the_post().
 
-			   endwhile; // End of the loop. ?>
+			endwhile; // End of the loop. ?>
 
 			</div>
 
