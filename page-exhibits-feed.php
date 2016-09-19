@@ -122,7 +122,7 @@ get_header();
 	        array(
 	          'post_type'   => 'exhibits',  // Only query events.
 	          'meta_key'    => 'end_date',  // Load up the event_date meta.
-	          'orderby'    => 'meta_value_num',
+	          'orderby'    	=> 'end_date',
 	          'order'       => 'DESC',      // Descending, so later events first.
 	          'meta_query'  => array(
 	             array(
