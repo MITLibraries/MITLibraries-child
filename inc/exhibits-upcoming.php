@@ -20,8 +20,9 @@ $todaysDate = date( 'm/d/Y H:i:s' );
 			<div class="exhibits-feed">
 				<div class="entry-categories">
 					<div class="entry-cats-list">
-						<?php foreach ( (get_the_category()) as $category ) { ?>
-							<a href="/exhibits/about/"><span class="category-bg"><span class="category-init"><?php echo esc_attr( substr( $category->cat_name,0,1 ) ); ?></span></span><span class="cat-name"><?php echo esc_attr( $category->cat_name ); ?> Exhibit</span></a>
+						<?php foreach ( (get_the_category()) as $category ) {
+							$cat_link = get_category_link( $category->term_id ); ?>
+							<a href="<?php echo esc_url( $cat_link ); ?>"><span class="category-bg"><span class="category-init"><?php echo esc_attr( substr( $category->cat_name,0,1 ) ); ?></span></span><span class="cat-name"><?php echo esc_attr( $category->cat_name ); ?> Exhibit</span></a>
 						<?php } ?>
 					</div>
 				</div>

@@ -45,6 +45,8 @@ engines:
         enabled: false
       Squiz Functions MultiLineFunctionDeclaration BraceOnSameLine:
         enabled: false
+      WordPress VIP RestrictedFunctions get_term_link:
+        enabled: false
   phpmd:
     enabled: true
     checks:
