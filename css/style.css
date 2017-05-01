@@ -164,10 +164,6 @@ b, strong {
 }
 
 /* ---- Child Page Nav ---- */
-#bs-example-navbar-collapse-1 {
-	padding-left: 0;
-	padding-right: 0;
-}
 
 #menu-primary>li>a,
 #menu-navigation>li>a {
