@@ -153,22 +153,6 @@ add_filter('single_template', create_function(
 	return $the_template;' )
 );
 
-/**
- * Load all custom post_types if home page or search results.
- *
- * @param object $query A wordpress query object.
- */
-function search_filter( $query ) {
-	if ( ! is_admin() && $query->is_main_query() ) {
-		if ( $query->is_home() || $query->is_search() ) {
-			$query->set( 'post_type', array( 'maihaugen', 'rotch', 'online' ) );
-		}
-	}
-}
-add_action( 'pre_get_posts','search_filter' );
-
-
-
 
 if ( function_exists( 'add_theme_support' ) ) { add_theme_support( 'post-thumbnails' ); }
 
