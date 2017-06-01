@@ -5,13 +5,7 @@
  * @package MIT_Libraries_Child
  * @since 2.0.0
  */
-
-	$siteName = get_bloginfo( 'name' );
-	$noChildNav = array( 'MIT Libraries News', 'Document Services' );
-	$countPosts = wp_count_posts( 'page' )->publish;
-	if ( ! in_array( $siteName, $noChildNav ) && $countPosts > 1 ) {
 ?>
-
 	
 	<nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
@@ -58,5 +52,3 @@
 </script>
 
 <!-- #site-navigation -->
-
-<?php } ?>

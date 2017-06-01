@@ -22,8 +22,24 @@ $todaysDate = date( 'm/d/Y H:i:s' );
 			
 		<div id="stage" class="inner" role="main">
 			
-			<?php get_template_part( 'inc/postHead' ); ?>
+		<?php get_template_part( 'inc/header-child' );
 
+    	// Checks to see if menu has not been assigned. -->
+		if ( !has_nav_menu( 'child-nav' ) ) {
+			wp_nav_menu( array(
+				'theme_location' => 'child-nav',
+				'fallback_cb' => false) );			
+			
+		echo '' ;
+			
+		} else {
+    	
+    	// Otherwise, if menu has been assigned, get navbar. -->
+		get_template_part( 'inc/nav', 'child' );
+				
+		} 
+			
+		?>
 			<div id="content" class="content has-sidebar">
 
 				<div class="main-content">

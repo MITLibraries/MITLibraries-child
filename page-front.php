@@ -27,9 +27,26 @@ get_header(); ?>
 
 		<div id="stage" class="inner" role="main">
 
-			<?php get_template_part( 'inc/postHead' ); ?>
-
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php get_template_part( 'inc/header-child' );
+	
+	    	// Checks to see if menu has not been assigned. -->
+			if ( !has_nav_menu( 'child-nav' ) ) {
+				wp_nav_menu( array(
+					'theme_location' => 'child-nav',
+					'fallback_cb' => false) );			
+				
+			echo '' ;
+				
+			} else {
+	    	
+	    	// Otherwise, if menu has been assigned, get navbar. -->
+			get_template_part( 'inc/nav', 'child' );
+					
+			} 
+				
+			while ( have_posts() ) : the_post(); 
+			
+			?>
 
 			<div id="content" class="content <?php if ( is_active_sidebar( 'sidebar' ) ) { echo 'has-sidebar';} ?>">
 
