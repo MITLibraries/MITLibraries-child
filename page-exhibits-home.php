@@ -40,7 +40,14 @@ $todaysDate = date( 'm/d/Y H:i:s' );
 						$sticky = get_option( 'sticky_posts' );
 						rsort( $sticky );
 						$sticky = array_slice( $sticky, 0, 5 );
-						$query = new WP_Query( array( 'post_type' => 'exhibits', 'posts_per_page' => -1, 'post__in' => $sticky, 'ignore_sticky_posts' => 1 ) );
+						$query = new WP_Query(
+							array(
+								'post_type' => 'exhibits',
+								'posts_per_page' => -1,
+								'post__in' => $sticky,
+								'ignore_sticky_posts' => 1,
+							)
+						);
 						while ( $query->have_posts() ) : $query->the_post(); ?>
 						 
 						<?php get_template_part( 'inc/exhibits-current' ); ?>

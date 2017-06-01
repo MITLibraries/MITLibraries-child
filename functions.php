@@ -108,7 +108,8 @@ add_action( 'widgets_init', 'remove_parent_widgets', 11 );
  * @since Twenty Twelve 1.0
  */
 function twentytwelve_child_widgets_init() {
-	register_sidebar( array(
+	register_sidebar(
+		array(
 			'name' => __( 'Main Sidebar', 'twentytwelve' ),
 			'id' => 'sidebar',
 			'description' => __( 'Appears on posts and pages', 'twentytwelve' ),
@@ -116,9 +117,11 @@ function twentytwelve_child_widgets_init() {
 			'after_widget' => '</aside>',
 			'before_title' => '<h2 class="widget-title">',
 			'after_title' => '</h2>',
-		) );
+		)
+	);
 
-	register_sidebar( array(
+	register_sidebar(
+		array(
 			'name' => __( 'Below Content Widget Area', 'twentytwelve' ),
 			'id' => 'sidebar-two',
 			'description' => __( 'Appears when using the Front Page or Widgetized Page templates', 'twentytwelve' ),
@@ -126,7 +129,8 @@ function twentytwelve_child_widgets_init() {
 			'after_widget' => '</div>',
 			'before_title' => '<h3 class="widget-title">',
 			'after_title' => '</h3>',
-		) );
+		)
+	);
 }
 add_action( 'widgets_init', 'twentytwelve_child_widgets_init' );
 
