@@ -20,6 +20,7 @@ get_header(); ?>
 
 					<?php if ( have_posts() ) : ?>
 
+						<?php /* translators: Header containing submitted search string */ ?>
 						<h2 class="page-title search-title"><?php printf( __( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
 
 						<?php twentytwelve_content_nav( 'nav-above' ); ?>

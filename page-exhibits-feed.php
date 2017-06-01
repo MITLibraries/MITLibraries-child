@@ -74,21 +74,21 @@ get_header();
 		<?php
 
 		$future_query = new WP_Query(
-	        array(
-	          'post_type'   => 'exhibits',    // Only query exhibits.
-	          'meta_key'    => 'start_date',  // Load up the event_date meta.
-	          'orderby'    => 'start_date',
-	          'order'       => 'ASC',        // Descending, so later events first.
-	          'meta_query'  => array(
-	             array(
-	              'key'     => 'start_date',     // Which meta to query.
-	              'value'   => date( 'Y-m-d' ),  // Value for comparison.
-	              'compare' => '>',             // Method of comparison.
-	              'type'    => 'DATE',
-	            ), // The meta_query is an array of query items.
-	           ), // End meta_query array.
-	          ) // End array.
-	        ); // Close WP_Query constructor call.
+			array(
+				'post_type'   => 'exhibits',    // Only query exhibits.
+				'meta_key'    => 'start_date',  // Load up the event_date meta.
+				'orderby'    => 'start_date',
+				'order'       => 'ASC',        // Descending, so later events first.
+				'meta_query'  => array(
+					array(
+						'key'     => 'start_date',     // Which meta to query.
+						'value'   => date( 'Y-m-d' ),  // Value for comparison.
+						'compare' => '>',             // Method of comparison.
+						'type'    => 'DATE',
+					), // The meta_query is an array of query items.
+				), // End meta_query array.
+			) // End array.
+		); // Close WP_Query constructor call.
 		?> 
 			
 			<div class="exhibits-feed-section">
@@ -119,21 +119,21 @@ get_header();
 		<?php
 
 		$past_query = new WP_Query(
-	        array(
-	          'post_type'   => 'exhibits',  // Only query events.
-	          'meta_key'    => 'end_date',  // Load up the event_date meta.
-	          'orderby'    	=> 'end_date',
-	          'order'       => 'DESC',      // Descending, so later events first.
-	          'meta_query'  => array(
-	             array(
-	              'key'     => 'end_date',       // Which meta to query.
-	              'value'   => date( 'Y-m-d' ),  // Value for comparison.
-	              'compare' => '<',              // Method of comparison.
-	              'type'    => 'DATE',
-	            ), // The meta_query is an array of query items.
-	           ), // End meta_query array.
-	          ) // End array.
-	        ); // Close WP_Query constructor call.
+			array(
+				'post_type'   => 'exhibits',  // Only query events.
+				'meta_key'    => 'end_date',  // Load up the event_date meta.
+				'orderby'     => 'end_date',
+				'order'       => 'DESC',      // Descending, so later events first.
+				'meta_query'  => array(
+					array(
+						'key'     => 'end_date',       // Which meta to query.
+						'value'   => date( 'Y-m-d' ),  // Value for comparison.
+						'compare' => '<',              // Method of comparison.
+						'type'    => 'DATE',
+					), // The meta_query is an array of query items.
+				), // End meta_query array.
+			) // End array.
+		); // Close WP_Query constructor call.
 
 		?> 
 		
