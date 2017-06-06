@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying Category pages.
+ *  The template for displaying Category pages.
  *
  * Used to display archive-type pages for posts in a category.
  *
@@ -14,20 +14,23 @@ $pageRoot = getRoot( $post );
 $section = get_post( $pageRoot );
 $isRoot = $section->ID == $post->ID;
 
-get_header(); ?>
 
-	<?php get_template_part( 'inc/breadcrumbs', 'category' ); ?>
+get_header();
 
-		<div id="stage" class="inner group" role="main">
-			
-			 
+get_template_part( 'inc/breadcrumbs', 'category' ); ?>
+
+
+	<?php while ( have_posts() ) : the_post(); ?>
+
+
+		<div id="stage" class="inner" role="main">
 
 			<?php get_template_part( 'inc/postHead' ); ?>
-
-
-			<div id="content" class="allContent hasSidebar group ">
-
-				<div class="mainContent group">
+				<div id="content" class="content has-sidebar">
+				
+					<div class="main-content">
+	
+						<div class="entry-content">
 
 					<?php if ( is_category() ) {
 						echo '<h2>';
@@ -35,33 +38,19 @@ get_header(); ?>
 						echo '</h2>';
 						}
 					?>
-					<?php if ( have_posts() ) : ?>
-
-						<?php while ( have_posts() ) : the_post(); ?>
-
-							<?php get_template_part( 'content', 'cpt' ); ?>
-
-						<span class="post-page-nav">
-							<?php
-							endwhile;
-							child_numeric_posts_nav();
-
-						?>
-						</span>
-
-						<?php else : ?>
-							<?php get_template_part( 'content', 'none' ); ?>
-						<?php endif; ?>
-
-				</div><!-- end div.mainContent -->
-				
+	
+				<?php get_template_part( 'inc/content', 'feed' ); ?>
+					</div>
+				</div>
 			<?php get_sidebar(); ?>
 
-			</div><!-- end div#content -->
 
-		</div><!-- #stage -->
+			</div>
+			
+		</div><!-- end div#stage -->
+		
 
 
-
+	<?php endwhile; // End of the loop. ?>
 
 <?php get_footer(); ?>
