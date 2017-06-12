@@ -28,7 +28,7 @@ get_header(); ?>
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'inc/post', 'trimmed' ); ?>
+					<?php get_template_part( 'inc/post', 'searchresult' ); ?>
 
 				<?php endwhile; ?>
 

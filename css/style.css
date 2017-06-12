@@ -780,6 +780,11 @@ footer .footerHeader {
 	margin-bottom: 2em;
 }
 
+/* ---- Search Results ---- */
+.search-results .post {
+	margin: 2em 0;
+}
+
 /* ---- TO-GO ---- */
 .hide-title .widget-title,
 .screen-reader-text {
