@@ -108,7 +108,8 @@ add_action( 'widgets_init', 'remove_parent_widgets', 11 );
  * @since Twenty Twelve 1.0
  */
 function twentytwelve_child_widgets_init() {
-	register_sidebar( array(
+	register_sidebar(
+		array(
 			'name' => __( 'Main Sidebar', 'twentytwelve' ),
 			'id' => 'sidebar',
 			'description' => __( 'Appears on posts and pages', 'twentytwelve' ),
@@ -116,9 +117,11 @@ function twentytwelve_child_widgets_init() {
 			'after_widget' => '</aside>',
 			'before_title' => '<h2 class="widget-title">',
 			'after_title' => '</h2>',
-		) );
+		)
+	);
 
-	register_sidebar( array(
+	register_sidebar(
+		array(
 			'name' => __( 'Below Content Widget Area', 'twentytwelve' ),
 			'id' => 'sidebar-two',
 			'description' => __( 'Appears when using the Front Page or Widgetized Page templates', 'twentytwelve' ),
@@ -126,7 +129,8 @@ function twentytwelve_child_widgets_init() {
 			'after_widget' => '</div>',
 			'before_title' => '<h3 class="widget-title">',
 			'after_title' => '</h3>',
-		) );
+		)
+	);
 }
 add_action( 'widgets_init', 'twentytwelve_child_widgets_init' );
 
@@ -148,22 +152,6 @@ add_filter('single_template', create_function(
 		return STYLESHEETPATH . "/single-{$cat->slug}.php"; }
 	return $the_template;' )
 );
-
-/**
- * Load all custom post_types if home page or search results.
- *
- * @param object $query A wordpress query object.
- */
-function search_filter( $query ) {
-	if ( ! is_admin() && $query->is_main_query() ) {
-		if ( $query->is_home() || $query->is_search() ) {
-			$query->set( 'post_type', array( 'maihaugen', 'rotch', 'online' ) );
-		}
-	}
-}
-add_action( 'pre_get_posts','search_filter' );
-
-
 
 
 if ( function_exists( 'add_theme_support' ) ) { add_theme_support( 'post-thumbnails' ); }

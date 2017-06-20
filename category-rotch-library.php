@@ -25,7 +25,7 @@ get_header();
 				array(
 					'posts_per_page' => -1,
 					'ignore_sticky_posts' => false,
-					'category_name'	=> 'rotch-library',
+					'category_name' => 'rotch-library',
 					'meta_key'    => 'start_date',  // Load up the event_date meta.
 					'orderby'     => 'start_date',
 					'order'       => 'DESC',      // Descending, so later events first.
@@ -74,7 +74,7 @@ get_header();
 
 		$future_query = new WP_Query(
 			array(
-				'category_name'	=> 'rotch-library',
+				'category_name' => 'rotch-library',
 				'meta_key'    => 'start_date',  // Load up the event_date meta.
 				'orderby'    => 'start_date',
 				'order'       => 'ASC',        // Descending, so later events first.
@@ -117,7 +117,7 @@ get_header();
 
 		$past_query = new WP_Query(
 			array(
-				'category_name'	=> 'rotch-library',
+				'category_name' => 'rotch-library',
 				'meta_key'    => 'end_date',  // Load up the event_date meta.
 				'orderby'    => 'end_date',
 				'order'       => 'DESC',      // Descending, so later events first.

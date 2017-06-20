@@ -29,12 +29,16 @@ $todaysDate = date( 'm/d/Y H:i:s' );
 
 				<div class="category-post">
 					<div class="category-image" style="background-image: url('<?php get_stylesheet_directory_uri();
-the_field( 'exhibit_thumbnail_image' ); ?>');">
+						the_field( 'exhibit_thumbnail_image' ); ?>');">
 					</div>
 					<div class="category-post-content">
 						<h4><a class="exhibit-title" href="<?php the_permalink(); ?>"><?php the_title();?></a></h4>
 						<div class="entry-summary">
-							<p><?php custom_excerpt( 35, '...' ) ?></p>
+						<?php if ( get_field( 'excerpt' ) ) { ?>
+			            	<p><?php the_field( 'excerpt' ); ?></p>
+						<?php  } else { ?>
+			              	<p><?php custom_excerpt( 35, '...' ) ?></p>
+			            <?php } ?>
 						</div>
 						<div class="exhibit-ends">
 							Opens <?php the_field( 'start_date' ); ?>
