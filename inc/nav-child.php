@@ -14,6 +14,7 @@
 
 	
 	<nav class="navbar navbar-default" role="navigation">
+
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -47,13 +48,13 @@
 		?>
 
 
-    </div>
+	</div>
 </nav>
 <script>
 	$('.dropdown-toggle').click(function() {
-    var location = $(this).attr('href');
-    window.location.href = location;
-    return false;
+	var location = $(this).attr('href');
+	window.location.href = location;
+	return false;
 });
 </script>
 
