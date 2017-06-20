@@ -19,11 +19,11 @@
 		$wp_query   = NULL;
 		$wp_query   = $custom_query;
 
-		 if ( $custom_query->have_posts() ) : ?>
+		 if ( $wp_query->have_posts() ) : ?>
 
 
 		<div class="upw-posts hfeed">
-		<?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
+		<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 
 		<?php $current_post = ($post->ID == $current_post_id && is_single()) ? 'active' : '';
 
@@ -104,12 +104,20 @@
 <?php
 // Reset postdata
 wp_reset_postdata();
+?>
 
-// Custom query loop pagination
-previous_posts_link( 'Newer Posts' );
-echo("&nbsp;");
-next_posts_link( 'Older Posts', $custom_query->max_num_pages );
+<!--BEGIN: Page Nav-->
+		<?php if ( $custom_query->max_num_pages > 1 ) : ?>
 
+	        	<ul class="post-navigation">
+			        <li><?php previous_posts_link('Newer Posts') ?></li>
+			        <li><?php next_posts_link('Older Posts', $custom_query->max_num_pages ) ?></li>
+		        </ul>
+
+		<?php endif; ?>
+		<!--END: Page Nav-->
+
+<?php
 // Reset main query object
 $wp_query = NULL;
 $wp_query = $temp_query;

@@ -116,6 +116,7 @@ b, strong {
 	margin:0 auto;
 	padding-bottom:50px;
 	text-align:center;
+	margin-left:0 !important;
 }
 
 .post-navigation li a,.post-navigation li a:hover,.post-navigation li.active a,.post-navigation li.disabled {
@@ -125,6 +126,12 @@ b, strong {
 
 .post-navigation li {
 	display:inline;
+	float:left;
+	margin-left:0 !important;
+}
+
+.post-navigation li:last-child {
+	float:right;
 }
 
 .post-navigation li a,.post-navigation li a:hover,.post-navigation li.active a,.post-navigation li.disabled {
