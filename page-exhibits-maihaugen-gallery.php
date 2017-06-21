@@ -6,7 +6,6 @@
  * @since Twenty Twelve 1.0
  */
 
-
 get_header();
 ?>
 
@@ -25,7 +24,7 @@ get_header();
 			$current_query = new WP_Query(
 				array(
 					'post_type'   => 'exhibits',  // Only query exhibits.
-					'posts_per_page' => -1,
+					'posts_per_page' => 10,
 					'ignore_sticky_posts' => false,
 					'meta_key'		=> 'start_date',
 					'orderby'     => 'start_date',
@@ -83,6 +82,7 @@ get_header();
 			array(
 				'post_type'   => 'exhibits',  // Only query exhibits.
 				'meta_key'		=> 'start_date',
+				'posts_per_page' => 10,
 				'orderby'    => 'start_date',
 				'order'       => 'ASC',        // Descending, so later events first.
 				'meta_query'  => array(
@@ -91,7 +91,7 @@ get_header();
 						'value'   => date( 'Y-m-d' ),  // Value for comparison.
 						'compare' => '>',             // Method of comparison.
 						'type'    => 'DATE',
-					), 
+					),
 					array(
 							'key'     => 'location',       // Which meta to query.
 							'value'   => 'Maihaugen Gallery',  // Value for comparison.
@@ -129,9 +129,10 @@ get_header();
 		<?php
 
 		$past_query = new WP_Query(
-			array( 
+			array(
 				'post_type'   => 'exhibits',  // Only query exhibits.
 	         	'meta_key'		=> 'end_date',
+	         	'posts_per_page' => 5,
 				'orderby'    => 'end_date',
 				'order'       => 'DESC',      // Descending, so later events first.
 				'meta_query'  => array(
@@ -157,7 +158,7 @@ get_header();
 
 				<h3 class="title-sub">Past Exhibits</h3>
 
-		   <?php while ( $past_query->have_posts() ) : $past_query->the_post(); // Loop for events.
+			<?php while ( $past_query->have_posts() ) : $past_query->the_post(); // Loop for events.
 
 				get_template_part( 'inc/exhibits-detail' );
 
@@ -166,9 +167,8 @@ get_header();
 			endwhile; // End of the loop. ?>
 
 			</div>
-
-
-		<!-- END OF UPCOMING EXHIBITS LOOP -->
+			<!-- END OF UPCOMING EXHIBITS LOOP -->
+			<a class="button-secondary exhibits-button" href="/exhibits/past-exhibits/">View all past exhibits</a>
 
 		</div>  <!-- main-content --> 
 

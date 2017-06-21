@@ -7,7 +7,6 @@
  */
 
 get_header();
-$postsPerPage
 ?>
 
 	<?php get_template_part( 'inc/breadcrumbs', 'child' ); ?>
@@ -76,21 +75,21 @@ $postsPerPage
 
 		$future_query = new WP_Query(
 	        array(
-	          'post_type'   => 'exhibits',    // Only query exhibits.
-	          'meta_key'    => 'start_date',  // Load up the event_date meta.
-	          'orderby'    => 'start_date',
-	          'order'       => 'ASC', 
-	          'posts_per_page' => 10,       // Descending, so later events first.
-	          'meta_query'  => array(
-	             array(
-	              'key'     => 'start_date',     // Which meta to query.
-	              'value'   => date( 'Y-m-d' ),  // Value for comparison.
-	              'compare' => '>',             // Method of comparison.
-	              'type'    => 'DATE',
-	            ), // The meta_query is an array of query items.
-	           ), // End meta_query array.
-	          ) // End array.
-	        ); // Close WP_Query constructor call.
+	          	'post_type'   => 'exhibits',    // Only query exhibits.
+	          	'meta_key'    => 'start_date',  // Load up the event_date meta.
+	          	'orderby'    => 'start_date',
+	          	'order'       => 'ASC',
+	          	'posts_per_page' => 10,       // Descending, so later events first.
+	          	'meta_query'  => array(
+	             	array(
+	              		'key'     => 'start_date',     // Which meta to query.
+	              		'value'   => date( 'Y-m-d' ),  // Value for comparison.
+	              		'compare' => '>',             // Method of comparison.
+	              		'type'    => 'DATE',
+	            	), // The meta_query is an array of query items.
+	           	), // End meta_query array.
+	         ) // End array.
+	    ); // Close WP_Query constructor call.
 		?> 
 			
 			<div class="exhibits-feed-section">
@@ -122,22 +121,21 @@ $postsPerPage
 
 		$past_query = new WP_Query(
 	        array(
-	          'post_type'   => 'exhibits',  // Only query events.
-	          'meta_key'    => 'end_date',  // Load up the event_date meta.
-	          'orderby'    	=> 'end_date',
-	          'order'       => 'DESC',      // Descending, so later events first.
-	          'posts_per_page' => 5,
-	          'meta_query'  => array(
-	             array(
-	              'key'     => 'end_date',       // Which meta to query.
-	              'value'   => date( 'Y-m-d' ),  // Value for comparison.
-	              'compare' => '<',              // Method of comparison.
-	              'type'    => 'DATE',
-	            ), // The meta_query is an array of query items.
+	          	'post_type'   => 'exhibits',  // Only query events.
+	          	'meta_key'    => 'end_date',  // Load up the event_date meta.
+	          	'orderby'    	=> 'end_date',
+	          	'order'       => 'DESC',      // Descending, so later events first.
+	          	'posts_per_page' => 5,
+	          	'meta_query'  => array(
+	            	array(
+	              		'key'     => 'end_date',       // Which meta to query.
+	              		'value'   => date( 'Y-m-d' ),  // Value for comparison.
+	              		'compare' => '<',              // Method of comparison.
+	              		'type'    => 'DATE',
+	           		), // The meta_query is an array of query items.
 	           ), // End meta_query array.
-	          ) // End array.
-	        ); // Close WP_Query constructor call.
-
+	        ) // End array.
+		); // Close WP_Query constructor call.
 		?> 
 		
 			<div class="exhibits-feed-section">
@@ -146,7 +144,7 @@ $postsPerPage
 				 
 		   <?php while ( $past_query->have_posts() ) : $past_query->the_post(); // Loop for events.
 
-		      get_template_part( 'inc/exhibits-detail' );
+		      		get_template_part( 'inc/exhibits-detail' );
 
 					wp_reset_postdata(); // Restore global post data stomped by the_post().
 

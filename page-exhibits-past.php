@@ -6,8 +6,7 @@
  * @since Twenty Twelve 1.0
  */
 
-get_header();
-$postsPerPage
+	get_header();
 ?>
 
 	<?php get_template_part( 'inc/breadcrumbs', 'child' ); ?>
@@ -22,7 +21,7 @@ $postsPerPage
 
 		 
 		<?php
-		$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 		$past_query = new WP_Query(
 	        array(
 	          'post_type'   => 'exhibits',  // Only query events.
@@ -40,15 +39,14 @@ $postsPerPage
 	            ), // The meta_query is an array of query items.
 	           ), // End meta_query array.
 	          ) // End array.
-	        ); // Close WP_Query constructor call.
-
-		?> 
+	    ); // Close WP_Query constructor call.
+	?> 
 		
 			<div class="exhibits-feed-section">
 			
 				<h3 class="title-sub">Past Exhibits</h3>
 				 
-		   <?php while ( $past_query->have_posts() ) : $past_query->the_post(); // Loop for events.
+		   		<?php while ( $past_query->have_posts() ) : $past_query->the_post(); // Loop for events.
 
 		      		get_template_part( 'inc/exhibits-detail' );
 
@@ -59,17 +57,14 @@ $postsPerPage
 			</div>
 
 		<!-- END OF PAST EXHIBITS LOOP -->
-    
-  		
-            <ul class="post-navigation">
-               	<li>
-                 <?php previous_posts_link( 'Newer Posts') ?>
-                </li>
-                <li>
-                <?php next_posts_link( 'Older Posts', $past_query->max_num_pages ) ?>
-                </li>
-            </ul>
-  		
+			<ul class="post-navigation">
+				<li>
+					<?php previous_posts_link( 'Newer Posts' ) ?>
+				</li>
+				<li>
+					<?php next_posts_link( 'Older Posts', $past_query->max_num_pages ) ?>
+				</li>
+			</ul>
 	  	</div>  <!-- main-content --> 
 	
 	  	<?php get_sidebar(); ?>

@@ -37,8 +37,15 @@ $todaysDate = date( 'm/d/Y H:i:s' );
 					
 					<?php
 
-						$query = new WP_Query( array( 'post_type' => 'exhibits', 'posts_per_page' => -1, 'category_name' => 'featured','orderby' => 'menu_order','order' =>'ASC' 
-								 ) );
+						$query = new WP_Query(
+							array(
+								'post_type' => 'exhibits',
+								'posts_per_page' => 10,
+								'category_name' => 'featured',
+								'orderby' => 'menu_order',
+								'order' => 'ASC',
+							)
+						);
 						while ( $query->have_posts() ) : $query->the_post(); ?>
 						 
 						<?php get_template_part( 'inc/exhibits-detail' ); ?>

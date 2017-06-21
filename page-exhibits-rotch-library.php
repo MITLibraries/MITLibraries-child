@@ -1,11 +1,10 @@
-	<?php
+<?php
 /**
  * Template Name: Exhibits |  Rotch Library
  *
  * @package MIT_Libraries_Child
  * @since Twenty Twelve 1.0
  */
-
 
 get_header();
 ?>
@@ -20,12 +19,11 @@ get_header();
 
 			<div class="main-content">
 
-		<?php
-
+			<?php
 			$current_query = new WP_Query(
 				array(
 					'post_type'   => 'exhibits',  // Only query exhibits.
-					'posts_per_page' => -1,
+					'posts_per_page' => 10,
 					'ignore_sticky_posts' => false,
 					'meta_key'		=> 'start_date',
 					'orderby'     => 'start_date',
@@ -52,7 +50,7 @@ get_header();
 					), // End meta_query array.
 				) // End array.
 			); // Close WP_Query constructor call.
-		?> 
+			?>
 
 			<div class="exhibits-feed-section">
 
@@ -78,11 +76,12 @@ get_header();
 		<!-- END OF CURRENT EXHIBITS LOOP -->
 
 		<?php
-
+		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 		$future_query = new WP_Query(
 			array(
 				'post_type'   => 'exhibits',  // Only query exhibits.
 				'meta_key'		=> 'start_date',
+				'posts_per_page' => 10,
 				'orderby'    => 'start_date',
 				'order'       => 'ASC',        // Descending, so later events first.
 				'meta_query'  => array(
@@ -132,6 +131,7 @@ get_header();
 			array(
 				'post_type'   => 'exhibits',  // Only query exhibits.
 				'meta_key'		=> 'end_date',
+				'posts_per_page' => 5,
 				'orderby'    => 'end_date',
 				'order'       => 'DESC',      // Descending, so later events first.
 				'meta_query'  => array(
@@ -145,7 +145,7 @@ get_header();
 						'key'     => 'location',       // Which meta to query.
 						'value'   => 'Rotch Library',  // Value for comparison.
 						'compare' => '=',             // Method of comparison.
-						'type'    => 'CHAR', 
+						'type'    => 'CHAR',
 					),// The meta_query is an array of query items.
 				), // End meta_query array.
 			) // End array.
@@ -157,7 +157,7 @@ get_header();
 
 				<h3 class="title-sub">Past Exhibits</h3>
 
-		   <?php while ( $past_query->have_posts() ) : $past_query->the_post(); // Loop for events.
+			<?php while ( $past_query->have_posts() ) : $past_query->the_post(); // Loop for events.
 
 				get_template_part( 'inc/exhibits-detail' );
 
@@ -166,9 +166,8 @@ get_header();
 			endwhile; // End of the loop. ?>
 
 			</div>
-
-
-		<!-- END OF UPCOMING EXHIBITS LOOP -->
+			<!-- END OF UPCOMING EXHIBITS LOOP -->
+			<a class="button-secondary exhibits-button" href="/exhibits/past-exhibits/">View all past exhibits</a>
 
 		</div>  <!-- main-content --> 
 
