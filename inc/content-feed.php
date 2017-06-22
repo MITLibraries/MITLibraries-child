@@ -9,11 +9,11 @@
 ?>
 <div id="sticky-posts-2" class="widget-1 widget-first widget-last widget-odd hide-title widget widget_ultimate_posts" role="complementary">
 	<?php
-	$custom_query_args = array( 
-		'post_type' => 'post',  
+	$custom_query_args = array(
+		'post_type' => 'post',
 		'posts_per_page' => 5,
 		 );
-	
+
 	$custom_query_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 
 	$custom_query = new WP_Query( $custom_query_args );
@@ -57,10 +57,10 @@
 									<?php
 								  	if ( ! is_array( $custom_field_values ) ) {
 
-									// For custom fields named "event_date", we pass the value through an additional parsing step.
+										// For custom fields named "event_date", we pass the value through an additional parsing step.
 										if ( 'event_date' === $name ) {
-										  $event_date = date_parse_from_format( 'Ymd', $custom_field_values );
-										  $custom_field_values = date( 'F j, Y', mktime( 0, 0, 0, $event_date['month'],$event_date['day'],$event_date['year'] ) );
+										  	$event_date = date_parse_from_format( 'Ymd', $custom_field_values );
+										  	$custom_field_values = date( 'F j, Y', mktime( 0, 0, 0, $event_date['month'],$event_date['day'],$event_date['year'] ) );
 										}
 
 										echo $custom_field_values;
@@ -68,11 +68,11 @@
 									} else {
 										$last_value = end( $custom_field_values );
 										foreach ( $custom_field_values as $value ) {
-										   echo $value;
-										   if ( $value !== $last_value ) { echo ', '; }
+										   	echo $value;
+										   	if ( $value !== $last_value ) { echo ', '; }
 										}
-									 }
-								   ?>
+									}
+								 	?>
 								</span>
 							<?php endif;
 						endforeach; ?>
@@ -84,7 +84,7 @@
 						<img src="<?php echo get_first_post_image(); ?>" width="200" >
 						<?php endif; ?>
 					    <p>
-						  <?php echo custom_excerpt( 100,'...' ); ?>
+						  	<?php echo custom_excerpt( 100,'...' ); ?>
 				    	</p>
 					</div>
 			
@@ -105,10 +105,10 @@
 <!--BEGIN: Page Nav-->
 	<?php if ( $wp_query->max_num_pages > 1 ) : ?>
 
-    	<ul class="post-navigation">
+		<ul class="post-navigation">
 	        <li><?php previous_posts_link( 'Newer Posts' ) ?></li>
 	        <li><?php next_posts_link( 'Older Posts', $wp_query->max_num_pages ) ?></li>
-        </ul>
+		</ul>
 
 	<?php endif; ?>
 		<!--END: Page Nav-->

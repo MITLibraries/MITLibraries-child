@@ -13,7 +13,7 @@
 
 $pageRoot = getRoot( $post );
 $section = get_post( $pageRoot );
-$isRoot = $section->ID == $post->ID;
+$isRoot = $section->ID === $post->ID;
 
 
 get_header();

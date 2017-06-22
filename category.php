@@ -41,7 +41,7 @@ get_template_part( 'inc/breadcrumbs', 'category' ); ?>
 						<div class="upw-posts hfeed">
 						<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 							<?php $current_post = ( $post->ID === $current_post_id && is_single() ) ? 'active' : '';
-							$custom_fields = get_fields($current_post_id); ?>
+							$custom_fields = get_fields( $current_post_id ); ?>
 
 							<article <?php post_class( $current_post ); ?>>
 
@@ -67,8 +67,8 @@ get_template_part( 'inc/breadcrumbs', 'category' ); ?>
 
 														// For custom fields named "event_date", we pass the value through an additional parsing step.
 														if ( 'event_date' === $name ) {
-														  $event_date = date_parse_from_format( 'Ymd', $custom_field_values );
-														  $custom_field_values = date( 'F j, Y', mktime( 0, 0, 0, $event_date['month'],$event_date['day'],$event_date['year'] ) );
+														  	$event_date = date_parse_from_format( 'Ymd', $custom_field_values );
+														  	$custom_field_values = date( 'F j, Y', mktime( 0, 0, 0, $event_date['month'],$event_date['day'],$event_date['year'] ) );
 														}
 
 														echo $custom_field_values;
@@ -92,7 +92,7 @@ get_template_part( 'inc/breadcrumbs', 'category' ); ?>
 										<img src="<?php echo get_first_post_image(); ?>" width="200" >
 										<?php endif; ?>
 									  <p>
-										<?php echo custom_excerpt(100,'...'); ?>
+										<?php echo custom_excerpt( 100,'...' ); ?>
 									  </p>
 									</div>
 									 <footer>
