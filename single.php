@@ -61,48 +61,48 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 			<?php endwhile; // End of the loop. ?>
 			
 			<?php
-			  	$orig_post = $post;
-			  	global $post;
-			  	$tags = wp_get_post_tags( $current_post_id );
-			   	$tagcount = count( $tags );
+		  	$orig_post = $post;
+		  	global $post;
+		  	$tags = wp_get_post_tags( $current_post_id );
+		   	$tagcount = count( $tags );
 
-				if ( $tagcount > 0 )  {
-				 	$tag_ids = array();
-			  		foreach( $tags as $individual_tag ) 
-			  			$tag_ids[] = $individual_tag->term_id;
-						$args = array(
-						  	'tag__in' => $tag_ids,
-						  	'post__not_in' => array( $current_post_id ),
-						  	'posts_per_page' => 3
-						  	);
-						   
-				  			$related_query = new WP_Query( $args ); ?>
-							if ( $related_query->have_posts() ) :
-							?>
-							<hr/>
-							<div>
-							<h3>Related posts</h3>
-								<ul>
-		 						<?php
-		  							while ( $related_query->have_posts() ) : $related_query->the_post(); ?>
+			if ( $tagcount > 0 ) {
+			 	$tag_ids = array();
+		  		foreach ( $tags as $individual_tag )
+		  			$tag_ids[] = $individual_tag->term_id;
+					$args = array(
+					  	'tag__in' => $tag_ids,
+					  	'post__not_in' => array( $current_post_id ),
+					  	'posts_per_page' => 3,
+					  	);
+
+			  			$related_query = new WP_Query( $args ); ?>
+						if ( $related_query->have_posts() ) :
+						?>
+						<hr/>
+						<div>
+						<h3>Related posts</h3>
+							<ul>
+	 						<?php
+	  							while ( $related_query->have_posts() ) : $related_query->the_post(); ?>
+	   
+									<div class="relatedthumb">
+									    <li><a rel="external" href="<?php the_permalink()?>">
+									    <?php the_post_thumbnail ( array(100, 100) ); ?> &nbsp;
+									    <?php the_title(); ?>
+									    </a></li>
+									</div>
+	     						<?php endwhile; ?>
+	    					</ul>
+	    				</div>
+	      			
 		   
-										<div class="relatedthumb">
-										    <li><a rel="external" href="<?php the_permalink()?>">
-										    <?php the_post_thumbnail( array(100,100) ); ?> &nbsp;
-										    <?php the_title(); ?>
-										    </a></li>
-										</div>
-		     						<?php endwhile; ?>
-		    					</ul>
-		    				</div>
-		      			
-			   
-				<?php
+			<?php
 
-				}
-				$post = $orig_post;
-				wp_reset_query();
-				?>
+			}
+			$post = $orig_post;
+			wp_reset_query();
+			?>
 
 			</div>
 		<?php get_sidebar(); ?>

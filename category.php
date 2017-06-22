@@ -72,7 +72,7 @@ get_template_part( 'inc/breadcrumbs', 'category' ); ?>
 														}
 
 														echo $custom_field_values;
-													
+
 													} else {
 														$last_value = end( $custom_field_values );
 														foreach ( $custom_field_values as $value ) {
