@@ -74,7 +74,7 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 					  	'post__not_in' => array( $current_post_id ),
 					  	'posts_per_page' => 3,
 					  	);
-					}
+				}
 			  	$related_query = new WP_Query( $args );
 
 				if ( $related_query->have_posts() ) :
@@ -83,8 +83,8 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 					<div>
 					<h3>Related posts</h3>
 						<ul>
- 						<?php
- 						while ( $related_query->have_posts() ) : $related_query->the_post(); ?>
+						<?php
+						while ( $related_query->have_posts() ) : $related_query->the_post(); ?>
 
 							<div class="relatedthumb">
 							    <li><a rel="external" href="<?php the_permalink()?>">
@@ -93,9 +93,9 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 							    </a></li>
 							</div>
 						<?php endwhile; ?>
-    					</ul>
-    				</div>
-  				<?php endif;?>
+						</ul>
+					</div>
+				<?php endif;?>
 		   
 			<?php
 
