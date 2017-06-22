@@ -61,7 +61,7 @@ get_template_part( 'inc/breadcrumbs', 'category' ); ?>
 											  	$name = trim( $name );
 											  	$custom_field_values = get_post_meta( $post->ID, $name, true );
 											  	if ( $custom_field_values ) : ?>
-													<span class="custom-field custom-field-<?php echo $name; ?>">
+													<span class="custom-field custom-field-<?php echo esc_html( $name ); ?>">
 													<?php
 													if ( ! is_array( $custom_field_values ) ) {
 
@@ -71,12 +71,12 @@ get_template_part( 'inc/breadcrumbs', 'category' ); ?>
 														  	$custom_field_values = date( 'F j, Y', mktime( 0, 0, 0, $event_date['month'],$event_date['day'],$event_date['year'] ) );
 														}
 
-														echo $custom_field_values;
+														echo esc_html( $custom_field_values );
 
 													} else {
 														$last_value = end( $custom_field_values );
 														foreach ( $custom_field_values as $value ) {
-														  	echo $value;
+														  	echo esc_html( $value );
 														  	if ( $value !== $last_value ) { echo ', '; }
 														}
 													}
@@ -89,15 +89,15 @@ get_template_part( 'inc/breadcrumbs', 'category' ); ?>
 
 									<div class="entry-summary">
 										<?php if ( get_first_post_image() ) : ?>
-										<img src="<?php echo get_first_post_image(); ?>" width="200" >
+										<img src="<?php echo esc_attr( get_first_post_image() ); ?>" width="200" >
 										<?php endif; ?>
 									  <p>
-										<?php echo custom_excerpt( 100,'...' ); ?>
+										<?php echo esc_html( custom_excerpt( 100,'...' ) ); ?>
 									  </p>
 									</div>
 									 <footer>
 										<div class="entry-meta">
-											<time class="published" datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_time( 'F j, Y' ); ?></time>
+											<time class="published" datetime="<?php echo esc_attr( get_the_time( 'c' ) ); ?>"><?php echo esc_html( get_the_time( 'F j, Y' ) ); ?></time>
 													
 								  		</div>
 									</footer>

@@ -84,15 +84,15 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 						<h3>Related posts</h3>
 							<ul>
 	 						<?php
-	  							while ( $related_query->have_posts() ) : $related_query->the_post(); ?>
-	   
-									<div class="relatedthumb">
-									    <li><a rel="external" href="<?php the_permalink()?>">
-									    <?php the_post_thumbnail ( array(100, 100) ); ?> &nbsp;
-									    <?php the_title(); ?>
-									    </a></li>
-									</div>
-	     						<?php endwhile; ?>
+  							while ( $related_query->have_posts() ) : $related_query->the_post(); ?>
+   
+								<div class="relatedthumb">
+								    <li><a rel="external" href="<?php the_permalink()?>">
+								    <?php the_post_thumbnail( array( 100, 100 ) ); ?> &nbsp;
+								    <?php the_title(); ?>
+								    </a></li>
+								</div>
+     						<?php endwhile; ?>
 	    					</ul>
 	    				</div>
 	      			
