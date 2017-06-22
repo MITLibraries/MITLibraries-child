@@ -84,7 +84,7 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 						<h3>Related posts</h3>
 							<ul>
 	 						<?php
-  							while ( $related_query->have_posts() ) : $related_query->the_post(); ?>
+	 						while ( $related_query->have_posts() ) : $related_query->the_post(); ?>
    
 								<div class="relatedthumb">
 								    <li><a rel="external" href="<?php the_permalink()?>">
