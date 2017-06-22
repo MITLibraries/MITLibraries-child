@@ -61,7 +61,6 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 			<?php endwhile; // End of the loop. ?>
 			
 			<?php
-		  	$orig_post = $post;
 		  	global $post;
 		  	$tags = wp_get_post_tags( $current_post_id );
 		   	$tagcount = count( $tags );
@@ -76,31 +75,31 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 					  	'posts_per_page' => 3,
 					  	);
 
-			  			$related_query = new WP_Query( $args ); ?>
+			  			$related_query = new WP_Query( $args ); 
+
 						if ( $related_query->have_posts() ) :
 						?>
-						<hr/>
-						<div>
-						<h3>Related posts</h3>
-							<ul>
-	 						<?php
-	 						while ( $related_query->have_posts() ) : $related_query->the_post(); ?>
-   
-								<div class="relatedthumb">
-								    <li><a rel="external" href="<?php the_permalink()?>">
-								    <?php the_post_thumbnail( array( 100, 100 ) ); ?> &nbsp;
-								    <?php the_title(); ?>
-								    </a></li>
-								</div>
-     						<?php endwhile; ?>
-	    					</ul>
-	    				</div>
-	      			
+							<hr/>
+							<div>
+							<h3>Related posts</h3>
+								<ul>
+		 						<?php
+		 						while ( $related_query->have_posts() ) : $related_query->the_post(); ?>
+
+									<div class="relatedthumb">
+									    <li><a rel="external" href="<?php the_permalink()?>">
+									    <?php the_post_thumbnail( array( 100, 100 ) ); ?> &nbsp;
+									    <?php the_title(); ?>
+									    </a></li>
+									</div>
+								<?php endwhile; ?>
+		    					</ul>
+		    				</div>
+	      				<?php endif;?>
 		   
 			<?php
 
 			}
-			$post = $orig_post;
 			wp_reset_query();
 			?>
 
