@@ -24,9 +24,9 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<div class="article-head">
-					<?php foreach ( (get_the_category()) as $category ) { ?>
-						<p class="title-sub"><?php echo esc_attr( $category->cat_name ); ?> Exhibit</p>
-					<?php } ?>
+				
+						<p class="title-sub"><?php the_field( 'location' ) ?> Exhibit</p>
+				
 
 					<h2><?php the_title(); ?></h2>
 					<?php if ( get_field( 'subtitle' ) ) : ?>
