@@ -9,7 +9,7 @@
 get_header();
 ?>
 
-	<?php get_template_part( 'inc/breadcrumbs', 'category' ); ?>
+	<?php get_template_part( 'inc/breadcrumbs', 'child' ); ?>
 
 	<div id="stage" class="inner" role="main">
 
