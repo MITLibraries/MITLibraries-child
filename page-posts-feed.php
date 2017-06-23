@@ -8,7 +8,7 @@
  * different template.
  *
  * @package MIT_Libraries_Child
- * @since Twenty Twelve 1.0
+ * @since Twenty Twelve 2.2.2
  */
 
 $pageRoot = getRoot( $post );
