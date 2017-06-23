@@ -15,7 +15,7 @@
 				<div class="entry-categories">
 					<div class="entry-cats-list">
 
-							<a href="<?php echo esc_url( $cat_link ); ?>"><span class="category-bg"><span class="category-init"><?php echo esc_attr( substr( get_field( 'location' ),0,1 ) ); ?></span></span><span class="cat-name"><?php the_field( 'location' ) ?> Exhibit</span></a>
+							<a href="/exhibits/<?php echo esc_attr( str_replace( ' ','-',get_field( 'location' ) ) ); ?>"><span class="category-bg"><span class="category-init"><?php echo esc_attr( substr( get_field( 'location' ),0,1 ) ); ?></span></span><span class="cat-name"><?php the_field( 'location' ) ?> Exhibit</span></a>
 					
 					</div>
 		</div>
