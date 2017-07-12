@@ -30,9 +30,9 @@ get_template_part( 'inc/breadcrumbs', 'category' ); ?>
 			<div class="entry-content">
 				
 				<?php if ( is_category() ) {
-					echo '<h2>';
+					echo '<h1>';
 					single_cat_title();
-					echo '</h2>';
+					echo '</h1>';
 					}
 				?>
 				<div id="sticky-posts-2" class="widget-1 widget-first widget-last widget-odd hide-title widget widget_ultimate_posts" role="complementary">
