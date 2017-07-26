@@ -1411,6 +1411,8 @@ a.px14 {
 	}
 }
 
+/** MOH styles **/
+
 .home .video {
     float: left;
     width: 50%
@@ -1473,7 +1475,7 @@ background: #ede8e2;
     margin: 10px 15px;
     width: 40%;
     border: 1px solid #ccc;
-    width: 220px;
+    width: 350px;
     border-radius: 3px;
     overflow: hidden;
     background-color: #fff;
@@ -1829,6 +1831,43 @@ th.moh-column-one, td.moh-column-one, th.moh-column-two, td.moh-column-two {
         width: 100% !important;
 	}
 
+}
+.page-template-page-moh-home-php .title-page h2 {
+    padding: 0.5em 0;
+}
+
+table.tablepress {
+    border-top: 1px solid #ededed;
+    color: #666;
+    width: 100%;
+}
+
+.tablepress {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin-bottom: 1em;
+    border: none;
+}
+
+table.tablepress tr:first-child {
+    border-top: 1px solid #ededed;
+}
+
+table.tablepress tr:nth-child(2n+1), tablepress {
+    background: #f5f5f5;
+}
+
+.th-title {
+    display: none;
+}
+.single-interviews .info-meta {
+    margin-bottom: 1.25rem;
+    padding: 0 0 0 1.25rem;
+}
+
+.single-interviews .expandable {
+    margin-bottom: 1.25rem;
 }
 
 @media screen and (min-width:560px) and (max-width:960px) {

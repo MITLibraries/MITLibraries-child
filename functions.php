@@ -309,6 +309,24 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 
 
 /**
+ * Sort interviews function for MOH
+ *
+ * @param type $a post.
+ * @param type $b taxonomy.
+ */
+function sortInterviews( $a, $b ) {
+
+	$aval = get_the_time( 'Ymd', $a->term_id );
+	$bval = get_the_time( 'Ymd', $b->term_id );
+
+	if ( $aval == $bval ) {
+		return 0;
+	}
+	return ($aval > $bval) ? 1 : -1;
+
+}
+
+/**
  * Address CPTonomies plugin bug
  *
  * @param type $post post.

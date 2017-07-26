@@ -20,8 +20,8 @@ get_header();
 <?php get_template_part( 'inc/breadcrumbs','sitename' );
 ?>
 
-<div id="stage" role="main">
-		<?php get_template_part( 'inc/postHead' ); ?>
+<div id="stage" class="inner" role="main">
+	<?php get_template_part( 'inc/postHead' ); ?>
 
 	<div class="title-page flex-container">
 		<h2><?php the_title(); ?></h2>
@@ -204,5 +204,5 @@ get_header();
 		<?php endwhile; ?>
 	</div><!-- end div#content -->
 </div><!-- end div.stage -->
-
+<script type='text/javascript' src='/music-oral-history/wp-content/themes/libraries-new-child/js/libs/3playmedia.js?ver=3.0'></script>
 <?php get_footer(); ?>
