@@ -18,7 +18,7 @@ $tag_query = intval( @$_GET[ 'topic' ] );
 $interviewees = new WP_Query( '&order=ASC&meta_key=wpcf-sort-order&orderby=meta_value&post_type=interviewees&posts_per_page=-1' . $cat . $tag );
 
 
-get_header();
+get_header( 'option' );
 
 
 

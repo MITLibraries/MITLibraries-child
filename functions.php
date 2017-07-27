@@ -351,3 +351,29 @@ function get_the_terms_override( $post, $taxonomy ) {
 	return $terms;
 }
 
+//adding setting for copyright text
+add_action('customize_register', 'theme_menu_style_customizer');
+
+function theme_menu_style_customizer($wp_customize) {
+    //adding section in wordpress customizer   
+    $wp_customize->add_section('menu_style_section', array(
+        'title'          => 'Menu Style'
+    ));
+
+    //adding setting for copyright text
+    $wp_customize->add_setting('text_setting', array(
+        'default'        => 'Full Menu',
+        'type' 			 => 'option',
+    ));
+
+    $wp_customize->add_control('text_setting', array(
+        'label'   => 'Menu Style',
+        'section' => 'menu_style_section',
+        'type'    => 'radio',
+         'choices'    => array(
+            'full' => 'Full Menu',
+            'slim' => 'Slim No Menu',
+        ),
+    ));
+}
+
