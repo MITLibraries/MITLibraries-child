@@ -351,7 +351,7 @@ function get_the_terms_override( $post, $taxonomy ) {
 	return $terms;
 }
 
-//adding setting for copyright text
+//adding setting for menu style
 add_action('customize_register', 'theme_menu_style_customizer');
 
 function theme_menu_style_customizer($wp_customize) {
@@ -360,13 +360,13 @@ function theme_menu_style_customizer($wp_customize) {
         'title'          => 'Menu Style'
     ));
 
-    //adding setting for copyright text
-    $wp_customize->add_setting('text_setting', array(
+    //adding setting for menu style
+    $wp_customize->add_setting('menu_style_setting', array(
         'default'        => 'Full Menu',
         'type' 			 => 'option',
     ));
 
-    $wp_customize->add_control('text_setting', array(
+    $wp_customize->add_control('menu_style_setting', array(
         'label'   => 'Menu Style',
         'section' => 'menu_style_section',
         'type'    => 'radio',

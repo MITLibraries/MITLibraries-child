@@ -6,14 +6,14 @@ $pageRoot = getRoot($post);
 $section = get_post($pageRoot);
 $isRoot = $section->ID == $post->ID;
 
-get_header();
+get_header( 'child' );
 
 ?>
 <?php
 
-		get_template_part( 'inc/breadcrumbs','sitename' );
+get_template_part( 'inc/breadcrumbs','sitename' );
 
-	?>
+?>
 
 <?php while ( have_posts() ) : the_post(); ?>		
 		
