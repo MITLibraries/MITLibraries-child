@@ -10,7 +10,7 @@
 
 ?>
 <?php
-if ( get_option( 'menu_style_setting' ) = 'slim' ) {
+if ( get_option( 'menu_style_setting' ) == 'slim' ) {
 	get_header( 'slim' );
 } else {
 	get_header();
