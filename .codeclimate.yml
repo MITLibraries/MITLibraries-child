@@ -69,3 +69,4 @@ exclude_paths:
 - js/jquery.flexslider-min.js
 - js/jquery.flexslider.js
 - navwalker.php
+- js/libs/*
