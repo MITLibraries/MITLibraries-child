@@ -63,7 +63,7 @@ get_header( 'child' );
 				<?php
 
 				$tags = get_the_terms( $interviewee->ID, 'post_tag' );
-				foreach ( $tags as $tag) {
+				foreach ( $tags as $tag ) {
 					$selected = ( $tag->term_id == $tag_query ) ? ' selected' : '';
 					echo '<li><a href="' . home_url() . '/interviewees/?topic=' . $tag->term_id . '">' . $tag->name . '</a></li>';
 				}
@@ -74,12 +74,12 @@ get_header( 'child' );
 				<?php
 
 				$audio = types_render_field( 'audio', array(
-					'link'		=> 'true',
-					'title'		=> 'Download (MP3)'
+					'link' => 'true',
+					'title'	=> 'Download (MP3)'
 				) );
 				$transcript = types_render_field( 'transcript', array(
-					'link'		=> 'true',
-					'title'		=> 'Transcript (PDF)'
+					'link' => 'true',
+					'title' => 'Transcript (PDF)'
 				) );
 				$cd = types_render_field( 'cd' );
 				$print = types_render_field( 'print' );
@@ -130,7 +130,10 @@ get_header( 'child' );
 
 			$output_header_3 = do_shortcode( '[types field="sidebar_header_3" id="' . $interviewee->ID . '"]' );
 			$output_content_3 = do_shortcode( '[types field="sidebar_content_3" id="' . $interviewee->ID . '"]' );
-			if ( $output_header_3 && $output_content_3 ) { $no_sidebar = false; }
+			if ( $output_header_3 && $output_content_3 ) 
+				{ 
+					$no_sidebar = false; 
+				}
 
 			?>
 			
