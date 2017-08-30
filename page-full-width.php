@@ -7,7 +7,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  */
 
-get_header();
+get_header( 'child' );
 
 get_template_part( 'inc/breadcrumbs', 'child' ); ?>
 
