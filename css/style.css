@@ -1410,3 +1410,476 @@ a.px14 {
 		font-size: 14px;
 	}
 }
+
+/** MOH styles **/
+
+.home .video {
+    float: left;
+    width: 50%
+}
+
+.home .entry-content {
+    display: block;
+    padding-right: 32px;
+    padding-right: 2rem;
+    float: left;
+    width: 50%;
+}
+.content-main .col-2 {
+    min-width: 18em;
+    width: auto;
+}
+
+.col-2 .sidebarWidgets {
+    background: #ede8e2;
+    padding: 1rem;
+}
+
+.col-2 .sidebar {
+    width: 100%;
+background: #ede8e2;
+}
+
+.post-type-archive-interviewees #content,
+.single-interviews #content { 
+	width: 100%;
+}
+
+.post-type-archive-interviewees #filters {
+	padding-bottom: 20px;
+	width: 100%;
+}
+
+.post-type-archive-interviewees #filters select {
+	margin: 0 10px 0 0;
+	font-weight: bold;
+}
+
+.post-type-archive-interviewees #filters button {
+	margin: 10px;
+	height:44px;
+	border: 1px solid #338bc5;
+	color: #fff;
+	padding: 0 20px;
+	background: #338bc5;
+}
+
+.post-type-archive-interviewees #filters button:hover {
+	background: #f89406;
+	border: 1px solid #f89406;
+}
+
+.select-style-first,
+.select-style-second {
+    padding: 0;
+    margin: 10px 15px;
+    width: 40%;
+    border: 1px solid #ccc;
+    width: 350px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+    background: #fff url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 90% 50%;
+    float: left;
+}
+
+
+
+.select-style-first select,
+.select-style-second select {
+    padding: 15px 20px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.select-style-first select:focus,
+.select-style-second select:focus {
+    outline: none;
+}
+
+option.uppercase {
+	text-transform: uppercase !important;
+}
+
+/* Interviews */
+
+#playerWrap {
+    width: 48%;
+    float: left;
+}
+
+#interviewContents {
+    width: 48%;
+    float: right;
+}
+
+.single-interviews .title h2 {
+	font-size: 23px;
+	font-weight: normal;
+	position: relative;
+	top: 2px;
+}
+
+.single-interviews #titlebar {
+	background: #f2f0f0;
+	font-size: 12px;
+	margin-left: 0;
+}
+
+.single-interviews #titlebar .span9 {
+	padding-top: 10px;
+}
+
+.single-interviews #titlebar .inline {
+	margin-top: 11px;
+}
+
+.single-interviews #titlebar .inline li {
+	color: #999;
+	display: inline;
+	line-height: 1.7;
+	margin-right: 5px;
+}
+
+.single-interviews #titlebar .inline li i {
+	font-size: 20px;
+	position: relative;
+	top: 3px;
+}
+
+.single-interviews #titlebar .inline li i.icon-folder-close {
+	font-size: 15px;
+	margin-left: 2px;
+	margin-right: 5px;
+	top: 1px;
+}
+
+.single-interviews #titlebar .tags li:first-child {
+	margin-right: 1px;
+}
+
+.single-interviews #titlebar .tags a {
+	background: #dadada;
+	border-radius: 3px;
+	color: #666;
+	display: inline-block;
+	margin-bottom: 5px;
+	padding: 1px 6px 0;
+}
+
+.single-interviews #titlebar .tags a:hover {
+	background: #cacaca;
+	text-decoration: none;
+}
+
+.single-interviews #titlebar .links li {
+	color: #3c3a79; margin-right: 14px;
+}
+
+.single-interviews #titlebar .links,
+.single-interviews #titlebar .links li i {
+	color: #3c3a79;
+}
+
+.single-interviews #titlebar .links a {
+	text-decoration: underline;
+}
+
+.single-interviews #titlebar .links a:hover {
+	text-decoration: none;
+}
+
+.single-interviews #titlebar .links .cd {
+	margin-right: 3px;
+	position:relative;
+	top:3px;
+}
+
+.single-interviews #titlebar .post-thumbnail img {
+	background: #ddd;
+	border-radius: 0;
+	box-shadow: none;
+	float: right;
+	height: auto;
+	width: 150px;
+}
+
+.single-interviews #contents h3 {
+	font-size: 16px;
+}
+
+.single-interviews #contents h3.inverse {
+	background: #333;
+	color: #fff;
+	padding: 1px 10px;
+}
+
+.single-interviews #contents .dataTables_info {
+	margin-bottom: 8px;
+}
+
+.single-interviews table.tablepress th, 
+.single-interviews table.tablepress td {
+	padding: 8px;
+}
+
+.single-interviews #contents table.tablepress thead {
+	display: none;
+}
+
+/* MB padding rule changed from 1px 10px to 3px 10px - should be switched back when play icons are re-enabled */
+.single-interviews #contents table.tablepress tbody td {
+	background-image: none;
+	border: 0;
+	height: auto;
+	line-height: 1.3;
+	min-height: auto;
+	padding: 3px 10px;
+}
+
+.single-interviews #contents .column-1 {
+	color: #333;
+	font-size: 22px;
+}
+
+/* MB Added display: none to hide play icon - should be re-enabled when play buttons are functional */
+.single-interviews #contents .column-1 i {
+	display: none;
+	position: relative;
+	top: 2px;
+}
+
+.single-interviews #contents .column-3 {
+	text-align: right;
+}
+
+.single-interviews #contents a {
+	text-decoration: none;
+}
+
+.single-interviews #contents a:hover {
+	text-decoration: underline;
+}
+
+.single-interviews #contents .arrows {
+	margin-left: 3px;
+}
+
+.single-interviews #contents .arrows li {
+	margin-top: 5px;
+}
+
+.single-interviews #tables .tabcontent {
+	width: auto;
+}
+
+.single-interviews #tables .tabcontent .tab {
+	padding: 20px 0 0;
+}
+
+.single-interviews #tables table.tablepress .arrows,
+.single-interviews #tables table.tablepress .arrows li {
+	margin-bottom: 0;
+}
+
+.single-interviews #tables table.tablepress tbody td {
+	background: url(images/divider-small.gif) center right no-repeat;
+}
+
+.single-interviews #tables table.tablepress .row-hover tr:hover td {
+	background: #ddd url(images/divider-small.gif) center right no-repeat;
+}
+
+.single-interviews #tables table.tablepress tbody td:last-child,
+.single-interviews #tables table.tablepress .row-hover tr:hover td:last-child { background-image: none;
+}
+
+.single-interviews #tables #tab1 table.tablepress .column-1,
+.single-interviews #tables #tab2 table.tablepress .column-1 {
+	color: #444;
+	font-weight: bold;
+}
+
+.single-interviews #biography h2.heading {
+	margin-bottom: 9px;
+}
+
+.single-interviews #biography #sidebarContent {
+	margin-top: 8px;
+}
+
+.single-interviews #biography #sidebarContent h3 {
+	color: #666 !important;
+}
+
+
+.post-thumbnail img {
+	border: 1px solid #333 !important;
+	width: 97px;
+	height: 97px;
+}
+table.tablepress tfoot th, table.tablepress thead th {
+    background: #fff;
+    border: 0;
+    color: #333;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 13px 20px;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+.tablepress tfoot th, .tablepress thead th {
+    background-color: #d9edf7;
+    font-weight: 700;
+    vertical-align: middle;
+}
+.tablepress thead th {
+    border-bottom: 1px solid #ddd;
+}
+.tablepress td, .tablepress th {
+    padding: 8px;
+    border: none;
+    background: 0 0;
+    text-align: left;
+    float: none !important;
+}
+th.moh-column-one, td.moh-column-one, th.moh-column-two, td.moh-column-two {
+    width: 10%;
+}
+.mobile-include {
+    display: none;
+}
+
+
+@media screen and (max-width:760px) {
+	.entry-content {
+	padding: 0 1em !important;
+	}
+	
+	table.tablepress .row-hover tr:hover td {
+	background: none !important;
+	}
+	
+	table.tablepress tbody td {
+	border-bottom: none !important;
+	padding: 10px 20px !important; 
+	font-size: .8em;
+	width: 100% !important;
+	display: block;
+	float: left !important;
+	height: auto;
+	}	
+		
+	.tablepress th {
+	display: none
+	}
+	
+	.tablepress td {
+	float: left !important;
+	}
+	
+	td.moh-column-one {
+	display: none !important;
+	}
+	
+	td.moh-column-two .mobile-include {
+	display: block;
+	float: left;
+	border: 1px solid #ddd;
+	}
+	
+	.tablepress td h3.interviewee-name {
+	font-size: 21px;
+	padding: 10px 0 !important
+	}
+	
+	td.post-thumbnail {
+	display: none;
+	}
+	
+	.mobile-include img {
+	width: 100px;
+	height: 100px;
+	float: left;
+	}
+	
+	.th-title {
+	width: 45%;
+	float: left;
+	padding-right: 10px !important;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	}
+	
+	span.mobile-right {
+	width: 55%;
+	float: right;
+	}
+	
+	.tablepress tbody tr:first-child td {
+	border-top: 1px solid #ddd !important;
+	}
+
+    #playerWrap,
+    #interviewContents{
+        width: 100% !important;
+	}
+
+}
+.page-template-page-moh-home-php .title-page h2 {
+    padding: 0.5em 0;
+}
+
+table.tablepress {
+    border-top: 1px solid #ededed;
+    color: #666;
+    width: 100%;
+}
+
+.tablepress {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin-bottom: 1em;
+    border: none;
+}
+
+table.tablepress tr:first-child {
+    border-top: 1px solid #ededed;
+}
+
+table.tablepress tr:nth-child(2n+1), tablepress {
+    background: #f5f5f5;
+}
+
+.th-title {
+    display: none;
+}
+.single-interviews .info-meta {
+    margin-bottom: 1.25rem;
+    padding: 0 0 0 1.25rem;
+}
+
+.single-interviews .expandable {
+    margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width:560px) and (max-width:960px) {
+
+	.childTheme .header-main .logo-mit-lib svg {
+	width: 75% !important;
+	float: left;
+	}
+	
+	.nav-moh .link-primary {
+	padding-top: 1.5em !important;
+	}
+
+}
+

@@ -6,7 +6,7 @@
  * @since Twenty Twelve 1.0
  */
 
-get_header();
+get_header( 'child' );
 ?>
 
 	<?php get_template_part( 'inc/breadcrumbs', 'child' ); ?>
