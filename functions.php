@@ -306,3 +306,60 @@ function get_first_post_image() {
  * Remove native Gallery styling
  */
 add_filter( 'use_default_gallery_style', '__return_false' );
+
+
+
+/**
+ * Address CPTonomies plugin bug
+ *
+ * @param type $post post.
+ * @param type $taxonomy taxonomy.
+ */
+function get_the_terms_override( $post, $taxonomy ) {
+	if ( ! $post = get_post( $post ) ) {
+		return false;
+	}
+
+	$terms = wp_get_object_terms( $post->ID, $taxonomy );
+	if ( ! is_wp_error( $terms ) ) {
+		$term_ids = wp_list_pluck( $terms, 'term_id' );
+		wp_cache_add( $post->ID, $term_ids, $taxonomy . '_relationships' );
+	}
+	$terms = apply_filters( 'get_the_terms', $terms, $post->ID, $taxonomy );
+
+	if ( empty( $terms ) ) {
+		return false;
+	}
+
+	return $terms;
+}
+
+/**
+ * Add menu style option
+ *
+ */
+add_action('customize_register', 'theme_menu_style_customizer');
+
+function theme_menu_style_customizer($wp_customize) {
+    //adding section in wordpress customizer   
+    $wp_customize->add_section('menu_style_section', array(
+        'title'          => 'Menu Style'
+    ));
+
+    //adding setting for menu style
+    $wp_customize->add_setting('menu_style_setting', array(
+        'default'        => 'Full Menu',
+        'type' 			 => 'option',
+    ));
+
+    $wp_customize->add_control('menu_style_setting', array(
+        'label'   => 'Menu Style',
+        'section' => 'menu_style_section',
+        'type'    => 'radio',
+         'choices'    => array(
+            'full' => 'Full Menu',
+            'slim' => 'Slim No Menu',
+        ),
+    ));
+}
+
