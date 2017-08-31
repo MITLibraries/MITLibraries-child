@@ -334,32 +334,33 @@ function get_the_terms_override( $post, $taxonomy ) {
 	return $terms;
 }
 
+
+add_action( 'customize_register', 'theme_menu_style_customizer' );
+
 /**
  * Add menu style option
  *
+ * @param type $wp_customize wp_customize.
  */
-add_action('customize_register', 'theme_menu_style_customizer');
+function theme_menu_style_customizer( $wp_customize ) {
 
-function theme_menu_style_customizer($wp_customize) {
-    //adding section in wordpress customizer   
-    $wp_customize->add_section('menu_style_section', array(
-        'title'          => 'Menu Style'
-    ));
+	$wp_customize->add_section('menu_style_section', array(
+		'title' => 'Menu Style',
+	));
 
-    //adding setting for menu style
-    $wp_customize->add_setting('menu_style_setting', array(
-        'default'        => 'Full Menu',
-        'type' 			 => 'option',
-    ));
+	$wp_customize->add_setting('menu_style_setting', array(
+		'default' => 'Full Menu',
+		'type' => 'option',
+	));
 
-    $wp_customize->add_control('menu_style_setting', array(
-        'label'   => 'Menu Style',
-        'section' => 'menu_style_section',
-        'type'    => 'radio',
-         'choices'    => array(
-            'full' => 'Full Menu',
-            'slim' => 'Slim No Menu',
-        ),
-    ));
+	$wp_customize->add_control('menu_style_setting', array(
+		'label'   => 'Menu Style',
+		'section' => 'menu_style_section',
+		'type'    => 'radio',
+		'choices'    => array(
+			'full' => 'Full Menu',
+			'slim' => 'Slim No Menu',
+		),
+	));
 }
 
