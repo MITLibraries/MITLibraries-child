@@ -345,7 +345,7 @@ add_action( 'customize_register', 'theme_menu_style_customizer' );
 function theme_menu_style_customizer( $wp_customize ) {
 
 	$wp_customize->add_section('menu_style_section', array(
-		'title'	=> 'Menu Style',
+		'title' => 'Menu Style',
 	));
 
 	$wp_customize->add_setting('menu_style_setting', array(
