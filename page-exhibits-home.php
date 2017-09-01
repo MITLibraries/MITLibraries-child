@@ -9,7 +9,7 @@
  * @since Twenty Twelve 1.0
  */
 
-get_header(); ?>
+get_header( 'child' ); ?>
 
 <?php // Get today's date in the right format.
 $todaysDate = date( 'm/d/Y H:i:s' );

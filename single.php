@@ -7,7 +7,7 @@
  * @since 2.1.0
  */
 
-get_header();
+get_header( 'child' );
 
 get_template_part( 'inc/breadcrumbs', 'child' );
 

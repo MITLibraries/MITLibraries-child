@@ -306,3 +306,33 @@ function get_first_post_image() {
  * Remove native Gallery styling
  */
 add_filter( 'use_default_gallery_style', '__return_false' );
+
+add_action( 'customize_register', 'theme_menu_style_customizer' );
+
+/**
+ * Add menu style option
+ *
+ * @param type $wp_customize wp_customize.
+ */
+function theme_menu_style_customizer( $wp_customize ) {
+
+	$wp_customize->add_section('menu_style_section', array(
+		'title' => 'Menu Style',
+	));
+
+	$wp_customize->add_setting('menu_style_setting', array(
+		'default' => 'Full Menu',
+		'type' => 'option',
+	));
+
+	$wp_customize->add_control('menu_style_setting', array(
+		'label'   => 'Menu Style',
+		'section' => 'menu_style_section',
+		'type'    => 'radio',
+		'choices'    => array(
+			'full' => 'Full Menu',
+			'slim' => 'Slim No Menu',
+		),
+	));
+}
+

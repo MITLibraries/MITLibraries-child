@@ -11,7 +11,7 @@
  * @since Twenty Twelve 1.0
  */
 
-get_header(); ?>
+get_header( 'child' ); ?>
 
 	<?php if ( is_front_page() ) {
 
