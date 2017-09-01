@@ -309,9 +309,6 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 
 add_action( 'customize_register', 'theme_menu_style_customizer' );
 
-
-add_action( 'customize_register', 'theme_menu_style_customizer' );
-
 /**
  * Add menu style option
  *

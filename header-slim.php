@@ -1,6 +1,6 @@
 <?php
 /**
- * The Header for our theme.
+ * Simplified slim header with no Libraries site navigation
  *
  * Displays all of the <head> section and everything up till div#breadcrumb
  *
