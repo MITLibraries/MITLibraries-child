@@ -37,7 +37,7 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 					$cats = array();
 					foreach ( get_the_category( $post_id ) as $cat ) {
 						$categ = get_category( $cat );
-						array_push( $cats, $categ -> name );
+						array_push( $cats, $categ->name );
 					}
 
 					$post_categories = implode( ', ', $cats );
