@@ -48,6 +48,17 @@ b, strong {
 }
 
 /* ---- Begin Child Page Content Styles ---- */
+
+.childTheme .header-slim .name-site {
+	margin: .5rem 1.5%;
+	padding: 0;
+}
+
+.childTheme .header-slim .logo-mit-lib svg {
+	max-height: 2rem;
+}
+
+
 .childTheme .betterBreadcrumbs {
 	background:#eceaea;
 	font-size:.75rem;
