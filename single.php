@@ -27,8 +27,6 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 
 				<div class="article-head">
 
-					<span class="meta-header">News</span>
-
 					<h2><?php the_title(); ?></h2>
 
 					<p class="entry-meta"> posted <?php
