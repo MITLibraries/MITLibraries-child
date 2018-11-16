@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying a post as a search result.
+ * The template for displaying a post as a search result. - DEPRECATED for content-search
  *
  * @package MIT_Libraries_Child
  * @since 2.2.1

@@ -26,8 +26,7 @@ get_template_part( 'inc/breadcrumbs', 'category' ); ?>
 	<?php get_template_part( 'inc/postHead' ); ?>
 		
 	<div id="content" class="content has-sidebar">
-		<div class="main-content">
-			<div class="entry-content">
+		<div class="content-main main-content">
 				
 				<?php if ( is_category() ) {
 					echo '<h1>';
@@ -36,6 +35,7 @@ get_template_part( 'inc/breadcrumbs', 'category' ); ?>
 					}
 				?>
 				<div id="sticky-posts-2" class="widget-1 widget-first widget-last widget-odd hide-title widget widget_ultimate_posts" role="complementary">
+
 					<?php
 					if ( have_posts() ) : ?>
 						<div class="upw-posts hfeed">

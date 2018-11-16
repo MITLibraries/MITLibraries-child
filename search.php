@@ -14,23 +14,20 @@ get_header( 'child' ); ?>
 
 	<?php get_template_part( 'inc/postHead' ); ?>
 
-	<div id="content" class="allContent hasSidebar group">
+	<div id="content" class="content has-sidebar">
 
-		<div class="mainContent group">
+		<div class="content-main main-content">
 
 			<?php if ( have_posts() ) : ?>
 
-				<?php /* translators: Header containing submitted search string */ ?>
 				<h2 class="page-title search-title"><?php printf( esc_html__( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
 
-				<?php twentytwelve_content_nav( 'nav-above' ); ?>
+					<?php /* Start the Loop */ ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+						<?php get_template_part( 'inc/content', 'search' ); ?>
 
-					<?php get_template_part( 'inc/post', 'searchresult' ); ?>
-
-				<?php endwhile; ?>
+					<?php endwhile; ?>
 
 				<?php twentytwelve_content_nav( 'nav-below' ); ?>
 

@@ -47,13 +47,13 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 
 				</div>
 
-				<div class="entry-content">
+				<div class="entry-content clearfix">
 					<?php the_content(); ?>
 				</div>
 
 				<ul class="post-navigation">
-			        <li><?php previous_post_link( '%link', 'Previous Post', 'no' ) ?></li>
-			        <li><?php next_post_link( '%link', 'Next Post', 'no' ) ?></li>
+			        <li><?php previous_post_link( '%link', 'Previous', 'no' ) ?></li>
+			        <li><?php next_post_link( '%link', 'Next', 'no' ) ?></li>
 		        </ul>
 		
 			<?php endwhile; // End of the loop. ?>
@@ -80,16 +80,17 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 					<hr/>
 					<div>
 					<h3>Related posts</h3>
-						<ul>
+						<ul class="relateds">
 						<?php
 						while ( $related_query->have_posts() ) : $related_query->the_post(); ?>
 
-							<div class="relatedthumb">
-							    <li><a rel="external" href="<?php the_permalink()?>">
-							    <?php the_post_thumbnail( array( 100, 100 ) ); ?> &nbsp;
+					    <li class="related">
+					    	<?php the_post_thumbnail( array( 100, 100 ) ); ?>
+					    	<a class="related-title" href="<?php the_permalink()?>">
 							    <?php the_title(); ?>
-							    </a></li>
-							</div>
+						    </a>
+						  </li>
+
 						<?php endwhile; ?>
 						</ul>
 					</div>
