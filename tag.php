@@ -1,6 +1,6 @@
 <?php
 /**
- *  The template for displaying Category pages.
+ *  The template for displaying Tag pages.
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *

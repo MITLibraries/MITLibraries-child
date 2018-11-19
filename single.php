@@ -27,22 +27,10 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 
 				<div class="article-head">
 
-					<h2><?php the_title(); ?></h2>
+					<h2 class="entry-title"><?php the_title(); ?></h2>
 
-					<p class="entry-meta"> posted <?php
-					the_time( 'F j, Y' );
-
-					$cats = array();
-					foreach ( get_the_category( $post_id ) as $cat ) {
-						$categ = get_category( $cat );
-						array_push( $cats, $categ->name );
-					}
-
-					$post_categories = implode( ', ', $cats );
-
-					echo ' in ' . esc_html( $post_categories );
-
-					?>
+					<p class="entry-meta">
+						Posted on <?php the_date(); ?> in <?php the_category( ', ' ); ?>
 					</p>
 
 				</div>
@@ -52,28 +40,28 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 				</div>
 
 				<ul class="post-navigation">
-			        <li><?php previous_post_link( '%link', 'Previous', 'no' ) ?></li>
-			        <li><?php next_post_link( '%link', 'Next', 'no' ) ?></li>
-		        </ul>
+							<li><?php previous_post_link( '%link', 'Previous', 'no' ); ?></li>
+							<li><?php next_post_link( '%link', 'Next', 'no' ); ?></li>
+						</ul>
 		
 			<?php endwhile; // End of the loop. ?>
 			
 			<?php
-		  	global $post;
-		  	$tags = wp_get_post_tags( $current_post_id );
-		   	$tagcount = count( $tags );
+				global $post;
+				$tags = wp_get_post_tags( $current_post_id );
+				$tagcount = count( $tags );
 
 			if ( $tagcount > 0 ) {
-			 	$tag_ids = array();
-		  		foreach ( $tags as $individual_tag ) {
-		  			$tag_ids[] = $individual_tag->term_id;
+				$tag_ids = array();
+				foreach ( $tags as $individual_tag ) {
+					$tag_ids[] = $individual_tag->term_id;
 					$args = array(
-					  	'tag__in' => $tag_ids,
-					  	'post__not_in' => array( $current_post_id ),
-					  	'posts_per_page' => 3,
-					  	);
+						'tag__in' => $tag_ids,
+						'post__not_in' => array( $current_post_id ),
+						'posts_per_page' => 3,
+						);
 				}
-			  	$related_query = new WP_Query( $args );
+					$related_query = new WP_Query( $args );
 
 				if ( $related_query->have_posts() ) :
 				?>
@@ -84,18 +72,18 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 						<?php
 						while ( $related_query->have_posts() ) : $related_query->the_post(); ?>
 
-					    <li class="related">
-					    	<?php the_post_thumbnail( array( 100, 100 ) ); ?>
-					    	<a class="related-title" href="<?php the_permalink()?>">
-							    <?php the_title(); ?>
-						    </a>
-						  </li>
+							<li class="related">
+								<?php the_post_thumbnail( array( 100, 100 ) ); ?>
+								<a class="related-title" href="<?php the_permalink(); ?>">
+									<?php the_title(); ?>
+								</a>
+							</li>
 
 						<?php endwhile; ?>
 						</ul>
 					</div>
 				<?php endif;?>
-		   
+			 
 			<?php
 
 			}
