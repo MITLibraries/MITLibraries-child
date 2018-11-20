@@ -168,6 +168,7 @@ b, strong {
 	padding:.5rem;
 	margin: .5rem 0;
 	display: inline-block;
+	text-decoration: none;
 }
 
 .post-navigation li a:hover,
@@ -398,6 +399,11 @@ nav.navbar.navbar-default {
 	font-size: 24px;
 }
 
+.entry-meta {
+	font-size: 12px;
+	color: #777;
+}
+
 .error404 p {
 	margin: 2em 0;
 }
@@ -602,7 +608,6 @@ dd.wp-caption-text {
 .main-content .post h2,.category .post h3,.search .post h3 {
 	font-size:24px;
 	line-height:28px;
-	margin-bottom:0;
 }
 
 .post h2 a,.category .post h3 a,.search .post h3 a {
