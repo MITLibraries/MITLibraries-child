@@ -103,7 +103,7 @@ script:
   # --standard: Use WordPress as the standard.
   # --report: Generate summary table (source) and line-by-line output (full)
   # --extensions: Only sniff PHP files.
-  - $WP_DEVELOP_DIR/php-codesniffer/scripts/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --report=source --report=full  --extensions=php
+  - $WP_DEVELOP_DIR/php-codesniffer/scripts/phpcs -p -s -v -n . --standard=./codesniffer.mitlib.xml --report=source --report=full  --extensions=php
 
 # Receive notifications for build results.
 # @link http://docs.travis-ci.com/user/notifications/#Email-notifications
