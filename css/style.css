@@ -845,6 +845,7 @@ dd.wp-caption-text {
 	font-size: 16px ;
 	font-weight: 600 ;
 }
+
 .childTheme .sidebar .widget {
 	background: none;
 	border-top: 2px solid #ddd;
@@ -852,6 +853,10 @@ dd.wp-caption-text {
 	padding: 0;
 	padding-bottom: 20px;
 	padding-top: 10px;
+}
+
+.childTheme .sidebar .widget_search input {
+	margin-bottom: 10px;
 }
 
 .childTheme .has-sidebar .sidebar {
