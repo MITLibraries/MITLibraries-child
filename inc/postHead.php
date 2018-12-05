@@ -37,7 +37,7 @@
 
 			</div>
 
-			<?php get_template_part( 'inc/header','image' ); ?>
+			<?php get_template_part( 'inc/header', 'image' ); ?>
 
 		</div>
 
@@ -48,7 +48,7 @@
 				<div class="child-page-title"><a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a></div>
 			</div>
 
-			<?php get_template_part( 'inc/header','image' ); ?>
+			<?php get_template_part( 'inc/header', 'image' ); ?>
 
 		</div>
 

@@ -7,26 +7,16 @@
  * @since Twenty Twelve 1.0
  */
 
-$pageRoot = getRoot( $post );
-$section = get_post( $pageRoot );
-$isRoot = $section->ID == $post->ID;
+get_header( 'child' ); ?>
 
-get_header(); ?>
-
-<?php get_template_part( 'inc/breadcrumbs' ); ?>
-
-<div class="betterBreadcrumbs hidden-phone" role="navigation" aria-label="breadcrumbs">
-  <span><a href="/">Libraries home</a></span>
-  <span><?php bloginfo(); ?></span>
-</div>
-
+<?php get_template_part( 'inc/breadcrumbs', 'sitename' ); ?>
 		
-<div id="stage" class="inner group" role="main">
+<div id="stage" class="inner" role="main">
 
 	<?php get_template_part( 'inc/postHead' ); ?>
-			
-		<div id="content" class="allContent hasSidebar group">
-			<div id="mainContent" class="mainContent">		
+
+	<div id="content" class="content has-sidebar">
+		<div class="content-main main-content">
 
 				<?php while ( have_posts() ) : the_post();?>
 
@@ -34,6 +24,7 @@ get_header(); ?>
 			
 				<?php endwhile; // End of the loop. ?>
 
+				<?php twentytwelve_content_nav( 'nav-below' ); ?>
 			</div>
 				
 				<?php get_sidebar(); ?>				

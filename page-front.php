@@ -15,7 +15,7 @@ get_header( 'child' ); ?>
 
 	<?php if ( is_front_page() ) {
 
-		get_template_part( 'inc/breadcrumbs','sitename' );
+		get_template_part( 'inc/breadcrumbs', 'sitename' );
 
 		} else {
 
