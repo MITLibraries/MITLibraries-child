@@ -61,6 +61,11 @@ b, strong {
 
 /* ---- Begin Child Page Content Styles ---- */
 
+.childTheme .header-slim {
+	justify-content: space-between;
+	padding: 0 1em;
+}
+
 .childTheme .header-slim .name-site {
 	margin: .5rem 1.5%;
 	padding: 0;
@@ -70,6 +75,14 @@ b, strong {
 	max-height: 2rem;
 }
 
+.childTheme .header-main.header-slim .link-site-search, 
+.childTheme .header-main.header-slim .link-account {
+	display: none;
+}
+
+.childTheme .header-main.header-slim .link-logo-mit {
+	display: block;
+}
 
 .childTheme .betterBreadcrumbs {
 	background:#eceaea;
