@@ -254,6 +254,20 @@ nav.navbar.navbar-default {
 		display:block;
 	}
 
+	/* make widgets sit in a row on bigger screens */
+	.childTheme .twoup-widget {
+		width: 47%;
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 2%;
+	}
+
+	.childTheme .threeup-widget {
+		width: 31%;
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 2%;
+	}
 }
 
 /* ---- Child Header ---- */
@@ -936,7 +950,13 @@ footer .footerHeader {
 }
 
 /* ---- Widgets ---- */
-.staff-widget {
+
+.childTheme .twoup-widget, 
+.childTheme .threeup-widget {
+	clear: both;
+}
+
+.childTheme .staff-widget {
 	float: left;
 	width: 30%;
 	margin-right: 5%;
