@@ -18,7 +18,7 @@ get_template_part( 'inc/breadcrumbs', 'child' ); ?>
 			<div id="content" class="content">
 				<?php while ( have_posts() ) : the_post(); ?>
 	
-					<?php get_template_part( 'inc/content', 'page' ); ?>
+					<?php get_template_part( 'inc/content', 'widgetized' ); ?>
 	
 				<?php endwhile; // End of the loop. ?>
 	
