@@ -967,6 +967,10 @@ footer .footerHeader {
 	border-top: none;
 }
 
+.childTheme .sidebar .collapse-top-margin {
+	margin-top: -30px;
+}
+
 .widget .button {
 	padding: 1em 0;
 	max-width: none;
