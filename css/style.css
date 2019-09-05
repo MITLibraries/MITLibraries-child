@@ -688,6 +688,34 @@ dd.wp-caption-text {
 	background:#eceaea;
 }
 
+/* Table styles */
+/* Numeric tables assume that the top and left rows are headers, but other
+cells are numbers (and thus right-justified) */
+table.numeric tbody td,
+table.numeric thead th {
+	text-align: right;
+}
+/* Left-align the left column (first thead and th, and tbody th) */
+table.numeric thead th:first-of-type,
+table.numeric tbody th {
+	text-align: left;
+}
+
+/* Pentagram-influence table style - black thead with white text, and
+light gray zebra-striping */
+table.pentagram thead th {
+	background: black;
+	color: white;
+}
+table.pentagram tbody tr:nth-of-type(even) {
+	background: #eee;
+}
+table.pentagram th,
+table.pentagram td {
+	padding: 8px;
+}
+
+
 .childTheme #dcrumb {
 	height:100%;
 	line-height:1;
