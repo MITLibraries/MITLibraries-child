@@ -699,6 +699,12 @@ dd.wp-caption-text {
 	display:inline-block;
 }
 
+body.childTheme.page-home {
+	background-color: #fff;
+	color: #000;
+
+}
+
 .childTheme.page-home .flexItem {
 	max-width:100%;
 }
