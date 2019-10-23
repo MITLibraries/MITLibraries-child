@@ -2,7 +2,7 @@
 Theme Name: MIT Libraries Child NEW
 Author: Lightning Trumpet & MIT Libraries
 Author URI: http://wordpress.org/
-Version: 2.2.2-@@branch-@@commit
+Version: 2.2.3-@@branch-@@commit
 
 Template: libraries
 
@@ -697,6 +697,11 @@ dd.wp-caption-text {
 
 .breadcrumbs {
 	display:inline-block;
+}
+
+body.childTheme.page-home {
+	background-color: #fff;
+	color: #000;
 }
 
 .childTheme.page-home .flexItem {
