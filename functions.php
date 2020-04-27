@@ -145,14 +145,17 @@ if ( ! function_exists( 'register_child_nav' ) ) {
 }
 
 // Gets post cat slug and looks for single-[cat slug].php and applies it.
-add_filter('single_template', create_function(
-		'$the_template',
-		'foreach( (array) get_the_category() as $cat ) {
-		if ( file_exists(STYLESHEETPATH . "/single-{$cat->slug}.php") )
-		return STYLESHEETPATH . "/single-{$cat->slug}.php"; }
-	return $the_template;' )
+add_filter(
+	'single_template',
+	function( $the_template ) {
+		foreach ( (array) get_the_category() as $cat ) {
+			if ( file_exists( get_stylesheet_directory() . "/single-{$cat->slug}.php" ) ) {
+				return get_stylesheet_directory() . "/single-{$cat->slug}.php";
+			}
+		}
+		return $the_template;
+	}
 );
-
 
 if ( function_exists( 'add_theme_support' ) ) { add_theme_support( 'post-thumbnails' ); }
 
