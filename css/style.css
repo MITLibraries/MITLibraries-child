@@ -2,7 +2,7 @@
 Theme Name: MIT Libraries Child NEW
 Author: Lightning Trumpet & MIT Libraries
 Author URI: http://wordpress.org/
-Version: 2.2.3-@@branch-@@commit
+Version: 2.2.4-@@branch-@@commit
 
 Template: libraries
 
@@ -961,10 +961,8 @@ footer .footerHeader {
 	clear: both;
 }
 
-.childTheme .staff-widget {
-	float: left;
-	width: 30%;
-	margin-right: 5%;
+.staff-widget {
+	margin-top: 1em;
 }
 
 .entry-content .staff-widget .textwidget,
@@ -1300,6 +1298,11 @@ a.px14 {
 		width: 100%;
 		margin-bottom: 50px;
 		float: none;
+	}
+
+	.childTheme .has-sidebar .sidebar {
+		clear: both;
+		padding-top: 50px;
 	}
 
 	ul.nav li.dropdown:hover > ul.dropdown-menu {
