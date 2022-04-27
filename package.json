@@ -21,7 +21,7 @@
   "homepage": "https://github.com/MITLibraries/MITLibraries-child#readme",
   "devDependencies": {
     "glob": "^7.1.2",
-    "grunt": "^1.0.1",
+    "grunt": "^1.5.2",
     "grunt-gitinfo": "^0.1.9",
     "grunt-replace-regex": "^1.0.3"
   },
