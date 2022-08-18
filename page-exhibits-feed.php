@@ -23,13 +23,13 @@ get_header( 'child' );
 
 			$current_query = new WP_Query(
 				array(
-					'posts_per_page' => 10,
+					'posts_per_page'      => 10,
 					'ignore_sticky_posts' => false,
-					'post_type'   => 'exhibits',  // Only query exhibits.
-					'meta_key'    => 'start_date',  // Load up the event_date meta.
-					'orderby'     => 'start_date',
-					'order'       => 'DESC',      // Descending, so later events first.
-					'meta_query'  => array( // The meta_query is an array of query items.
+					'post_type'           => 'exhibits',  // Only query exhibits.
+					'meta_key'            => 'start_date',  // Load up the event_date meta.
+					'orderby'             => 'start_date',
+					'order'               => 'DESC',      // Descending, so later events first.
+					'meta_query'          => array( // The meta_query is an array of query items.
 						array(
 							'key'     => 'start_date',     // Which meta to query.
 							'value'   => gmdate( 'Y-m-d' ),  // Value for comparison.
@@ -87,12 +87,12 @@ get_header( 'child' );
 
 		$future_query = new WP_Query(
 			array(
-				'post_type'   => 'exhibits',    // Only query exhibits.
-				'meta_key'    => 'start_date',  // Load up the event_date meta.
-				'orderby'    => 'start_date',
-				'order'       => 'ASC',
+				'post_type'      => 'exhibits',    // Only query exhibits.
+				'meta_key'       => 'start_date',  // Load up the event_date meta.
+				'orderby'        => 'start_date',
+				'order'          => 'ASC',
 				'posts_per_page' => 10,       // Descending, so later events first.
-				'meta_query'  => array(
+				'meta_query'     => array(
 					array(
 						'key'     => 'start_date',     // Which meta to query.
 						'value'   => gmdate( 'Y-m-d' ),  // Value for comparison.
