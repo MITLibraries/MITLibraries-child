@@ -43,30 +43,35 @@ $location_name = $categories[0]->name;
 			$current_query = new WP_Query(
 				array(
 					'post_type'           => 'exhibits',  // Only query exhibits.
+					'category_name'       => $location_name,
 					'posts_per_page'      => 10,
 					'ignore_sticky_posts' => false,
 					'meta_key'            => 'start_date',
 					'orderby'             => 'start_date',
 					'order'               => 'DESC',      // Descending, so later events first.
-					'meta_query'          => array(
+					'meta_query'          => array( // The meta_query is an array of query items.
+						'relation' => 'AND',
 						array(
 							'key'     => 'start_date',     // Which meta to query.
 							'value'   => gmdate( 'Y-m-d' ),  // Value for comparison.
 							'compare' => '<=',             // Method of comparison.
 							'type'    => 'DATE',
 						),
-						array(
-							'key'     => 'end_date',       // Which meta to query.
-							'value'   => gmdate( 'Y-m-d' ),  // Value for comparison.
-							'compare' => '>=',             // Method of comparison.
-							'type'    => 'DATE',
+						array( // Either exhibits with a future end date, or with no end date.
+							'relation' => 'OR',
+							array(
+								'key'     => 'end_date',       // Which meta to query.
+								'value'   => gmdate( 'Y-m-d' ),  // Value for comparison.
+								'compare' => '>=',             // Method of comparison.
+								'type'    => 'DATE',
+							),
+							array(
+								'key'     => 'end_date',       // Which meta to query.
+								'value'   => '',  // Value for comparison.
+								'compare' => '=',             // Method of comparison.
+								'type'    => 'CHAR',
+							),
 						),
-						array(
-							'key'     => 'location',       // Which meta to query.
-							'value'   => $location_name,  // Value for comparison.
-							'compare' => '=',             // Method of comparison.
-							'type'    => 'CHAR',
-						), // The meta_query is an array of query items.
 					), // End meta_query array.
 				) // End array.
 			); // Close WP_Query constructor call.
@@ -103,6 +108,7 @@ $location_name = $categories[0]->name;
 		$future_query = new WP_Query(
 			array(
 				'post_type'      => 'exhibits',  // Only query exhibits.
+				'category_name'  => $location_name,
 				'meta_key'       => 'start_date',
 				'posts_per_page' => 10,
 				'orderby'        => 'start_date',
@@ -113,12 +119,6 @@ $location_name = $categories[0]->name;
 						'value'   => gmdate( 'Y-m-d' ),  // Value for comparison.
 						'compare' => '>',             // Method of comparison.
 						'type'    => 'DATE',
-					),
-					array(
-						'key'     => 'location',       // Which meta to query.
-						'value'   => $location_name,  // Value for comparison.
-						'compare' => '=',             // Method of comparison.
-						'type'    => 'CHAR',
 					), // The meta_query is an array of query items.
 				), // End meta_query array.
 			) // End array.
@@ -156,6 +156,7 @@ $location_name = $categories[0]->name;
 		$past_query = new WP_Query(
 			array(
 				'post_type'      => 'exhibits',  // Only query exhibits.
+				'category_name'  => $location_name,
 				'meta_key'       => 'end_date',
 				'posts_per_page' => 5,
 				'orderby'        => 'end_date',
@@ -166,12 +167,6 @@ $location_name = $categories[0]->name;
 						'value'   => gmdate( 'Y-m-d' ),  // Value for comparison.
 						'compare' => '<',              // Method of comparison.
 						'type'    => 'DATE',
-					),
-					array(
-						'key'     => 'location',       // Which meta to query.
-						'value'   => $location_name,  // Value for comparison.
-						'compare' => '=',             // Method of comparison.
-						'type'    => 'CHAR',
 					), // The meta_query is an array of query items.
 				), // End meta_query array.
 			) // End array.

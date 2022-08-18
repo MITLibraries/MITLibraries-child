@@ -29,7 +29,7 @@ get_header( 'child' );
 					'meta_key'    => 'start_date',  // Load up the event_date meta.
 					'orderby'     => 'start_date',
 					'order'       => 'DESC',      // Descending, so later events first.
-					'meta_query'  => array(
+					'meta_query'  => array( // The meta_query is an array of query items.
 						array(
 							'key'     => 'start_date',     // Which meta to query.
 							'value'   => gmdate( 'Y-m-d' ),  // Value for comparison.
@@ -37,11 +37,20 @@ get_header( 'child' );
 							'type'    => 'DATE',
 						),
 						array(
-							'key'     => 'end_date',       // Which meta to query.
-							'value'   => gmdate( 'Y-m-d' ),  // Value for comparison.
-							'compare' => '>=',             // Method of comparison.
-							'type'    => 'DATE',
-						), // The meta_query is an array of query items.
+							'relation' => 'OR',
+							array(
+								'key'     => 'end_date',        // Which meta to query.
+								'value'   => gmdate( 'Y-m-d' ), // Value for comparison.
+								'compare' => '>=',              // Method of comparison.
+								'type'    => 'DATE',
+							),
+							array(
+								'key'     => 'end_date',       // Which meta to query.
+								'value'   => '',               // Value for comparison.
+								'compare' => '=',              // Method of comparison.
+								'type'    => 'CHAR',
+							),
+						),
 					), // End meta_query array.
 				) // End array.
 			); // Close WP_Query constructor call.
