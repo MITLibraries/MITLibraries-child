@@ -19,26 +19,26 @@ get_header( 'child' );
 
 			<div class="main-content">
 
-		<?php
+			<?php
 
 			$current_query = new WP_Query(
 				array(
-					'post_type'   => 'exhibits',  // Only query exhibits.
-					'posts_per_page' => 10,
+					'post_type'           => 'exhibits',  // Only query exhibits.
+					'posts_per_page'      => 10,
 					'ignore_sticky_posts' => false,
-					'meta_key'		=> 'start_date',
-					'orderby'     => 'start_date',
-					'order'       => 'DESC',      // Descending, so later events first.
-					'meta_query'  => array(
+					'meta_key'            => 'start_date',
+					'orderby'             => 'start_date',
+					'order'               => 'DESC',      // Descending, so later events first.
+					'meta_query'          => array(
 						array(
 							'key'     => 'start_date',     // Which meta to query.
-							'value'   => date( 'Y-m-d' ),  // Value for comparison.
+							'value'   => gmdate( 'Y-m-d' ),  // Value for comparison.
 							'compare' => '<=',             // Method of comparison.
 							'type'    => 'DATE',
 						),
 						array(
 							'key'     => 'end_date',       // Which meta to query.
-							'value'   => date( 'Y-m-d' ),  // Value for comparison.
+							'value'   => gmdate( 'Y-m-d' ),  // Value for comparison.
 							'compare' => '>=',             // Method of comparison.
 							'type'    => 'DATE',
 						),
@@ -51,14 +51,17 @@ get_header( 'child' );
 					), // End meta_query array.
 				) // End array.
 			); // Close WP_Query constructor call.
-		?> 
+			?>
 
 			<div class="exhibits-feed-section">
 
 				<h3 class="title-sub">Current Exhibits</h3>
 
-				<?php if ( $current_query->have_posts() ) :
-					while ( $current_query->have_posts() ) : $current_query->the_post(); // Loop for current exhibits.
+				<?php
+				if ( $current_query->have_posts() ) :
+					while ( $current_query->have_posts() ) :
+
+						$current_query->the_post(); // Loop for current exhibits.
 
 						get_template_part( 'inc/exhibits-detail' );
 
@@ -66,7 +69,8 @@ get_header( 'child' );
 
 						wp_reset_postdata();
 
-				else : ?>
+				else :
+					?>
 
 					<p><?php esc_html_e( 'There are no current exhibit announcements at this time. New exhibits are added throughout the year, so please check back.' ); ?></p>
 
@@ -80,35 +84,38 @@ get_header( 'child' );
 
 		$future_query = new WP_Query(
 			array(
-				'post_type'   => 'exhibits',  // Only query exhibits.
-				'meta_key'		=> 'start_date',
+				'post_type'      => 'exhibits',  // Only query exhibits.
+				'meta_key'       => 'start_date',
 				'posts_per_page' => 10,
-				'orderby'    => 'start_date',
-				'order'       => 'ASC',        // Descending, so later events first.
-				'meta_query'  => array(
+				'orderby'        => 'start_date',
+				'order'          => 'ASC',        // Descending, so later events first.
+				'meta_query'     => array(
 					array(
 						'key'     => 'start_date',     // Which meta to query.
-						'value'   => date( 'Y-m-d' ),  // Value for comparison.
+						'value'   => gmdate( 'Y-m-d' ),  // Value for comparison.
 						'compare' => '>',             // Method of comparison.
 						'type'    => 'DATE',
 					),
 					array(
-							'key'     => 'location',       // Which meta to query.
-							'value'   => 'Maihaugen Gallery',  // Value for comparison.
-							'compare' => '=',             // Method of comparison.
-							'type'    => 'CHAR',
-					),// The meta_query is an array of query items.
+						'key'     => 'location',       // Which meta to query.
+						'value'   => 'Maihaugen Gallery',  // Value for comparison.
+						'compare' => '=',             // Method of comparison.
+						'type'    => 'CHAR',
+					), // The meta_query is an array of query items.
 				), // End meta_query array.
 			) // End array.
 		); // Close WP_Query constructor call.
-		?> 
+		?>
 
 			<div class="exhibits-feed-section">
 
 				<h3 class="title-sub">Upcoming Exhibits</h3>
 
-				<?php if ( $future_query->have_posts() ) :
-					while ( $future_query->have_posts() ) : $future_query->the_post(); // Loop for future exhibits.
+				<?php
+				if ( $future_query->have_posts() ) :
+					while ( $future_query->have_posts() ) :
+
+						$future_query->the_post(); // Loop for future exhibits.
 
 						get_template_part( 'inc/exhibits-detail' );
 
@@ -116,7 +123,8 @@ get_header( 'child' );
 
 					wp_reset_postdata();
 
-				else : ?>
+				else :
+					?>
 
 					<p><?php esc_html_e( 'There are no upcoming exhibit announcements at this time. New exhibits are added throughout the year, so please check back.' ); ?></p>
 
@@ -130,41 +138,44 @@ get_header( 'child' );
 
 		$past_query = new WP_Query(
 			array(
-				'post_type'   => 'exhibits',  // Only query exhibits.
-	         	'meta_key'		=> 'end_date',
-	         	'posts_per_page' => 5,
-				'orderby'    => 'end_date',
-				'order'       => 'DESC',      // Descending, so later events first.
-				'meta_query'  => array(
+				'post_type'      => 'exhibits',  // Only query exhibits.
+				'meta_key'       => 'end_date',
+				'posts_per_page' => 5,
+				'orderby'        => 'end_date',
+				'order'          => 'DESC',      // Descending, so later events first.
+				'meta_query'     => array(
 					array(
 						'key'     => 'end_date',       // Which meta to query.
-						'value'   => date( 'Y-m-d' ),  // Value for comparison.
+						'value'   => gmdate( 'Y-m-d' ),  // Value for comparison.
 						'compare' => '<',              // Method of comparison.
 						'type'    => 'DATE',
 					),
 					array(
-							'key'     => 'location',       // Which meta to query.
-							'value'   => 'Maihaugen Gallery',  // Value for comparison.
-							'compare' => '=',             // Method of comparison.
-							'type'    => 'CHAR',
+						'key'     => 'location',       // Which meta to query.
+						'value'   => 'Maihaugen Gallery',  // Value for comparison.
+						'compare' => '=',             // Method of comparison.
+						'type'    => 'CHAR',
 					), // The meta_query is an array of query items.
 				), // End meta_query array.
 			) // End array.
 		); // Close WP_Query constructor call.
 
-		?> 
+		?>
 
 			<div class="exhibits-feed-section">
 
 				<h3 class="title-sub">Past Exhibits</h3>
 
-			<?php while ( $past_query->have_posts() ) : $past_query->the_post(); // Loop for events.
+			<?php
+			while ( $past_query->have_posts() ) :
+				$past_query->the_post(); // Loop for events.
 
 				get_template_part( 'inc/exhibits-detail' );
 
 				wp_reset_postdata(); // Restore global post data stomped by the_post().
 
-			endwhile; // End of the loop. ?>
+			endwhile; // End of the loop.
+			?>
 
 			</div>
 			<!-- END OF UPCOMING EXHIBITS LOOP -->

@@ -21,25 +21,28 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 
 		<div class="content-main main-content">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php
+			while ( have_posts() ) :
+				the_post();
+				?>
 
 				<div class="article-head">
 				
-						<p class="title-sub"><?php the_field( 'location' ) ?> Exhibit</p>
+						<p class="title-sub"><?php the_field( 'location' ); ?> Exhibit</p>
 				
 
 					<h2><?php the_title(); ?></h2>
 					<?php if ( get_field( 'subtitle' ) ) : ?>
-						<h3 class="sub-title"><?php the_field( 'subtitle' );?></h3>
+						<h3 class="sub-title"><?php the_field( 'subtitle' ); ?></h3>
 					<?php endif; ?>
 
 					<p class="date-span">
-						<?php the_field( 'start_date' );?> 
+						<?php the_field( 'start_date' ); ?>
 						- 
-						<?php the_field( 'end_date' );?>
+						<?php the_field( 'end_date' ); ?>
 					</p>
 					<?php if ( get_field( 'sponsored' ) ) : ?>
-						<p class="sponsored-content"><?php the_field( 'sponsored' );?></p>
+						<p class="sponsored-content"><?php the_field( 'sponsored' ); ?></p>
 					<?php endif; ?>
 
 				</div>
