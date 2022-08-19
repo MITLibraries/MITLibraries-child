@@ -11,6 +11,7 @@ get_header( 'child' );
 
 get_template_part( 'inc/breadcrumbs', 'child' );
 
+$location_info = get_exhibit_location();
 ?>
 
 <div id="stage" class="inner" role="main">
@@ -28,7 +29,7 @@ get_template_part( 'inc/breadcrumbs', 'child' );
 
 				<div class="article-head">
 				
-						<p class="title-sub"><?php the_field( 'location' ); ?> Exhibit</p>
+						<p class="title-sub"><?php echo esc_html( $location_info['name'] ); ?> Exhibit</p>
 				
 
 					<h2><?php the_title(); ?></h2>

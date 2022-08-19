@@ -339,3 +339,63 @@ function theme_menu_style_customizer( $wp_customize ) {
 	));
 }
 
+/**
+ * Function to look up exhibit location information
+ *
+ * Multiple templates in this theme need to display information about the
+ * location of an Exhibit record. This can be a bit more complex than might be
+ * expected, so we have this helper function to assist.
+ *
+ * Exhibit locations are recorded using Categories, but they can also be placed
+ * in a "Featured" category (which is not a location, and must be ignored).
+ *
+ * Additionally, there is a catchall category of "Uncategorized", for exhibits
+ * in non-standard locations. For these Exhibits, the name to be displayed is
+ * found in a custom "uncategorized_location" field.
+ *
+ * This function:
+ * 1. Looks up all categories for the current Exhibit post ID.
+ * 2. Rebuilds this list without a "Featured" item, if found. In the process it
+ *    extracts only the name and slug for these categories, removing the WP_Term
+ *    in favor of a simple Array.
+ * 3. Calculates the displayed name for the location, along with a link and
+ *    initial which the theme templates expect.
+ * 4. Returns these three values (name, link, and initial) in an array.
+ */
+function get_exhibit_location() {
+	// 1. Look up all categories for the current post ID.
+	$locations_array = get_the_category();
+
+	// 2. Rebuilt the array without a "Featured" category entry, if found.
+	$locations_rebuild = array();
+	foreach ( $locations_array as $term ) {
+		if ( 'Featured' === $term->name ) {
+			continue;
+		}
+		array_push(
+			$locations_rebuild,
+			array(
+				'name' => $term->name,
+				'slug' => $term->slug,
+			)
+		);
+	}
+
+	// 3. Calculate the name, link, and initial from the rebuilt array.
+	$location_name = 'Multiple Locations';
+	if ( 1 === count( $locations_rebuild ) ) {
+		$location_name = $locations_rebuild[0]['name'];
+		if ( 'Uncategorized' === $location_name ) {
+			$location_name = get_field( 'uncategorized_location' );
+		}
+	}
+	$location_link    = site_url() . '/' . $locations_rebuild[0]['slug'];
+	$location_initial = substr( $location_name, 0, 1 );
+
+	// 4. Return those calculated values in an array.
+	return array(
+		'name'    => $location_name,
+		'link'    => $location_link,
+		'initial' => $location_initial,
+	);
+}

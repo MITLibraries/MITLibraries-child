@@ -8,12 +8,12 @@
  * @since 2.0.0
  */
 
-$locations_link = site_url() . '/' . esc_attr( str_replace( ' ', '-', get_field( 'location' ) ) );
+$location_info = get_exhibit_location();
 ?>
 <div class="exhibits-feed">
 	<div class="entry-categories">
 		<div class="entry-cats-list">
-			<a href="<?php echo esc_url( $locations_link ); ?>"><span class="category-bg"><span class="category-init"><?php echo esc_attr( substr( get_field( 'location' ), 0, 1 ) ); ?></span></span><span class="cat-name"><?php the_field( 'location' ); ?> Exhibit</span></a>
+			<a href="<?php echo esc_url( $location_info['link'] ); ?>"><span class="category-bg"><span class="category-init"><?php echo esc_html( $location_info['initial'] ); ?></span></span><span class="cat-name"><?php echo esc_html( $location_info['name'] ); ?> Exhibit</span></a>
 		</div>
 	</div>
 	<div class="category-post">
@@ -39,7 +39,7 @@ $locations_link = site_url() . '/' . esc_attr( str_replace( ' ', '-', get_field(
 					Ended <?php the_field( 'end_date' ); ?>
 				<?php } elseif ( $start > $today ) { ?>
 					Opens <?php the_field( 'start_date' ); ?>
-				<?php } else { ?>	
+				<?php } else { ?>
 					<?php the_field( 'start_date' ); ?> - <?php the_field( 'end_date' ); ?>
 				<?php } ?>
 			</div>
