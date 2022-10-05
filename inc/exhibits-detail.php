@@ -10,10 +10,11 @@
 
 $location_info = get_exhibit_location();
 ?>
+
 <div class="exhibits-feed">
 	<div class="entry-categories">
 		<div class="entry-cats-list">
-			<a href="<?php echo esc_url( $location_info['link'] ); ?>"><span class="category-bg"><span class="category-init"><?php echo esc_html( $location_info['initial'] ); ?></span></span><span class="cat-name"><?php echo esc_html( $location_info['name'] ); ?> Exhibit</span></a>
+			<span class="category-bg"><span class="category-init"><?php echo esc_html( $location_info['initial'] ); ?></span></span><span class="cat-name"><?php echo esc_html( $location_info['name'] ); ?> Exhibit</span>
 		</div>
 	</div>
 	<div class="category-post">
