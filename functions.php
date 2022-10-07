@@ -389,13 +389,11 @@ function get_exhibit_location() {
 			$location_name = get_field( 'uncategorized_location' );
 		}
 	}
-	$location_link    = site_url() . '/' . $locations_rebuild[0]['slug'];
 	$location_initial = substr( $location_name, 0, 1 );
 
 	// 4. Return those calculated values in an array.
 	return array(
 		'name'    => $location_name,
-		'link'    => $location_link,
 		'initial' => $location_initial,
 	);
 }
